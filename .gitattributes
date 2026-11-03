@@ -1,0 +1,5 @@
+* text=auto eol=lf
+# Frozen source kit, including traces, must preserve its exact original bytes.
+/reproduction/** -text
+*.png binary
+*.pyd binary

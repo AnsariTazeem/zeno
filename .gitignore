@@ -1,0 +1,20 @@
+# Explicit root allowlist: keep local research and other projects out of Git.
+/*
+!/.gitignore
+!/.gitattributes
+!/README.md
+!/bootstrap.py
+!/run_eval.py
+!/.env.example
+!/requirements.txt
+!/reproduction/
+!/docs/
+!/tools/
+!/evidence/
+
+# Generated state never belongs in the source import.
+**/__pycache__/
+**/*.pyc
+**/test_workspace/
+**/.venv/
+**/.env
