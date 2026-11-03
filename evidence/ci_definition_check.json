@@ -1,0 +1,14 @@
+{
+  "workflow_sha256": "58cdbcf1bbd4b6a26ab5e8f7a6c6e5346c4ae20c8613456b9b81f4409d282349",
+  "YAML_parsed": true,
+  "pinned_actions": {
+    "actions/checkout": "d23441a48e516b6c34aea4fa41551a30e30af803",
+    "actions/setup-python": "ece7cb06caefa5fff74198d8649806c4678c61a1",
+    "actions/upload-artifact": "b7c566a772e6b6bfb58ed0dc250532a479d7789f"
+  },
+  "powershell_blocks": 5,
+  "hosted_workflow_executed": false,
+  "scope": "Local structure checks, not GitHub workflow compilation",
+  "powershell_blocks_parsed": 5,
+  "at_utc": "2026-11-03T18:15:16.194338+00:00"
+}
