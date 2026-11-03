@@ -1,0 +1,67 @@
+{
+  "package_url": "https://conda.anaconda.org/conda-forge/win-64/ngspice-exe-41-h295a5eb_0.conda",
+  "package_sha256": "ca2c615fe7a397d37fa7f54e02f80074e77a547e98d0b5421b6cb0aafbed135a",
+  "version": "41",
+  "exe": "deps\\ngspice_win41\\runtime\\Library\\bin\\ngspice_con.exe",
+  "exe_sha256": "41a6bda700d9160089f2a39a14f94408172f7748215b68b81d39ea1bc26e300c",
+  "scope": "Project-local extraction; no conda activation or package scripts executed",
+  "files": [
+    {
+      "path": "info\\licenses\\COPYING",
+      "sha256": "df9e98a686fad462feeff23d780d733bce3d615e351938ac86ef8119d707da20",
+      "bytes": 45719
+    },
+    {
+      "path": "Library\\bin\\ngspice.exe",
+      "sha256": "458b4d7ceb71a77bc30c364d5f9b3c6bf261eac35b5c13f753e189c98f0fcd2a",
+      "bytes": 7557632
+    },
+    {
+      "path": "Library\\bin\\ngspice.pdb",
+      "sha256": "ec2b659024df7434674340bcc75cd10ececeb795c3bb2bfc66ece27b9875d7b2",
+      "bytes": 26267648
+    },
+    {
+      "path": "Library\\bin\\ngspice_con.exe",
+      "sha256": "41a6bda700d9160089f2a39a14f94408172f7748215b68b81d39ea1bc26e300c",
+      "bytes": 6766080
+    },
+    {
+      "path": "Library\\lib\\ngspice\\analog.cm",
+      "sha256": "db0c6753564c6381a19ec54117f81f64e35cd6606785404ac951f43d7a248c81",
+      "bytes": 284672
+    },
+    {
+      "path": "Library\\lib\\ngspice\\digital.cm",
+      "sha256": "766c5dae2d7f44f04c39e57eebf64e7b5a97fac50aa1142a87cc19456fa750a2",
+      "bytes": 290304
+    },
+    {
+      "path": "Library\\lib\\ngspice\\spice2poly.cm",
+      "sha256": "5a51e1b1a59e8c41929ca4b5f4c8e3df65d3a27351733a3e4a06af5f54027a13",
+      "bytes": 93696
+    },
+    {
+      "path": "Library\\lib\\ngspice\\table.cm",
+      "sha256": "e9cd7cf3c6c52776126a3a43ac75cb53cc2a5aa28c202baaddf44b114d0a040f",
+      "bytes": 189440
+    },
+    {
+      "path": "Library\\lib\\ngspice\\xtradev.cm",
+      "sha256": "a038670b0e9cdd3ef9d19cceffbc2212469c111715bffc9282de79cddd51d9e7",
+      "bytes": 146432
+    },
+    {
+      "path": "Library\\lib\\ngspice\\xtraevt.cm",
+      "sha256": "3ad4dd0cf81b7858d110fba822fea217fa64ee85bad3eec9dd715126bcda1178",
+      "bytes": 121344
+    },
+    {
+      "path": "Library\\share\\ngspice\\scripts\\spinit",
+      "sha256": "b26f04884dc0ca0db6d4c4ebbd1028e7522a04161a29c0e466108ad378f20fe3",
+      "bytes": 1048
+    }
+  ],
+  "entrypoint_note": "Console executable, not the packaged GUI executable",
+  "version_command_returncode": 0
+}

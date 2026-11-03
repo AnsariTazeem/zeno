@@ -1,0 +1,97 @@
+{
+  "repository": "https://github.com/saeidrajabii/AnalogPortBench",
+  "commit": "13c40b2dd9bae22b83e2fc4aba0adb05e99e4282",
+  "files": [
+    {
+      "path": "benchmark/evaluate.py",
+      "git_blob_sha": "60fd377315378733fb88bc7895ed2aa8f77511cb",
+      "sha256": "2123491bd21f85ee55b2c884a3f5370dc9a181670fd299e5561c38dfaa689d70",
+      "bytes": 6131,
+      "url": "https://github.com/saeidrajabii/AnalogPortBench/blob/13c40b2dd9bae22b83e2fc4aba0adb05e99e4282/benchmark/evaluate.py"
+    },
+    {
+      "path": "benchmark/measure.py",
+      "git_blob_sha": "284f2dd1b400cbaaafb01b6ab8eff478f0857c19",
+      "sha256": "c1d662e402fe0ff98b17b173830010c7a98c5d892cd5fae213059d553ee8cd45",
+      "bytes": 7289,
+      "url": "https://github.com/saeidrajabii/AnalogPortBench/blob/13c40b2dd9bae22b83e2fc4aba0adb05e99e4282/benchmark/measure.py"
+    },
+    {
+      "path": "benchmark/golden/opamp_2stg_1v2.sp",
+      "git_blob_sha": "61483e0ddab9edf9be2c9d30130527d620f1ecb6",
+      "sha256": "4778a3e11bf09bf5aa363376071ca523981ca17f8147d5dade255ab1d6a215f8",
+      "bytes": 3350,
+      "url": "https://github.com/saeidrajabii/AnalogPortBench/blob/13c40b2dd9bae22b83e2fc4aba0adb05e99e4282/benchmark/golden/opamp_2stg_1v2.sp"
+    },
+    {
+      "path": "benchmark/sim.py",
+      "git_blob_sha": "fd8eb29500e4f93c483d0a45bf07f401c93b6a49",
+      "sha256": "fcf361521320e685c993d8f9272bb4eaa5d8b150c6f27a64ce5cec2235972adc",
+      "bytes": 2751,
+      "url": "https://github.com/saeidrajabii/AnalogPortBench/blob/13c40b2dd9bae22b83e2fc4aba0adb05e99e4282/benchmark/sim.py"
+    },
+    {
+      "path": "benchmark/config.py",
+      "git_blob_sha": "31d68311aef773abe1a01240731cf84bc47fab52",
+      "sha256": "3217951fa80d762c02b03c1e82b3594367c22a6a1dde845ecb73a55ec877a71b",
+      "bytes": 1593,
+      "url": "https://github.com/saeidrajabii/AnalogPortBench/blob/13c40b2dd9bae22b83e2fc4aba0adb05e99e4282/benchmark/config.py"
+    },
+    {
+      "path": "benchmark/netlist.py",
+      "git_blob_sha": "b8c6641879e15f6d07ee3511ac14516d9dc360d4",
+      "sha256": "90c9f87a6b59be0adacda7c6e7b41cb5b1158d18950b3e9a0c335a3d8ecb37d6",
+      "bytes": 3377,
+      "url": "https://github.com/saeidrajabii/AnalogPortBench/blob/13c40b2dd9bae22b83e2fc4aba0adb05e99e4282/benchmark/netlist.py"
+    },
+    {
+      "path": "benchmark/testbenches/opamp_loop.cir.tmpl",
+      "git_blob_sha": "d053c220c919a7ee5ddbc9d966885c85f5a73d32",
+      "sha256": "626df10926321c717566e36678e6135c5281f881f6bc0d4f579b4940f06399e6",
+      "bytes": 1037,
+      "url": "https://github.com/saeidrajabii/AnalogPortBench/blob/13c40b2dd9bae22b83e2fc4aba0adb05e99e4282/benchmark/testbenches/opamp_loop.cir.tmpl"
+    },
+    {
+      "path": "benchmark/circuits/opamp_2stg/spec.yaml",
+      "git_blob_sha": "41dab701b7bfec788b8ee8563ff734870c75605d",
+      "sha256": "ae32658726535bf152720bd2f2e84d4df20ea613a08081fcace68e4199de330a",
+      "bytes": 1337,
+      "url": "https://github.com/saeidrajabii/AnalogPortBench/blob/13c40b2dd9bae22b83e2fc4aba0adb05e99e4282/benchmark/circuits/opamp_2stg/spec.yaml"
+    },
+    {
+      "path": "benchmark/circuits.py",
+      "git_blob_sha": "a8a07cd8a6a34305e7bd2a5055a81ab4e321f921",
+      "sha256": "68d591d8f6b9d8998c645de61a9203da586319d93339d5d57466991125ac6967",
+      "bytes": 3644,
+      "url": "https://github.com/saeidrajabii/AnalogPortBench/blob/13c40b2dd9bae22b83e2fc4aba0adb05e99e4282/benchmark/circuits.py"
+    },
+    {
+      "path": "benchmark/testbenches/opamp_tran.cir.tmpl",
+      "git_blob_sha": "16bb332f24e045c71ae0b4e4a86244bcfd82de26",
+      "sha256": "a99591fa40d1b7786ca9cf19660474d55b4d70dc54382e7ecf8c1c934d557ba6",
+      "bytes": 617,
+      "url": "https://github.com/saeidrajabii/AnalogPortBench/blob/13c40b2dd9bae22b83e2fc4aba0adb05e99e4282/benchmark/testbenches/opamp_tran.cir.tmpl"
+    },
+    {
+      "path": "benchmark/techs.py",
+      "git_blob_sha": "1b1ad27d703ae6b21833fca3ba8128d2f00f0bd1",
+      "sha256": "d93a7c748883018458dfdf270dbda4873f58cb146215826e3dcc1262f526bd1f",
+      "bytes": 1717,
+      "url": "https://github.com/saeidrajabii/AnalogPortBench/blob/13c40b2dd9bae22b83e2fc4aba0adb05e99e4282/benchmark/techs.py"
+    },
+    {
+      "path": "LICENSE",
+      "git_blob_sha": "3c68bdb69818ef892b00bb722647047b25db7515",
+      "sha256": "d6b95b322ce7e119bbf18c0c43452cd88fa3247e5efcb1ac1c48bdffc886af75",
+      "bytes": 1069,
+      "url": "https://github.com/saeidrajabii/AnalogPortBench/blob/13c40b2dd9bae22b83e2fc4aba0adb05e99e4282/LICENSE"
+    },
+    {
+      "path": "benchmark/golden/opamp_2stg_1v8.sp",
+      "git_blob_sha": "68bb9c66dc0a7b48802302bc30addd03af0f5a92",
+      "sha256": "a97e6011f3c9f1de99ff9b02c9f47a1c6f074bdf174bcb1e1978560b9d886e84",
+      "bytes": 3253,
+      "url": "https://github.com/saeidrajabii/AnalogPortBench/blob/13c40b2dd9bae22b83e2fc4aba0adb05e99e4282/benchmark/golden/opamp_2stg_1v8.sp"
+    }
+  ]
+}
