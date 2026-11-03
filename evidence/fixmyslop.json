@@ -1,0 +1,111 @@
+{
+  "at_utc": "2026-11-03T17:57:46.329394+00:00",
+  "tool": "FixMySlop",
+  "version": "0.6.8",
+  "revision": "d2b8ab2960f9cbcab54e4d3df12073fe8d4444b8",
+  "mode": "scoped offline deterministic engine",
+  "files_scanned": [
+    "README.md",
+    "docs/AI_USE.md",
+    "docs/benchmark_lessons.md",
+    "docs/guide_checklist.md",
+    "docs/methodology.md",
+    "docs/PRIOR_WORK.md",
+    "docs/quality_check.md",
+    "docs/reproduction.md",
+    "docs/results.md",
+    "docs/RIGHTS_REVIEW.md",
+    "docs/run.md",
+    "tools/export_task.py",
+    "tools/run_checks.py",
+    "tests/test_repository_layout.py",
+    "tasks/README.md",
+    "reference/README.md",
+    "graders/README.md",
+    "results/README.md",
+    "transcripts/README.md"
+  ],
+  "file_identities": [
+    {
+      "path": "README.md",
+      "sha256": "bdce8d23f1397f7895a160f6b84e48d8c6be5502e591663de682ec4b50070254"
+    },
+    {
+      "path": "docs/AI_USE.md",
+      "sha256": "24f69484daf4614851d9ad1801a861c5bbbfb8ec69f9292a4c11b920b41799a2"
+    },
+    {
+      "path": "docs/benchmark_lessons.md",
+      "sha256": "97f41212200b68ef6b37e0b15839cfb601f709f144eee529df887c2fa1fa3901"
+    },
+    {
+      "path": "docs/guide_checklist.md",
+      "sha256": "31ceec35019a98245508bb16d36e2e023acf67290e5fc3363aa09879a3309ef6"
+    },
+    {
+      "path": "docs/methodology.md",
+      "sha256": "f6314297e45f27004be5c2fff65838e6980789e2156615a407db9a1b503d57e1"
+    },
+    {
+      "path": "docs/PRIOR_WORK.md",
+      "sha256": "aa2d68b8243df700f6eb1c32d484ca984fa76e4f634b868535296039757c0a2d"
+    },
+    {
+      "path": "docs/quality_check.md",
+      "sha256": "5f9feb149f411f8fa083c38d94cbd4c03de76dcf41f960ac57e95f1518a83f4c"
+    },
+    {
+      "path": "docs/reproduction.md",
+      "sha256": "d761739704b22743874155d135fe83eda2560a66e67a549687fa1c29a982f1b7"
+    },
+    {
+      "path": "docs/results.md",
+      "sha256": "e69ffd4578d70f393c971e9572f580cc99867c94dac778910a2636f8e40cb932"
+    },
+    {
+      "path": "docs/RIGHTS_REVIEW.md",
+      "sha256": "5011a0614b1956cb0908197155aba24234ee649ad4542b1e786fb9b2f5f04d97"
+    },
+    {
+      "path": "docs/run.md",
+      "sha256": "36d36c071d8c2adab78883c42f40b62c8618b398871d526b8164726c5e8fe1c5"
+    },
+    {
+      "path": "tools/export_task.py",
+      "sha256": "2f42c3e3aa27a983dd8e3398a1786dcc244d1915664c72484b0ad59f53f875a4"
+    },
+    {
+      "path": "tools/run_checks.py",
+      "sha256": "add9d9f92c125ce8cd38b7434be84062bfaf70c59173fccbca34d098cec71715"
+    },
+    {
+      "path": "tests/test_repository_layout.py",
+      "sha256": "e1058d8e900b71a55e7ee3ec914e23b9820af619f042ed7cce7cdfd22081d530"
+    },
+    {
+      "path": "tasks/README.md",
+      "sha256": "de702a970709ac9223ef9a177c15ebe3ae40761da1f3c30d03da26c57155f104"
+    },
+    {
+      "path": "reference/README.md",
+      "sha256": "7edb78601a42df574172ea23300e0f5fd886e60aec7a34dde32e7a8661a8ac7c"
+    },
+    {
+      "path": "graders/README.md",
+      "sha256": "9937a3a49ebcb334ff9bd987a51424c9e5d476d2850e7cad888013f628e6a7cd"
+    },
+    {
+      "path": "results/README.md",
+      "sha256": "5aee0d5a546f561ecd656517253c86bf05cdb277683dae4ad5e52dcc002c0a79"
+    },
+    {
+      "path": "transcripts/README.md",
+      "sha256": "221687324f1f8018691eedf40bbe1953b67490043be55800dde8651980f0529b"
+    }
+  ],
+  "findings": [],
+  "model_calls": 0,
+  "network_requests_during_scan": 0,
+  "automatic_fixes": 0,
+  "scope": "Maintained docs/tools and new layout tests; not frozen code, native data or external optional analyzers"
+}

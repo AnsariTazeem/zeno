@@ -1,8 +1,8 @@
 {
-  "at_utc": "2026-11-03T17:28:04.314029+00:00",
+  "at_utc": "2026-11-03T17:47:57.997264+00:00",
   "outcome": "passed",
   "verified_frozen_files": 355,
-  "tests_passed": 50,
+  "tests_passed": 57,
   "checks": [
     {
       "suite": "bootstrap_boundaries",
@@ -23,6 +23,13 @@
       "returncode": 0,
       "expected_tests": 12,
       "observed_tests": 12,
+      "passed": true
+    },
+    {
+      "suite": "repository_layout",
+      "returncode": 0,
+      "expected_tests": 7,
+      "observed_tests": 7,
       "passed": true
     }
   ],

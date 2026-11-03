@@ -1,0 +1,19 @@
+{
+  "at_utc": "2026-11-03T17:58:09.982707+00:00",
+  "guide_pages": 22,
+  "guide_sha256": "5b9109672654cf0784456f8d64948aa3104e929b01112bfc77f85e685f540e12",
+  "offline_tests_passed": 57,
+  "frozen_kit_files_verified": 355,
+  "navigation_source_copies": 90,
+  "public_metadata_files_redacted": 19,
+  "local_markdown_links_checked": 59,
+  "maintained_readme_words": 314,
+  "fixmyslop_scoped_files": 19,
+  "fixmyslop_findings": 0,
+  "copied_responses_and_candidates_changed": false,
+  "sealed_submission_archive_updated": false,
+  "guide_fully_satisfied": false,
+  "model_calls": 0,
+  "simulator_calls": 0,
+  "pushed": false
+}
