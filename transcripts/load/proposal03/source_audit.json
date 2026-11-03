@@ -1,0 +1,10 @@
+{
+  "duration_ui": "1m 16s",
+  "single_complete_network_in_latest_answer": true,
+  "feedback_access_confirmed": "Correctly quotes two passing conditions, worst overshoot, minimum PM, settling, DC power and node voltage from proposal 2",
+  "change": "Adds 300 pF between load and ground inside the permitted passive feedback network; the six fixed fixture capacitors remain unchanged",
+  "compiler_acceptance": "Four resistors plus one capacitor; within all frozen limits",
+  "new_electrical_simulation_claims": "Explicitly unverified pending local evaluation",
+  "outside_references": "No external sources cited in answer; no reference circuits were supplied; complete source history not independently recovered",
+  "researcher_modified_circuit": false
+}

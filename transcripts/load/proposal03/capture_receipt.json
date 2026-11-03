@@ -1,0 +1,17 @@
+{
+  "trial_id": "LOAD-P01-T01",
+  "proposal": 3,
+  "retained_at_utc": "2026-11-01T18:20:52.818906+00:00",
+  "capture_method": "Read rendered response and all code blocks before response controls or next request; exact DUT stored separately",
+  "candidate_file": "candidate_rendered.sp",
+  "candidate_sha256": "838960ad14473af1eca8e7152d160f6183f5700f345ef2936a0187c157b42347",
+  "rendered_answer_file": "rendered_answer_whitespace_normalized.txt",
+  "rendered_answer_sha256": "f69bed834ed8855aead409f15b73f0a1bffb7a7b48f7487705d23d78ec4c74da",
+  "prose_normalization": "Whitespace runs collapsed to one space, trimmed, terminal LF added; exact code retained separately",
+  "code_normalization": "Rendered code trimEnd plus one terminal LF",
+  "code_changed_by_researcher": false,
+  "browser_hashes_matched": true,
+  "source": "Rendered UI export, not raw API response",
+  "complete_DUT_blocks_in_latest_answer": 1,
+  "public_metadata_note": "Private chat identifiers and local launch details withheld; original record retained in entry archive."
+}
