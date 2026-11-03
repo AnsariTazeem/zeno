@@ -1,0 +1,118 @@
+{
+  "tasks": {
+    "supply": {
+      "task_id": "SUPPLY-P01-v2",
+      "frozen_source": "analog_supply_pilot_v1/public_v2",
+      "files": [
+        {
+          "name": "PROMPT.txt",
+          "bytes": 7209,
+          "sha256": "7b0317c46fbac01010dddb77b4975466147db0429145e9df37af0159859a402e"
+        },
+        {
+          "name": "TASK.md",
+          "bytes": 5779,
+          "sha256": "ab873ea2d5eabf8d2be27542b445391f0e8e429339300a4786f350d2cd9b319d"
+        },
+        {
+          "name": "starter.sp",
+          "bytes": 1243,
+          "sha256": "8605f9e675fb6d047eb97910f80fa667a63f89ff841250b548984a1b04debfdd"
+        },
+        {
+          "name": "contract.json",
+          "bytes": 1521,
+          "sha256": "b1ab4a010bc5ce9bfd41ffeebacbe3973020f59a281a50eb0d2fe6b4699426a2"
+        },
+        {
+          "name": "LICENSE_UPSTREAM.txt",
+          "bytes": 1069,
+          "sha256": "d6b95b322ce7e119bbf18c0c43452cd88fa3247e5efcb1ac1c48bdffc886af75"
+        }
+      ]
+    },
+    "load": {
+      "task_id": "LOAD-P01",
+      "frozen_source": "capload_case_v1/public",
+      "files": [
+        {
+          "name": "PROMPT.txt",
+          "bytes": 9292,
+          "sha256": "d2f9707791bbe7070eca2e622872987cc5da18aa97d4e83479546897b4603a45"
+        },
+        {
+          "name": "TASK.md",
+          "bytes": 7656,
+          "sha256": "04937efe1947db5bbedc3988f50d4c1bdc1badbe72ba206d1dad7dc043bd8cb2"
+        },
+        {
+          "name": "starter.sp",
+          "bytes": 83,
+          "sha256": "b1ed6ce7308f63d02ed3dfd08ecb0a8d73e42b1bec2752ab9ac472583d18afd5"
+        },
+        {
+          "name": "fixed_amplifier.sp",
+          "bytes": 1385,
+          "sha256": "e8494224e2caf771c03b23ad3c982f2924640fa28dfd9591480ad6a47b3c78bc"
+        },
+        {
+          "name": "contract.json",
+          "bytes": 1560,
+          "sha256": "2b615a5cc09ef62ece6b03f76040bbe64570fa3ae3c1d04d1547ec37d40e0b31"
+        },
+        {
+          "name": "MODEL_IDENTITY.json",
+          "bytes": 883,
+          "sha256": "ab7665233ec2a05316fdfc827ae402d090eef989251f680165d03807ed1920d9"
+        },
+        {
+          "name": "LICENSE_UPSTREAM.txt",
+          "bytes": 1069,
+          "sha256": "d6b95b322ce7e119bbf18c0c43452cd88fa3247e5efcb1ac1c48bdffc886af75"
+        }
+      ]
+    },
+    "tia": {
+      "task_id": "TIA-P01",
+      "frozen_source": "tia_case_v1/public",
+      "files": [
+        {
+          "name": "PROMPT.txt",
+          "bytes": 10098,
+          "sha256": "7def6e90969b00723fff6d97617798c62b5ed18ac39107854b622a78fc5e0c79"
+        },
+        {
+          "name": "TASK.md",
+          "bytes": 6154,
+          "sha256": "42263dbef3559ca8a6aab0b7caf1ddb7a09f7e784c656cd1963dc5abb5cf557b"
+        },
+        {
+          "name": "starter.sp",
+          "bytes": 85,
+          "sha256": "64870a2676739ba01ee9587b00f4919f11e64a6092b991b91dab6913728d838e"
+        },
+        {
+          "name": "fixed_amplifier.sp",
+          "bytes": 1385,
+          "sha256": "e8494224e2caf771c03b23ad3c982f2924640fa28dfd9591480ad6a47b3c78bc"
+        },
+        {
+          "name": "contract.json",
+          "bytes": 2094,
+          "sha256": "e12b0d29c4965ecb68f54bfdfcd119a718c978cfb3e00d60120c7a732397d81c"
+        },
+        {
+          "name": "MODEL_IDENTITY.json",
+          "bytes": 474,
+          "sha256": "17bcbea07f53e66b5c9bf9a8b24d617f7f08a808e721e16d1e69e49102e9feaf"
+        },
+        {
+          "name": "LICENSE_UPSTREAM.txt",
+          "bytes": 1069,
+          "sha256": "d6b95b322ce7e119bbf18c0c43452cd88fa3247e5efcb1ac1c48bdffc886af75"
+        }
+      ]
+    }
+  },
+  "scope": "Public packets only; one fresh model context per task"
+}
