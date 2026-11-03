@@ -1,0 +1,47 @@
+* Follower step-response testbench (from tb_Opamp_2stg_tran): VCM +/- Vstep/2 pulse, period T.
+* DUT: .subckt dut iref inp inn out.
+.lib ../../../../../../../analog_public_v1/deps/pdk/sky130A/libs.tech/combined/sky130.lib.spice tt
+.param VDD=1.15 Iref=20u
+.global vdd
+.options reltol=1e-3 gmin=1e-12 vntol=1e-6 abstol=1e-12
+.temp 27
+
+* Compiled component-only pilot DUT; no supplied simulator commands.
+.subckt dut iref inp inn out
+xnb iref iref 0 0 sky130_fd_pr__nfet_01v8_lvt W=20 L=2 nf=1 m=1
+xnt tail iref 0 0 sky130_fd_pr__nfet_01v8_lvt W=80 L=2 nf=1 m=1
+rbias vdd vbtop 7500
+xpbias vpc vpc vbtop vbtop sky130_fd_pr__pfet_01v8_lvt W=40 L=0.34999999999999998 nf=1 m=1
+xnbias vpc iref 0 0 sky130_fd_pr__nfet_01v8_lvt W=20 L=2 nf=1 m=1
+cbtop vbtop vdd 9.9999999999999994e-12
+cbpc vpc vdd 9.9999999999999994e-12
+xni1 ni1 inp tail 0 sky130_fd_pr__nfet_01v8_lvt W=40 L=1 nf=1 m=1
+xni2 ni2 inn tail 0 sky130_fd_pr__nfet_01v8_lvt W=40 L=1 nf=1 m=1
+xnc1 nstage vbtop ni1 0 sky130_fd_pr__nfet_01v8_lvt W=50 L=0.5 nf=1 m=1
+xnc2 nmirror vbtop ni2 0 sky130_fd_pr__nfet_01v8_lvt W=50 L=0.5 nf=1 m=1
+xpm1 pmref nmirror vdd vdd sky130_fd_pr__pfet_01v8_lvt W=80 L=0.34999999999999998 nf=1 m=1
+xpm2 pmout nmirror vdd vdd sky130_fd_pr__pfet_01v8_lvt W=80 L=0.34999999999999998 nf=1 m=1
+xpc1 nmirror vpc pmref vdd sky130_fd_pr__pfet_01v8_lvt W=200 L=1 nf=1 m=1
+xpc2 nstage vpc pmout vdd sky130_fd_pr__pfet_01v8_lvt W=200 L=1 nf=1 m=1
+xpo out nstage vdd vdd sky130_fd_pr__pfet_01v8_lvt W=240 L=0.34999999999999998 nf=1 m=1
+xno out iref 0 0 sky130_fd_pr__nfet_01v8_lvt W=105 L=2 nf=1 m=1
+rz nstage ncomp 1600
+cc ncomp out 1.6e-12
+.ends dut
+
+
+VSUP vdd 0 dc {VDD}
+.param VCM=0.9 CL=1p Vstep=0.2 T=100n td=5n tr=10p
+IREF vdd niref dc {Iref}
+VIN nin 0 dc {VCM-Vstep/2} PULSE({VCM-Vstep/2} {VCM+Vstep/2} {td} {tr} {tr} {T/2-tr} {T})
+XDUT niref nin nout nout dut
+CL nout 0 {CL}
+
+.control
+set wr_singlescale
+set wr_vecnames
+option numdgt=7
+tran 10p 200n 0 10p
+wrdata tran.txt v(nin) v(nout) i(VSUP)
+.endc
+.end

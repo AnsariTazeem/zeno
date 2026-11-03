@@ -1,0 +1,38 @@
+
+Note: Compatibility modes selected: hs a
+
+
+Circuit: * follower step-response testbench (from tb_opamp_2stg_tran): vcm +/- vstep/2 pulse, period t.
+
+option SCALE: Scale is set to 1e-06 for instance and model parameters
+option SCALE: Scale is set to 1e-06 for instance and model parameters
+option SCALE: Scale is set to 1e-06 for instance and model parameters
+option SCALE: Scale is set to 1e-06 for instance and model parameters
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+vdd                                       1.15
+niref                                  0.56124
+nin                                        0.8
+xdut.tail                             0.220557
+xdut.vbtop                            0.998682
+xdut.vpc                               0.63726
+xdut.ni1                              0.406645
+xdut.ni2                              0.229771
+nout                                   1.13546
+xdut.nstage                           0.543363
+xdut.nmirror                          0.236852
+xdut.pmref                             1.14449
+xdut.pmout                             1.14483
+xdut.ncomp                            0.543363
+vin#branch                                   0
+vsup#branch                       -0.000228727
+
+ Reference value :  0.00000e+00 Reference value :  5.44220e-08 Reference value :  1.06892e-07 Reference value :  1.63552e-07
+No. of Data Rows : 20032
+Note: Simulation executed from .control section 
