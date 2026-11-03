@@ -7,13 +7,13 @@ meet gain, stability, settling, accuracy and power limits at every test point.
 
 | Task | What changes | Recorded result |
 |---|---|---|
-| [SUPPLY](tasks/supply/TASK.md) | Supply voltage | Two Sol/High sessions, no full pass within three proposals each |
+| [SUPPLY](tasks/supply/TASK.md) | Supply voltage | Three Sol/High sessions; 0 full passes within three proposals |
 | [LOAD](tasks/load/TASK.md) | Load and parasitic capacitance | GPT-6/High passed on proposal 3 |
 | [TIA](tasks/tia/TASK.md) | Sensor and wiring capacitance | GPT-6/High passed on proposal 2 |
 
-Finer simulation confirmed the final results. The latest SUPPLY circuit
-misses rising settling: 13.278–14.053 ns against a 12.24 ns limit. The four
-recorded sessions use different interfaces and grader versions.
+Finer simulation confirmed the final results. The five recorded sessions
+use different interfaces and grader versions. One SUPPLY session recovered
+from a collection interruption.
 [Results](docs/results.md) · [Model responses](transcripts/README.md)
 
 ## Run
