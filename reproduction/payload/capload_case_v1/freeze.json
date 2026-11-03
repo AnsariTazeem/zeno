@@ -1,0 +1,126 @@
+{
+  "task_id": "LOAD-P01",
+  "version": "development-1",
+  "frozen_at_utc": "2026-11-01T17:17:01.201677+00:00",
+  "files": [
+    {
+      "path": "capload_case_v1/public/contract.json",
+      "bytes": 1560,
+      "sha256": "2b615a5cc09ef62ece6b03f76040bbe64570fa3ae3c1d04d1547ec37d40e0b31"
+    },
+    {
+      "path": "capload_case_v1/public/fixed_amplifier.sp",
+      "bytes": 1385,
+      "sha256": "e8494224e2caf771c03b23ad3c982f2924640fa28dfd9591480ad6a47b3c78bc"
+    },
+    {
+      "path": "capload_case_v1/public/LICENSE_UPSTREAM.txt",
+      "bytes": 1069,
+      "sha256": "d6b95b322ce7e119bbf18c0c43452cd88fa3247e5efcb1ac1c48bdffc886af75"
+    },
+    {
+      "path": "capload_case_v1/public/MODEL_IDENTITY.json",
+      "bytes": 883,
+      "sha256": "ab7665233ec2a05316fdfc827ae402d090eef989251f680165d03807ed1920d9"
+    },
+    {
+      "path": "capload_case_v1/public/PROMPT.txt",
+      "bytes": 9292,
+      "sha256": "d2f9707791bbe7070eca2e622872987cc5da18aa97d4e83479546897b4603a45"
+    },
+    {
+      "path": "capload_case_v1/public/starter.sp",
+      "bytes": 83,
+      "sha256": "b1ed6ce7308f63d02ed3dfd08ecb0a8d73e42b1bec2752ab9ac472583d18afd5"
+    },
+    {
+      "path": "capload_case_v1/public/TASK.md",
+      "bytes": 7656,
+      "sha256": "04937efe1947db5bbedc3988f50d4c1bdc1badbe72ba206d1dad7dc043bd8cb2"
+    },
+    {
+      "path": "capload_case_v1/apparatus.py",
+      "bytes": 4351,
+      "sha256": "7d6fb4d8422a90c5cc0ed0f5646694913dd9d7a2cde7a7694213cd4866bb9470"
+    },
+    {
+      "path": "capload_case_v1/network_input.py",
+      "bytes": 2314,
+      "sha256": "0dbdf1da17ae1b7ac88123dc3530ac87d91c25f98d189937394878a3dd317970"
+    },
+    {
+      "path": "capload_case_v1/evaluate_network.py",
+      "bytes": 6016,
+      "sha256": "917a33560a05b8f3290111a4b8fdd0843a85ea72ff33139dc8eb9d5bad1e51bc"
+    },
+    {
+      "path": "capload_case_v1/requirements.txt",
+      "bytes": 14,
+      "sha256": "b278f1339f69781eefd2f8fc58f11e4c07a5fbd9134324562c8c0f65599b34c5"
+    },
+    {
+      "path": "capload_case_v1/.env.example",
+      "bytes": 163,
+      "sha256": "0ea8f1763982b7182ce186faa5d3cb07a73b4b4ed177232ecc4b540876158138"
+    },
+    {
+      "path": "capload_case_v1/private/reference.sp",
+      "bytes": 105,
+      "sha256": "6037f51e6df2c571991e5bdadfc6f426c78888258e2db361c46d9897e8e6bf20"
+    },
+    {
+      "path": "capload_case_v1/private/alternative.sp",
+      "bytes": 103,
+      "sha256": "5d3b1ca9d2bf75b2f3debcd4b1f3fadf043bcd3695ea000a35b39c3ba53141ef"
+    },
+    {
+      "path": "capload_case_v1/private/local_negative.sp",
+      "bytes": 86,
+      "sha256": "97d193811b4e14d6b208a5794c2e81cbc47a11b2a306217fe46e89eb6127c6af"
+    },
+    {
+      "path": "capload_case_v1/qualification_scope.json",
+      "bytes": 1609,
+      "sha256": "f6b491722f89e9e8c48b194d1bfc2c9c29ec95077d0c53c98d820997fa324a7b"
+    },
+    {
+      "path": "capload_case_v1/test_network_input.py",
+      "bytes": 1700,
+      "sha256": "8eaf3caac367eff49179610570adc34d6e1d6991f7b0add2c42161d481b22c0e"
+    },
+    {
+      "path": "capload_case_v1/test_apparatus_trace.py",
+      "bytes": 3146,
+      "sha256": "a5631f26de47ec57d2ba19f81ba4cb032be26c1eaff3339f7676180a9741f58e"
+    },
+    {
+      "path": "capload_case_v1/validate_final_loop.py",
+      "bytes": 4122,
+      "sha256": "839369e96b94b701e8e7fa4ccdbd879b8c798fde563385ab403ef14ea015fec5"
+    },
+    {
+      "path": "analog_public_v1/upstream_manifest.json",
+      "bytes": 4860,
+      "sha256": "2959409bde191e290151d383cf5a803650fd877574e1f6d0d2d64e8ab0a6c8fb"
+    },
+    {
+      "path": "analog_public_v1/model_manifest.json",
+      "bytes": 225792,
+      "sha256": "4b489804d74852817888031596285c0fa51a757e7e9224cbac3bcda1ff956b9a"
+    },
+    {
+      "path": "analog_public_v1/windows_simulator_manifest.json",
+      "bytes": 2427,
+      "sha256": "1cef2955775355ba55f25308ef4fbb8bc069bbee4b538a47ec2443b4b81a4863"
+    },
+    {
+      "path": "analog_public_v1/sim_scripts/spinit",
+      "bytes": 18,
+      "sha256": "2ef8c1ce0b4d65b62053c99e75b2bad1d1158582c6ca6cfc19b1e255c84ecfbc"
+    }
+  ],
+  "model_trials_started": 0,
+  "max_complete_proposals": 3,
+  "isolation": "Fresh unpersonalized chat; public/PROMPT.txt plus candidate-only feedback; no references, calibration outputs, tests or project-directory access",
+  "paid_inference_api_calls": 0
+}

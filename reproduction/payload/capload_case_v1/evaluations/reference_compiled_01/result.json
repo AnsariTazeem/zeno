@@ -1,0 +1,404 @@
+{
+  "outcome": "pass",
+  "score": 100,
+  "all_six_points_pass": true,
+  "completed_operating_points": 6,
+  "components": {
+    "R": 3,
+    "C": 0,
+    "internal_nodes": 0
+  },
+  "cases": [
+    {
+      "case": {
+        "id": "case00",
+        "cl_pF": 50,
+        "cp_pF": 0.2
+      },
+      "ac": {
+        "low_frequency_loop_gain_dB": 74.504054473,
+        "phase_at_low_frequency_deg": -0.041048819947,
+        "unity_downward_crossings_Hz": [
+          43545544.23514959
+        ],
+        "phase_margins_deg": [
+          81.48176499164937
+        ],
+        "dc_power_uW": 223.0760574
+      },
+      "transient": {
+        "edges": [
+          {
+            "edge": 1,
+            "target_V": 1.0,
+            "settle_us": 0.31050000000000066,
+            "endpoint_error_V": -4.215326000001074e-05,
+            "overshoot_V": 0.0
+          },
+          {
+            "edge": 2,
+            "target_V": 0.8,
+            "settle_us": 0.30250000000000093,
+            "endpoint_error_V": -3.911430000003158e-06,
+            "overshoot_V": 3.911430000003158e-06
+          },
+          {
+            "edge": 3,
+            "target_V": 1.0,
+            "settle_us": 0.31049999999999983,
+            "endpoint_error_V": -4.215326000001074e-05,
+            "overshoot_V": 0.0
+          },
+          {
+            "edge": 4,
+            "target_V": 0.8,
+            "settle_us": 0.3025000000000026,
+            "endpoint_error_V": -3.911430000003158e-06,
+            "overshoot_V": 3.911430000003158e-06
+          }
+        ],
+        "stop_s": 2.5e-05,
+        "rows": 25032,
+        "max_retained_step_s": 1.0000000000021927e-09,
+        "drive_range_V": [
+          0.80597948601,
+          1.0499513787
+        ]
+      },
+      "checks": {
+        "noninverting_loop": true,
+        "phase_margin": true,
+        "power": true,
+        "settling": true,
+        "overshoot": true
+      },
+      "pass": true
+    },
+    {
+      "case": {
+        "id": "case01",
+        "cl_pF": 50,
+        "cp_pF": 2
+      },
+      "ac": {
+        "low_frequency_loop_gain_dB": 74.504054464,
+        "phase_at_low_frequency_deg": -0.04113931808,
+        "unity_downward_crossings_Hz": [
+          36014437.31744594
+        ],
+        "phase_margins_deg": [
+          53.576213067994004
+        ],
+        "dc_power_uW": 223.0760574
+      },
+      "transient": {
+        "edges": [
+          {
+            "edge": 1,
+            "target_V": 1.0,
+            "settle_us": 0.31250000000000083,
+            "endpoint_error_V": -4.215326000001074e-05,
+            "overshoot_V": 0.0
+          },
+          {
+            "edge": 2,
+            "target_V": 0.8,
+            "settle_us": 0.3005000000000016,
+            "endpoint_error_V": -3.911430000003158e-06,
+            "overshoot_V": 3.911430000003158e-06
+          },
+          {
+            "edge": 3,
+            "target_V": 1.0,
+            "settle_us": 0.31250000000000083,
+            "endpoint_error_V": -4.215326000001074e-05,
+            "overshoot_V": 0.0
+          },
+          {
+            "edge": 4,
+            "target_V": 0.8,
+            "settle_us": 0.3005000000000016,
+            "endpoint_error_V": -3.911430000003158e-06,
+            "overshoot_V": 3.911430000003158e-06
+          }
+        ],
+        "stop_s": 2.5e-05,
+        "rows": 25032,
+        "max_retained_step_s": 1.0000000000021927e-09,
+        "drive_range_V": [
+          0.79631247016,
+          1.0522952319
+        ]
+      },
+      "checks": {
+        "noninverting_loop": true,
+        "phase_margin": true,
+        "power": true,
+        "settling": true,
+        "overshoot": true
+      },
+      "pass": true
+    },
+    {
+      "case": {
+        "id": "case02",
+        "cl_pF": 150,
+        "cp_pF": 0.2
+      },
+      "ac": {
+        "low_frequency_loop_gain_dB": 74.504053958,
+        "phase_at_low_frequency_deg": -0.045720058048,
+        "unity_downward_crossings_Hz": [
+          43494482.91207538
+        ],
+        "phase_margins_deg": [
+          82.75780130470962
+        ],
+        "dc_power_uW": 223.0760574
+      },
+      "transient": {
+        "edges": [
+          {
+            "edge": 1,
+            "target_V": 1.0,
+            "settle_us": 0.9865000000000006,
+            "endpoint_error_V": -4.215326000001074e-05,
+            "overshoot_V": 0.0
+          },
+          {
+            "edge": 2,
+            "target_V": 0.8,
+            "settle_us": 0.8955000000000002,
+            "endpoint_error_V": -3.911430000003158e-06,
+            "overshoot_V": 3.911430000003158e-06
+          },
+          {
+            "edge": 3,
+            "target_V": 1.0,
+            "settle_us": 0.9865000000000015,
+            "endpoint_error_V": -4.215326000001074e-05,
+            "overshoot_V": 0.0
+          },
+          {
+            "edge": 4,
+            "target_V": 0.8,
+            "settle_us": 0.8955000000000019,
+            "endpoint_error_V": -3.911430000003158e-06,
+            "overshoot_V": 3.911430000003158e-06
+          }
+        ],
+        "stop_s": 2.5e-05,
+        "rows": 25032,
+        "max_retained_step_s": 1.0000000000021927e-09,
+        "drive_range_V": [
+          0.8073894994,
+          1.0308208562
+        ]
+      },
+      "checks": {
+        "noninverting_loop": true,
+        "phase_margin": true,
+        "power": true,
+        "settling": true,
+        "overshoot": true
+      },
+      "pass": true
+    },
+    {
+      "case": {
+        "id": "case03",
+        "cl_pF": 150,
+        "cp_pF": 2
+      },
+      "ac": {
+        "low_frequency_loop_gain_dB": 74.504053948,
+        "phase_at_low_frequency_deg": -0.045810556171,
+        "unity_downward_crossings_Hz": [
+          36054066.27393949
+        ],
+        "phase_margins_deg": [
+          54.94746503949526
+        ],
+        "dc_power_uW": 223.0760574
+      },
+      "transient": {
+        "edges": [
+          {
+            "edge": 1,
+            "target_V": 1.0,
+            "settle_us": 0.9895000000000005,
+            "endpoint_error_V": -4.215326000001074e-05,
+            "overshoot_V": 0.0
+          },
+          {
+            "edge": 2,
+            "target_V": 0.8,
+            "settle_us": 0.8945000000000013,
+            "endpoint_error_V": -3.911430000003158e-06,
+            "overshoot_V": 3.911430000003158e-06
+          },
+          {
+            "edge": 3,
+            "target_V": 1.0,
+            "settle_us": 0.9895000000000013,
+            "endpoint_error_V": -4.215326000001074e-05,
+            "overshoot_V": 0.0
+          },
+          {
+            "edge": 4,
+            "target_V": 0.8,
+            "settle_us": 0.8945000000000031,
+            "endpoint_error_V": -3.911430000003158e-06,
+            "overshoot_V": 3.911430000003158e-06
+          }
+        ],
+        "stop_s": 2.5e-05,
+        "rows": 25032,
+        "max_retained_step_s": 1.0000000000021927e-09,
+        "drive_range_V": [
+          0.79806824111,
+          1.0319637617
+        ]
+      },
+      "checks": {
+        "noninverting_loop": true,
+        "phase_margin": true,
+        "power": true,
+        "settling": true,
+        "overshoot": true
+      },
+      "pass": true
+    },
+    {
+      "case": {
+        "id": "case04",
+        "cl_pF": 300,
+        "cp_pF": 0.2
+      },
+      "ac": {
+        "low_frequency_loop_gain_dB": 74.504053061,
+        "phase_at_low_frequency_deg": -0.052726913984,
+        "unity_downward_crossings_Hz": [
+          43493346.105011284
+        ],
+        "phase_margins_deg": [
+          83.08242139479205
+        ],
+        "dc_power_uW": 223.0760574
+      },
+      "transient": {
+        "edges": [
+          {
+            "edge": 1,
+            "target_V": 1.0,
+            "settle_us": 1.9875,
+            "endpoint_error_V": -4.217068000000879e-05,
+            "overshoot_V": 0.0
+          },
+          {
+            "edge": 2,
+            "target_V": 0.8,
+            "settle_us": 1.7865000000000006,
+            "endpoint_error_V": -3.90167000008379e-06,
+            "overshoot_V": 3.90167000008379e-06
+          },
+          {
+            "edge": 3,
+            "target_V": 1.0,
+            "settle_us": 1.987500000000001,
+            "endpoint_error_V": -4.217068000000879e-05,
+            "overshoot_V": 0.0
+          },
+          {
+            "edge": 4,
+            "target_V": 0.8,
+            "settle_us": 1.7865000000000006,
+            "endpoint_error_V": -3.90167000008379e-06,
+            "overshoot_V": 3.90167000008379e-06
+          }
+        ],
+        "stop_s": 2.5e-05,
+        "rows": 25032,
+        "max_retained_step_s": 1.0000000000021927e-09,
+        "drive_range_V": [
+          0.80782517279,
+          1.0232921434
+        ]
+      },
+      "checks": {
+        "noninverting_loop": true,
+        "phase_margin": true,
+        "power": true,
+        "settling": true,
+        "overshoot": true
+      },
+      "pass": true
+    },
+    {
+      "case": {
+        "id": "case05",
+        "cl_pF": 300,
+        "cp_pF": 2
+      },
+      "ac": {
+        "low_frequency_loop_gain_dB": 74.504053049,
+        "phase_at_low_frequency_deg": -0.05281741209,
+        "unity_downward_crossings_Hz": [
+          36074136.43827134
+        ],
+        "phase_margins_deg": [
+          55.28789565283504
+        ],
+        "dc_power_uW": 223.0760574
+      },
+      "transient": {
+        "edges": [
+          {
+            "edge": 1,
+            "target_V": 1.0,
+            "settle_us": 1.9905000000000006,
+            "endpoint_error_V": -4.217087000002451e-05,
+            "overshoot_V": 0.0
+          },
+          {
+            "edge": 2,
+            "target_V": 0.8,
+            "settle_us": 1.7845000000000013,
+            "endpoint_error_V": -3.9017300000887545e-06,
+            "overshoot_V": 3.9017300000887545e-06
+          },
+          {
+            "edge": 3,
+            "target_V": 1.0,
+            "settle_us": 1.9905000000000006,
+            "endpoint_error_V": -4.217087000002451e-05,
+            "overshoot_V": 0.0
+          },
+          {
+            "edge": 4,
+            "target_V": 0.8,
+            "settle_us": 1.784500000000003,
+            "endpoint_error_V": -3.9017300000887545e-06,
+            "overshoot_V": 3.9017300000887545e-06
+          }
+        ],
+        "stop_s": 2.5e-05,
+        "rows": 25032,
+        "max_retained_step_s": 1.0000000000021927e-09,
+        "drive_range_V": [
+          0.79855747736,
+          1.0239605498
+        ]
+      },
+      "checks": {
+        "noninverting_loop": true,
+        "phase_margin": true,
+        "power": true,
+        "settling": true,
+        "overshoot": true
+      },
+      "pass": true
+    }
+  ],
+  "model_trial": false
+}
