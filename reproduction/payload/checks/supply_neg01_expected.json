@@ -1,0 +1,211 @@
+{
+  "candidate": "candidate.sp",
+  "all_points_pass": false,
+  "conditions": "TT, 27 C, VCM=0.9 V, CL=1 pF, Iref=20 uA, 0.2 V step",
+  "points": [
+    {
+      "vdd": 1.15,
+      "upstream_pass": false,
+      "metrics": {
+        "dc_gain_dB": 67.73,
+        "ugf_Hz": 85854362.67482512,
+        "pm_deg": 65.1,
+        "gm_dB": 3.9,
+        "power_uW": 250.91,
+        "input_current_uA": 0.0,
+        "rise_settle_ns": 22.83,
+        "rise_overshoot_pct": 18.85,
+        "rise_slew_V_per_us": 25.6,
+        "fall_settle_ns": 37.93,
+        "fall_overshoot_pct": 13.36,
+        "fall_slew_V_per_us": 26.1,
+        "n_triode": 0
+      },
+      "errors": [],
+      "failed_checks": [
+        {
+          "metric": "dc_gain_dB",
+          "value": 67.73,
+          "op": ">=",
+          "limit": 72.71,
+          "source": 75.71,
+          "pass": false
+        },
+        {
+          "metric": "gm_dB",
+          "value": 3.9,
+          "op": ">=",
+          "limit": 10.0,
+          "source": 19.8,
+          "pass": false
+        },
+        {
+          "metric": "rise_settle_ns",
+          "value": 22.83,
+          "op": "<=",
+          "limit": 12.24,
+          "source": 8.16,
+          "pass": false
+        },
+        {
+          "metric": "fall_settle_ns",
+          "value": 37.93,
+          "op": "<=",
+          "limit": 26.73,
+          "source": 17.82,
+          "pass": false
+        }
+      ],
+      "command_tracking": {
+        "rise_settle_ns": 22.560745999999998,
+        "rise_endpoint_error_V": 0.0005774999999998975,
+        "fall_settle_ns": 38.071999999999996,
+        "fall_endpoint_error_V": 0.00022780000000000022,
+        "observed_stop_s": 2e-07,
+        "max_retained_step_s": 1.0000199999999822e-11,
+        "measured_rows": 20032
+      },
+      "pass": false,
+      "outcome_category": "electrical_specification_failure"
+    },
+    {
+      "vdd": 1.2,
+      "upstream_pass": false,
+      "metrics": {
+        "dc_gain_dB": 67.13,
+        "ugf_Hz": 98193959.51411557,
+        "pm_deg": 58.5,
+        "gm_dB": 4.2,
+        "power_uW": 261.82,
+        "input_current_uA": 0.0,
+        "rise_settle_ns": 27.83,
+        "rise_overshoot_pct": 25.4,
+        "rise_slew_V_per_us": 26.1,
+        "fall_settle_ns": 28.77,
+        "fall_overshoot_pct": 18.95,
+        "fall_slew_V_per_us": 25.8,
+        "n_triode": 0
+      },
+      "errors": [],
+      "failed_checks": [
+        {
+          "metric": "dc_gain_dB",
+          "value": 67.13,
+          "op": ">=",
+          "limit": 72.71,
+          "source": 75.71,
+          "pass": false
+        },
+        {
+          "metric": "gm_dB",
+          "value": 4.2,
+          "op": ">=",
+          "limit": 10.0,
+          "source": 19.8,
+          "pass": false
+        },
+        {
+          "metric": "rise_settle_ns",
+          "value": 27.83,
+          "op": "<=",
+          "limit": 12.24,
+          "source": 8.16,
+          "pass": false
+        },
+        {
+          "metric": "fall_settle_ns",
+          "value": 28.77,
+          "op": "<=",
+          "limit": 26.73,
+          "source": 17.82,
+          "pass": false
+        }
+      ],
+      "command_tracking": {
+        "rise_settle_ns": 27.559186,
+        "rise_endpoint_error_V": 0.0004249999999998977,
+        "fall_settle_ns": 28.602368999999996,
+        "fall_endpoint_error_V": 0.0003339099999999373,
+        "observed_stop_s": 2e-07,
+        "max_retained_step_s": 1.0001000000001732e-11,
+        "measured_rows": 20036
+      },
+      "pass": false,
+      "outcome_category": "electrical_specification_failure"
+    },
+    {
+      "vdd": 1.25,
+      "upstream_pass": false,
+      "metrics": {
+        "dc_gain_dB": 63.74,
+        "ugf_Hz": 107611850.54164414,
+        "pm_deg": 49.3,
+        "gm_dB": 3.4,
+        "power_uW": 272.73,
+        "input_current_uA": 0.0,
+        "rise_settle_ns": 34.46,
+        "rise_overshoot_pct": 23.45,
+        "rise_slew_V_per_us": 26.7,
+        "fall_settle_ns": 35.8,
+        "fall_overshoot_pct": 18.87,
+        "fall_slew_V_per_us": 25.6,
+        "n_triode": 1
+      },
+      "errors": [],
+      "failed_checks": [
+        {
+          "metric": "dc_gain_dB",
+          "value": 63.74,
+          "op": ">=",
+          "limit": 72.71,
+          "source": 75.71,
+          "pass": false
+        },
+        {
+          "metric": "pm_deg",
+          "value": 49.3,
+          "op": ">=",
+          "limit": 55.0,
+          "source": 58.6,
+          "pass": false
+        },
+        {
+          "metric": "gm_dB",
+          "value": 3.4,
+          "op": ">=",
+          "limit": 10.0,
+          "source": 19.8,
+          "pass": false
+        },
+        {
+          "metric": "rise_settle_ns",
+          "value": 34.46,
+          "op": "<=",
+          "limit": 12.24,
+          "source": 8.16,
+          "pass": false
+        },
+        {
+          "metric": "fall_settle_ns",
+          "value": 35.8,
+          "op": "<=",
+          "limit": 26.73,
+          "source": 17.82,
+          "pass": false
+        }
+      ],
+      "command_tracking": {
+        "rise_settle_ns": 31.548511,
+        "rise_endpoint_error_V": 0.0004907000000000661,
+        "fall_settle_ns": 35.87995699999999,
+        "fall_endpoint_error_V": 0.00012811999999995383,
+        "observed_stop_s": 2e-07,
+        "max_retained_step_s": 1.0002999999995752e-11,
+        "measured_rows": 20039
+      },
+      "pass": false,
+      "outcome_category": "electrical_specification_failure"
+    }
+  ],
+  "finished_at_utc": "2026-11-03T08:59:50.620275+00:00"
+}

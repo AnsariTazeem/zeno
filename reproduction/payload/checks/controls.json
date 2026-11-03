@@ -1,0 +1,50 @@
+{
+  "controls": [
+    {
+      "task": "supply",
+      "label": "ref01",
+      "candidate": "checks/supply_ref01.sp",
+      "expected_native": "checks/supply_ref01_expected.json",
+      "category": "pass",
+      "conditions": 3,
+      "native_processes": 6
+    },
+    {
+      "task": "load",
+      "label": "ref01",
+      "candidate": "checks/load_ref01.sp",
+      "expected_native": "checks/load_ref01_expected.json",
+      "category": "pass",
+      "conditions": 6,
+      "native_processes": 1
+    },
+    {
+      "task": "tia",
+      "label": "ref01",
+      "candidate": "checks/tia_ref01.sp",
+      "expected_native": "checks/tia_ref01_expected.json",
+      "category": "pass",
+      "conditions": 6,
+      "native_processes": 1
+    },
+    {
+      "task": "supply",
+      "label": "neg01",
+      "candidate": "checks/supply_neg01.sp",
+      "expected_native": "checks/supply_neg01_expected.json",
+      "category": "specification_failure",
+      "conditions": 3,
+      "native_processes": 6
+    },
+    {
+      "task": "supply",
+      "label": "no_gain01",
+      "candidate": "checks/supply_no_gain01.sp",
+      "expected_native": "eval_core_v3/runs/supply/cs02_p2/native/result.json",
+      "expected_native_directory": "eval_core_v3/runs/supply/cs02_p2/native",
+      "category": "specification_failure",
+      "conditions": 3,
+      "native_processes": 6
+    }
+  ]
+}

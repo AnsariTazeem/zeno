@@ -1,0 +1,466 @@
+{
+  "outcome": "pass",
+  "score": 100,
+  "scope": "Compiled candidate all-condition evaluation",
+  "completed_operating_points": 6,
+  "all_points_pass": true,
+  "model_trial": false,
+  "cases": [
+    {
+      "case": {
+        "id": "case00",
+        "sensor_pF": 10,
+        "wire_pF": 2
+      },
+      "ac": {
+        "dc_transimpedance_real_ohm": -9991.333412281,
+        "dc_transimpedance_imag_ohm": 0.05540242705051,
+        "first_minus_3dB_Hz": 1922279.3842558553,
+        "all_minus_3dB_crossings_Hz": [
+          1922279.3842558553
+        ],
+        "response_peak_dB": 0.0,
+        "phase_at_low_frequency_deg": -0.03285756618894,
+        "low_frequency_loop_gain_dB": 63.48707445732,
+        "unity_downward_crossings_Hz": [
+          25933504.75441173
+        ],
+        "phase_margins_deg": [
+          55.919873917010506
+        ],
+        "dc_delivered_power_uW": 226.94191626120002
+      },
+      "transient": {
+        "initial_error_V": 7.260370569994734e-05,
+        "edges": [
+          {
+            "edge": 1,
+            "target_V": 0.7,
+            "settle_ns": 471.25000000000017,
+            "endpoint_error_V": 0.0002496973420000881,
+            "overshoot_V": 0.0
+          },
+          {
+            "edge": 2,
+            "target_V": 0.9,
+            "settle_ns": 441.75000000000006,
+            "endpoint_error_V": 7.13058243999587e-05,
+            "overshoot_V": 7.13058243999587e-05
+          },
+          {
+            "edge": 3,
+            "target_V": 0.7,
+            "settle_ns": 471.24999999999994,
+            "endpoint_error_V": 0.00024969733450008746,
+            "overshoot_V": 0.0
+          },
+          {
+            "edge": 4,
+            "target_V": 0.9,
+            "settle_ns": 441.75000000000045,
+            "endpoint_error_V": 7.130582449998979e-05,
+            "overshoot_V": 7.130582449998979e-05
+          }
+        ],
+        "rows": 10032,
+        "stop_s": 5e-06,
+        "max_retained_step_s": 5.000000000002493e-10,
+        "sense_range_V": [
+          0.8938317966626,
+          0.9063177410378
+        ]
+      },
+      "checks": {
+        "dc_gain": true,
+        "bandwidth": true,
+        "valid_loop": true,
+        "phase_margin": true,
+        "power": true,
+        "initial_accuracy": true,
+        "settling": true,
+        "overshoot": true
+      },
+      "pass": true
+    },
+    {
+      "case": {
+        "id": "case01",
+        "sensor_pF": 10,
+        "wire_pF": 10
+      },
+      "ac": {
+        "dc_transimpedance_real_ohm": -9991.333412287,
+        "dc_transimpedance_imag_ohm": 0.05541693542407,
+        "first_minus_3dB_Hz": 1970909.9787753306,
+        "all_minus_3dB_crossings_Hz": [
+          1970909.9787753306
+        ],
+        "response_peak_dB": 0.0,
+        "phase_at_low_frequency_deg": -0.03298194954345,
+        "low_frequency_loop_gain_dB": 63.48707445495,
+        "unity_downward_crossings_Hz": [
+          19465292.454718895
+        ],
+        "phase_margins_deg": [
+          58.385946912553045
+        ],
+        "dc_delivered_power_uW": 226.94191626120002
+      },
+      "transient": {
+        "initial_error_V": 7.260370569994734e-05,
+        "edges": [
+          {
+            "edge": 1,
+            "target_V": 0.7,
+            "settle_ns": 462.2500000000001,
+            "endpoint_error_V": 0.0002493914787000673,
+            "overshoot_V": 0.0
+          },
+          {
+            "edge": 2,
+            "target_V": 0.9,
+            "settle_ns": 433.7500000000003,
+            "endpoint_error_V": 7.16139158000173e-05,
+            "overshoot_V": 7.16139158000173e-05
+          },
+          {
+            "edge": 3,
+            "target_V": 0.7,
+            "settle_ns": 462.2500000000001,
+            "endpoint_error_V": 0.00024939147460001365,
+            "overshoot_V": 0.0
+          },
+          {
+            "edge": 4,
+            "target_V": 0.9,
+            "settle_ns": 433.7499999999999,
+            "endpoint_error_V": 7.161391569998621e-05,
+            "overshoot_V": 7.161391569998621e-05
+          }
+        ],
+        "rows": 10032,
+        "stop_s": 5e-06,
+        "max_retained_step_s": 5.000000000002493e-10,
+        "sense_range_V": [
+          0.8945328703457,
+          0.9055995896312
+        ]
+      },
+      "checks": {
+        "dc_gain": true,
+        "bandwidth": true,
+        "valid_loop": true,
+        "phase_margin": true,
+        "power": true,
+        "initial_accuracy": true,
+        "settling": true,
+        "overshoot": true
+      },
+      "pass": true
+    },
+    {
+      "case": {
+        "id": "case02",
+        "sensor_pF": 70,
+        "wire_pF": 2
+      },
+      "ac": {
+        "dc_transimpedance_real_ohm": -9991.333412329,
+        "dc_transimpedance_imag_ohm": 0.05551123985225,
+        "first_minus_3dB_Hz": 2336599.5348520675,
+        "all_minus_3dB_crossings_Hz": [
+          2336599.5348520675
+        ],
+        "response_peak_dB": 0.0,
+        "phase_at_low_frequency_deg": -0.03379044134604,
+        "low_frequency_loop_gain_dB": 63.48707443857,
+        "unity_downward_crossings_Hz": [
+          7781260.047388817
+        ],
+        "phase_margins_deg": [
+          64.57212250457302
+        ],
+        "dc_delivered_power_uW": 226.94191626120002
+      },
+      "transient": {
+        "initial_error_V": 7.260370569994734e-05,
+        "edges": [
+          {
+            "edge": 1,
+            "target_V": 0.7,
+            "settle_ns": 387.75,
+            "endpoint_error_V": 0.0002484565056000143,
+            "overshoot_V": 0.0
+          },
+          {
+            "edge": 2,
+            "target_V": 0.9,
+            "settle_ns": 365.25,
+            "endpoint_error_V": 7.25497157000321e-05,
+            "overshoot_V": 7.25497157000321e-05
+          },
+          {
+            "edge": 3,
+            "target_V": 0.7,
+            "settle_ns": 387.74999999999983,
+            "endpoint_error_V": 0.00024845650630000993,
+            "overshoot_V": 0.0
+          },
+          {
+            "edge": 4,
+            "target_V": 0.9,
+            "settle_ns": 365.25000000000045,
+            "endpoint_error_V": 7.254971579995217e-05,
+            "overshoot_V": 7.254971579995217e-05
+          }
+        ],
+        "rows": 10032,
+        "stop_s": 5e-06,
+        "max_retained_step_s": 5.000000000002493e-10,
+        "sense_range_V": [
+          0.8959836739742,
+          0.9041253015449
+        ]
+      },
+      "checks": {
+        "dc_gain": true,
+        "bandwidth": true,
+        "valid_loop": true,
+        "phase_margin": true,
+        "power": true,
+        "initial_accuracy": true,
+        "settling": true,
+        "overshoot": true
+      },
+      "pass": true
+    },
+    {
+      "case": {
+        "id": "case03",
+        "sensor_pF": 70,
+        "wire_pF": 10
+      },
+      "ac": {
+        "dc_transimpedance_real_ohm": -9991.333412335,
+        "dc_transimpedance_imag_ohm": 0.05552574822582,
+        "first_minus_3dB_Hz": 2395366.3826054465,
+        "all_minus_3dB_crossings_Hz": [
+          2395366.3826054465
+        ],
+        "response_peak_dB": 0.0,
+        "phase_at_low_frequency_deg": -0.03391482469998,
+        "low_frequency_loop_gain_dB": 63.48707443589,
+        "unity_downward_crossings_Hz": [
+          7146965.194235382
+        ],
+        "phase_margins_deg": [
+          64.48425311096088
+        ],
+        "dc_delivered_power_uW": 226.94191626120002
+      },
+      "transient": {
+        "initial_error_V": 7.260370569994734e-05,
+        "edges": [
+          {
+            "edge": 1,
+            "target_V": 0.7,
+            "settle_ns": 372.2500000000001,
+            "endpoint_error_V": 0.00024842472750008504,
+            "overshoot_V": 0.0
+          },
+          {
+            "edge": 2,
+            "target_V": 0.9,
+            "settle_ns": 350.75,
+            "endpoint_error_V": 7.258094919992963e-05,
+            "overshoot_V": 7.258094919992963e-05
+          },
+          {
+            "edge": 3,
+            "target_V": 0.7,
+            "settle_ns": 372.2500000000001,
+            "endpoint_error_V": 0.0002484247287000141,
+            "overshoot_V": 0.0
+          },
+          {
+            "edge": 4,
+            "target_V": 0.9,
+            "settle_ns": 350.75,
+            "endpoint_error_V": 7.258094910000956e-05,
+            "overshoot_V": 7.258094910000956e-05
+          }
+        ],
+        "rows": 10032,
+        "stop_s": 5e-06,
+        "max_retained_step_s": 5.000000000002493e-10,
+        "sense_range_V": [
+          0.8960809727854,
+          0.904027906569
+        ]
+      },
+      "checks": {
+        "dc_gain": true,
+        "bandwidth": true,
+        "valid_loop": true,
+        "phase_margin": true,
+        "power": true,
+        "initial_accuracy": true,
+        "settling": true,
+        "overshoot": true
+      },
+      "pass": true
+    },
+    {
+      "case": {
+        "id": "case04",
+        "sensor_pF": 150,
+        "wire_pF": 2
+      },
+      "ac": {
+        "dc_transimpedance_real_ohm": -9991.333412393,
+        "dc_transimpedance_imag_ohm": 0.05565632358791,
+        "first_minus_3dB_Hz": 2731653.135837784,
+        "all_minus_3dB_crossings_Hz": [
+          2731653.135837784
+        ],
+        "response_peak_dB": 0.0,
+        "phase_at_low_frequency_deg": -0.0350342748821,
+        "low_frequency_loop_gain_dB": 63.48707440999,
+        "unity_downward_crossings_Hz": [
+          4247278.544071742
+        ],
+        "phase_margins_deg": [
+          60.48800689250083
+        ],
+        "dc_delivered_power_uW": 226.94191626120002
+      },
+      "transient": {
+        "initial_error_V": 7.260370569994734e-05,
+        "edges": [
+          {
+            "edge": 1,
+            "target_V": 0.7,
+            "settle_ns": 381.24999999999994,
+            "endpoint_error_V": 0.0002484024914000127,
+            "overshoot_V": 0.004109763020299972
+          },
+          {
+            "edge": 2,
+            "target_V": 0.9,
+            "settle_ns": 393.7500000000002,
+            "endpoint_error_V": 7.256984560000124e-05,
+            "overshoot_V": 0.004580791472699963
+          },
+          {
+            "edge": 3,
+            "target_V": 0.7,
+            "settle_ns": 381.24999999999994,
+            "endpoint_error_V": 0.0002484024921000083,
+            "overshoot_V": 0.004109761917199917
+          },
+          {
+            "edge": 4,
+            "target_V": 0.9,
+            "settle_ns": 393.7500000000002,
+            "endpoint_error_V": 7.256984420001e-05,
+            "overshoot_V": 0.004580791472699963
+          }
+        ],
+        "rows": 10032,
+        "stop_s": 5e-06,
+        "max_retained_step_s": 5.000000000002493e-10,
+        "sense_range_V": [
+          0.8966352627254,
+          0.9034757938165
+        ]
+      },
+      "checks": {
+        "dc_gain": true,
+        "bandwidth": true,
+        "valid_loop": true,
+        "phase_margin": true,
+        "power": true,
+        "initial_accuracy": true,
+        "settling": true,
+        "overshoot": true
+      },
+      "pass": true
+    },
+    {
+      "case": {
+        "id": "case05",
+        "sensor_pF": 150,
+        "wire_pF": 10
+      },
+      "ac": {
+        "dc_transimpedance_real_ohm": -9991.333412399,
+        "dc_transimpedance_imag_ohm": 0.05567083196148,
+        "first_minus_3dB_Hz": 2741311.969168951,
+        "all_minus_3dB_crossings_Hz": [
+          2741311.969168951
+        ],
+        "response_peak_dB": 0.0,
+        "phase_at_low_frequency_deg": -0.03515865823522,
+        "low_frequency_loop_gain_dB": 63.4870744069,
+        "unity_downward_crossings_Hz": [
+          4077849.178987311
+        ],
+        "phase_margins_deg": [
+          59.92042368444791
+        ],
+        "dc_delivered_power_uW": 226.94191626120002
+      },
+      "transient": {
+        "initial_error_V": 7.260370569994734e-05,
+        "edges": [
+          {
+            "edge": 1,
+            "target_V": 0.7,
+            "settle_ns": 391.25000000000006,
+            "endpoint_error_V": 0.0002484575876000594,
+            "overshoot_V": 0.005365181481699954
+          },
+          {
+            "edge": 2,
+            "target_V": 0.9,
+            "settle_ns": 402.75000000000006,
+            "endpoint_error_V": 7.247844049995678e-05,
+            "overshoot_V": 0.005874565658799957
+          },
+          {
+            "edge": 3,
+            "target_V": 0.7,
+            "settle_ns": 391.24999999999983,
+            "endpoint_error_V": 0.0002484575876000594,
+            "overshoot_V": 0.0053651770976999025
+          },
+          {
+            "edge": 4,
+            "target_V": 0.9,
+            "settle_ns": 402.7500000000005,
+            "endpoint_error_V": 7.247844039992568e-05,
+            "overshoot_V": 0.005874565659300002
+          }
+        ],
+        "rows": 10032,
+        "stop_s": 5e-06,
+        "max_retained_step_s": 5.000000000002493e-10,
+        "sense_range_V": [
+          0.8966777852176,
+          0.9034335048566
+        ]
+      },
+      "checks": {
+        "dc_gain": true,
+        "bandwidth": true,
+        "valid_loop": true,
+        "phase_margin": true,
+        "power": true,
+        "initial_accuracy": true,
+        "settling": true,
+        "overshoot": true
+      },
+      "pass": true
+    }
+  ]
+}
