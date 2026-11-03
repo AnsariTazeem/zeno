@@ -1,0 +1,43 @@
+{
+  "source_sha256": "32bb15d9ab0689f2938c4a52a78c4c0c37588347500f1cdf0acf35e820d72722",
+  "records": [
+    {
+      "timestamp": "2026-11-03T15:43:41.265Z",
+      "record": {
+        "type": "custom_tool_call",
+        "id": "ctc_0221f4c4f6f5ce66016aea01236e588191a29014e428c9fbfc",
+        "status": "completed",
+        "call_id": "call_82847138c37f4f4ca9c0042a2eda3ac1",
+        "name": "exec",
+        "input": "const oldU=91.4955, oldPM=79.1, oldGM=7.8;\nconst fit=[];\nfunction phase(f, ps,z){return -90 + Math.atan(f/z)*180/Math.PI-ps.reduce((a,p)=>a+Math.atan(f/p)*180/Math.PI,0);}\nfunction shape(f,ps,z){return Math.sqrt(1+(f/z)**2)/ps.reduce((a,p)=>a*Math.sqrt(1+(f/p)**2),1);}\nfunction crossPhase(ps,z){let lo=oldU, hi=1e5;if(phase(hi,ps,z)>-180)return null;for(let j=0;j<45;j++){const m=Math.sqrt(lo*hi);if(phase(m,ps,z)>-180)lo=m;else hi=m;}return Math.sqrt(lo*hi);}\nfor(let n=0;n<150000;n++){\n const invgm=300+Math.random()*300;\n const z=1e6/(2*Math.PI*1.2*(1600-invgm));\n const ps=Array.from({length:3+(n%2)},()=>Math.pow(10,1.7+Math.random()*2.6));\n const pm=180+phase(oldU,ps,z);\n if(Math.abs(pm-oldPM)>0.4)continue;\n const k=oldU/shape(oldU,ps,z);\n const gm=2*Math.PI*1.2e-6*k;\n if(gm<0.00035||gm>0.0009)continue;\n const pc=crossPhase(ps,z);if(!pc)continue;\n const g=-20*Math.log10(k/pc*shape(pc,ps,z));\n if(Math.abs(g-oldGM)>.4)continue;\n const preds=[];\n for(const [c,r] of [[.95,1000],[.9,1100],[1,950],[.95,1050]]){\n const nz=1e6/(2*Math.PI*c*(r-invgm)),nk=k*1.2/c;\n let lo=1,hi=1000;\n for(let j=0;j<40;j++){const m=Math.sqrt(lo*hi);if(nk/m*shape(m,ps,nz)>1)lo=m;else hi=m;}\n const u=Math.sqrt(lo*hi),p=180+phase(u,ps,nz), np=crossPhase(ps,nz),g=-20*Math.log10(nk/np*shape(np,ps,nz));\n preds.push([u,p,g]);\n }\n fit.push({ps,invgm,gm,preds});\n}\ntext({fits:fit.length, ranges:[0,1,2,3].map(i=>({setting:i,range:[0,1,2].map(j=>[Math.min(...fit.map(f=>f.preds[i][j])),Math.max(...fit.map(f=>f.preds[i][j]))])})),examples:fit.slice(0,2)});\n",
+        "internal_chat_message_metadata_passthrough": {
+          "turn_id": "01a1a213-ceab-74a1-b71f-8d963a9f7283",
+          "create_time": 1793720611.4425197
+        }
+      }
+    },
+    {
+      "timestamp": "2026-11-03T15:43:44.490Z",
+      "record": {
+        "type": "custom_tool_call_output",
+        "id": "ctco_01a1a214-a56a-79c2-9836-242fb5793458",
+        "call_id": "call_82847138c37f4f4ca9c0042a2eda3ac1",
+        "output": [
+          {
+            "type": "input_text",
+            "text": "Script completed\nWall time 0.5 seconds\nOutput:\n"
+          },
+          {
+            "type": "input_text",
+            "text": "{\"fits\":0,\"ranges\":[{\"setting\":0,\"range\":[[null,null],[null,null],[null,null]]},{\"setting\":1,\"range\":[[null,null],[null,null],[null,null]]},{\"setting\":2,\"range\":[[null,null],[null,null],[null,null]]},{\"setting\":3,\"range\":[[null,null],[null,null],[null,null]]}],\"examples\":[]}"
+          }
+        ],
+        "internal_chat_message_metadata_passthrough": {
+          "turn_id": "01a1a213-ceab-74a1-b71f-8d963a9f7283",
+          "create_time": 1793720624.490834
+        }
+      }
+    }
+  ],
+  "public_metadata_note": "Private chat identifiers and local launch details withheld; original record retained in entry archive."
+}
