@@ -1,10 +1,5 @@
-# AI assistance
+# AI use
 
-AI tools assisted with research, task drafting, reference exploration, code,
-simulation runs, tests, packaging and analysis. The participant directed the
-project. Public circuits, models and testbench infrastructure are attributed
-in [prior work](PRIOR_WORK.md).
-
-Model responses, measured results and passing alternatives are retained.
-Automated checks are not independent human expert review. No personal
-checking record or expert endorsement is claimed.
+AI tools assisted with research, task design, implementation and analysis.
+Validation uses automated tests, reference circuits and ngspice runs.
+Original model responses and measured outputs are retained with the results.
