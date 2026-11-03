@@ -1,0 +1,646 @@
+{
+  "files": [
+    {
+      "path": "tasks/supply/PROMPT.txt",
+      "source": "reproduction/payload/analog_supply_pilot_v1/public_v2/PROMPT.txt",
+      "bytes": 7209,
+      "sha256": "7b0317c46fbac01010dddb77b4975466147db0429145e9df37af0159859a402e"
+    },
+    {
+      "path": "tasks/supply/TASK.md",
+      "source": "reproduction/payload/analog_supply_pilot_v1/public_v2/TASK.md",
+      "bytes": 5779,
+      "sha256": "ab873ea2d5eabf8d2be27542b445391f0e8e429339300a4786f350d2cd9b319d"
+    },
+    {
+      "path": "tasks/supply/starter.sp",
+      "source": "reproduction/payload/analog_supply_pilot_v1/public_v2/starter.sp",
+      "bytes": 1243,
+      "sha256": "8605f9e675fb6d047eb97910f80fa667a63f89ff841250b548984a1b04debfdd"
+    },
+    {
+      "path": "tasks/supply/contract.json",
+      "source": "reproduction/payload/analog_supply_pilot_v1/public_v2/contract.json",
+      "bytes": 1521,
+      "sha256": "b1ab4a010bc5ce9bfd41ffeebacbe3973020f59a281a50eb0d2fe6b4699426a2"
+    },
+    {
+      "path": "tasks/supply/LICENSE_UPSTREAM.txt",
+      "source": "reproduction/payload/analog_supply_pilot_v1/public_v2/LICENSE_UPSTREAM.txt",
+      "bytes": 1069,
+      "sha256": "d6b95b322ce7e119bbf18c0c43452cd88fa3247e5efcb1ac1c48bdffc886af75"
+    },
+    {
+      "path": "reference/supply.sp",
+      "source": "reproduction/payload/checks/supply_ref01.sp",
+      "bytes": 1385,
+      "sha256": "e8494224e2caf771c03b23ad3c982f2924640fa28dfd9591480ad6a47b3c78bc"
+    },
+    {
+      "path": "tasks/load/PROMPT.txt",
+      "source": "reproduction/payload/capload_case_v1/public/PROMPT.txt",
+      "bytes": 9292,
+      "sha256": "d2f9707791bbe7070eca2e622872987cc5da18aa97d4e83479546897b4603a45"
+    },
+    {
+      "path": "tasks/load/TASK.md",
+      "source": "reproduction/payload/capload_case_v1/public/TASK.md",
+      "bytes": 7656,
+      "sha256": "04937efe1947db5bbedc3988f50d4c1bdc1badbe72ba206d1dad7dc043bd8cb2"
+    },
+    {
+      "path": "tasks/load/starter.sp",
+      "source": "reproduction/payload/capload_case_v1/public/starter.sp",
+      "bytes": 83,
+      "sha256": "b1ed6ce7308f63d02ed3dfd08ecb0a8d73e42b1bec2752ab9ac472583d18afd5"
+    },
+    {
+      "path": "tasks/load/fixed_amplifier.sp",
+      "source": "reproduction/payload/capload_case_v1/public/fixed_amplifier.sp",
+      "bytes": 1385,
+      "sha256": "e8494224e2caf771c03b23ad3c982f2924640fa28dfd9591480ad6a47b3c78bc"
+    },
+    {
+      "path": "tasks/load/contract.json",
+      "source": "reproduction/payload/capload_case_v1/public/contract.json",
+      "bytes": 1560,
+      "sha256": "2b615a5cc09ef62ece6b03f76040bbe64570fa3ae3c1d04d1547ec37d40e0b31"
+    },
+    {
+      "path": "tasks/load/MODEL_IDENTITY.json",
+      "source": "reproduction/payload/capload_case_v1/public/MODEL_IDENTITY.json",
+      "bytes": 883,
+      "sha256": "ab7665233ec2a05316fdfc827ae402d090eef989251f680165d03807ed1920d9"
+    },
+    {
+      "path": "tasks/load/LICENSE_UPSTREAM.txt",
+      "source": "reproduction/payload/capload_case_v1/public/LICENSE_UPSTREAM.txt",
+      "bytes": 1069,
+      "sha256": "d6b95b322ce7e119bbf18c0c43452cd88fa3247e5efcb1ac1c48bdffc886af75"
+    },
+    {
+      "path": "reference/load.sp",
+      "source": "reproduction/payload/checks/load_ref01.sp",
+      "bytes": 105,
+      "sha256": "6037f51e6df2c571991e5bdadfc6f426c78888258e2db361c46d9897e8e6bf20"
+    },
+    {
+      "path": "tasks/tia/PROMPT.txt",
+      "source": "reproduction/payload/tia_case_v1/public/PROMPT.txt",
+      "bytes": 10098,
+      "sha256": "7def6e90969b00723fff6d97617798c62b5ed18ac39107854b622a78fc5e0c79"
+    },
+    {
+      "path": "tasks/tia/TASK.md",
+      "source": "reproduction/payload/tia_case_v1/public/TASK.md",
+      "bytes": 6154,
+      "sha256": "42263dbef3559ca8a6aab0b7caf1ddb7a09f7e784c656cd1963dc5abb5cf557b"
+    },
+    {
+      "path": "tasks/tia/starter.sp",
+      "source": "reproduction/payload/tia_case_v1/public/starter.sp",
+      "bytes": 85,
+      "sha256": "64870a2676739ba01ee9587b00f4919f11e64a6092b991b91dab6913728d838e"
+    },
+    {
+      "path": "tasks/tia/fixed_amplifier.sp",
+      "source": "reproduction/payload/tia_case_v1/public/fixed_amplifier.sp",
+      "bytes": 1385,
+      "sha256": "e8494224e2caf771c03b23ad3c982f2924640fa28dfd9591480ad6a47b3c78bc"
+    },
+    {
+      "path": "tasks/tia/contract.json",
+      "source": "reproduction/payload/tia_case_v1/public/contract.json",
+      "bytes": 2094,
+      "sha256": "e12b0d29c4965ecb68f54bfdfcd119a718c978cfb3e00d60120c7a732397d81c"
+    },
+    {
+      "path": "tasks/tia/MODEL_IDENTITY.json",
+      "source": "reproduction/payload/tia_case_v1/public/MODEL_IDENTITY.json",
+      "bytes": 474,
+      "sha256": "17bcbea07f53e66b5c9bf9a8b24d617f7f08a808e721e16d1e69e49102e9feaf"
+    },
+    {
+      "path": "tasks/tia/LICENSE_UPSTREAM.txt",
+      "source": "reproduction/payload/tia_case_v1/public/LICENSE_UPSTREAM.txt",
+      "bytes": 1069,
+      "sha256": "d6b95b322ce7e119bbf18c0c43452cd88fa3247e5efcb1ac1c48bdffc886af75"
+    },
+    {
+      "path": "reference/tia.sp",
+      "source": "reproduction/payload/checks/tia_ref01.sp",
+      "bytes": 106,
+      "sha256": "6572321e005a1f86fa1dd188b766a809f7bf600cf178874e50032bdba9118303"
+    },
+    {
+      "path": "transcripts/supply/proposal01/candidate.sp",
+      "source": "submission_draft_v2/package01/transcripts/supply/proposal01/candidate.sp",
+      "bytes": 635,
+      "sha256": "ba872c7d69f9f01180ac80a783b7ad9512ac41e301d86d10101c3c2f4b2b23bf"
+    },
+    {
+      "path": "transcripts/supply/proposal01/capture.json",
+      "source": "submission_draft_v2/package01/transcripts/supply/proposal01/capture.json",
+      "bytes": 402,
+      "sha256": "e42270f651ebc8a4d5730a6d1ab80fe75d120bf84d61a6f732369edab06bc37a"
+    },
+    {
+      "path": "transcripts/supply/proposal01/feedback.txt",
+      "source": "submission_draft_v2/package01/transcripts/supply/proposal01/feedback.txt",
+      "bytes": 6377,
+      "sha256": "ca4847d9361c976cff49a31007cff21fa6da27de6c105e9a22a32a25b478adaa"
+    },
+    {
+      "path": "transcripts/supply/proposal01/input_message.txt",
+      "source": "submission_draft_v2/package01/transcripts/supply/proposal01/input_message.txt",
+      "bytes": 8078,
+      "sha256": "c095ecf7d271ba76d2e553cf3e811dc157dcc3c2801f11b23ff9d372c8e50f65"
+    },
+    {
+      "path": "transcripts/supply/proposal01/launch.json",
+      "source": "submission_draft_v2/package01/transcripts/supply/proposal01/launch.json",
+      "bytes": 603,
+      "sha256": "13d74cd4184e37d6eac780deca0009fb15082edc209b05f6daacd7ad4f38c03b",
+      "source_sha256": "b432ae7f896c4f788ac53c69b1540040419335a8795b99508007173cd725fd51",
+      "treatment": "public metadata redaction",
+      "redacted_fields": [
+        "command",
+        "private identifier inside string"
+      ]
+    },
+    {
+      "path": "transcripts/supply/proposal01/model_reply.md",
+      "source": "submission_draft_v2/package01/transcripts/supply/proposal01/model_reply.md",
+      "bytes": 1032,
+      "sha256": "e30484e8a948adb0d288f2ec864c1c8f3f37874b691944ed66fc1e3616ba671f"
+    },
+    {
+      "path": "transcripts/supply/proposal01/tool_audit.json",
+      "source": "submission_draft_v2/package01/transcripts/supply/proposal01/tool_audit.json",
+      "bytes": 122,
+      "sha256": "055cd6754fa3a832a0e1e69be42e2079cd253283216cf72b6739afafcf7864a9"
+    },
+    {
+      "path": "transcripts/supply/proposal01/visible_tools.json",
+      "source": "submission_draft_v2/package01/transcripts/supply/proposal01/visible_tools.json",
+      "bytes": 239,
+      "sha256": "1c722820d14d26dec96b9eda5492568795bda702bda37fca8b528eaf1ba25914",
+      "source_sha256": "2960406c3773414762bde8ce525b981b05bc44ecff7b9e2e9c9ec1e9181514a8",
+      "treatment": "public metadata redaction",
+      "redacted_fields": [
+        "session_id"
+      ]
+    },
+    {
+      "path": "transcripts/supply/proposal02/candidate.sp",
+      "source": "submission_draft_v2/package01/transcripts/supply/proposal02/candidate.sp",
+      "bytes": 944,
+      "sha256": "cb7c7f5cb1da6648b6dc478524091996c902b83b497323f03ca112a27fcf014d"
+    },
+    {
+      "path": "transcripts/supply/proposal02/capture.json",
+      "source": "submission_draft_v2/package01/transcripts/supply/proposal02/capture.json",
+      "bytes": 406,
+      "sha256": "4bf2f21ba98bf02fecbf341d87f9e8274a4b0b32e9a9f1f9eae248cb4a85d188"
+    },
+    {
+      "path": "transcripts/supply/proposal02/feedback.txt",
+      "source": "submission_draft_v2/package01/transcripts/supply/proposal02/feedback.txt",
+      "bytes": 6721,
+      "sha256": "e679fc6972a3c68e6ba46be20e3bddf4ed00e8c6c3ee6a8c1f0d26c8793b782f"
+    },
+    {
+      "path": "transcripts/supply/proposal02/input_message.txt",
+      "source": "submission_draft_v2/package01/transcripts/supply/proposal02/input_message.txt",
+      "bytes": 6410,
+      "sha256": "258b457319ff57cc278d739078024922050e79078b8297b7f1fa07f3c2d3d8f4"
+    },
+    {
+      "path": "transcripts/supply/proposal02/launch.json",
+      "source": "submission_draft_v2/package01/transcripts/supply/proposal02/launch.json",
+      "bytes": 637,
+      "sha256": "3ae9575d127c9a323a4eb281c6d4650e657f1a1ad50513d8bf4520e4f3c45017",
+      "source_sha256": "8fabe558a00bb40a62ef547cb806bf97bfc8d9e26f697c13f53d9a30ecaf6823",
+      "treatment": "public metadata redaction",
+      "redacted_fields": [
+        "command",
+        "private identifier inside string"
+      ]
+    },
+    {
+      "path": "transcripts/supply/proposal02/model_reply.md",
+      "source": "submission_draft_v2/package01/transcripts/supply/proposal02/model_reply.md",
+      "bytes": 1238,
+      "sha256": "10d4d94ffadf5bde54c0132c17396e2d078385c7646614d573eec55a2d504c74"
+    },
+    {
+      "path": "transcripts/supply/proposal02/tool_audit.json",
+      "source": "submission_draft_v2/package01/transcripts/supply/proposal02/tool_audit.json",
+      "bytes": 122,
+      "sha256": "055cd6754fa3a832a0e1e69be42e2079cd253283216cf72b6739afafcf7864a9"
+    },
+    {
+      "path": "transcripts/supply/proposal02/visible_tools.json",
+      "source": "submission_draft_v2/package01/transcripts/supply/proposal02/visible_tools.json",
+      "bytes": 239,
+      "sha256": "79a3adf78dba12ad762428ac641d9b486d114d01613331d8317c605d78fdd675",
+      "source_sha256": "21df8845e0257c273d101cb56d5ac55b4de73eae73ccc93590c9a04992573e00",
+      "treatment": "public metadata redaction",
+      "redacted_fields": [
+        "session_id"
+      ]
+    },
+    {
+      "path": "transcripts/supply/proposal03/candidate.sp",
+      "source": "submission_draft_v2/package01/transcripts/supply/proposal03/candidate.sp",
+      "bytes": 991,
+      "sha256": "8bb15e3ee8312d72d2db543838cad93ff9702da83fc399b5b2f1adb7f26e27fe"
+    },
+    {
+      "path": "transcripts/supply/proposal03/capture.json",
+      "source": "submission_draft_v2/package01/transcripts/supply/proposal03/capture.json",
+      "bytes": 406,
+      "sha256": "630438666f5b307dd6f05c089f8087f1246910766c7ad0e057d828d08aebb6d2"
+    },
+    {
+      "path": "transcripts/supply/proposal03/input_message.txt",
+      "source": "submission_draft_v2/package01/transcripts/supply/proposal03/input_message.txt",
+      "bytes": 6750,
+      "sha256": "9fdf652e2eb759cc0378d9cad0c5b2edb701eeccf818ea583532bb50de52c8b2"
+    },
+    {
+      "path": "transcripts/supply/proposal03/launch.json",
+      "source": "submission_draft_v2/package01/transcripts/supply/proposal03/launch.json",
+      "bytes": 637,
+      "sha256": "4528d219946daa3059b7e84a9e366f21c73c867e1b7dbfa0d6934b12bd81f76a",
+      "source_sha256": "491fd986e48fbc24f0eb1f670e656a1e5086bfbbae77bb0df6c9a38b01df8b92",
+      "treatment": "public metadata redaction",
+      "redacted_fields": [
+        "command",
+        "private identifier inside string"
+      ]
+    },
+    {
+      "path": "transcripts/supply/proposal03/model_reply.md",
+      "source": "submission_draft_v2/package01/transcripts/supply/proposal03/model_reply.md",
+      "bytes": 1416,
+      "sha256": "ca19b2f7611e89ca15eac484674ee039f3f33195a589cd3c4b6cc24d3976d48a"
+    },
+    {
+      "path": "transcripts/supply/proposal03/tool_audit.json",
+      "source": "submission_draft_v2/package01/transcripts/supply/proposal03/tool_audit.json",
+      "bytes": 122,
+      "sha256": "055cd6754fa3a832a0e1e69be42e2079cd253283216cf72b6739afafcf7864a9"
+    },
+    {
+      "path": "transcripts/supply/proposal03/visible_tools.json",
+      "source": "submission_draft_v2/package01/transcripts/supply/proposal03/visible_tools.json",
+      "bytes": 239,
+      "sha256": "7c69014564e94a365eb2d3a26b3364097c26e685da17f82576083f5ca12e9783",
+      "source_sha256": "9ce56cdc0f8361ac46933567f140217d5a31d44662f9fc555848d01a6ba6f491",
+      "treatment": "public metadata redaction",
+      "redacted_fields": [
+        "session_id"
+      ]
+    },
+    {
+      "path": "transcripts/supply_v4/proposal01/candidate.sp",
+      "source": "submission_draft_v2/package01/transcripts/supply_v4/proposal01/candidate.sp",
+      "bytes": 1385,
+      "sha256": "d44161ee5e9953d8d069924f9430c9a49c14b5459e66a78cfbbaf2fe6771d700"
+    },
+    {
+      "path": "transcripts/supply_v4/proposal01/capture.json",
+      "source": "submission_draft_v2/package01/transcripts/supply_v4/proposal01/capture.json",
+      "bytes": 404,
+      "sha256": "13406564ffef18a72d974a4451d183c467a68a7529bcef4e1ee039137ac55870"
+    },
+    {
+      "path": "transcripts/supply_v4/proposal01/feedback.txt",
+      "source": "submission_draft_v2/package01/transcripts/supply_v4/proposal01/feedback.txt",
+      "bytes": 6745,
+      "sha256": "c6516c2d0bca0bd94fdd96f5402610f3b22618664fee1f1e194e02e8cbdce13e"
+    },
+    {
+      "path": "transcripts/supply_v4/proposal01/feedback_receipt.json",
+      "source": "submission_draft_v2/package01/transcripts/supply_v4/proposal01/feedback_receipt.json",
+      "bytes": 411,
+      "sha256": "1bbd79c00c4b4aef3a417edadc7284c6c7be3556322d65a79896c6f6d4a645e9"
+    },
+    {
+      "path": "transcripts/supply_v4/proposal01/input_message.txt",
+      "source": "submission_draft_v2/package01/transcripts/supply_v4/proposal01/input_message.txt",
+      "bytes": 8078,
+      "sha256": "c095ecf7d271ba76d2e553cf3e811dc157dcc3c2801f11b23ff9d372c8e50f65"
+    },
+    {
+      "path": "transcripts/supply_v4/proposal01/launch.json",
+      "source": "submission_draft_v2/package01/transcripts/supply_v4/proposal01/launch.json",
+      "bytes": 603,
+      "sha256": "b9ada27229b24a31a5c209ee44dcdb908349a1fdd7182154421b1ae8a3a1ee63",
+      "source_sha256": "90c0566052e39f06a915499665c44feb3ccd109fb304c885609bc46fe7828e34",
+      "treatment": "public metadata redaction",
+      "redacted_fields": [
+        "command",
+        "private identifier inside string"
+      ]
+    },
+    {
+      "path": "transcripts/supply_v4/proposal01/model_reply.md",
+      "source": "submission_draft_v2/package01/transcripts/supply_v4/proposal01/model_reply.md",
+      "bytes": 1906,
+      "sha256": "e5ecb3341aa163da1a1702da0172261a5e751ccfcf0c299de4482fde5c247c6f"
+    },
+    {
+      "path": "transcripts/supply_v4/proposal01/tool_audit.json",
+      "source": "submission_draft_v2/package01/transcripts/supply_v4/proposal01/tool_audit.json",
+      "bytes": 122,
+      "sha256": "055cd6754fa3a832a0e1e69be42e2079cd253283216cf72b6739afafcf7864a9"
+    },
+    {
+      "path": "transcripts/supply_v4/proposal01/visible_tools.json",
+      "source": "submission_draft_v2/package01/transcripts/supply_v4/proposal01/visible_tools.json",
+      "bytes": 239,
+      "sha256": "e11810170c302183f0721cc53121f2675f43b181f5e631494bf0dabe28c58bcf",
+      "source_sha256": "4ab33be56a887a357eab0d2cc9953dfda7db5875fbc60dd2c6df7ea8659d9c15",
+      "treatment": "public metadata redaction",
+      "redacted_fields": [
+        "session_id"
+      ]
+    },
+    {
+      "path": "transcripts/supply_v4/proposal02/candidate.sp",
+      "source": "submission_draft_v2/package01/transcripts/supply_v4/proposal02/candidate.sp",
+      "bytes": 1387,
+      "sha256": "dc9c2a5a9e2595300b3b002b5070ad65e3f61c8b568f0add0eb5a0cb84643cae"
+    },
+    {
+      "path": "transcripts/supply_v4/proposal02/capture.json",
+      "source": "submission_draft_v2/package01/transcripts/supply_v4/proposal02/capture.json",
+      "bytes": 408,
+      "sha256": "59d2bf114045b07a25b78bc9bc179fde61f4ac3d14d7037dde12b825ff89b792"
+    },
+    {
+      "path": "transcripts/supply_v4/proposal02/feedback.txt",
+      "source": "submission_draft_v2/package01/transcripts/supply_v4/proposal02/feedback.txt",
+      "bytes": 6543,
+      "sha256": "9b730268f166360f2a3ce866fb4219b854e48f5eef0d1e63c33189ee06b831c4"
+    },
+    {
+      "path": "transcripts/supply_v4/proposal02/feedback_receipt.json",
+      "source": "submission_draft_v2/package01/transcripts/supply_v4/proposal02/feedback_receipt.json",
+      "bytes": 411,
+      "sha256": "fea9148082d1a6de7812058981143547477f3da9e1f48cd13d7c30c6fb29a82f"
+    },
+    {
+      "path": "transcripts/supply_v4/proposal02/input_message.txt",
+      "source": "submission_draft_v2/package01/transcripts/supply_v4/proposal02/input_message.txt",
+      "bytes": 6801,
+      "sha256": "4a234f3131fd11596734e460cb5547cd652c63f2d5603b7a8777acb7dffcd587"
+    },
+    {
+      "path": "transcripts/supply_v4/proposal02/launch.json",
+      "source": "submission_draft_v2/package01/transcripts/supply_v4/proposal02/launch.json",
+      "bytes": 637,
+      "sha256": "6fb08a83d67cec71921755fe8b974a0ee255b48a151715dca7e815517a55fb52",
+      "source_sha256": "f3122c96564e20a79c166bcb85925fdf37bea9e7e60439e1a677e0d937c5120a",
+      "treatment": "public metadata redaction",
+      "redacted_fields": [
+        "command",
+        "private identifier inside string"
+      ]
+    },
+    {
+      "path": "transcripts/supply_v4/proposal02/model_reply.md",
+      "source": "submission_draft_v2/package01/transcripts/supply_v4/proposal02/model_reply.md",
+      "bytes": 1784,
+      "sha256": "a22c87d8cd66d40b31ba2dbf36dde3ee58125c2bf9e9973219980b437fd59740"
+    },
+    {
+      "path": "transcripts/supply_v4/proposal02/tool_audit.json",
+      "source": "submission_draft_v2/package01/transcripts/supply_v4/proposal02/tool_audit.json",
+      "bytes": 122,
+      "sha256": "055cd6754fa3a832a0e1e69be42e2079cd253283216cf72b6739afafcf7864a9"
+    },
+    {
+      "path": "transcripts/supply_v4/proposal02/visible_tools.json",
+      "source": "submission_draft_v2/package01/transcripts/supply_v4/proposal02/visible_tools.json",
+      "bytes": 239,
+      "sha256": "132f8ce36d6ce0829cd6a3652ddafecfe2b675935d887215e4b8f2965a12ed02",
+      "source_sha256": "213c97a4efadea576a295282a48ac3cd22d934ce4e7905cfd996ebf666e78fb9",
+      "treatment": "public metadata redaction",
+      "redacted_fields": [
+        "session_id"
+      ]
+    },
+    {
+      "path": "transcripts/supply_v4/proposal03/candidate.sp",
+      "source": "submission_draft_v2/package01/transcripts/supply_v4/proposal03/candidate.sp",
+      "bytes": 1387,
+      "sha256": "6ca767a466494bb1087b5fa0e9e30a35b9c95653d333f48e4f3ad4b58b15f908"
+    },
+    {
+      "path": "transcripts/supply_v4/proposal03/capture.json",
+      "source": "submission_draft_v2/package01/transcripts/supply_v4/proposal03/capture.json",
+      "bytes": 409,
+      "sha256": "b27a9554777c8d9a46873844fbad0b9e232aefdf2e8a97c852a747d9f57349a2"
+    },
+    {
+      "path": "transcripts/supply_v4/proposal03/input_message.txt",
+      "source": "submission_draft_v2/package01/transcripts/supply_v4/proposal03/input_message.txt",
+      "bytes": 6615,
+      "sha256": "e4a99561ac7f6b762b12d41a984b016d1c7d90063312671a27c61f4e4273b24b"
+    },
+    {
+      "path": "transcripts/supply_v4/proposal03/launch.json",
+      "source": "submission_draft_v2/package01/transcripts/supply_v4/proposal03/launch.json",
+      "bytes": 637,
+      "sha256": "ac70a5d8fb23bb3f7c3fa43c1a9e4f26a20b17c438a1b0e46414392bba76c150",
+      "source_sha256": "9a1f84bca522bf65050c69f1aa7fedea6fe807945eb3e7d9c066f705817f5b90",
+      "treatment": "public metadata redaction",
+      "redacted_fields": [
+        "command",
+        "private identifier inside string"
+      ]
+    },
+    {
+      "path": "transcripts/supply_v4/proposal03/model_reply.md",
+      "source": "submission_draft_v2/package01/transcripts/supply_v4/proposal03/model_reply.md",
+      "bytes": 1795,
+      "sha256": "d4ea0c8bad79d7bdcabd0be005e2a7cc000620cbb9e439410f2e4878d121dcda"
+    },
+    {
+      "path": "transcripts/supply_v4/proposal03/tool_audit.json",
+      "source": "submission_draft_v2/package01/transcripts/supply_v4/proposal03/tool_audit.json",
+      "bytes": 122,
+      "sha256": "055cd6754fa3a832a0e1e69be42e2079cd253283216cf72b6739afafcf7864a9"
+    },
+    {
+      "path": "transcripts/supply_v4/proposal03/visible_tools.json",
+      "source": "submission_draft_v2/package01/transcripts/supply_v4/proposal03/visible_tools.json",
+      "bytes": 3268,
+      "sha256": "859e242cd46430ced43feaa62dfd7818d5389d5eefcbefb0bf87da8af8e171b8",
+      "source_sha256": "137aec0bb58f92a93a9106e9ee4d46e023d72fcacb2069791bacf52dc2644c9f",
+      "treatment": "public metadata redaction",
+      "redacted_fields": [
+        "session_id"
+      ]
+    },
+    {
+      "path": "transcripts/load/proposal01/candidate_rendered.sp",
+      "source": "submission_draft_v2/package01/transcripts/load/proposal01/candidate_rendered.sp",
+      "bytes": 111,
+      "sha256": "0952810413709d53602f07446f73765edb94d1ab959c7f0da7c000fc3e0e921c"
+    },
+    {
+      "path": "transcripts/load/proposal01/capture_receipt.json",
+      "source": "submission_draft_v2/package01/transcripts/load/proposal01/capture_receipt.json",
+      "bytes": 1048,
+      "sha256": "d876df50a7453f9f1c09c2de7ef4430f3206612e9176344f49b3f9a0c934d645",
+      "source_sha256": "096efe9fd57293f094ba222b757db84e703dbeb6fb0dad1b7e3c2b53f6273ba3",
+      "treatment": "public metadata redaction",
+      "redacted_fields": [
+        "conversation_url"
+      ]
+    },
+    {
+      "path": "transcripts/load/proposal01/rendered_answer_whitespace_normalized.txt",
+      "source": "submission_draft_v2/package01/transcripts/load/proposal01/rendered_answer_whitespace_normalized.txt",
+      "bytes": 2186,
+      "sha256": "f7548ed95472bff8ac9292e4a024862c23e96d71311c4e1edb1b10d8a96aef44"
+    },
+    {
+      "path": "transcripts/load/proposal01/source_audit.json",
+      "source": "submission_draft_v2/package01/transcripts/load/proposal01/source_audit.json",
+      "bytes": 609,
+      "sha256": "bdbbf2267509082b473be7578f609329c5d5ebe4df12c7de1a250f0f75fa09e1"
+    },
+    {
+      "path": "transcripts/load/proposal02/candidate_rendered.sp",
+      "source": "submission_draft_v2/package01/transcripts/load/proposal02/candidate_rendered.sp",
+      "bytes": 125,
+      "sha256": "0fddb9ccdc01eb8a445cf9cbf4f7393f5ca4fa5df7744bcd3333c621464d1e4b"
+    },
+    {
+      "path": "transcripts/load/proposal02/capture_receipt.json",
+      "source": "submission_draft_v2/package01/transcripts/load/proposal02/capture_receipt.json",
+      "bytes": 1048,
+      "sha256": "9c6209e9a81f0c74e6ff0b3394ce31721113c60b3ec26ab448fe54a3a86a48ec",
+      "source_sha256": "6535c02c4e8108380aa12019fa979cd8fd2fbd9b211ee54115d02ffb09a2bbd3",
+      "treatment": "public metadata redaction",
+      "redacted_fields": [
+        "conversation_url"
+      ]
+    },
+    {
+      "path": "transcripts/load/proposal02/rendered_answer_whitespace_normalized.txt",
+      "source": "submission_draft_v2/package01/transcripts/load/proposal02/rendered_answer_whitespace_normalized.txt",
+      "bytes": 2389,
+      "sha256": "7725e45de0e5612a72ffc51d636684471a0af4b8d44b1de27c4eb2ebd0484e40"
+    },
+    {
+      "path": "transcripts/load/proposal02/source_audit.json",
+      "source": "submission_draft_v2/package01/transcripts/load/proposal02/source_audit.json",
+      "bytes": 826,
+      "sha256": "6886d52a4e5213514766b699b4f57efb1d8d549619baddd4f070d90a339af791"
+    },
+    {
+      "path": "transcripts/load/proposal03/candidate_rendered.sp",
+      "source": "submission_draft_v2/package01/transcripts/load/proposal03/candidate_rendered.sp",
+      "bytes": 145,
+      "sha256": "838960ad14473af1eca8e7152d160f6183f5700f345ef2936a0187c157b42347"
+    },
+    {
+      "path": "transcripts/load/proposal03/capture_receipt.json",
+      "source": "submission_draft_v2/package01/transcripts/load/proposal03/capture_receipt.json",
+      "bytes": 1048,
+      "sha256": "eaf69264b6961d076bceed9a4447ec60ba878e05955fba2f4ea5bdbd432ebe09",
+      "source_sha256": "94599063dcc2c4c0c5124ea51a70984058b13b6449724453888c8898ea9cab40",
+      "treatment": "public metadata redaction",
+      "redacted_fields": [
+        "conversation_url"
+      ]
+    },
+    {
+      "path": "transcripts/load/proposal03/rendered_answer_whitespace_normalized.txt",
+      "source": "submission_draft_v2/package01/transcripts/load/proposal03/rendered_answer_whitespace_normalized.txt",
+      "bytes": 2213,
+      "sha256": "f69bed834ed8855aead409f15b73f0a1bffb7a7b48f7487705d23d78ec4c74da"
+    },
+    {
+      "path": "transcripts/load/proposal03/source_audit.json",
+      "source": "submission_draft_v2/package01/transcripts/load/proposal03/source_audit.json",
+      "bytes": 765,
+      "sha256": "ad91efb74621178a38bd2e021f704a5f1b290b3081840d52f36ab3bda2569c85"
+    },
+    {
+      "path": "transcripts/tia/proposal01/candidate_rendered.sp",
+      "source": "submission_draft_v2/package01/transcripts/tia/proposal01/candidate_rendered.sp",
+      "bytes": 85,
+      "sha256": "42495a95f97653bb06dd2ccf6620c68e5344f548a9899d638842468fa8a78a1d"
+    },
+    {
+      "path": "transcripts/tia/proposal01/capture_receipt.json",
+      "source": "submission_draft_v2/package01/transcripts/tia/proposal01/capture_receipt.json",
+      "bytes": 909,
+      "sha256": "7b66e178fc5d517f3c9d89ee917dcd7ca74c15dafef9ae66827e0118c87e0cfe",
+      "source_sha256": "9473f9460a81146ae77b2c70436738bfa7159ca8ac31d061b671aad02228ff1b",
+      "treatment": "public metadata redaction",
+      "redacted_fields": [
+        "conversation_url"
+      ]
+    },
+    {
+      "path": "transcripts/tia/proposal01/rendered_answer_whitespace_normalized.txt",
+      "source": "submission_draft_v2/package01/transcripts/tia/proposal01/rendered_answer_whitespace_normalized.txt",
+      "bytes": 1010,
+      "sha256": "66f16de93f45e2aff2ee59eee3e670c44d507f5fd4d05542ff82ec1db28874ba"
+    },
+    {
+      "path": "transcripts/tia/proposal01/source_audit.json",
+      "source": "submission_draft_v2/package01/transcripts/tia/proposal01/source_audit.json",
+      "bytes": 794,
+      "sha256": "ea04b4e1df4b67c4240ef1eadb6e1d566ca01b8450bd550b0be8a49c56aa05fa",
+      "source_sha256": "64f1de6a84da6683edcc9ef605ba70bee64fd89784e97984411ca40a51f2a23e",
+      "treatment": "public metadata redaction",
+      "redacted_fields": [
+        "conversation_url"
+      ]
+    },
+    {
+      "path": "transcripts/tia/proposal02/candidate_rendered.sp",
+      "source": "submission_draft_v2/package01/transcripts/tia/proposal02/candidate_rendered.sp",
+      "bytes": 107,
+      "sha256": "6da3159f7ea705371e387d64a5024cbc32daf49e3434a008e0d51061fecc7b7e"
+    },
+    {
+      "path": "transcripts/tia/proposal02/capture_receipt.json",
+      "source": "submission_draft_v2/package01/transcripts/tia/proposal02/capture_receipt.json",
+      "bytes": 909,
+      "sha256": "79b5d1d76fdeb2076b26e6e17104ed30aca3bbbbb0bb828a00d0da1cb3db6ae6",
+      "source_sha256": "ff38e9a5f357392c06f982ad3a44dc1e7190ac812af7491a429df44c09e4949d",
+      "treatment": "public metadata redaction",
+      "redacted_fields": [
+        "conversation_url"
+      ]
+    },
+    {
+      "path": "transcripts/tia/proposal02/rendered_answer_whitespace_normalized.txt",
+      "source": "submission_draft_v2/package01/transcripts/tia/proposal02/rendered_answer_whitespace_normalized.txt",
+      "bytes": 1274,
+      "sha256": "e0a3ffad05d48522147dfa2d2113d1fc3b0384fdedef108a4fa037ae9f516c74"
+    },
+    {
+      "path": "transcripts/tia/proposal02/source_audit.json",
+      "source": "submission_draft_v2/package01/transcripts/tia/proposal02/source_audit.json",
+      "bytes": 904,
+      "sha256": "84ba9023a790e2dccb6c06bea645cb27c37becfc8f475760a10e406abdfe153d",
+      "source_sha256": "e26495acfe91901cb86e6eb97ffdf8dd98633ba3c0b7e884bb17470002cb797f",
+      "treatment": "public metadata redaction",
+      "redacted_fields": [
+        "conversation_url"
+      ]
+    }
+  ],
+  "scope": "Exact public packet/reference/response copies; metadata redactions explicitly recorded. Frozen reproduction tree unchanged."
+}
