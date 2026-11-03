@@ -1,5 +1,5 @@
-* text=auto eol=lf
-# Frozen source kit, including traces, must preserve its exact original bytes.
-/reproduction/** -text
+# Preserve the exact bytes recorded by the imported artifact manifests.
+# Authored repository files are written as UTF-8/LF before staging.
+* -text
 *.png binary
 *.pyd binary
