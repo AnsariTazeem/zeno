@@ -1,0 +1,14 @@
+{
+  "at_utc": "2026-11-01T19:28:44.089203+00:00",
+  "upstream_manifest.json": 13,
+  "model_manifest.json": 1065,
+  "simulator_sha256": "41a6bda700d9160089f2a39a14f94408172f7748215b68b81d39ea1bc26e300c",
+  "plan_sha256": "042a87a2daea7b94c705c14e70dd138541777627e17d78ab02821d712317dfa1",
+  "initial_code_sha256": {
+    "apparatus.py": "1bea6a0d6543e84afd6a266e4084d94382e9ffa77996d4b6d6a964549ee08435",
+    "network_input.py": "f7f7d27668a01b14b6fb6f76c577f2a8e863e09a8c333f99eef7021efc3eee87",
+    "qualify.py": "f8441d7a998fe8523be6ae3d4fcd369b0eacab6719b117a5598185fc0fea55b5"
+  },
+  "plant_sha256": "e8494224e2caf771c03b23ad3c982f2924640fa28dfd9591480ad6a47b3c78bc",
+  "model_calls": 0
+}
