@@ -1,0 +1,66 @@
+{
+  "recorded_at_utc": "2026-11-03T18:49:38.650888+00:00",
+  "run_id": 41695986264,
+  "run_url": "https://github.com/AnsariTazeem/zeno/actions/runs/41695986264",
+  "source_commit": "5442d80f46c00577c9d2d5db2057c54b35ad0e97",
+  "runner": "GitHub-hosted windows-2022",
+  "conclusion": "success",
+  "offline_tests_passed": 57,
+  "native_processes": 20,
+  "operating_conditions": 21,
+  "controls": [
+    {
+      "label": "load_ref01",
+      "category": "pass",
+      "conditions": 6,
+      "passing_conditions": 6,
+      "native_processes": 1
+    },
+    {
+      "label": "tia_ref01",
+      "category": "pass",
+      "conditions": 6,
+      "passing_conditions": 6,
+      "native_processes": 1
+    },
+    {
+      "label": "supply_ref01",
+      "category": "pass",
+      "conditions": 3,
+      "passing_conditions": 3,
+      "native_processes": 6
+    },
+    {
+      "label": "supply_neg01",
+      "category": "specification_failure",
+      "conditions": 3,
+      "passing_conditions": 0,
+      "native_processes": 6
+    },
+    {
+      "label": "supply_no_gain01",
+      "category": "specification_failure",
+      "conditions": 3,
+      "passing_conditions": 0,
+      "native_processes": 6
+    }
+  ],
+  "runtime_inputs_verified": 1202,
+  "verified_artifact_files": 309,
+  "artifacts": [
+    {
+      "name": "native-qualification",
+      "artifact_id": 13260742975,
+      "sha256": "59ded16b0c2944a1af1dad6f72be2f1252fc4e1692215330ffa167949a90dbd7",
+      "bytes": 5195341
+    },
+    {
+      "name": "offline-checks",
+      "artifact_id": 13260577804,
+      "sha256": "4d02667ea31164ebe0f13faec1dc8fb306fe22f456759dbd93f43777cb98b85c",
+      "bytes": 3661
+    }
+  ],
+  "model_calls": 0,
+  "scope": "Independent hosted Windows execution of the recorded source commit"
+}
