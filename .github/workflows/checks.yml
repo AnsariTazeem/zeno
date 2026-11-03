@@ -1,0 +1,79 @@
+name: Checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      native:
+        description: Run the five native circuit controls as well
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: zeno-${{ github.workflow }}-${{ github.event_name }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  offline:
+    runs-on: windows-2022
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6, verified 2026-11-03
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
+          architecture: x64
+      - name: Install hash-pinned test dependencies
+        run: >-
+          python -I -m pip --isolated install --disable-pip-version-check --no-deps
+          --only-binary=:all: --require-hashes -r reproduction/requirements.lock
+      - name: Run offline checks
+        run: python -I -B tools/run_checks.py
+      - name: Check setup entry point
+        run: python -I -B bootstrap.py --help
+      - name: Retain offline logs
+        if: always()
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
+        with:
+          name: offline-checks
+          path: .local-checks/
+          include-hidden-files: true
+          retention-days: 7
+
+  native:
+    if: ${{ github.event_name == 'workflow_dispatch' && inputs.native }}
+    needs: offline
+    runs-on: windows-2022
+    timeout-minutes: 30
+    env:
+      ZENO_RUNTIME: ${{ runner.temp }}\zeno_native
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
+          architecture: x64
+      - name: Bootstrap a fresh native environment
+        run: python -I -B bootstrap.py --output "$env:ZENO_RUNTIME" --cache "$env:RUNNER_TEMP/zeno_cache"
+      - name: Reproduce native controls
+        run: '& "$env:ZENO_RUNTIME/.venv/Scripts/python.exe" -I -B "$env:ZENO_RUNTIME/qualification.py"'
+      - name: Retain qualification evidence
+        if: always()
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
+        with:
+          name: native-qualification
+          path: |
+            ${{ env.ZENO_RUNTIME }}/qualification/
+            ${{ env.ZENO_RUNTIME }}/eval_core_v4/runs/
+            ${{ env.ZENO_RUNTIME }}/bootstrap*.json
+            ${{ env.ZENO_RUNTIME }}/pip_install_*.txt
+            ${{ env.ZENO_RUNTIME }}/materialize_*.txt
+          retention-days: 7
