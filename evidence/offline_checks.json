@@ -1,0 +1,32 @@
+{
+  "at_utc": "2026-11-03T17:28:04.314029+00:00",
+  "outcome": "passed",
+  "verified_frozen_files": 355,
+  "tests_passed": 50,
+  "checks": [
+    {
+      "suite": "bootstrap_boundaries",
+      "returncode": 0,
+      "expected_tests": 8,
+      "observed_tests": 8,
+      "passed": true
+    },
+    {
+      "suite": "grading_regressions",
+      "returncode": 0,
+      "expected_tests": 30,
+      "observed_tests": 30,
+      "passed": true
+    },
+    {
+      "suite": "supply_evidence",
+      "returncode": 0,
+      "expected_tests": 12,
+      "observed_tests": 12,
+      "passed": true
+    }
+  ],
+  "model_calls": 0,
+  "simulator_calls": 0,
+  "scope": "Offline regression checks on existing host; not native or independent-machine qualification"
+}
