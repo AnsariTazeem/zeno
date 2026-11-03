@@ -36,12 +36,12 @@ def main():
     log_parent = ROOT / '.local-checks'
     log_parent.mkdir(exist_ok=True)
     output = Path(tempfile.mkdtemp(prefix='offline_', dir=log_parent))
-    suites = [('bootstrap_boundaries','checks/test_bootstrap.py',8),
-              ('grading_regressions','eval_core_v4/test_core.py',30),
-              ('supply_evidence','eval_core_v4/test_supply_evidence.py',12)]
+    suites = [('bootstrap_boundaries',PAYLOAD/'checks/test_bootstrap.py',8),
+              ('grading_regressions',PAYLOAD/'eval_core_v4/test_core.py',30),
+              ('supply_evidence',PAYLOAD/'eval_core_v4/test_supply_evidence.py',12),
+              ('repository_layout',ROOT/'tests/test_repository_layout.py',7)]
     checks=[]
-    for label, name, count in suites:
-        path = PAYLOAD / name
+    for label, path, count in suites:
         command = [sys.executable,'-I','-B','-c',
             "import runpy,sys; sys.path.insert(0,sys.argv[1]); p=sys.argv[2]; sys.argv=[p]; runpy.run_path(p,run_name='__main__')",
             str(path.parent),str(path)]
