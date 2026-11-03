@@ -1,0 +1,58 @@
+{
+  "at_utc": "2026-11-03T15:54:26.908784+00:00",
+  "grader": "eval_core_v4",
+  "outcome": "fresh_venv_controls_reproduced_on_existing_host",
+  "tests_passed": 50,
+  "prepared_source_files_unchanged": true,
+  "verified_runtime_files": 1202,
+  "controls": [
+    {
+      "label": "load_ref01",
+      "category": "pass",
+      "conditions": 6,
+      "passing_conditions": 6,
+      "native_processes": 1
+    },
+    {
+      "label": "tia_ref01",
+      "category": "pass",
+      "conditions": 6,
+      "passing_conditions": 6,
+      "native_processes": 1
+    },
+    {
+      "label": "supply_ref01",
+      "category": "pass",
+      "conditions": 3,
+      "passing_conditions": 3,
+      "native_processes": 6
+    },
+    {
+      "label": "supply_neg01",
+      "category": "specification_failure",
+      "conditions": 3,
+      "passing_conditions": 0,
+      "native_processes": 6
+    },
+    {
+      "label": "supply_no_gain01",
+      "category": "specification_failure",
+      "conditions": 3,
+      "passing_conditions": 0,
+      "native_processes": 6
+    }
+  ],
+  "native_processes": 20,
+  "operating_conditions": 21,
+  "verified_native_artifact_files": 282,
+  "archive": "analog_reproduction_v4_02.zip",
+  "archive_bytes": 3688925,
+  "archive_sha256": "0f7ff84c537468fc6120bde3aefd90569c57a5779c6ddf17e05e9961c1c722f5",
+  "cached_assets": true,
+  "fresh_venv": true,
+  "independent_machine_or_OS": false,
+  "cached_setup_seconds": 67.197332,
+  "qualification_wall_seconds": 472.141038,
+  "model_calls": 0,
+  "rights_clearance_claimed": false
+}

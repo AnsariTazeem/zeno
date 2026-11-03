@@ -1,0 +1,33 @@
+{
+  "at_utc": "2026-11-03T15:56:27.381737+00:00",
+  "archive": "Analog_Change_Eval_v4_DRAFT_01.zip",
+  "archive_sha256": "ffb0a490a1da836551b55794b448e0734406d8fda973d7b32b6d3e327d6c4ab8",
+  "ZIP_extracted_without_overwrite": true,
+  "checks": [
+    {
+      "name": "saved_audit",
+      "returncode": 0
+    },
+    {
+      "name": "bootstrap_help",
+      "returncode": 0
+    },
+    {
+      "name": "wrapper_inspect",
+      "returncode": 0
+    }
+  ],
+  "byte_identical_tested_reproduction_kit": true,
+  "source_map_verified": true,
+  "captured_complete_session_proposals": 11,
+  "baseline_operating_points": 48,
+  "refined_operating_points": 18,
+  "completed_session_native_process_records": 55,
+  "interrupted_session_excluded_from_denominator": true,
+  "fresh_final_only_failure_is_rising_settling": true,
+  "model_calls": 0,
+  "simulator_calls": 0,
+  "submitted": false,
+  "ready_for_submission": false,
+  "scope": "Actual extracted ZIP audit on existing Windows host, not independent OS testing"
+}
