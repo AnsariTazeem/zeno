@@ -1,0 +1,86 @@
+* Loop-gain testbench, unity-gain follower (from tb_Opamp_2stg_stb).
+* ngspice has no stb: Middlebrook double injection at the output -> inn feedback point,
+*   Tv = -v(driver)/v(receiver), Ti = i(driver)/i(receiver), T = (Tv*Ti - 1)/(Tv + Ti + 2).
+* DUT: .subckt dut iref inp inn out.
+.lib ../../../../../../../analog_public_v1/deps/pdk/sky130A/libs.tech/combined/sky130.lib.spice tt
+.param VDD=1.25 Iref=20u
+.global vdd
+.options reltol=1e-3 gmin=1e-12 vntol=1e-6 abstol=1e-12
+.temp 27
+
+* Compiled component-only pilot DUT; no supplied simulator commands.
+.subckt dut iref inp inn out
+r0 iref vnc 1
+rn vnc vnb 13000
+xnr3 vnb vnc nr1 0 sky130_fd_pr__nfet_01v8_lvt W=20 L=0.5 nf=1 m=1
+xnr1 nr1 vnb 0 0 sky130_fd_pr__nfet_01v8_lvt W=40 L=2 nf=1 m=1
+xns1 vpc vnb 0 0 sky130_fd_pr__nfet_01v8_lvt W=10 L=2 nf=1 m=1
+rp vpb vpc 34000
+xpr3 vpb vpc pr1 vdd sky130_fd_pr__pfet_01v8_lvt W=20 L=0.5 nf=1 m=1
+xpr1 pr1 vpb vdd vdd sky130_fd_pr__pfet_01v8_lvt W=10 L=1 nf=1 m=1
+xnt tail vnb 0 0 sky130_fd_pr__nfet_01v8_lvt W=50 L=2 nf=1 m=1
+xni1 fa inp tail 0 sky130_fd_pr__nfet_01v8_lvt W=40 L=0.5 nf=1 m=1
+xni2 fb inn tail 0 sky130_fd_pr__nfet_01v8_lvt W=40 L=0.5 nf=1 m=1
+xps1 fa vpb vdd vdd sky130_fd_pr__pfet_01v8_lvt W=10 L=1 nf=1 m=6
+xps2 fb vpb vdd vdd sky130_fd_pr__pfet_01v8_lvt W=10 L=1 nf=1 m=6
+xpc1 o1 vpc fa vdd sky130_fd_pr__pfet_01v8_lvt W=70 L=0.5 nf=1 m=1
+xpc2 d1 vpc fb vdd sky130_fd_pr__pfet_01v8_lvt W=70 L=0.5 nf=1 m=1
+xnl3 d1 vnc nl1 0 sky130_fd_pr__nfet_01v8_lvt W=20 L=0.5 nf=1 m=1
+xnl1 nl1 d1 0 0 sky130_fd_pr__nfet_01v8_lvt W=10 L=0.5 nf=1 m=1
+xnl4 o1 vnc nl2 0 sky130_fd_pr__nfet_01v8_lvt W=20 L=0.5 nf=1 m=1
+xnl2 nl2 d1 0 0 sky130_fd_pr__nfet_01v8_lvt W=10 L=0.5 nf=1 m=1
+xn6 out o1 0 0 sky130_fd_pr__nfet_01v8_lvt W=40 L=0.5 nf=1 m=1
+xp7 out vpb vdd vdd sky130_fd_pr__pfet_01v8_lvt W=10 L=1 nf=1 m=19
+rz o1 cz 2000
+cc cz out 5.2000000000000001e-13
+.ends dut
+
+
+VSUP vdd 0 dc {VDD}
+.param VCM=0.9 CL=1p
+IREF vdd niref dc {Iref}
+VCMS nin 0 dc {VCM}
+XDUT niref nin nfb nout dut
+Vprb_b prb_n1 nout 0
+Vprb_inj prb_n1 prb_n2 0 ac 1
+Vprb_a prb_n2 nfb 0
+Iprb_inj 0 prb_n1 0 ac 0
+CL nout 0 {CL}
+
+.control
+set wr_singlescale
+set wr_vecnames
+option numdgt=7
+op
+print all > op_nodes.txt
+print @m.xdut.xnr3.msky130_fd_pr__nfet_01v8_lvt[id] @m.xdut.xnr3.msky130_fd_pr__nfet_01v8_lvt[vgs] @m.xdut.xnr3.msky130_fd_pr__nfet_01v8_lvt[vds] @m.xdut.xnr3.msky130_fd_pr__nfet_01v8_lvt[vdsat] @m.xdut.xnr3.msky130_fd_pr__nfet_01v8_lvt[vth] > op_devices.txt
+print @m.xdut.xnr1.msky130_fd_pr__nfet_01v8_lvt[id] @m.xdut.xnr1.msky130_fd_pr__nfet_01v8_lvt[vgs] @m.xdut.xnr1.msky130_fd_pr__nfet_01v8_lvt[vds] @m.xdut.xnr1.msky130_fd_pr__nfet_01v8_lvt[vdsat] @m.xdut.xnr1.msky130_fd_pr__nfet_01v8_lvt[vth] >> op_devices.txt
+print @m.xdut.xns1.msky130_fd_pr__nfet_01v8_lvt[id] @m.xdut.xns1.msky130_fd_pr__nfet_01v8_lvt[vgs] @m.xdut.xns1.msky130_fd_pr__nfet_01v8_lvt[vds] @m.xdut.xns1.msky130_fd_pr__nfet_01v8_lvt[vdsat] @m.xdut.xns1.msky130_fd_pr__nfet_01v8_lvt[vth] >> op_devices.txt
+print @m.xdut.xpr3.msky130_fd_pr__pfet_01v8_lvt[id] @m.xdut.xpr3.msky130_fd_pr__pfet_01v8_lvt[vgs] @m.xdut.xpr3.msky130_fd_pr__pfet_01v8_lvt[vds] @m.xdut.xpr3.msky130_fd_pr__pfet_01v8_lvt[vdsat] @m.xdut.xpr3.msky130_fd_pr__pfet_01v8_lvt[vth] >> op_devices.txt
+print @m.xdut.xpr1.msky130_fd_pr__pfet_01v8_lvt[id] @m.xdut.xpr1.msky130_fd_pr__pfet_01v8_lvt[vgs] @m.xdut.xpr1.msky130_fd_pr__pfet_01v8_lvt[vds] @m.xdut.xpr1.msky130_fd_pr__pfet_01v8_lvt[vdsat] @m.xdut.xpr1.msky130_fd_pr__pfet_01v8_lvt[vth] >> op_devices.txt
+print @m.xdut.xnt.msky130_fd_pr__nfet_01v8_lvt[id] @m.xdut.xnt.msky130_fd_pr__nfet_01v8_lvt[vgs] @m.xdut.xnt.msky130_fd_pr__nfet_01v8_lvt[vds] @m.xdut.xnt.msky130_fd_pr__nfet_01v8_lvt[vdsat] @m.xdut.xnt.msky130_fd_pr__nfet_01v8_lvt[vth] >> op_devices.txt
+print @m.xdut.xni1.msky130_fd_pr__nfet_01v8_lvt[id] @m.xdut.xni1.msky130_fd_pr__nfet_01v8_lvt[vgs] @m.xdut.xni1.msky130_fd_pr__nfet_01v8_lvt[vds] @m.xdut.xni1.msky130_fd_pr__nfet_01v8_lvt[vdsat] @m.xdut.xni1.msky130_fd_pr__nfet_01v8_lvt[vth] >> op_devices.txt
+print @m.xdut.xni2.msky130_fd_pr__nfet_01v8_lvt[id] @m.xdut.xni2.msky130_fd_pr__nfet_01v8_lvt[vgs] @m.xdut.xni2.msky130_fd_pr__nfet_01v8_lvt[vds] @m.xdut.xni2.msky130_fd_pr__nfet_01v8_lvt[vdsat] @m.xdut.xni2.msky130_fd_pr__nfet_01v8_lvt[vth] >> op_devices.txt
+print @m.xdut.xps1.msky130_fd_pr__pfet_01v8_lvt[id] @m.xdut.xps1.msky130_fd_pr__pfet_01v8_lvt[vgs] @m.xdut.xps1.msky130_fd_pr__pfet_01v8_lvt[vds] @m.xdut.xps1.msky130_fd_pr__pfet_01v8_lvt[vdsat] @m.xdut.xps1.msky130_fd_pr__pfet_01v8_lvt[vth] >> op_devices.txt
+print @m.xdut.xps2.msky130_fd_pr__pfet_01v8_lvt[id] @m.xdut.xps2.msky130_fd_pr__pfet_01v8_lvt[vgs] @m.xdut.xps2.msky130_fd_pr__pfet_01v8_lvt[vds] @m.xdut.xps2.msky130_fd_pr__pfet_01v8_lvt[vdsat] @m.xdut.xps2.msky130_fd_pr__pfet_01v8_lvt[vth] >> op_devices.txt
+print @m.xdut.xpc1.msky130_fd_pr__pfet_01v8_lvt[id] @m.xdut.xpc1.msky130_fd_pr__pfet_01v8_lvt[vgs] @m.xdut.xpc1.msky130_fd_pr__pfet_01v8_lvt[vds] @m.xdut.xpc1.msky130_fd_pr__pfet_01v8_lvt[vdsat] @m.xdut.xpc1.msky130_fd_pr__pfet_01v8_lvt[vth] >> op_devices.txt
+print @m.xdut.xpc2.msky130_fd_pr__pfet_01v8_lvt[id] @m.xdut.xpc2.msky130_fd_pr__pfet_01v8_lvt[vgs] @m.xdut.xpc2.msky130_fd_pr__pfet_01v8_lvt[vds] @m.xdut.xpc2.msky130_fd_pr__pfet_01v8_lvt[vdsat] @m.xdut.xpc2.msky130_fd_pr__pfet_01v8_lvt[vth] >> op_devices.txt
+print @m.xdut.xnl3.msky130_fd_pr__nfet_01v8_lvt[id] @m.xdut.xnl3.msky130_fd_pr__nfet_01v8_lvt[vgs] @m.xdut.xnl3.msky130_fd_pr__nfet_01v8_lvt[vds] @m.xdut.xnl3.msky130_fd_pr__nfet_01v8_lvt[vdsat] @m.xdut.xnl3.msky130_fd_pr__nfet_01v8_lvt[vth] >> op_devices.txt
+print @m.xdut.xnl1.msky130_fd_pr__nfet_01v8_lvt[id] @m.xdut.xnl1.msky130_fd_pr__nfet_01v8_lvt[vgs] @m.xdut.xnl1.msky130_fd_pr__nfet_01v8_lvt[vds] @m.xdut.xnl1.msky130_fd_pr__nfet_01v8_lvt[vdsat] @m.xdut.xnl1.msky130_fd_pr__nfet_01v8_lvt[vth] >> op_devices.txt
+print @m.xdut.xnl4.msky130_fd_pr__nfet_01v8_lvt[id] @m.xdut.xnl4.msky130_fd_pr__nfet_01v8_lvt[vgs] @m.xdut.xnl4.msky130_fd_pr__nfet_01v8_lvt[vds] @m.xdut.xnl4.msky130_fd_pr__nfet_01v8_lvt[vdsat] @m.xdut.xnl4.msky130_fd_pr__nfet_01v8_lvt[vth] >> op_devices.txt
+print @m.xdut.xnl2.msky130_fd_pr__nfet_01v8_lvt[id] @m.xdut.xnl2.msky130_fd_pr__nfet_01v8_lvt[vgs] @m.xdut.xnl2.msky130_fd_pr__nfet_01v8_lvt[vds] @m.xdut.xnl2.msky130_fd_pr__nfet_01v8_lvt[vdsat] @m.xdut.xnl2.msky130_fd_pr__nfet_01v8_lvt[vth] >> op_devices.txt
+print @m.xdut.xn6.msky130_fd_pr__nfet_01v8_lvt[id] @m.xdut.xn6.msky130_fd_pr__nfet_01v8_lvt[vgs] @m.xdut.xn6.msky130_fd_pr__nfet_01v8_lvt[vds] @m.xdut.xn6.msky130_fd_pr__nfet_01v8_lvt[vdsat] @m.xdut.xn6.msky130_fd_pr__nfet_01v8_lvt[vth] >> op_devices.txt
+print @m.xdut.xp7.msky130_fd_pr__pfet_01v8_lvt[id] @m.xdut.xp7.msky130_fd_pr__pfet_01v8_lvt[vgs] @m.xdut.xp7.msky130_fd_pr__pfet_01v8_lvt[vds] @m.xdut.xp7.msky130_fd_pr__pfet_01v8_lvt[vdsat] @m.xdut.xp7.msky130_fd_pr__pfet_01v8_lvt[vth] >> op_devices.txt
+ac dec 50 10 10G
+let lg_tv = -v(prb_n1)/v(prb_n2)
+alter Vprb_inj acmag=0
+alter Iprb_inj acmag=1
+ac dec 50 10 10G
+let lg_ti = i(Vprb_b)/i(Vprb_a)
+let tv = ac1.lg_tv
+let loopgain = (tv*lg_ti - 1)/(tv + lg_ti + 2)
+let lg_db = db(loopgain)
+let lg_ph = 180/pi*cph(loopgain)
+wrdata stb.txt lg_db lg_ph
+.endc
+.end
