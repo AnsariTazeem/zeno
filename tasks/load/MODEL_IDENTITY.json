@@ -1,0 +1,13 @@
+{
+  "amplifier_repository": "https://github.com/saeidrajabii/AnalogPortBench",
+  "amplifier_commit": "13c40b2dd9bae22b83e2fc4aba0adb05e99e4282",
+  "amplifier_source": "benchmark/golden/opamp_2stg_1v2.sp",
+  "PDK_open_pdks_build": "f6eeac7dad085ffcc829ccfd721f7b4ce39edcf7",
+  "PDK_release": "https://github.com/fossi-foundation/ciel-releases/releases/tag/sky130-f6eeac7dad085ffcc829ccfd721f7b4ce39edcf7",
+  "selected_model_files": 1065,
+  "model_manifest_sha256": "4b489804d74852817888031596285c0fa51a757e7e9224cbac3bcda1ff956b9a",
+  "simulator_version": "41",
+  "simulator_package_url": "https://conda.anaconda.org/conda-forge/win-64/ngspice-exe-41-h295a5eb_0.conda",
+  "simulator_executable_sha256": "41a6bda700d9160089f2a39a14f94408172f7748215b68b81d39ea1bc26e300c",
+  "scope": "Frozen public numerical model, not a named commercial IC or silicon characterization"
+}
