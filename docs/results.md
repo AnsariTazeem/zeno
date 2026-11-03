@@ -1,33 +1,30 @@
-# Selected results
+# Results
 
-Four complete selected adaptive sessions cover three tasks. The separate
-interrupted v3 follow-up is excluded from that denominator. LOAD and TIA
-passed; both complete SUPPLY sessions exhausted three proposals without
-a full pass. Versions/interfaces differ; no population rate is inferred.
+| Session | Proposals | Final outcome |
+|---|---:|---|
+| SUPPLY, Sol/High CLI, v3 | 3 | No full pass |
+| SUPPLY, Sol/High CLI, v4 | 3 | No full pass |
+| LOAD, UI-labelled GPT-6/High | 3 | Pass |
+| TIA, UI-labelled GPT-6/High | 2 | Pass |
 
-## Fresh v4 SUPPLY session
+Finer simulation confirmed each final result. The sessions use different
+interfaces and grader versions; they are not a matched model comparison.
 
-| Proposal | Profile | Supply V | Rise settling ns | Full pass |
-|---:|---|---:|---:|---|
-| 1 | baseline | 1.15 | 18.372 | False |
-| 1 | baseline | 1.2 | 16.792 | False |
-| 1 | baseline | 1.25 | 7.372 | False |
-| 2 | baseline | 1.15 | 14.432 | False |
-| 2 | baseline | 1.2 | 13.782 | False |
-| 2 | baseline | 1.25 | 13.322 | False |
-| 3 | baseline | 1.15 | 14.052 | False |
-| 3 | baseline | 1.2 | 13.672 | False |
-| 3 | baseline | 1.25 | 13.282 | False |
-| 3 | refined | 1.15 | 14.053 | False |
-| 3 | refined | 1.2 | 13.663 | False |
-| 3 | refined | 1.25 | 13.278 | False |
+## Latest SUPPLY circuit
 
-The final circuit passes every check except rising settling, whose limit is
-12.24 ns. Its finer profile confirms the same failure at all three supplies.
-Three proposals and twelve baseline/refined operating points are one
-adaptive session, not twelve independent samples. See the compact JSON
-under evidence/ and the complete local archive identified there.
+| Supply | Rising settling | Limit |
+|---:|---:|---:|
+| 1.15 V | 14.053 ns | 12.24 ns |
+| 1.20 V | 13.663 ns | 12.24 ns |
+| 1.25 V | 13.278 ns | 12.24 ns |
 
-Reproduction: 50 tests, five controls, 21 conditions and 20 successful
-native processes in a fresh venv on the existing Windows host. Independent
-machine/OS replication and broader matched model collection remain open.
+The final proposal passes the other checks but misses rising settling at all
+three supplies. Earlier proposals also missed stability requirements. This
+case measures the difficulty of meeting the coupled limits within three
+proposals; it does not establish a general failure rate.
+
+[Measurements](../evidence/supply_v4_summary.json) · [Catalog](../results/catalog.json) · [Responses](../transcripts/README.md)
+
+A separate SUPPLY follow-up stopped after two replies on a wrapper defect.
+It is excluded from the four complete-session count. Proposals, operating
+conditions and refined reruns are correlated measurements.

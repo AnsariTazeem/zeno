@@ -44,9 +44,8 @@ The completed run on this computer took about 67 seconds for cached setup and
 successful full-circuit native processes. These are observed timings, not
 guarantees. [Reproduction report](reproduction.md)
 
-A separate [clean-clone test](clone_reproduction.md) reproduced the committed
-source with a new venv on the same host. Independent-machine testing remains
-open; the [hosted workflow](ci.md) has not run yet.
+The source was checked in a fresh clone and venv. See [reproduction](reproduction.md)
+and [CI](ci.md) for run details.
 
 ## Grade a circuit
 

@@ -1,36 +1,25 @@
 # Methodology
 
-Each task has explicit input constraints and numerical acceptance limits.
-Every check must pass at every disclosed operating point. Equivalent permitted
-circuits are accepted. Scores for valid results are 100/0; malformed inputs,
-timeouts and genuinely invalid evidence remain separate unscored outcomes.
-There is no LLM judge.
+Each task defines the allowed circuit elements, operating points and limits.
+Every check must pass at every point. Valid results score 100 or 0; invalid
+input and invalid execution/evidence are separate unscored outcomes.
+Equivalent valid circuits are accepted. No LLM judge is used.
 
-The v4 supply adapter corrects a narrow classification defect: complete,
-finite, verified native sweeps may stay below unity gain and legitimately
-have undefined UGF/phase margin. With candidate/deck/process identities and
-raw trace coverage checked, this is electrical noncompliance. Null metrics
-are retained; missing/corrupt evidence and JSON-only nulls remain unscored.
-No physical requirement or old result was rewritten.
+Sessions allow at most three proposals, with feedback only about the submitted
+candidate. References are withheld. The final valid proposal is checked with
+finer numerics. CLI/UI sessions and grader versions are recorded separately.
+Backend revisions, temperatures and seeds are unknown.
 
-Model sessions are adaptive: at most three proposals, with feedback about
-only that proposal. Positive references are withheld. Passing final results
-and final valid failures receive finer numerical confirmation. Arithmetic
-availability and actual use are separate observations. Historical CLI/UI
-conditions and grader versions are labelled separately, without pooling them
-as a matched model ranking. Backend identity, temperature and seed are unknown.
+The v4 SUPPLY adapter handles a completed sweep whose gain stays below unity:
+UGF and phase margin can be undefined. With native identity and trace checks
+satisfied, this is an electrical failure. Missing or corrupt data stay unscored.
 
-The original and fresh SUPPLY sessions are complete. The v3 follow-up stopped
-after two replies on the wrapper defect and is excluded from completed-trial
-counts; no post-hoc grading invents a missing response. LOAD and TIA successes
-are retained. Selected results do not establish population rates.
+The two complete SUPPLY sessions, LOAD session and TIA session are included.
+A separate v3 follow-up stopped after two replies on a wrapper defect and is
+excluded from complete-trial counts. Conditions, proposals and refined runs
+are correlated measurements, not independent trials.
 
-The task envelopes are synthetic scenarios around attributed public circuits.
-Manufacturer application literature supports the physical mechanisms, not
-the specific thresholds, customer prevalence or silicon performance. No
-independent human expert or hardware validation is claimed.
-
-This repository contains references. Export exactly one public packet to a
-fresh subject context; LOAD/TIA's fixed plant can reveal SUPPLY's repair.
-Directory/feature restrictions do not prove OS secrecy or absence of training
-familiarity. Future trials must record the public-repository exposure context.
+Export one public packet per fresh model context. LOAD/TIA's fixed amplifier
+can expose SUPPLY's repair if tasks are mixed. The verifier uses fresh working
+directories; it is not a hardened OS sandbox. Public repository exposure must
+be recorded for future collections.
