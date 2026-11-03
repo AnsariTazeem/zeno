@@ -6,7 +6,8 @@
 | LOAD | [Compensate the load](load/TASK.md) | Six load/parasitic pairs |
 | TIA | [Design sensor feedback](tia/TASK.md) | Six sensor/wiring pairs |
 
-Each folder contains byte-identical copies of its frozen public packet.
+These are the versioned packets used in the recorded trials. Their original
+text, including dated status notes, is retained for replay.
 `contract.json` contains the scoring limits; `PROMPT.txt` is the model-facing
 request. [catalog.json](catalog.json) records source paths and hashes.
 
