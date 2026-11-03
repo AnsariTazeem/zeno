@@ -1,0 +1,221 @@
+{
+  "circuit": "opamp_2stg",
+  "netlist": "C:\\Users\\dell\\AppData\\Local\\Temp\\me_mi747alq\\analog_supply_pilot_v1\\runs\\s\\candidate_compiled.sp",
+  "tech": "sky130_lvt",
+  "vdd": 1.25,
+  "corner": "tt",
+  "metrics": {
+    "dc_gain_dB": 63.74,
+    "ugf_Hz": 107617883.75354974,
+    "pm_deg": 49.3,
+    "gm_dB": 3.4,
+    "power_uW": 272.73,
+    "input_current_uA": 0.0,
+    "rise_settle_ns": 34.46,
+    "rise_overshoot_pct": 23.46,
+    "rise_slew_V_per_us": 26.7,
+    "fall_settle_ns": 35.79,
+    "fall_overshoot_pct": 18.86,
+    "fall_slew_V_per_us": 25.6,
+    "n_triode": 1
+  },
+  "errors": [],
+  "warnings": [],
+  "headroom": {
+    "n_triode": 1,
+    "min_sat_margin_V": -0.011,
+    "triode_devices": [
+      "m.xdut.xpc2.msky130_fd_pr__pfet_01v8_lvt"
+    ],
+    "devices": [
+      {
+        "device": "m.xdut.xnb.msky130_fd_pr__nfet_01v8_lvt",
+        "type": "n",
+        "drain": "xdut.nb",
+        "id_uA": 19.004,
+        "vgs_V": 0.558,
+        "vds_V": 0.558,
+        "vdsat_V": 0.109,
+        "margin_V": 0.448
+      },
+      {
+        "device": "m.xdut.xnt.msky130_fd_pr__nfet_01v8_lvt",
+        "type": "n",
+        "drain": "xdut.tail",
+        "id_uA": 74.125,
+        "vgs_V": 0.558,
+        "vds_V": 0.331,
+        "vdsat_V": 0.109,
+        "margin_V": 0.222
+      },
+      {
+        "device": "m.xdut.xni1.msky130_fd_pr__nfet_01v8_lvt",
+        "type": "n",
+        "drain": "xdut.na",
+        "id_uA": 36.953,
+        "vgs_V": 0.569,
+        "vds_V": 0.201,
+        "vdsat_V": 0.085,
+        "margin_V": 0.116
+      },
+      {
+        "device": "m.xdut.xni2.msky130_fd_pr__nfet_01v8_lvt",
+        "type": "n",
+        "drain": "xdut.nbm",
+        "id_uA": 37.172,
+        "vgs_V": 0.569,
+        "vds_V": 0.198,
+        "vdsat_V": 0.085,
+        "margin_V": 0.113
+      },
+      {
+        "device": "m.xdut.xnc1.msky130_fd_pr__nfet_01v8_lvt",
+        "type": "n",
+        "drain": "xdut.stage",
+        "id_uA": 36.953,
+        "vgs_V": 0.566,
+        "vds_V": 0.332,
+        "vdsat_V": 0.057,
+        "margin_V": 0.275
+      },
+      {
+        "device": "m.xdut.xnc2.msky130_fd_pr__nfet_01v8_lvt",
+        "type": "n",
+        "drain": "xdut.mirror",
+        "id_uA": 37.172,
+        "vgs_V": 0.569,
+        "vds_V": 0.183,
+        "vdsat_V": 0.058,
+        "margin_V": 0.125
+      },
+      {
+        "device": "m.xdut.xpl1.msky130_fd_pr__pfet_01v8_lvt",
+        "type": "p",
+        "drain": "xdut.pa",
+        "id_uA": 37.172,
+        "vgs_V": 0.538,
+        "vds_V": 0.292,
+        "vdsat_V": 0.11,
+        "margin_V": 0.183
+      },
+      {
+        "device": "m.xdut.xpl2.msky130_fd_pr__pfet_01v8_lvt",
+        "type": "p",
+        "drain": "xdut.pb",
+        "id_uA": 36.953,
+        "vgs_V": 0.538,
+        "vds_V": 0.277,
+        "vdsat_V": 0.11,
+        "margin_V": 0.167
+      },
+      {
+        "device": "m.xdut.xpc1.msky130_fd_pr__pfet_01v8_lvt",
+        "type": "p",
+        "drain": "xdut.mirror",
+        "id_uA": 37.172,
+        "vgs_V": 0.539,
+        "vds_V": 0.245,
+        "vdsat_V": 0.111,
+        "margin_V": 0.135
+      },
+      {
+        "device": "m.xdut.xpc2.msky130_fd_pr__pfet_01v8_lvt",
+        "type": "p",
+        "drain": "xdut.stage",
+        "id_uA": 36.953,
+        "vgs_V": 0.555,
+        "vds_V": 0.109,
+        "vdsat_V": 0.12,
+        "margin_V": -0.011
+      },
+      {
+        "device": "m.xdut.xpo.msky130_fd_pr__pfet_01v8_lvt",
+        "type": "p",
+        "drain": "nout",
+        "id_uA": 124.06,
+        "vgs_V": 0.386,
+        "vds_V": 0.349,
+        "vdsat_V": 0.098,
+        "margin_V": 0.251
+      },
+      {
+        "device": "m.xdut.xno.msky130_fd_pr__nfet_01v8_lvt",
+        "type": "n",
+        "drain": "nout",
+        "id_uA": 124.06,
+        "vgs_V": 0.558,
+        "vds_V": 0.9,
+        "vdsat_V": 0.109,
+        "margin_V": 0.791
+      }
+    ]
+  },
+  "spec": "C:\\Users\\dell\\AppData\\Local\\Temp\\me_mi747alq\\analog_public_v1\\upstream\\benchmark\\circuits\\opamp_2stg\\spec.yaml",
+  "checks": [
+    {
+      "metric": "dc_gain_dB",
+      "value": 63.74,
+      "op": ">=",
+      "limit": 72.71,
+      "source": 75.71,
+      "pass": false
+    },
+    {
+      "metric": "ugf_Hz",
+      "value": 107617883.75354974,
+      "op": ">=",
+      "limit": 66590000.0,
+      "source": 83230000.0,
+      "pass": true
+    },
+    {
+      "metric": "pm_deg",
+      "value": 49.3,
+      "op": ">=",
+      "limit": 55.0,
+      "source": 58.6,
+      "pass": false
+    },
+    {
+      "metric": "gm_dB",
+      "value": 3.4,
+      "op": ">=",
+      "limit": 10.0,
+      "source": 19.8,
+      "pass": false
+    },
+    {
+      "metric": "power_uW",
+      "value": 272.73,
+      "op": "<=",
+      "limit": 296.4,
+      "source": 247.0,
+      "pass": true
+    },
+    {
+      "metric": "rise_settle_ns",
+      "value": 34.46,
+      "op": "<=",
+      "limit": 12.24,
+      "source": 8.16,
+      "pass": false
+    },
+    {
+      "metric": "fall_settle_ns",
+      "value": 35.79,
+      "op": "<=",
+      "limit": 26.73,
+      "source": 17.82,
+      "pass": false
+    },
+    {
+      "metric": "n_triode",
+      "value": 1,
+      "op": "<=",
+      "limit": 2,
+      "source": 2,
+      "pass": true
+    }
+  ],
+  "pass": false
+}
