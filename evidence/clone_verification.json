@@ -1,0 +1,63 @@
+{
+  "started_at_utc": "2026-11-03T18:05:36.879351+00:00",
+  "source_commit": "c3fd48ddff9aca0c53f26a041f06a1df7877b4ee",
+  "model_calls": 0,
+  "scope": "Fresh local Git clone, new venv and hash-reverified cache on this Windows host; not independent machine/OS or cold-cache proof",
+  "finished_at_utc": "2026-11-03T18:12:56.046299+00:00",
+  "outcome": "committed_source_closure_reproduced_on_existing_host",
+  "tracked_files": 482,
+  "git_objects_shared": false,
+  "reused_runtime_or_venv": false,
+  "cached_assets_reverified": true,
+  "offline_tests_passed": 57,
+  "native_controls": 5,
+  "operating_conditions": 21,
+  "native_processes": 20,
+  "controls": [
+    {
+      "label": "load_ref01",
+      "category": "pass",
+      "conditions": 6,
+      "passing_conditions": 6,
+      "native_processes": 1
+    },
+    {
+      "label": "tia_ref01",
+      "category": "pass",
+      "conditions": 6,
+      "passing_conditions": 6,
+      "native_processes": 1
+    },
+    {
+      "label": "supply_ref01",
+      "category": "pass",
+      "conditions": 3,
+      "passing_conditions": 3,
+      "native_processes": 6
+    },
+    {
+      "label": "supply_neg01",
+      "category": "specification_failure",
+      "conditions": 3,
+      "passing_conditions": 0,
+      "native_processes": 6
+    },
+    {
+      "label": "supply_no_gain01",
+      "category": "specification_failure",
+      "conditions": 3,
+      "passing_conditions": 0,
+      "native_processes": 6
+    }
+  ],
+  "source_files_unchanged": true,
+  "clone_working_tree_clean": true,
+  "independent_machine_or_OS": false,
+  "pushed": false,
+  "stage_seconds": {
+    "clone": 5.469,
+    "bootstrap": 77.703,
+    "offline_checks": 9.719,
+    "qualification": 344.141
+  }
+}
