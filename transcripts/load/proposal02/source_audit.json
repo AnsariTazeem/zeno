@@ -1,0 +1,11 @@
+{
+  "duration_ui": "6m 23s",
+  "single_complete_network_in_latest_answer": true,
+  "feedback_access_confirmed": "Correctly quotes all-six pass/fail categories, worst rising/falling excursions, minimum PM and maximum settling",
+  "model_changes": "Four-resistor local/load feedback with fixed-load DC compensation; circuit not altered by researcher",
+  "static_validation": "Accepted by local restricted compiler",
+  "simulation_claims": "New proposal explicitly not electrically simulated",
+  "ui_tool_status": "Analysis errored was displayed; final answer complete. No details of the internal tool failure recovered; not counted as local simulator or browser failure",
+  "reference_networks_provided": false,
+  "no_source_urls_cited": "No external URLs in final answer; complete outside-source history unproven"
+}
