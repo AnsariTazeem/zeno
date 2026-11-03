@@ -1,0 +1,279 @@
+{
+  "circuit": "opamp_2stg",
+  "netlist": "C:\\Users\\dell\\AppData\\Local\\Temp\\me_b46arz1e\\analog_supply_pilot_v1\\runs\\s\\candidate_compiled.sp",
+  "tech": "sky130_lvt",
+  "vdd": 1.2,
+  "corner": "tt",
+  "metrics": {
+    "dc_gain_dB": 78.38,
+    "ugf_Hz": 81382655.56390102,
+    "pm_deg": 69.1,
+    "gm_dB": 13.3,
+    "power_uW": 223.48,
+    "input_current_uA": 0.0,
+    "rise_settle_ns": 9.56,
+    "rise_overshoot_pct": 3.29,
+    "rise_slew_V_per_us": 36.2,
+    "fall_settle_ns": 9.28,
+    "fall_overshoot_pct": 0.01,
+    "fall_slew_V_per_us": 34.4,
+    "n_triode": 0
+  },
+  "errors": [],
+  "warnings": [],
+  "headroom": {
+    "n_triode": 0,
+    "min_sat_margin_V": 0.12,
+    "triode_devices": [],
+    "devices": [
+      {
+        "device": "m.xdut.xnr3.msky130_fd_pr__nfet_01v8_lvt",
+        "type": "n",
+        "drain": "xdut.vnb",
+        "id_uA": 20.0,
+        "vgs_V": 0.572,
+        "vds_V": 0.312,
+        "vdsat_V": 0.075,
+        "margin_V": 0.238
+      },
+      {
+        "device": "m.xdut.xnr1.msky130_fd_pr__nfet_01v8_lvt",
+        "type": "n",
+        "drain": "xdut.nr1",
+        "id_uA": 20.0,
+        "vgs_V": 0.52,
+        "vds_V": 0.207,
+        "vdsat_V": 0.087,
+        "margin_V": 0.12
+      },
+      {
+        "device": "m.xdut.xns1.msky130_fd_pr__nfet_01v8_lvt",
+        "type": "n",
+        "drain": "xdut.vpc",
+        "id_uA": 5.159,
+        "vgs_V": 0.52,
+        "vds_V": 0.432,
+        "vdsat_V": 0.087,
+        "margin_V": 0.345
+      },
+      {
+        "device": "m.xdut.xpr3.msky130_fd_pr__pfet_01v8_lvt",
+        "type": "p",
+        "drain": "xdut.vpb",
+        "id_uA": 5.159,
+        "vgs_V": 0.495,
+        "vds_V": 0.32,
+        "vdsat_V": 0.082,
+        "margin_V": 0.238
+      },
+      {
+        "device": "m.xdut.xpr1.msky130_fd_pr__pfet_01v8_lvt",
+        "type": "p",
+        "drain": "xdut.pr1",
+        "id_uA": 5.159,
+        "vgs_V": 0.593,
+        "vds_V": 0.272,
+        "vdsat_V": 0.143,
+        "margin_V": 0.129
+      },
+      {
+        "device": "m.xdut.xnt.msky130_fd_pr__nfet_01v8_lvt",
+        "type": "n",
+        "drain": "xdut.tail",
+        "id_uA": 25.789,
+        "vgs_V": 0.52,
+        "vds_V": 0.361,
+        "vdsat_V": 0.087,
+        "margin_V": 0.274
+      },
+      {
+        "device": "m.xdut.xni1.msky130_fd_pr__nfet_01v8_lvt",
+        "type": "n",
+        "drain": "xdut.fa",
+        "id_uA": 12.892,
+        "vgs_V": 0.539,
+        "vds_V": 0.565,
+        "vdsat_V": 0.056,
+        "margin_V": 0.509
+      },
+      {
+        "device": "m.xdut.xni2.msky130_fd_pr__nfet_01v8_lvt",
+        "type": "n",
+        "drain": "xdut.fb",
+        "id_uA": 12.898,
+        "vgs_V": 0.539,
+        "vds_V": 0.565,
+        "vdsat_V": 0.056,
+        "margin_V": 0.509
+      },
+      {
+        "device": "m.xdut.xps1.msky130_fd_pr__pfet_01v8_lvt",
+        "type": "p",
+        "drain": "xdut.fa",
+        "id_uA": 30.971,
+        "vgs_V": 0.593,
+        "vds_V": 0.274,
+        "vdsat_V": 0.143,
+        "margin_V": 0.13
+      },
+      {
+        "device": "m.xdut.xps2.msky130_fd_pr__pfet_01v8_lvt",
+        "type": "p",
+        "drain": "xdut.fb",
+        "id_uA": 30.976,
+        "vgs_V": 0.593,
+        "vds_V": 0.274,
+        "vdsat_V": 0.143,
+        "margin_V": 0.131
+      },
+      {
+        "device": "m.xdut.xpc1.msky130_fd_pr__pfet_01v8_lvt",
+        "type": "p",
+        "drain": "xdut.o1",
+        "id_uA": 18.079,
+        "vgs_V": 0.494,
+        "vds_V": 0.347,
+        "vdsat_V": 0.081,
+        "margin_V": 0.266
+      },
+      {
+        "device": "m.xdut.xpc2.msky130_fd_pr__pfet_01v8_lvt",
+        "type": "p",
+        "drain": "xdut.d1",
+        "id_uA": 18.078,
+        "vgs_V": 0.494,
+        "vds_V": 0.354,
+        "vdsat_V": 0.081,
+        "margin_V": 0.273
+      },
+      {
+        "device": "m.xdut.xnl3.msky130_fd_pr__nfet_01v8_lvt",
+        "type": "n",
+        "drain": "xdut.d1",
+        "id_uA": 18.078,
+        "vgs_V": 0.567,
+        "vds_V": 0.359,
+        "vdsat_V": 0.072,
+        "margin_V": 0.287
+      },
+      {
+        "device": "m.xdut.xnl1.msky130_fd_pr__nfet_01v8_lvt",
+        "type": "n",
+        "drain": "xdut.nl1",
+        "id_uA": 18.078,
+        "vgs_V": 0.572,
+        "vds_V": 0.212,
+        "vdsat_V": 0.09,
+        "margin_V": 0.122
+      },
+      {
+        "device": "m.xdut.xnl4.msky130_fd_pr__nfet_01v8_lvt",
+        "type": "n",
+        "drain": "xdut.o1",
+        "id_uA": 18.079,
+        "vgs_V": 0.567,
+        "vds_V": 0.366,
+        "vdsat_V": 0.072,
+        "margin_V": 0.294
+      },
+      {
+        "device": "m.xdut.xnl2.msky130_fd_pr__nfet_01v8_lvt",
+        "type": "n",
+        "drain": "xdut.nl2",
+        "id_uA": 18.079,
+        "vgs_V": 0.572,
+        "vds_V": 0.212,
+        "vdsat_V": 0.09,
+        "margin_V": 0.122
+      },
+      {
+        "device": "m.xdut.xn6.msky130_fd_pr__nfet_01v8_lvt",
+        "type": "n",
+        "drain": "nout",
+        "id_uA": 99.124,
+        "vgs_V": 0.579,
+        "vds_V": 0.9,
+        "vdsat_V": 0.094,
+        "margin_V": 0.805
+      },
+      {
+        "device": "m.xdut.xp7.msky130_fd_pr__pfet_01v8_lvt",
+        "type": "p",
+        "drain": "nout",
+        "id_uA": 99.124,
+        "vgs_V": 0.593,
+        "vds_V": 0.3,
+        "vdsat_V": 0.143,
+        "margin_V": 0.156
+      }
+    ]
+  },
+  "spec": "C:\\Users\\dell\\AppData\\Local\\Temp\\me_b46arz1e\\analog_public_v1\\upstream\\benchmark\\circuits\\opamp_2stg\\spec.yaml",
+  "checks": [
+    {
+      "metric": "dc_gain_dB",
+      "value": 78.38,
+      "op": ">=",
+      "limit": 72.71,
+      "source": 75.71,
+      "pass": true
+    },
+    {
+      "metric": "ugf_Hz",
+      "value": 81382655.56390102,
+      "op": ">=",
+      "limit": 66590000.0,
+      "source": 83230000.0,
+      "pass": true
+    },
+    {
+      "metric": "pm_deg",
+      "value": 69.1,
+      "op": ">=",
+      "limit": 55.0,
+      "source": 58.6,
+      "pass": true
+    },
+    {
+      "metric": "gm_dB",
+      "value": 13.3,
+      "op": ">=",
+      "limit": 10.0,
+      "source": 19.8,
+      "pass": true
+    },
+    {
+      "metric": "power_uW",
+      "value": 223.48,
+      "op": "<=",
+      "limit": 296.4,
+      "source": 247.0,
+      "pass": true
+    },
+    {
+      "metric": "rise_settle_ns",
+      "value": 9.56,
+      "op": "<=",
+      "limit": 12.24,
+      "source": 8.16,
+      "pass": true
+    },
+    {
+      "metric": "fall_settle_ns",
+      "value": 9.28,
+      "op": "<=",
+      "limit": 26.73,
+      "source": 17.82,
+      "pass": true
+    },
+    {
+      "metric": "n_triode",
+      "value": 0,
+      "op": "<=",
+      "limit": 2,
+      "source": 2,
+      "pass": true
+    }
+  ],
+  "pass": true
+}
