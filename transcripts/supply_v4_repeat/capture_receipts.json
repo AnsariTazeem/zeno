@@ -1,0 +1,118 @@
+{
+  "files": [
+    {
+      "public_path": "transcripts/supply_v4_repeat/proposal01/input_message.txt",
+      "source_sha256": "c095ecf7d271ba76d2e553cf3e811dc157dcc3c2801f11b23ff9d372c8e50f65",
+      "published_sha256": "c095ecf7d271ba76d2e553cf3e811dc157dcc3c2801f11b23ff9d372c8e50f65",
+      "transformation": "none"
+    },
+    {
+      "public_path": "transcripts/supply_v4_repeat/proposal01/model_reply.md",
+      "source_sha256": "1c25992c9700c820376da38a710642389dcad445edd7dcbad7bcd91e5d7d7b2d",
+      "published_sha256": "1c25992c9700c820376da38a710642389dcad445edd7dcbad7bcd91e5d7d7b2d",
+      "transformation": "none"
+    },
+    {
+      "public_path": "transcripts/supply_v4_repeat/proposal01/candidate.sp",
+      "source_sha256": "d2a8942245e6c27816087aa269c153ccf806ad9dd9c8ae11f70c483fe7badb2e",
+      "published_sha256": "d2a8942245e6c27816087aa269c153ccf806ad9dd9c8ae11f70c483fe7badb2e",
+      "transformation": "none"
+    },
+    {
+      "public_path": "transcripts/supply_v4_repeat/proposal01/capture.json",
+      "source_sha256": "6603da083a054825f05ce5faf2a4fc3893bf90b460f79365a31cb9c3b585b98f",
+      "published_sha256": "6603da083a054825f05ce5faf2a4fc3893bf90b460f79365a31cb9c3b585b98f",
+      "transformation": "none"
+    },
+    {
+      "public_path": "transcripts/supply_v4_repeat/proposal01/feedback.txt",
+      "source_sha256": "21ac75cfef92b9f776cae6ac16f235c2571474910234f1174471a453bc3a5ad4",
+      "published_sha256": "21ac75cfef92b9f776cae6ac16f235c2571474910234f1174471a453bc3a5ad4",
+      "transformation": "none"
+    },
+    {
+      "public_path": "transcripts/supply_v4_repeat/proposal01/feedback_receipt.json",
+      "source_sha256": "328709d085ef7c727607e7cfa1b0ba49ef188528e87f078261182f066d56ed0d",
+      "published_sha256": "328709d085ef7c727607e7cfa1b0ba49ef188528e87f078261182f066d56ed0d",
+      "transformation": "none"
+    },
+    {
+      "public_path": "transcripts/supply_v4_repeat/proposal01/launch.json",
+      "source_sha256": "3730285736e97b219bb91dbfec59e27870fb5516c6cb7d399afb9f59a588162f",
+      "published_sha256": "ca7f2bb1c0643942cf63aa32c07a674a4c380891dd767fc391a0c0c3d866e24a",
+      "transformation": "Private session IDs, local paths and launch commands omitted"
+    },
+    {
+      "public_path": "transcripts/supply_v4_repeat/proposal02/input_message.txt",
+      "source_sha256": "769b1af56709aca66f9b0e88516ef3659fa3be432847729eb061c72fd0c6bba0",
+      "published_sha256": "769b1af56709aca66f9b0e88516ef3659fa3be432847729eb061c72fd0c6bba0",
+      "transformation": "none"
+    },
+    {
+      "public_path": "transcripts/supply_v4_repeat/proposal02/model_reply.md",
+      "source_sha256": "f71ef5cea717d5b038141b98388d383b1ac02789b6335ceac87c3645670f364c",
+      "published_sha256": "f71ef5cea717d5b038141b98388d383b1ac02789b6335ceac87c3645670f364c",
+      "transformation": "none"
+    },
+    {
+      "public_path": "transcripts/supply_v4_repeat/proposal02/candidate.sp",
+      "source_sha256": "ef78b479f22ed2840dba1ac8c0498fda3df93e1b2684410834936c6a6fff309f",
+      "published_sha256": "ef78b479f22ed2840dba1ac8c0498fda3df93e1b2684410834936c6a6fff309f",
+      "transformation": "none"
+    },
+    {
+      "public_path": "transcripts/supply_v4_repeat/proposal02/capture.json",
+      "source_sha256": "d669165181baf9efe648a215c7d05c91044be4af3e618cb13944d6b98fc30a93",
+      "published_sha256": "d669165181baf9efe648a215c7d05c91044be4af3e618cb13944d6b98fc30a93",
+      "transformation": "none"
+    },
+    {
+      "public_path": "transcripts/supply_v4_repeat/proposal02/feedback.txt",
+      "source_sha256": "3af3847cba4d6b195454c9c73d8aae0852f5c3b9752457d426c97f0a7c22d319",
+      "published_sha256": "3af3847cba4d6b195454c9c73d8aae0852f5c3b9752457d426c97f0a7c22d319",
+      "transformation": "none"
+    },
+    {
+      "public_path": "transcripts/supply_v4_repeat/proposal02/feedback_receipt.json",
+      "source_sha256": "2118f9b569bca352d03dcc8cb4f01585f1187dc9c446dca3a7a072215c9d3d46",
+      "published_sha256": "2118f9b569bca352d03dcc8cb4f01585f1187dc9c446dca3a7a072215c9d3d46",
+      "transformation": "none"
+    },
+    {
+      "public_path": "transcripts/supply_v4_repeat/proposal02/launch.json",
+      "source_sha256": "5acc54926e381ba9ccc311336a55ea29f2bbc94b87899e4dec73c5ea33f3cdbf",
+      "published_sha256": "ec1c678316fc50d215819c34d5c5b2226cb0f5b6ac7295ef218570b8402a27ec",
+      "transformation": "Private session IDs, local paths and launch commands omitted"
+    },
+    {
+      "public_path": "transcripts/supply_v4_repeat/proposal03/input_message.txt",
+      "source_sha256": "425ecdb1d7db35385b3b276915366618c575a85d1e5e3b695dfeb524fae92f17",
+      "published_sha256": "425ecdb1d7db35385b3b276915366618c575a85d1e5e3b695dfeb524fae92f17",
+      "transformation": "none"
+    },
+    {
+      "public_path": "transcripts/supply_v4_repeat/proposal03/model_reply.md",
+      "source_sha256": "1b26831bf323a7c49391fc75377203503a089b7bedabaca6debd00ae7f1c24b8",
+      "published_sha256": "1b26831bf323a7c49391fc75377203503a089b7bedabaca6debd00ae7f1c24b8",
+      "transformation": "none"
+    },
+    {
+      "public_path": "transcripts/supply_v4_repeat/proposal03/candidate.sp",
+      "source_sha256": "46a61df6b5ac94f3db92aa7bf49a4dbc15d16eb22625616d532e2f19142143f7",
+      "published_sha256": "46a61df6b5ac94f3db92aa7bf49a4dbc15d16eb22625616d532e2f19142143f7",
+      "transformation": "none"
+    },
+    {
+      "public_path": "transcripts/supply_v4_repeat/proposal03/capture.json",
+      "source_sha256": "fd61d8a9f8ddf8d9ff3333b5cd7e12a6e0897afa64f93466650e62bed1a135f8",
+      "published_sha256": "fd61d8a9f8ddf8d9ff3333b5cd7e12a6e0897afa64f93466650e62bed1a135f8",
+      "transformation": "none"
+    },
+    {
+      "public_path": "transcripts/supply_v4_repeat/proposal03/launch.json",
+      "source_sha256": "3e7c6081d5508e8651624574d3f3a9c2f0cd5bb01f6b44e887d315fb2aa553aa",
+      "published_sha256": "740637d8dabb299db00426a591cdfab1ffc3d38bfcf5c8e3b76f4255487fc77f",
+      "transformation": "Private session IDs, local paths and launch commands omitted"
+    }
+  ]
+}

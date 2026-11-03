@@ -1,0 +1,15 @@
+{
+  "outcome": "budget_exhausted_no_verified_pass",
+  "response_turns": 3,
+  "one_adaptive_task_trial": true,
+  "recovered_after_collection_interrupt": true,
+  "first_reply_regenerated": false,
+  "repository_public_before_collection": true,
+  "requested_model": "gpt-6.1-sol",
+  "requested_effort": "high",
+  "exact_backend_revision_known": false,
+  "temperature": null,
+  "seed": null,
+  "separately_billed_API_calls": 0,
+  "original_stop_receipt_sha256": "c2ad33df55e5d61fa31daa11072b654edfc948054a39969c57cf61754d86f65f"
+}
