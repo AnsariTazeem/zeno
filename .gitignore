@@ -11,6 +11,12 @@
 !/docs/
 !/tools/
 !/evidence/
+!/tasks/
+!/reference/
+!/graders/
+!/results/
+!/transcripts/
+!/tests/
 
 # Generated state never belongs in the source import.
 **/__pycache__/
