@@ -1,0 +1,15 @@
+{
+  "trial_id": "TIA-P01-T02",
+  "proposal": 1,
+  "UI_work_duration": "4m 15s",
+  "complete_final_response_observed": true,
+  "outside_sources_cited_in_final": [],
+  "full_attachment_read": "Model self-report; correct current, voltage, capacitance and RC-pole discussion retained.",
+  "outside_source_or_reference_use": "Self-reported none; complete internal source history unavailable.",
+  "private_reference_or_previous_trial_answer_uploaded": false,
+  "transistor_level_simulation_claimed": false,
+  "raw_API_response": false,
+  "hash_origin": "Node crypto in browser-control runtime, independently matched by Python",
+  "code_changed_by_researcher": false,
+  "public_metadata_note": "Private chat identifiers and local launch details withheld; original record retained in entry archive."
+}

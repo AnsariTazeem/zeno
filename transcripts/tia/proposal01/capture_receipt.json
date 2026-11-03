@@ -1,0 +1,15 @@
+{
+  "trial_id": "TIA-P01-T02",
+  "proposal": 1,
+  "retained_at_utc": "2026-11-02T07:01:46.411827+00:00",
+  "capture_method": "Complete final rendered answer and all code blocks, before next request/response controls",
+  "candidate_sha256": "42495a95f97653bb06dd2ccf6620c68e5344f548a9899d638842468fa8a78a1d",
+  "rendered_answer_sha256": "66f16de93f45e2aff2ee59eee3e670c44d507f5fd4d05542ff82ec1db28874ba",
+  "prose_normalization": "Collapse whitespace runs, trim, terminal LF; exact code separately retained",
+  "code_normalization": "Rendered code trimEnd plus one terminal LF; initial blank retained",
+  "browser_hashes_matched": true,
+  "code_changed_by_researcher": false,
+  "complete_DUT_blocks_in_latest_answer": 1,
+  "source": "Rendered UI export, not raw API response",
+  "public_metadata_note": "Private chat identifiers and local launch details withheld; original record retained in entry archive."
+}
