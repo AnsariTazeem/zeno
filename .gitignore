@@ -17,6 +17,7 @@
 !/results/
 !/transcripts/
 !/tests/
+!/.github/
 
 # Generated state never belongs in the source import.
 **/__pycache__/
@@ -24,3 +25,4 @@
 **/test_workspace/
 **/.venv/
 **/.env
+/reproduction/cache/
