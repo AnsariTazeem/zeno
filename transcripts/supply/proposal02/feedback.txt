@@ -1,0 +1,245 @@
+Measured feedback for proposal 2 of 3.
+Task SUPPLY-P01-v2; unchanged physical inputs and electrical requirements.
+Outcome: specification_failure
+Supply 1.15 V:
+{
+  "metrics": {
+    "dc_gain_dB": 66.41,
+    "ugf_Hz": 77569818.42551804,
+    "pm_deg": 38.7,
+    "gm_dB": 5.0,
+    "power_uW": 251.2,
+    "input_current_uA": 0.0,
+    "rise_settle_ns": 49.47,
+    "rise_overshoot_pct": 21.45,
+    "rise_slew_V_per_us": 26.0,
+    "fall_settle_ns": 49.79,
+    "fall_overshoot_pct": 35.98,
+    "fall_slew_V_per_us": 18.2,
+    "n_triode": 2
+  },
+  "command_tracking": {
+    "rise_settle_ns": null,
+    "rise_endpoint_error_V": -0.015496990000000044,
+    "fall_settle_ns": null,
+    "fall_endpoint_error_V": 0.0041385699999999526,
+    "observed_stop_s": 2e-07,
+    "max_retained_step_s": 1.0000999999988497e-11,
+    "measured_rows": 20034
+  },
+  "electrical_pass": false,
+  "failed_checks": [
+    {
+      "metric": "dc_gain_dB",
+      "value": 66.41,
+      "op": ">=",
+      "limit": 72.71,
+      "source": 75.71,
+      "pass": false
+    },
+    {
+      "metric": "pm_deg",
+      "value": 38.7,
+      "op": ">=",
+      "limit": 55.0,
+      "source": 58.6,
+      "pass": false
+    },
+    {
+      "metric": "gm_dB",
+      "value": 5.0,
+      "op": ">=",
+      "limit": 10.0,
+      "source": 19.8,
+      "pass": false
+    },
+    {
+      "metric": "rise_settle_ns",
+      "value": 49.47,
+      "op": "<=",
+      "limit": 12.24,
+      "source": 8.16,
+      "pass": false
+    },
+    {
+      "metric": "fall_settle_ns",
+      "value": 49.79,
+      "op": "<=",
+      "limit": 26.73,
+      "source": 17.82,
+      "pass": false
+    }
+  ]
+}
+DC device diagnostics: name | Id_uA | abs_Vgs | abs_Vds | abs_Vdsat | saturation_margin_V
+xnb | 19.004 | 0.558 | 0.558 | 0.109 | 0.448
+xnt | 74.384 | 0.558 | 0.354 | 0.109 | 0.245
+xni1 | 37.192 | 0.546 | 0.069 | 0.072 | -0.003
+xni2 | 37.192 | 0.546 | 0.069 | 0.072 | -0.003
+xnc1 | 37.192 | 0.584 | 0.185 | 0.067 | 0.118
+xnc2 | 37.192 | 0.584 | 0.185 | 0.067 | 0.118
+xpl1 | 37.192 | 0.542 | 0.195 | 0.112 | 0.083
+xpl2 | 37.192 | 0.542 | 0.195 | 0.112 | 0.083
+xpc1 | 37.192 | 0.537 | 0.347 | 0.109 | 0.238
+xpc2 | 37.192 | 0.537 | 0.347 | 0.109 | 0.238
+xpo | 124.055 | 0.542 | 0.25 | 0.121 | 0.129
+xno | 124.055 | 0.558 | 0.9 | 0.109 | 0.791
+Supply 1.2 V:
+{
+  "metrics": {
+    "dc_gain_dB": 70.78,
+    "ugf_Hz": 81306295.91046546,
+    "pm_deg": 28.8,
+    "gm_dB": 4.3,
+    "power_uW": 262.13,
+    "input_current_uA": 0.0,
+    "rise_settle_ns": 49.38,
+    "rise_overshoot_pct": 11.83,
+    "rise_slew_V_per_us": 28.6,
+    "fall_settle_ns": 49.44,
+    "fall_overshoot_pct": 15.82,
+    "fall_slew_V_per_us": 16.3,
+    "n_triode": 2
+  },
+  "command_tracking": {
+    "rise_settle_ns": null,
+    "rise_endpoint_error_V": -0.00385972999999995,
+    "fall_settle_ns": null,
+    "fall_endpoint_error_V": -0.032801240000000065,
+    "observed_stop_s": 2e-07,
+    "max_retained_step_s": 1.0000499999999918e-11,
+    "measured_rows": 20034
+  },
+  "electrical_pass": false,
+  "failed_checks": [
+    {
+      "metric": "dc_gain_dB",
+      "value": 70.78,
+      "op": ">=",
+      "limit": 72.71,
+      "source": 75.71,
+      "pass": false
+    },
+    {
+      "metric": "pm_deg",
+      "value": 28.8,
+      "op": ">=",
+      "limit": 55.0,
+      "source": 58.6,
+      "pass": false
+    },
+    {
+      "metric": "gm_dB",
+      "value": 4.3,
+      "op": ">=",
+      "limit": 10.0,
+      "source": 19.8,
+      "pass": false
+    },
+    {
+      "metric": "rise_settle_ns",
+      "value": 49.38,
+      "op": "<=",
+      "limit": 12.24,
+      "source": 8.16,
+      "pass": false
+    },
+    {
+      "metric": "fall_settle_ns",
+      "value": 49.44,
+      "op": "<=",
+      "limit": 26.73,
+      "source": 17.82,
+      "pass": false
+    }
+  ]
+}
+DC device diagnostics: name | Id_uA | abs_Vgs | abs_Vds | abs_Vdsat | saturation_margin_V
+xnb | 19.004 | 0.558 | 0.558 | 0.109 | 0.448
+xnt | 74.386 | 0.558 | 0.354 | 0.109 | 0.245
+xni1 | 37.193 | 0.546 | 0.07 | 0.072 | -0.002
+xni2 | 37.193 | 0.546 | 0.07 | 0.072 | -0.002
+xnc1 | 37.193 | 0.583 | 0.236 | 0.067 | 0.17
+xnc2 | 37.193 | 0.583 | 0.236 | 0.067 | 0.17
+xpl1 | 37.193 | 0.539 | 0.244 | 0.111 | 0.133
+xpl2 | 37.193 | 0.539 | 0.244 | 0.111 | 0.133
+xpc1 | 37.193 | 0.538 | 0.296 | 0.11 | 0.186
+xpc2 | 37.193 | 0.538 | 0.295 | 0.11 | 0.186
+xpo | 124.055 | 0.539 | 0.3 | 0.12 | 0.18
+xno | 124.055 | 0.558 | 0.9 | 0.109 | 0.791
+Supply 1.25 V:
+{
+  "metrics": {
+    "dc_gain_dB": 73.15,
+    "ugf_Hz": 84947435.33741955,
+    "pm_deg": 20.2,
+    "gm_dB": 3.6,
+    "power_uW": 273.05,
+    "input_current_uA": 0.0,
+    "rise_settle_ns": 43.51,
+    "rise_overshoot_pct": 10.93,
+    "rise_slew_V_per_us": 29.7,
+    "fall_settle_ns": 49.72,
+    "fall_overshoot_pct": 13.1,
+    "fall_slew_V_per_us": 15.9,
+    "n_triode": 2
+  },
+  "command_tracking": {
+    "rise_settle_ns": 43.656581,
+    "rise_endpoint_error_V": -0.00018649999999997835,
+    "fall_settle_ns": null,
+    "fall_endpoint_error_V": -0.04436623000000006,
+    "observed_stop_s": 2e-07,
+    "max_retained_step_s": 1.0000499999999918e-11,
+    "measured_rows": 20034
+  },
+  "electrical_pass": false,
+  "failed_checks": [
+    {
+      "metric": "pm_deg",
+      "value": 20.2,
+      "op": ">=",
+      "limit": 55.0,
+      "source": 58.6,
+      "pass": false
+    },
+    {
+      "metric": "gm_dB",
+      "value": 3.6,
+      "op": ">=",
+      "limit": 10.0,
+      "source": 19.8,
+      "pass": false
+    },
+    {
+      "metric": "rise_settle_ns",
+      "value": 43.51,
+      "op": "<=",
+      "limit": 12.24,
+      "source": 8.16,
+      "pass": false
+    },
+    {
+      "metric": "fall_settle_ns",
+      "value": 49.72,
+      "op": "<=",
+      "limit": 26.73,
+      "source": 17.82,
+      "pass": false
+    }
+  ]
+}
+DC device diagnostics: name | Id_uA | abs_Vgs | abs_Vds | abs_Vdsat | saturation_margin_V
+xnb | 19.004 | 0.558 | 0.558 | 0.109 | 0.448
+xnt | 74.387 | 0.558 | 0.354 | 0.109 | 0.245
+xni1 | 37.194 | 0.546 | 0.071 | 0.072 | -0.001
+xni2 | 37.194 | 0.546 | 0.071 | 0.072 | -0.001
+xnc1 | 37.194 | 0.582 | 0.287 | 0.066 | 0.221
+xnc2 | 37.194 | 0.582 | 0.287 | 0.066 | 0.221
+xpl1 | 37.194 | 0.538 | 0.292 | 0.11 | 0.182
+xpl2 | 37.194 | 0.538 | 0.292 | 0.11 | 0.182
+xpc1 | 37.194 | 0.539 | 0.246 | 0.111 | 0.135
+xpc2 | 37.194 | 0.539 | 0.245 | 0.111 | 0.134
+xpo | 124.055 | 0.537 | 0.35 | 0.118 | 0.232
+xno | 124.055 | 0.558 | 0.9 | 0.109 | 0.791
+1 complete proposal(s) remain. Return one revised complete DUT and a short explanation. New performance predictions remain estimates until measured.

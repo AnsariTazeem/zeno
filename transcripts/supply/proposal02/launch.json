@@ -1,0 +1,12 @@
+{
+  "started_at_utc": "2026-11-03T08:40:58.917209+00:00",
+  "requested_model": "gpt-6.1-sol",
+  "requested_effort": "high",
+  "resume_session": "01a1a08c-2f42-7ae0-9870-89bf711fcf9f",
+  "prompt_sha256": "258b457319ff57cc278d739078024922050e79078b8297b7f1fa07f3c2d3d8f4",
+  "auth": "Saved ChatGPT confirmed; API/provider overrides removed",
+  "working_directory": "[local path withheld]",
+  "runner_sha256": "437c166833b335a5201c956638becf05425ff2703f61d7c6b4255dd7faf60dfe",
+  "fallback_billing": false,
+  "public_metadata_note": "Private chat identifiers and local launch details withheld; original record retained in entry archive."
+}
