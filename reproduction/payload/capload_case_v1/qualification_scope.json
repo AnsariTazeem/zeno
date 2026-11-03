@@ -1,0 +1,30 @@
+{
+  "stage": "Reference feasibility before model evaluation",
+  "problem": "Compensate a frozen voltage-feedback amplifier driving a lumped capacitive and resistive input load without losing load-node DC accuracy or command settling",
+  "original_work": "Authored system task, passive-network design space, load scenarios and grading; amplifier and device models are attributed prior work",
+  "VDD_V": 1.2,
+  "Iref_A": 0.00002,
+  "process": "tt",
+  "temperature_C": 27,
+  "load_capacitances_pF": [50, 150, 300],
+  "feedback_node_stray_capacitances_pF": [0.2, 2],
+  "load_resistance_ohm": 100000,
+  "input_low_V": 0.8,
+  "input_high_V": 1.0,
+  "source_transition_ns": 20,
+  "first_transition_us": 5,
+  "edge_interval_us": 5,
+  "observation_us": 25,
+  "candidate_changes": "Passive feedback/isolation network only; fixed amplifier, source, load, supply and reference current",
+  "proposed_limits": {
+    "all_downward_unity_crossing_phase_margins_deg_min": 50,
+    "command_error_band_V": 0.0005,
+    "settle_us_max_each_of_four_edges": 2.5,
+    "overshoot_V_max_each_edge": 0.01,
+    "dc_supply_power_uW_max": 350
+  },
+  "limits_status": "Proposed system requirements declared before feasibility probes; not an already-qualified task or field measurement",
+  "simplifications": "Lumped loads only; no transmission-line model, ADC sampling kickback, noise, layout, PVT breadth or silicon guarantee",
+  "model_trials_started": 0,
+  "stop_rule": "Require a passing network and meaningful failing alternatives under refined numerics; otherwise investigate or reject the scenario before collecting model answers"
+}
