@@ -1,10 +1,10 @@
 # AI assistance
 
-Research synthesis, task drafting, reference exploration, implementation,
-simulation orchestration, grader tests, packaging and analysis were substantially
-AI-assisted. Public circuit/model/testbench infrastructure is attributed prior
-work. Automated checks and observed model outputs are documented; they are not
-represented as independent human expert review. No professional biography,
-personal checking record or expert endorsement is invented. The participant
-directed the work; technical lessons are not a prerequisite for this engineering
-workflow. All results and allowed successful alternatives remain in the record.
+AI tools assisted with research, task drafting, reference exploration, code,
+simulation runs, tests, packaging and analysis. The participant directed the
+project. Public circuits, models and testbench infrastructure are attributed
+in [prior work](PRIOR_WORK.md).
+
+Model responses, measured results and passing alternatives are retained.
+Automated checks are not independent human expert review. No personal
+checking record or expert endorsement is claimed.
