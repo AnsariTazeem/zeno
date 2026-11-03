@@ -1,0 +1,235 @@
+{
+  "candidate": "candidate.sp",
+  "all_points_pass": false,
+  "conditions": "TT, 27 C, VCM=0.9 V, CL=1 pF, Iref=20 uA, 0.2 V step",
+  "points": [
+    {
+      "vdd": 1.15,
+      "upstream_pass": false,
+      "metrics": {
+        "dc_gain_dB": 59.9,
+        "ugf_Hz": 57465551.56007457,
+        "pm_deg": 23.8,
+        "gm_dB": 8.3,
+        "power_uW": 244.97,
+        "input_current_uA": 0.0,
+        "rise_settle_ns": 42.42,
+        "rise_overshoot_pct": 0.0,
+        "rise_slew_V_per_us": 28.3,
+        "fall_settle_ns": 48.3,
+        "fall_overshoot_pct": 90.68,
+        "fall_slew_V_per_us": 27.5,
+        "n_triode": 0
+      },
+      "errors": [],
+      "failed_checks": [
+        {
+          "metric": "dc_gain_dB",
+          "value": 59.9,
+          "op": ">=",
+          "limit": 72.71,
+          "source": 75.71,
+          "pass": false
+        },
+        {
+          "metric": "ugf_Hz",
+          "value": 57465551.56007457,
+          "op": ">=",
+          "limit": 66590000.0,
+          "source": 83230000.0,
+          "pass": false
+        },
+        {
+          "metric": "pm_deg",
+          "value": 23.8,
+          "op": ">=",
+          "limit": 55.0,
+          "source": 58.6,
+          "pass": false
+        },
+        {
+          "metric": "gm_dB",
+          "value": 8.3,
+          "op": ">=",
+          "limit": 10.0,
+          "source": 19.8,
+          "pass": false
+        },
+        {
+          "metric": "rise_settle_ns",
+          "value": 42.42,
+          "op": "<=",
+          "limit": 12.24,
+          "source": 8.16,
+          "pass": false
+        },
+        {
+          "metric": "fall_settle_ns",
+          "value": 48.3,
+          "op": "<=",
+          "limit": 26.73,
+          "source": 17.82,
+          "pass": false
+        }
+      ],
+      "command_tracking": {
+        "rise_settle_ns": null,
+        "rise_endpoint_error_V": 0.07948770000000005,
+        "fall_settle_ns": null,
+        "fall_endpoint_error_V": -0.016738830000000093,
+        "observed_stop_s": 2e-07,
+        "max_retained_step_s": 1.0005000000003007e-11,
+        "measured_rows": 20034
+      },
+      "pass": false,
+      "outcome_category": "electrical_specification_failure"
+    },
+    {
+      "vdd": 1.2,
+      "upstream_pass": false,
+      "metrics": {
+        "dc_gain_dB": 64.06,
+        "ugf_Hz": 66934256.60777085,
+        "pm_deg": 17.6,
+        "gm_dB": 5.4,
+        "power_uW": 255.61,
+        "input_current_uA": 0.0,
+        "rise_settle_ns": 28.06,
+        "rise_overshoot_pct": 21.91,
+        "rise_slew_V_per_us": 30.5,
+        "fall_settle_ns": 49.15,
+        "fall_overshoot_pct": 82.26,
+        "fall_slew_V_per_us": 18.2,
+        "n_triode": 0
+      },
+      "errors": [],
+      "failed_checks": [
+        {
+          "metric": "dc_gain_dB",
+          "value": 64.06,
+          "op": ">=",
+          "limit": 72.71,
+          "source": 75.71,
+          "pass": false
+        },
+        {
+          "metric": "pm_deg",
+          "value": 17.6,
+          "op": ">=",
+          "limit": 55.0,
+          "source": 58.6,
+          "pass": false
+        },
+        {
+          "metric": "gm_dB",
+          "value": 5.4,
+          "op": ">=",
+          "limit": 10.0,
+          "source": 19.8,
+          "pass": false
+        },
+        {
+          "metric": "rise_settle_ns",
+          "value": 28.06,
+          "op": "<=",
+          "limit": 12.24,
+          "source": 8.16,
+          "pass": false
+        },
+        {
+          "metric": "fall_settle_ns",
+          "value": 49.15,
+          "op": "<=",
+          "limit": 26.73,
+          "source": 17.82,
+          "pass": false
+        }
+      ],
+      "command_tracking": {
+        "rise_settle_ns": null,
+        "rise_endpoint_error_V": 0.011402499999999982,
+        "fall_settle_ns": null,
+        "fall_endpoint_error_V": 0.01331987999999995,
+        "observed_stop_s": 2e-07,
+        "max_retained_step_s": 1.000000000001134e-11,
+        "measured_rows": 20034
+      },
+      "pass": false,
+      "outcome_category": "electrical_specification_failure"
+    },
+    {
+      "vdd": 1.25,
+      "upstream_pass": false,
+      "metrics": {
+        "dc_gain_dB": 66.16,
+        "ugf_Hz": 71398473.04519647,
+        "pm_deg": 16.0,
+        "gm_dB": 4.5,
+        "power_uW": 266.26,
+        "input_current_uA": 0.0,
+        "rise_settle_ns": 44.86,
+        "rise_overshoot_pct": 29.36,
+        "rise_slew_V_per_us": 31.4,
+        "fall_settle_ns": 49.63,
+        "fall_overshoot_pct": 71.77,
+        "fall_slew_V_per_us": 19.6,
+        "n_triode": 0
+      },
+      "errors": [],
+      "failed_checks": [
+        {
+          "metric": "dc_gain_dB",
+          "value": 66.16,
+          "op": ">=",
+          "limit": 72.71,
+          "source": 75.71,
+          "pass": false
+        },
+        {
+          "metric": "pm_deg",
+          "value": 16.0,
+          "op": ">=",
+          "limit": 55.0,
+          "source": 58.6,
+          "pass": false
+        },
+        {
+          "metric": "gm_dB",
+          "value": 4.5,
+          "op": ">=",
+          "limit": 10.0,
+          "source": 19.8,
+          "pass": false
+        },
+        {
+          "metric": "rise_settle_ns",
+          "value": 44.86,
+          "op": "<=",
+          "limit": 12.24,
+          "source": 8.16,
+          "pass": false
+        },
+        {
+          "metric": "fall_settle_ns",
+          "value": 49.63,
+          "op": "<=",
+          "limit": 26.73,
+          "source": 17.82,
+          "pass": false
+        }
+      ],
+      "command_tracking": {
+        "rise_settle_ns": 46.818316,
+        "rise_endpoint_error_V": 0.0019667999999999353,
+        "fall_settle_ns": null,
+        "fall_endpoint_error_V": 0.005645179999999916,
+        "observed_stop_s": 2e-07,
+        "max_retained_step_s": 1.0002999999995752e-11,
+        "measured_rows": 20039
+      },
+      "pass": false,
+      "outcome_category": "electrical_specification_failure"
+    }
+  ],
+  "finished_at_utc": "2026-11-03T14:55:52.019899+00:00"
+}
