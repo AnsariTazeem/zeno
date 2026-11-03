@@ -1,0 +1,9 @@
+{
+  "started_at_utc": "2026-11-03T19:39:24.732435+00:00",
+  "requested_model": "gpt-6.1-sol",
+  "requested_effort": "high",
+  "prompt_sha256": "425ecdb1d7db35385b3b276915366618c575a85d1e5e3b695dfeb524fae92f17",
+  "fallback_billing": false,
+  "session": "Fresh on proposal 1; exact same session resumed thereafter",
+  "collection_interruption": "UTC/local-date trace lookup; original first answer retained"
+}
