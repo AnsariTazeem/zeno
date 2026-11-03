@@ -88,3 +88,15 @@ Model settings, dates, capture timing and candidate feedback are retained in
 [transcripts](../transcripts/README.md). Exact backend revisions, temperatures
 and seeds are unknown. The full raw entry archive remains local; its identity
 is in [the archive record](../evidence/entry_archive.json).
+
+## Recreate the waveform plot
+
+With NumPy and matplotlib in a separate plotting environment, point the tool
+at an extracted entry archive and choose a new output folder:
+
+```powershell
+python -B tools/plot_supply_repeat.py --entry-root 'C:/extracted-entry' --out 'C:/new/plot'
+```
+
+It verifies the recorded result hash and re-extracts settling from all three
+rising traces. It makes no model or simulator calls.
