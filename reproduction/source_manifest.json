@@ -1391,16 +1391,6 @@
       "sha256": "c75c2c814a370f54300dac4716bd0fdc011d3e0ca29b01e9961e00bd2687591b"
     },
     {
-      "path": "eval_core_v4/FINDINGS.md",
-      "bytes": 1182,
-      "sha256": "ca482d29842fb7a406869c0ef013dcb512541b7a98c022c38bbf4fb371712645"
-    },
-    {
-      "path": "eval_core_v4/README.md",
-      "bytes": 1702,
-      "sha256": "ef0e329c08eb74787b525d2d26c661518685c2c7c809237d3043d0e4d4a7d7c4"
-    },
-    {
       "path": "eval_core_v4/run_eval.py",
       "bytes": 14068,
       "sha256": "cd79823ee9d7bd3aa377b1ae05a38ad05bacbde592c099bb6ce272eabaeec4ac"
@@ -1424,81 +1414,6 @@
       "path": "eval_core_v4/tia_adapter.py",
       "bytes": 4833,
       "sha256": "5c492620445a16badd8a35e2504fef5348a42386277e4bab9bf47a1001fe0f86"
-    },
-    {
-      "path": "model_campaign_v1/supply_trial01/execution/proposal01/capture.json",
-      "bytes": 402,
-      "sha256": "e42270f651ebc8a4d5730a6d1ab80fe75d120bf84d61a6f732369edab06bc37a"
-    },
-    {
-      "path": "model_campaign_v1/supply_trial01/execution/proposal01/input_message.txt",
-      "bytes": 8078,
-      "sha256": "c095ecf7d271ba76d2e553cf3e811dc157dcc3c2801f11b23ff9d372c8e50f65"
-    },
-    {
-      "path": "model_campaign_v1/supply_trial01/execution/proposal01/model_reply.md",
-      "bytes": 1032,
-      "sha256": "e30484e8a948adb0d288f2ec864c1c8f3f37874b691944ed66fc1e3616ba671f"
-    },
-    {
-      "path": "model_campaign_v1/supply_trial01/execution/proposal01/tool_audit.json",
-      "bytes": 122,
-      "sha256": "055cd6754fa3a832a0e1e69be42e2079cd253283216cf72b6739afafcf7864a9"
-    },
-    {
-      "path": "model_campaign_v1/supply_trial01/execution/proposal02/capture.json",
-      "bytes": 406,
-      "sha256": "4bf2f21ba98bf02fecbf341d87f9e8274a4b0b32e9a9f1f9eae248cb4a85d188"
-    },
-    {
-      "path": "model_campaign_v1/supply_trial01/execution/proposal02/input_message.txt",
-      "bytes": 6410,
-      "sha256": "258b457319ff57cc278d739078024922050e79078b8297b7f1fa07f3c2d3d8f4"
-    },
-    {
-      "path": "model_campaign_v1/supply_trial01/execution/proposal02/model_reply.md",
-      "bytes": 1238,
-      "sha256": "10d4d94ffadf5bde54c0132c17396e2d078385c7646614d573eec55a2d504c74"
-    },
-    {
-      "path": "model_campaign_v1/supply_trial01/execution/proposal02/tool_audit.json",
-      "bytes": 122,
-      "sha256": "055cd6754fa3a832a0e1e69be42e2079cd253283216cf72b6739afafcf7864a9"
-    },
-    {
-      "path": "model_campaign_v1/supply_trial01/execution/proposal03/capture.json",
-      "bytes": 406,
-      "sha256": "630438666f5b307dd6f05c089f8087f1246910766c7ad0e057d828d08aebb6d2"
-    },
-    {
-      "path": "model_campaign_v1/supply_trial01/execution/proposal03/input_message.txt",
-      "bytes": 6750,
-      "sha256": "9fdf652e2eb759cc0378d9cad0c5b2edb701eeccf818ea583532bb50de52c8b2"
-    },
-    {
-      "path": "model_campaign_v1/supply_trial01/execution/proposal03/model_reply.md",
-      "bytes": 1416,
-      "sha256": "ca19b2f7611e89ca15eac484674ee039f3f33195a589cd3c4b6cc24d3976d48a"
-    },
-    {
-      "path": "model_campaign_v1/supply_trial01/execution/proposal03/tool_audit.json",
-      "bytes": 122,
-      "sha256": "055cd6754fa3a832a0e1e69be42e2079cd253283216cf72b6739afafcf7864a9"
-    },
-    {
-      "path": "model_campaign_v1/supply_trial01/FEEDBACK_AUDIT_NOTE.md",
-      "bytes": 1123,
-      "sha256": "a11a05ed7ed029d8160f29ca1eee4a812656a39a593995242daba3a6c1b09a6c"
-    },
-    {
-      "path": "model_campaign_v1/supply_trial01/FINDINGS.md",
-      "bytes": 2574,
-      "sha256": "69350d6d1a888ae6a862b33394fadf1def910f383cec26b360f537e82190341f"
-    },
-    {
-      "path": "model_campaign_v1/supply_trial01/TECHNICAL_REVIEW.md",
-      "bytes": 3758,
-      "sha256": "671407373ecd47ab914ea45001fc11e8554830e894d7c3907cf3bda5360a39d5"
     },
     {
       "path": "qualification.py",
