@@ -44,6 +44,8 @@ unscored. No LLM judge is used. [Setup, grading, runtime and cost](docs/run.md)
 - [Recorded results](results/README.md) and [transcripts](transcripts/README.md).
 - [Lessons from SWE-bench, tau2-bench and Terminal-Bench](docs/benchmark_lessons.md).
 - [Prior work](docs/PRIOR_WORK.md), [AI assistance](docs/AI_USE.md) and [guide checklist](docs/guide_checklist.md).
+- [Automated checks](docs/ci.md): workflow defined; no hosted run yet.
+- [Clean-clone test](docs/clone_reproduction.md): 57 checks and five native controls reproduced on this host.
 
 The tested source lives under `reproduction/payload/`. Its paths and hashes
 stay unchanged; the folders above make it easier to inspect. The full local

@@ -18,7 +18,7 @@ at kickoff. Folder names alone do not establish compliance.
 | Multiple trials per task, report spread | Partial | SUPPLY: two complete sessions under separately labelled grader versions. LOAD/TIA: one each. Guide suggests 3–5 as a start |
 | Evidence across model conditions | Limited | CLI Sol/High and UI-labelled GPT-6/High are not a matched comparison; backend/settings partly unknown |
 | Roughly 5–10 tasks | Below recommendation | Three distinct tasks. Conditions are not counted as extra tasks |
-| Clean reproduction, versions, runtime and cost | Partial | Fresh-venv native qualification passed on this host; independent-machine run untested |
+| Clean reproduction, versions, runtime and cost | Partial | A clean local clone and new venv passed offline/native checks; independent-machine run untested |
 | Prior work, AI use and permitted data | Disclosed; rights decision open | Public infrastructure, synthetic tasks and notices; no TI/OpenCode assets in curated source |
 | Author expertise and human review | Unverified | No independent human expert review or personal checking record claimed |
 | ZIP under 50 MB; no videos or credentials | Draft verified | Local 27,434,760-byte archive passed extraction/replay and bounded credential-pattern checks |
@@ -28,5 +28,5 @@ at kickoff. Folder names alone do not establish compliance.
 
 The build continues without lessons or quizzes as prerequisites. The review
 criterion remains unverified; a linter or test count does not replace it.
-These repository changes do not update the sealed submission ZIP. A later
-package revision must include them and repeat the delivery checks.
+Source commits and submission archives are versioned separately. Each archive
+needs its own extraction/replay checks; the build receipt records its source.
