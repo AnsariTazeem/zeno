@@ -1,0 +1,33 @@
+{
+  "catalog_key": "supply_v4_repeat_p3_refined",
+  "native_result_sha256": "016135f52b7b394764de9d23f7fc243e2eeaf82d346a942787b4f195ae6537e2",
+  "sources": [
+    {
+      "trace_in_entry": "results/native/supply_v4_repeat_p3_refined/eval/opamp_2stg/v115/opamp_tran/tran.txt",
+      "sha256": "cd00601e59292b123acabb5407e084746107cdb40fc15d87c635266ee758baa5",
+      "vdd": 1.15,
+      "rise_settle_ns": null
+    },
+    {
+      "trace_in_entry": "results/native/supply_v4_repeat_p3_refined/eval/opamp_2stg/v120/opamp_tran/tran.txt",
+      "sha256": "6e5ea0e6c2b6f714c8a1d07cbe6e624642e660ceb9d85b3721b50a4ccda8b9e5",
+      "vdd": 1.2,
+      "rise_settle_ns": null
+    },
+    {
+      "trace_in_entry": "results/native/supply_v4_repeat_p3_refined/eval/opamp_2stg/v125/opamp_tran/tran.txt",
+      "sha256": "71d31499b808de7df8a8e70e845a5044bdc14b3fc65186c152773a3b56d1e479",
+      "vdd": 1.25,
+      "rise_settle_ns": null
+    }
+  ],
+  "measurement_code_sha256": "4e973f88ba9ff1e0af12c40c8e8783fbe2f66dce46ffdb5dda3b5057a3aa2a0e",
+  "plot_code_sha256": "cab3174595e7851ecc69815fd95a3d89b4599f6eb6b2814c88e1d72413b1c6fc",
+  "figure_sha256": "dc192b6b5db3eb4cc64d5e6bc36f4d62f64bd44ffdaf5d8096fc263eb1c11545",
+  "matplotlib": "3.10.7",
+  "numpy": "2.3.5",
+  "model_calls": 0,
+  "simulator_calls": 0,
+  "deadline_ns": 12.24,
+  "error_band_mV": 2
+}
