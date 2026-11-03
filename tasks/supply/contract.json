@@ -1,0 +1,83 @@
+{
+  "task_id": "SUPPLY-P01",
+  "version": "development-2-model-domain-corrected",
+  "supplies_V": [
+    1.15,
+    1.2,
+    1.25
+  ],
+  "process": "tt",
+  "temperature_C": 27,
+  "VCM_V": 0.9,
+  "CL_F": 1e-12,
+  "Iref_A": 2e-05,
+  "Vstep_V": 0.2,
+  "limits": {
+    "dc_gain_dB": {
+      ">=": 72.71
+    },
+    "ugf_Hz": {
+      ">=": 66590000
+    },
+    "pm_deg": {
+      ">=": 55
+    },
+    "gm_dB": {
+      ">=": 10
+    },
+    "power_uW": {
+      "<=": 296.4
+    },
+    "command_rise_settle_ns": {
+      "<=": 12.24
+    },
+    "command_fall_settle_ns": {
+      "<=": 26.73
+    },
+    "n_triode": {
+      "<=": 2
+    },
+    "input_current_uA": {
+      "<=": 0.01
+    }
+  },
+  "all_points_required": true,
+  "command_error_band_V": 0.002,
+  "observation_s": 2e-07,
+  "max_proposals": 3,
+  "feedback": "Same pointwise simulation metrics/errors after each proposal; no reference-solution disclosure",
+  "scope": "Explicitly adapted public-circuit development screen, not an independent novelty claim",
+  "geometry": {
+    "sky130_fd_pr__nfet_01v8_lvt": {
+      "W_um": [
+        1,
+        1000
+      ],
+      "L_um": [
+        0.15,
+        10
+      ],
+      "nf": 1,
+      "m_integer": [
+        1,
+        100
+      ]
+    },
+    "sky130_fd_pr__pfet_01v8_lvt": {
+      "W_um": [
+        1,
+        1000
+      ],
+      "L_um": [
+        0.35,
+        10
+      ],
+      "nf": 1,
+      "m_integer": [
+        1,
+        100
+      ]
+    }
+  },
+  "geometry_preflight": "run_candidate_v2.py; source-bound model_domain_v2.json"
+}
