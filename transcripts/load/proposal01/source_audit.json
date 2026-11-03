@@ -1,0 +1,9 @@
+{
+  "duration_ui": "1m 47s",
+  "single_complete_network": true,
+  "attachment_access_confirmed": "Answer explicitly describes full task, amplifier, six conditions and protocol",
+  "no_external_source_urls_cited_in_answer": true,
+  "outside_reference_absence": "Model self-reports no published/project references retrieved; this is not independent proof of complete source isolation",
+  "simulation_claims": "Electrical simulation explicitly not performed; estimates labelled analytical",
+  "compiler_acceptance": "Confirmed by local restricted compiler and all six complete electrical simulations"
+}
