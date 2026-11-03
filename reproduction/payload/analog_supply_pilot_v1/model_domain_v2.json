@@ -1,0 +1,631 @@
+{
+  "scope": "Pinned numerical model geometry support, not DRC",
+  "models": {
+    "sky130_fd_pr__nfet_01v8_lvt": {
+      "source": "analog_public_v1/deps/pdk/sky130A/libs.tech/combined/continuous/models_fet/sky130_fd_pr__nfet_01v8_lvt.spice",
+      "sha256": "ab9b94cc75c46a8d422e626fce870fee5d7a312c2f09e50489b56537b0d61d9f",
+      "bins": [
+        {
+          "model_bin": "nlowvt_model.1",
+          "lmin_um": 8.0,
+          "lmax_um": 20.2,
+          "wmin_um": 7.0,
+          "wmax_um": 1010.0
+        },
+        {
+          "model_bin": "nlowvt_model.2",
+          "lmin_um": 4.0,
+          "lmax_um": 8.0,
+          "wmin_um": 7.0,
+          "wmax_um": 1010.0
+        },
+        {
+          "model_bin": "nlowvt_model.3",
+          "lmin_um": 2.0,
+          "lmax_um": 4.0,
+          "wmin_um": 7.0,
+          "wmax_um": 1010.0
+        },
+        {
+          "model_bin": "nlowvt_model.4",
+          "lmin_um": 1.0,
+          "lmax_um": 2.0,
+          "wmin_um": 7.0,
+          "wmax_um": 1010.0
+        },
+        {
+          "model_bin": "nlowvt_model.5",
+          "lmin_um": 0.5,
+          "lmax_um": 1.0,
+          "wmin_um": 7.0,
+          "wmax_um": 1010.0
+        },
+        {
+          "model_bin": "nlowvt_model.6",
+          "lmin_um": 0.25,
+          "lmax_um": 0.5,
+          "wmin_um": 7.0,
+          "wmax_um": 1010.0
+        },
+        {
+          "model_bin": "nlowvt_model.7",
+          "lmin_um": 0.18,
+          "lmax_um": 0.25,
+          "wmin_um": 7.0,
+          "wmax_um": 1010.0
+        },
+        {
+          "model_bin": "nlowvt_model.8",
+          "lmin_um": 0.15,
+          "lmax_um": 0.18,
+          "wmin_um": 7.0,
+          "wmax_um": 1010.0
+        },
+        {
+          "model_bin": "nlowvt_model.9",
+          "lmin_um": 8.0,
+          "lmax_um": 20.2,
+          "wmin_um": 5.0,
+          "wmax_um": 7.0
+        },
+        {
+          "model_bin": "nlowvt_model.10",
+          "lmin_um": 4.0,
+          "lmax_um": 8.0,
+          "wmin_um": 5.0,
+          "wmax_um": 7.0
+        },
+        {
+          "model_bin": "nlowvt_model.11",
+          "lmin_um": 2.0,
+          "lmax_um": 4.0,
+          "wmin_um": 5.0,
+          "wmax_um": 7.0
+        },
+        {
+          "model_bin": "nlowvt_model.12",
+          "lmin_um": 1.0,
+          "lmax_um": 2.0,
+          "wmin_um": 5.0,
+          "wmax_um": 7.0
+        },
+        {
+          "model_bin": "nlowvt_model.13",
+          "lmin_um": 0.5,
+          "lmax_um": 1.0,
+          "wmin_um": 5.0,
+          "wmax_um": 7.0
+        },
+        {
+          "model_bin": "nlowvt_model.14",
+          "lmin_um": 0.25,
+          "lmax_um": 0.5,
+          "wmin_um": 5.0,
+          "wmax_um": 7.0
+        },
+        {
+          "model_bin": "nlowvt_model.15",
+          "lmin_um": 0.18,
+          "lmax_um": 0.25,
+          "wmin_um": 5.0,
+          "wmax_um": 7.0
+        },
+        {
+          "model_bin": "nlowvt_model.16",
+          "lmin_um": 0.15,
+          "lmax_um": 0.18,
+          "wmin_um": 5.0,
+          "wmax_um": 7.0
+        },
+        {
+          "model_bin": "nlowvt_model.17",
+          "lmin_um": 8.0,
+          "lmax_um": 20.2,
+          "wmin_um": 3.0,
+          "wmax_um": 5.0
+        },
+        {
+          "model_bin": "nlowvt_model.18",
+          "lmin_um": 4.0,
+          "lmax_um": 8.0,
+          "wmin_um": 3.0,
+          "wmax_um": 5.0
+        },
+        {
+          "model_bin": "nlowvt_model.19",
+          "lmin_um": 2.0,
+          "lmax_um": 4.0,
+          "wmin_um": 3.0,
+          "wmax_um": 5.0
+        },
+        {
+          "model_bin": "nlowvt_model.20",
+          "lmin_um": 1.0,
+          "lmax_um": 2.0,
+          "wmin_um": 3.0,
+          "wmax_um": 5.0
+        },
+        {
+          "model_bin": "nlowvt_model.21",
+          "lmin_um": 0.5,
+          "lmax_um": 1.0,
+          "wmin_um": 3.0,
+          "wmax_um": 5.0
+        },
+        {
+          "model_bin": "nlowvt_model.22",
+          "lmin_um": 0.25,
+          "lmax_um": 0.5,
+          "wmin_um": 3.0,
+          "wmax_um": 5.0
+        },
+        {
+          "model_bin": "nlowvt_model.23",
+          "lmin_um": 0.18,
+          "lmax_um": 0.25,
+          "wmin_um": 3.0,
+          "wmax_um": 5.0
+        },
+        {
+          "model_bin": "nlowvt_model.24",
+          "lmin_um": 0.15,
+          "lmax_um": 0.18,
+          "wmin_um": 3.0,
+          "wmax_um": 5.0
+        },
+        {
+          "model_bin": "nlowvt_model.25",
+          "lmin_um": 8.0,
+          "lmax_um": 20.2,
+          "wmin_um": 1.0,
+          "wmax_um": 3.0
+        },
+        {
+          "model_bin": "nlowvt_model.26",
+          "lmin_um": 4.0,
+          "lmax_um": 8.0,
+          "wmin_um": 1.0,
+          "wmax_um": 3.0
+        },
+        {
+          "model_bin": "nlowvt_model.27",
+          "lmin_um": 2.0,
+          "lmax_um": 4.0,
+          "wmin_um": 1.0,
+          "wmax_um": 3.0
+        },
+        {
+          "model_bin": "nlowvt_model.28",
+          "lmin_um": 1.0,
+          "lmax_um": 2.0,
+          "wmin_um": 1.0,
+          "wmax_um": 3.0
+        },
+        {
+          "model_bin": "nlowvt_model.29",
+          "lmin_um": 0.5,
+          "lmax_um": 1.0,
+          "wmin_um": 1.0,
+          "wmax_um": 3.0
+        },
+        {
+          "model_bin": "nlowvt_model.30",
+          "lmin_um": 0.25,
+          "lmax_um": 0.5,
+          "wmin_um": 1.0,
+          "wmax_um": 3.0
+        },
+        {
+          "model_bin": "nlowvt_model.31",
+          "lmin_um": 0.18,
+          "lmax_um": 0.25,
+          "wmin_um": 1.0,
+          "wmax_um": 3.0
+        },
+        {
+          "model_bin": "nlowvt_model.32",
+          "lmin_um": 0.15,
+          "lmax_um": 0.18,
+          "wmin_um": 1.0,
+          "wmax_um": 3.0
+        },
+        {
+          "model_bin": "nlowvt_model.33",
+          "lmin_um": 8.0,
+          "lmax_um": 20.2,
+          "wmin_um": 0.42,
+          "wmax_um": 1.0
+        },
+        {
+          "model_bin": "nlowvt_model.34",
+          "lmin_um": 4.0,
+          "lmax_um": 8.0,
+          "wmin_um": 0.42,
+          "wmax_um": 1.0
+        },
+        {
+          "model_bin": "nlowvt_model.35",
+          "lmin_um": 2.0,
+          "lmax_um": 4.0,
+          "wmin_um": 0.42,
+          "wmax_um": 1.0
+        },
+        {
+          "model_bin": "nlowvt_model.36",
+          "lmin_um": 1.0,
+          "lmax_um": 2.0,
+          "wmin_um": 0.42,
+          "wmax_um": 1.0
+        },
+        {
+          "model_bin": "nlowvt_model.37",
+          "lmin_um": 0.5,
+          "lmax_um": 1.0,
+          "wmin_um": 0.42,
+          "wmax_um": 1.0
+        },
+        {
+          "model_bin": "nlowvt_model.38",
+          "lmin_um": 0.25,
+          "lmax_um": 0.5,
+          "wmin_um": 0.42,
+          "wmax_um": 1.0
+        },
+        {
+          "model_bin": "nlowvt_model.39",
+          "lmin_um": 0.18,
+          "lmax_um": 0.25,
+          "wmin_um": 0.42,
+          "wmax_um": 1.0
+        },
+        {
+          "model_bin": "nlowvt_model.40",
+          "lmin_um": 0.15,
+          "lmax_um": 0.18,
+          "wmin_um": 0.42,
+          "wmax_um": 1.0
+        }
+      ],
+      "min_length_um": 0.15,
+      "max_length_um": 20.2,
+      "min_width_um": 0.42,
+      "max_width_um": 1010.0
+    },
+    "sky130_fd_pr__pfet_01v8_lvt": {
+      "source": "analog_public_v1/deps/pdk/sky130A/libs.tech/combined/continuous/models_fet/sky130_fd_pr__pfet_01v8_lvt.spice",
+      "sha256": "547a58975415a2c6dc633a3b3de5967b6c0fbcbea0ccfb7082235a666571f9a2",
+      "bins": [
+        {
+          "model_bin": "plowvt_model.1",
+          "lmin_um": 8.0,
+          "lmax_um": 20.2,
+          "wmin_um": 7.0,
+          "wmax_um": 1010.0
+        },
+        {
+          "model_bin": "plowvt_model.2",
+          "lmin_um": 4.0,
+          "lmax_um": 8.0,
+          "wmin_um": 7.0,
+          "wmax_um": 1010.0
+        },
+        {
+          "model_bin": "plowvt_model.3",
+          "lmin_um": 2.0,
+          "lmax_um": 4.0,
+          "wmin_um": 7.0,
+          "wmax_um": 1010.0
+        },
+        {
+          "model_bin": "plowvt_model.4",
+          "lmin_um": 1.5,
+          "lmax_um": 2.0,
+          "wmin_um": 7.0,
+          "wmax_um": 1010.0
+        },
+        {
+          "model_bin": "plowvt_model.5",
+          "lmin_um": 1.0,
+          "lmax_um": 1.5,
+          "wmin_um": 7.0,
+          "wmax_um": 1010.0
+        },
+        {
+          "model_bin": "plowvt_model.6",
+          "lmin_um": 0.5,
+          "lmax_um": 1.0,
+          "wmin_um": 7.0,
+          "wmax_um": 1010.0
+        },
+        {
+          "model_bin": "plowvt_model.7",
+          "lmin_um": 0.35,
+          "lmax_um": 0.5,
+          "wmin_um": 7.0,
+          "wmax_um": 1010.0
+        },
+        {
+          "model_bin": "plowvt_model.8",
+          "lmin_um": 8.0,
+          "lmax_um": 20.2,
+          "wmin_um": 5.0,
+          "wmax_um": 7.0
+        },
+        {
+          "model_bin": "plowvt_model.9",
+          "lmin_um": 4.0,
+          "lmax_um": 8.0,
+          "wmin_um": 5.0,
+          "wmax_um": 7.0
+        },
+        {
+          "model_bin": "plowvt_model.10",
+          "lmin_um": 2.0,
+          "lmax_um": 4.0,
+          "wmin_um": 5.0,
+          "wmax_um": 7.0
+        },
+        {
+          "model_bin": "plowvt_model.11",
+          "lmin_um": 1.5,
+          "lmax_um": 2.0,
+          "wmin_um": 5.0,
+          "wmax_um": 7.0
+        },
+        {
+          "model_bin": "plowvt_model.12",
+          "lmin_um": 1.0,
+          "lmax_um": 1.5,
+          "wmin_um": 5.0,
+          "wmax_um": 7.0
+        },
+        {
+          "model_bin": "plowvt_model.13",
+          "lmin_um": 0.5,
+          "lmax_um": 1.0,
+          "wmin_um": 5.0,
+          "wmax_um": 7.0
+        },
+        {
+          "model_bin": "plowvt_model.14",
+          "lmin_um": 0.35,
+          "lmax_um": 0.5,
+          "wmin_um": 5.0,
+          "wmax_um": 7.0
+        },
+        {
+          "model_bin": "plowvt_model.15",
+          "lmin_um": 8.0,
+          "lmax_um": 20.2,
+          "wmin_um": 3.0,
+          "wmax_um": 5.0
+        },
+        {
+          "model_bin": "plowvt_model.16",
+          "lmin_um": 4.0,
+          "lmax_um": 8.0,
+          "wmin_um": 3.0,
+          "wmax_um": 5.0
+        },
+        {
+          "model_bin": "plowvt_model.17",
+          "lmin_um": 2.0,
+          "lmax_um": 4.0,
+          "wmin_um": 3.0,
+          "wmax_um": 5.0
+        },
+        {
+          "model_bin": "plowvt_model.18",
+          "lmin_um": 1.5,
+          "lmax_um": 2.0,
+          "wmin_um": 3.0,
+          "wmax_um": 5.0
+        },
+        {
+          "model_bin": "plowvt_model.19",
+          "lmin_um": 1.0,
+          "lmax_um": 1.5,
+          "wmin_um": 3.0,
+          "wmax_um": 5.0
+        },
+        {
+          "model_bin": "plowvt_model.20",
+          "lmin_um": 0.5,
+          "lmax_um": 1.0,
+          "wmin_um": 3.0,
+          "wmax_um": 5.0
+        },
+        {
+          "model_bin": "plowvt_model.21",
+          "lmin_um": 0.35,
+          "lmax_um": 0.5,
+          "wmin_um": 3.0,
+          "wmax_um": 5.0
+        },
+        {
+          "model_bin": "plowvt_model.22",
+          "lmin_um": 8.0,
+          "lmax_um": 20.2,
+          "wmin_um": 1.0,
+          "wmax_um": 3.0
+        },
+        {
+          "model_bin": "plowvt_model.23",
+          "lmin_um": 4.0,
+          "lmax_um": 8.0,
+          "wmin_um": 1.0,
+          "wmax_um": 3.0
+        },
+        {
+          "model_bin": "plowvt_model.24",
+          "lmin_um": 2.0,
+          "lmax_um": 4.0,
+          "wmin_um": 1.0,
+          "wmax_um": 3.0
+        },
+        {
+          "model_bin": "plowvt_model.25",
+          "lmin_um": 1.5,
+          "lmax_um": 2.0,
+          "wmin_um": 1.0,
+          "wmax_um": 3.0
+        },
+        {
+          "model_bin": "plowvt_model.26",
+          "lmin_um": 1.0,
+          "lmax_um": 1.5,
+          "wmin_um": 1.0,
+          "wmax_um": 3.0
+        },
+        {
+          "model_bin": "plowvt_model.27",
+          "lmin_um": 0.5,
+          "lmax_um": 1.0,
+          "wmin_um": 1.0,
+          "wmax_um": 3.0
+        },
+        {
+          "model_bin": "plowvt_model.28",
+          "lmin_um": 0.35,
+          "lmax_um": 0.5,
+          "wmin_um": 1.0,
+          "wmax_um": 3.0
+        },
+        {
+          "model_bin": "plowvt_model.29",
+          "lmin_um": 8.0,
+          "lmax_um": 20.2,
+          "wmin_um": 0.55,
+          "wmax_um": 1.0
+        },
+        {
+          "model_bin": "plowvt_model.30",
+          "lmin_um": 4.0,
+          "lmax_um": 8.0,
+          "wmin_um": 0.55,
+          "wmax_um": 1.0
+        },
+        {
+          "model_bin": "plowvt_model.31",
+          "lmin_um": 2.0,
+          "lmax_um": 4.0,
+          "wmin_um": 0.55,
+          "wmax_um": 1.0
+        },
+        {
+          "model_bin": "plowvt_model.32",
+          "lmin_um": 1.5,
+          "lmax_um": 2.0,
+          "wmin_um": 0.55,
+          "wmax_um": 1.0
+        },
+        {
+          "model_bin": "plowvt_model.33",
+          "lmin_um": 1.0,
+          "lmax_um": 1.5,
+          "wmin_um": 0.55,
+          "wmax_um": 1.0
+        },
+        {
+          "model_bin": "plowvt_model.34",
+          "lmin_um": 0.5,
+          "lmax_um": 1.0,
+          "wmin_um": 0.55,
+          "wmax_um": 1.0
+        },
+        {
+          "model_bin": "plowvt_model.35",
+          "lmin_um": 0.35,
+          "lmax_um": 0.5,
+          "wmin_um": 0.55,
+          "wmax_um": 1.0
+        },
+        {
+          "model_bin": "plowvt_model.36",
+          "lmin_um": 8.0,
+          "lmax_um": 20.2,
+          "wmin_um": 0.42,
+          "wmax_um": 0.55
+        },
+        {
+          "model_bin": "plowvt_model.37",
+          "lmin_um": 4.0,
+          "lmax_um": 8.0,
+          "wmin_um": 0.42,
+          "wmax_um": 0.55
+        },
+        {
+          "model_bin": "plowvt_model.38",
+          "lmin_um": 2.0,
+          "lmax_um": 4.0,
+          "wmin_um": 0.42,
+          "wmax_um": 0.55
+        },
+        {
+          "model_bin": "plowvt_model.39",
+          "lmin_um": 1.5,
+          "lmax_um": 2.0,
+          "wmin_um": 0.42,
+          "wmax_um": 0.55
+        },
+        {
+          "model_bin": "plowvt_model.40",
+          "lmin_um": 1.0,
+          "lmax_um": 1.5,
+          "wmin_um": 0.42,
+          "wmax_um": 0.55
+        },
+        {
+          "model_bin": "plowvt_model.41",
+          "lmin_um": 0.5,
+          "lmax_um": 1.0,
+          "wmin_um": 0.42,
+          "wmax_um": 0.55
+        },
+        {
+          "model_bin": "plowvt_model.42",
+          "lmin_um": 0.35,
+          "lmax_um": 0.5,
+          "wmin_um": 0.42,
+          "wmax_um": 0.55
+        }
+      ],
+      "min_length_um": 0.35,
+      "max_length_um": 20.2,
+      "min_width_um": 0.42,
+      "max_width_um": 1010.0
+    }
+  },
+  "corrected_bounds": {
+    "sky130_fd_pr__nfet_01v8_lvt": {
+      "W_um": [
+        1,
+        1000
+      ],
+      "L_um": [
+        0.15,
+        10
+      ],
+      "nf": 1,
+      "m_integer": [
+        1,
+        100
+      ]
+    },
+    "sky130_fd_pr__pfet_01v8_lvt": {
+      "W_um": [
+        1,
+        1000
+      ],
+      "L_um": [
+        0.35,
+        10
+      ],
+      "nf": 1,
+      "m_integer": [
+        1,
+        100
+      ]
+    }
+  }
+}
