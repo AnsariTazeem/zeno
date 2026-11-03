@@ -1,0 +1,104 @@
+{
+  "candidate": "candidate.sp",
+  "all_points_pass": true,
+  "conditions": "TT, 27 C, VCM=0.9 V, CL=1 pF, Iref=20 uA, 0.2 V step",
+  "points": [
+    {
+      "vdd": 1.15,
+      "upstream_pass": true,
+      "metrics": {
+        "dc_gain_dB": 75.19,
+        "ugf_Hz": 79873332.06862326,
+        "pm_deg": 68.8,
+        "gm_dB": 13.4,
+        "power_uW": 210.17,
+        "input_current_uA": 0.0,
+        "rise_settle_ns": 9.98,
+        "rise_overshoot_pct": 3.05,
+        "rise_slew_V_per_us": 35.2,
+        "fall_settle_ns": 9.34,
+        "fall_overshoot_pct": 0.02,
+        "fall_slew_V_per_us": 33.9,
+        "n_triode": 0
+      },
+      "errors": [],
+      "failed_checks": [],
+      "command_tracking": {
+        "rise_settle_ns": 9.982000000000001,
+        "rise_endpoint_error_V": -4.140000000041333e-06,
+        "fall_settle_ns": 9.362000000000002,
+        "fall_endpoint_error_V": 3.452999999997708e-05,
+        "observed_stop_s": 2e-07,
+        "max_retained_step_s": 1.000000000001134e-11,
+        "measured_rows": 20032
+      },
+      "pass": true,
+      "outcome_category": "pass"
+    },
+    {
+      "vdd": 1.2,
+      "upstream_pass": true,
+      "metrics": {
+        "dc_gain_dB": 78.38,
+        "ugf_Hz": 81382655.56390102,
+        "pm_deg": 69.1,
+        "gm_dB": 13.3,
+        "power_uW": 223.48,
+        "input_current_uA": 0.0,
+        "rise_settle_ns": 9.56,
+        "rise_overshoot_pct": 3.29,
+        "rise_slew_V_per_us": 36.2,
+        "fall_settle_ns": 9.28,
+        "fall_overshoot_pct": 0.01,
+        "fall_slew_V_per_us": 34.4,
+        "n_triode": 0
+      },
+      "errors": [],
+      "failed_checks": [],
+      "command_tracking": {
+        "rise_settle_ns": 9.572,
+        "rise_endpoint_error_V": 9.200000000042508e-06,
+        "fall_settle_ns": 9.311999999999998,
+        "fall_endpoint_error_V": 3.425999999995266e-05,
+        "observed_stop_s": 2e-07,
+        "max_retained_step_s": 1.000000000001134e-11,
+        "measured_rows": 20032
+      },
+      "pass": true,
+      "outcome_category": "pass"
+    },
+    {
+      "vdd": 1.25,
+      "upstream_pass": true,
+      "metrics": {
+        "dc_gain_dB": 80.39,
+        "ugf_Hz": 82259601.20111199,
+        "pm_deg": 69.5,
+        "gm_dB": 13.2,
+        "power_uW": 236.33,
+        "input_current_uA": 0.0,
+        "rise_settle_ns": 9.25,
+        "rise_overshoot_pct": 3.11,
+        "rise_slew_V_per_us": 36.7,
+        "fall_settle_ns": 9.29,
+        "fall_overshoot_pct": 0.01,
+        "fall_slew_V_per_us": 34.5,
+        "n_triode": 0
+      },
+      "errors": [],
+      "failed_checks": [],
+      "command_tracking": {
+        "rise_settle_ns": 9.262,
+        "rise_endpoint_error_V": 1.4299999999911606e-05,
+        "fall_settle_ns": 9.321999999999996,
+        "fall_endpoint_error_V": 3.376999999993302e-05,
+        "observed_stop_s": 2e-07,
+        "max_retained_step_s": 1.000000000001134e-11,
+        "measured_rows": 20032
+      },
+      "pass": true,
+      "outcome_category": "pass"
+    }
+  ],
+  "finished_at_utc": "2026-11-03T08:34:15.766848+00:00"
+}
