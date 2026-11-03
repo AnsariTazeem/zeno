@@ -1,0 +1,204 @@
+{
+  "scope": "Numerically qualified development pilot; participant review remains pending for final submission",
+  "model_trials": 0,
+  "files": [
+    {
+      "path": "analog_public_v1/model_manifest.json",
+      "bytes": 225792,
+      "sha256": "4b489804d74852817888031596285c0fa51a757e7e9224cbac3bcda1ff956b9a"
+    },
+    {
+      "path": "analog_public_v1/sim_scripts/spinit",
+      "bytes": 18,
+      "sha256": "2ef8c1ce0b4d65b62053c99e75b2bad1d1158582c6ca6cfc19b1e255c84ecfbc"
+    },
+    {
+      "path": "analog_public_v1/upstream_manifest.json",
+      "bytes": 4860,
+      "sha256": "2959409bde191e290151d383cf5a803650fd877574e1f6d0d2d64e8ab0a6c8fb"
+    },
+    {
+      "path": "analog_public_v1/windows_simulator_manifest.json",
+      "bytes": 2427,
+      "sha256": "1cef2955775355ba55f25308ef4fbb8bc069bbee4b538a47ec2443b4b81a4863"
+    },
+    {
+      "path": "tia_case_v1/.env.example",
+      "bytes": 145,
+      "sha256": "73151932e38c8ea091d3a0e3f998e6ae48c88a9cf389d5c07fc1563c31f03973"
+    },
+    {
+      "path": "tia_case_v1/apparatus.py",
+      "bytes": 8496,
+      "sha256": "294a41ce8dcfce0e7886cc77a994b8c34f0bbdd04f77e67a538c69ba2d41f682"
+    },
+    {
+      "path": "tia_case_v1/COMPOUND_SELECTION.md",
+      "bytes": 1348,
+      "sha256": "64f29e18a140653be64d546401d76b583ed3e3ac21fc40cd0b2748cdecc328d7"
+    },
+    {
+      "path": "tia_case_v1/EQUIVALENCE_CHECK.md",
+      "bytes": 1020,
+      "sha256": "cbd5b7df8596a03da44558ce2f68e81a70cbed788a13f09ec0fc10fd79164118"
+    },
+    {
+      "path": "tia_case_v1/evaluate_frozen.py",
+      "bytes": 879,
+      "sha256": "d87a36cb832861e14e17035d8c9c390790c2242080f8b6a1658e59943f1cedd4"
+    },
+    {
+      "path": "tia_case_v1/EXTENSION_01.md",
+      "bytes": 1970,
+      "sha256": "37b228d6368803a89d2e18d7556b43649625a3be2ad1baedea29cabb0543365b"
+    },
+    {
+      "path": "tia_case_v1/independent_witness.py",
+      "bytes": 2825,
+      "sha256": "3f56f823eb29b4f1f9ddaa343fdf90d03b79562aa233b98dbfe3267bab672f50"
+    },
+    {
+      "path": "tia_case_v1/network_input.py",
+      "bytes": 2469,
+      "sha256": "f7f7d27668a01b14b6fb6f76c577f2a8e863e09a8c333f99eef7021efc3eee87"
+    },
+    {
+      "path": "tia_case_v1/PLAN.md",
+      "bytes": 4663,
+      "sha256": "042a87a2daea7b94c705c14e70dd138541777627e17d78ab02821d712317dfa1"
+    },
+    {
+      "path": "tia_case_v1/private/baseline_100p.sp",
+      "bytes": 85,
+      "sha256": "cf84747f1ced6d4bba51ccbc4dee7c7a11ca3729af82e1cdb2ebe594835c7e5b"
+    },
+    {
+      "path": "tia_case_v1/private/baseline_10p.sp",
+      "bytes": 102,
+      "sha256": "04ed24455d65e157cca498142a0f4afc8c09bddcc54eaea964bd46e99e1bb15a"
+    },
+    {
+      "path": "tia_case_v1/private/baseline_1p.sp",
+      "bytes": 102,
+      "sha256": "528cc7b58866ddd801ec1fff09523954d498e76bbefbeee9de2be545bd3d0ec9"
+    },
+    {
+      "path": "tia_case_v1/private/baseline_22p.sp",
+      "bytes": 102,
+      "sha256": "780bb58c567d09645d07c0bf81b0d13e0d6993e459bbdfb388c2e87a74a48a35"
+    },
+    {
+      "path": "tia_case_v1/private/baseline_2p2.sp",
+      "bytes": 102,
+      "sha256": "42524b8bfea07644e8c136f8e7c6da7bae3de296ef095c46bbb0ca4b1f77bc8d"
+    },
+    {
+      "path": "tia_case_v1/private/baseline_4p7.sp",
+      "bytes": 102,
+      "sha256": "095f06c36ed679489266f7853da0863bbd53ef6e7fa2829c48c4c74fe2dc8c1e"
+    },
+    {
+      "path": "tia_case_v1/private/baseline_6p8.sp",
+      "bytes": 102,
+      "sha256": "2deb854c512a182694f6d4070619a0a0d84afba6c649c03c624174808226bc20"
+    },
+    {
+      "path": "tia_case_v1/private/baseline_8p2.sp",
+      "bytes": 102,
+      "sha256": "19aa216b270ea8c467f142ac6a1cb414398eba1124c4a9df402a89b6f3fc8142"
+    },
+    {
+      "path": "tia_case_v1/private/equivalent_rg5000.sp",
+      "bytes": 138,
+      "sha256": "135c23b1ef42a855e6b7e0b7d73635702e86b37c15de90df45c33ee4a556e4eb"
+    },
+    {
+      "path": "tia_case_v1/private/shaped_rg1000.sp",
+      "bytes": 106,
+      "sha256": "b1938bf2fdc68e4436b91c4b649cbae0bf64d5a67421ad1506267b9f9a02fc6f"
+    },
+    {
+      "path": "tia_case_v1/private/shaped_rg2000.sp",
+      "bytes": 106,
+      "sha256": "5e5a71519903ad74a0a413c69b4d7fb92922015633d099239cfb920948677bf7"
+    },
+    {
+      "path": "tia_case_v1/private/shaped_rg5000.sp",
+      "bytes": 106,
+      "sha256": "6572321e005a1f86fa1dd188b766a809f7bf600cf178874e50032bdba9118303"
+    },
+    {
+      "path": "tia_case_v1/public/contract.json",
+      "bytes": 2094,
+      "sha256": "e12b0d29c4965ecb68f54bfdfcd119a718c978cfb3e00d60120c7a732397d81c"
+    },
+    {
+      "path": "tia_case_v1/public/fixed_amplifier.sp",
+      "bytes": 1385,
+      "sha256": "e8494224e2caf771c03b23ad3c982f2924640fa28dfd9591480ad6a47b3c78bc"
+    },
+    {
+      "path": "tia_case_v1/public/LICENSE_UPSTREAM.txt",
+      "bytes": 1069,
+      "sha256": "d6b95b322ce7e119bbf18c0c43452cd88fa3247e5efcb1ac1c48bdffc886af75"
+    },
+    {
+      "path": "tia_case_v1/public/MODEL_IDENTITY.json",
+      "bytes": 474,
+      "sha256": "17bcbea07f53e66b5c9bf9a8b24d617f7f08a808e721e16d1e69e49102e9feaf"
+    },
+    {
+      "path": "tia_case_v1/public/PROMPT.txt",
+      "bytes": 10098,
+      "sha256": "7def6e90969b00723fff6d97617798c62b5ed18ac39107854b622a78fc5e0c79"
+    },
+    {
+      "path": "tia_case_v1/public/starter.sp",
+      "bytes": 85,
+      "sha256": "64870a2676739ba01ee9587b00f4919f11e64a6092b991b91dab6913728d838e"
+    },
+    {
+      "path": "tia_case_v1/public/TASK.md",
+      "bytes": 6154,
+      "sha256": "42263dbef3559ca8a6aab0b7caf1ddb7a09f7e784c656cd1963dc5abb5cf557b"
+    },
+    {
+      "path": "tia_case_v1/qualify.py",
+      "bytes": 6155,
+      "sha256": "f8441d7a998fe8523be6ae3d4fcd369b0eacab6719b117a5598185fc0fea55b5"
+    },
+    {
+      "path": "tia_case_v1/requirements.txt",
+      "bytes": 13,
+      "sha256": "7bd6b8946940b79948c548c8048e545684b91c8edc9444d8dfc0c8f76a97c0a7"
+    },
+    {
+      "path": "tia_case_v1/STOPPING_RULE_REVISION.md",
+      "bytes": 1325,
+      "sha256": "38031eb7e7f5f6a519009f269d5e51e16d5b8c64df2450aba9ad5b07dd9d8f8e"
+    },
+    {
+      "path": "tia_case_v1/test_validation.py",
+      "bytes": 6787,
+      "sha256": "23cd548cf7c396e4701f33bcbeaa12e161b5350e8c71f6e7531b8e2ba0d1bade"
+    },
+    {
+      "path": "tia_case_v1/validate_analytic.py",
+      "bytes": 3321,
+      "sha256": "c7f8d43b9fb87948069f88f48ad9019c727c54eda0e1190dd3e16eaa778b2207"
+    },
+    {
+      "path": "tia_case_v1/validate_batch.py",
+      "bytes": 1956,
+      "sha256": "15237546d80de915489daf00e78a4ada9ec912a9d1e5741ee97f34a92b999f2e"
+    },
+    {
+      "path": "tia_case_v1/boundary_validation.py",
+      "bytes": 1805,
+      "sha256": "ec565a0827208f0c3e39365f8bedae4f1bb6af8d873ec2994e9100e70319c877"
+    }
+  ],
+  "public_packet_revision": 3,
+  "predecessor_freeze_sha256": "664b2514b6235ee6ae3c29074f6c428a4af73725ef69ba29e4ffc6ad8bb8d301",
+  "revision_reason": "Inclusive 1 ohm boundary aligned to the unchanged task; no retained verdict changes. User authorized development pilot; no claim of human expert review."
+}
