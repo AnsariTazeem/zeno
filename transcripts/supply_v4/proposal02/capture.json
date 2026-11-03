@@ -1,0 +1,16 @@
+{
+  "complete": true,
+  "returncode": 0,
+  "timed_out": false,
+  "elapsed_seconds": 180.76599999982864,
+  "usage": [
+    {
+      "input_tokens": 41077,
+      "cached_input_tokens": 28544,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 13016,
+      "reasoning_output_tokens": 11171
+    }
+  ],
+  "reply_sha256": "a22c87d8cd66d40b31ba2dbf36dde3ee58125c2bf9e9973219980b437fd59740"
+}
