@@ -1,10 +1,15 @@
 {
-  "archive": "Analog_Change_Eval_v4_DRAFT_01.zip",
-  "bytes": 27434760,
-  "sha256": "ffb0a490a1da836551b55794b448e0734406d8fda973d7b32b6d3e327d6c4ab8",
-  "files": 1310,
-  "completed_sessions": 4,
-  "evaluations": 15,
+  "archive": "Zeno_Eval_DRAFT_05_01.zip",
+  "bytes": 36537656,
+  "sha256": "d845cdb3f8081d2f570ffa9bad5f102dfedd58e0f01c237fe0468e867456b095",
+  "files": 1854,
+  "source_commit": "d2ea96c7fc32572ef304322707b41b2f503ab049",
+  "completed_sessions": 5,
+  "evaluations": 19,
+  "verified_at_utc": "2026-11-03T22:25:18.070256+00:00",
+  "scope": "Local draft built from source_commit; this receipt is published after verification",
+  "source_pushed": true,
+  "archive_uploaded": false,
   "submitted": false,
   "ready_for_submission": false
 }
