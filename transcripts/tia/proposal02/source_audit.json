@@ -1,0 +1,14 @@
+{
+  "trial_id": "TIA-P01-T02",
+  "proposal": 2,
+  "UI_work_duration": "1m 31s",
+  "complete_final_response_observed": true,
+  "feedback_attachment_read": "Self-report corroborated by correctly quoting both failing margins and other own-candidate metrics.",
+  "outside_sources_cited_in_final": [],
+  "outside_source_or_reference_use": "Self-reported none; complete internal source history unavailable.",
+  "private_reference_or_previous_trial_answer_uploaded": false,
+  "new_measurement_claimed": false,
+  "code_changed_by_researcher": false,
+  "interpretation_note": "The external fixture capacitances remain unchanged. The added 30 pF is inside the candidate network, making the effective input capacitance larger; that connection is permitted by the frozen contract.",
+  "public_metadata_note": "Private chat identifiers and local launch details withheld; original record retained in entry archive."
+}
