@@ -1,0 +1,245 @@
+{
+  "circuit": "opamp_2stg",
+  "netlist": "C:\\Users\\dell\\AppData\\Local\\Temp\\me_wssknlv0\\analog_supply_pilot_v1\\runs\\s\\candidate_compiled.sp",
+  "tech": "sky130_lvt",
+  "vdd": 1.25,
+  "corner": "tt",
+  "metrics": {
+    "dc_gain_dB": -27.85,
+    "ugf_Hz": null,
+    "pm_deg": null,
+    "gm_dB": null,
+    "power_uW": 288.86,
+    "input_current_uA": 0.0,
+    "rise_settle_ns": 48.94,
+    "rise_overshoot_pct": 0.0,
+    "rise_slew_V_per_us": 15.7,
+    "fall_settle_ns": 48.3,
+    "fall_overshoot_pct": 0.0,
+    "fall_slew_V_per_us": null,
+    "n_triode": 5
+  },
+  "errors": [],
+  "warnings": [],
+  "headroom": {
+    "n_triode": 5,
+    "min_sat_margin_V": -0.464,
+    "triode_devices": [
+      "m.xdut.xni2.msky130_fd_pr__nfet_01v8_lvt",
+      "m.xdut.xnc2.msky130_fd_pr__nfet_01v8_lvt",
+      "m.xdut.xpm1.msky130_fd_pr__pfet_01v8_lvt",
+      "m.xdut.xpm2.msky130_fd_pr__pfet_01v8_lvt",
+      "m.xdut.xpo.msky130_fd_pr__pfet_01v8_lvt"
+    ],
+    "devices": [
+      {
+        "device": "m.xdut.xnb.msky130_fd_pr__nfet_01v8_lvt",
+        "type": "n",
+        "drain": "niref",
+        "id_uA": 20.0,
+        "vgs_V": 0.561,
+        "vds_V": 0.561,
+        "vdsat_V": 0.111,
+        "margin_V": 0.45
+      },
+      {
+        "device": "m.xdut.xnt.msky130_fd_pr__nfet_01v8_lvt",
+        "type": "n",
+        "drain": "xdut.tail",
+        "id_uA": 77.707,
+        "vgs_V": 0.561,
+        "vds_V": 0.307,
+        "vdsat_V": 0.111,
+        "margin_V": 0.196
+      },
+      {
+        "device": "m.xdut.xpbias.msky130_fd_pr__pfet_01v8_lvt",
+        "type": "p",
+        "drain": "xdut.vpc",
+        "id_uA": 20.396,
+        "vgs_V": 0.362,
+        "vds_V": 0.362,
+        "vdsat_V": 0.087,
+        "margin_V": 0.275
+      },
+      {
+        "device": "m.xdut.xnbias.msky130_fd_pr__nfet_01v8_lvt",
+        "type": "n",
+        "drain": "xdut.vpc",
+        "id_uA": 20.396,
+        "vgs_V": 0.561,
+        "vds_V": 0.735,
+        "vdsat_V": 0.111,
+        "margin_V": 0.624
+      },
+      {
+        "device": "m.xdut.xni1.msky130_fd_pr__nfet_01v8_lvt",
+        "type": "n",
+        "drain": "xdut.ni1",
+        "id_uA": 36.899,
+        "vgs_V": 0.593,
+        "vds_V": 0.19,
+        "vdsat_V": 0.094,
+        "margin_V": 0.096
+      },
+      {
+        "device": "m.xdut.xni2.msky130_fd_pr__nfet_01v8_lvt",
+        "type": "n",
+        "drain": "xdut.ni2",
+        "id_uA": 40.808,
+        "vgs_V": 0.897,
+        "vds_V": 0.01,
+        "vdsat_V": 0.298,
+        "margin_V": -0.287
+      },
+      {
+        "device": "m.xdut.xnc1.msky130_fd_pr__nfet_01v8_lvt",
+        "type": "n",
+        "drain": "xdut.nstage",
+        "id_uA": 36.899,
+        "vgs_V": 0.6,
+        "vds_V": 0.3,
+        "vdsat_V": 0.069,
+        "margin_V": 0.23
+      },
+      {
+        "device": "m.xdut.xnc2.msky130_fd_pr__nfet_01v8_lvt",
+        "type": "n",
+        "drain": "xdut.nmirror",
+        "id_uA": 40.808,
+        "vgs_V": 0.779,
+        "vds_V": 0.007,
+        "vdsat_V": 0.191,
+        "margin_V": -0.184
+      },
+      {
+        "device": "m.xdut.xpm1.msky130_fd_pr__pfet_01v8_lvt",
+        "type": "p",
+        "drain": "xdut.pmref",
+        "id_uA": 40.808,
+        "vgs_V": 0.925,
+        "vds_V": 0.005,
+        "vdsat_V": 0.469,
+        "margin_V": -0.463
+      },
+      {
+        "device": "m.xdut.xpm2.msky130_fd_pr__pfet_01v8_lvt",
+        "type": "p",
+        "drain": "xdut.pmout",
+        "id_uA": 36.899,
+        "vgs_V": 0.925,
+        "vds_V": 0.005,
+        "vdsat_V": 0.469,
+        "margin_V": -0.464
+      },
+      {
+        "device": "m.xdut.xpc1.msky130_fd_pr__pfet_01v8_lvt",
+        "type": "p",
+        "drain": "xdut.nmirror",
+        "id_uA": 40.808,
+        "vgs_V": 0.51,
+        "vds_V": 0.919,
+        "vdsat_V": 0.094,
+        "margin_V": 0.826
+      },
+      {
+        "device": "m.xdut.xpc2.msky130_fd_pr__pfet_01v8_lvt",
+        "type": "p",
+        "drain": "xdut.nstage",
+        "id_uA": 36.899,
+        "vgs_V": 0.51,
+        "vds_V": 0.448,
+        "vdsat_V": 0.094,
+        "margin_V": 0.354
+      },
+      {
+        "device": "m.xdut.xpo.msky130_fd_pr__pfet_01v8_lvt",
+        "type": "p",
+        "drain": "nout",
+        "id_uA": 112.984,
+        "vgs_V": 0.453,
+        "vds_V": 0.045,
+        "vdsat_V": 0.139,
+        "margin_V": -0.094
+      },
+      {
+        "device": "m.xdut.xno.msky130_fd_pr__nfet_01v8_lvt",
+        "type": "n",
+        "drain": "nout",
+        "id_uA": 112.984,
+        "vgs_V": 0.561,
+        "vds_V": 1.204,
+        "vdsat_V": 0.111,
+        "margin_V": 1.093
+      }
+    ]
+  },
+  "spec": "C:\\Users\\dell\\AppData\\Local\\Temp\\me_wssknlv0\\analog_public_v1\\upstream\\benchmark\\circuits\\opamp_2stg\\spec.yaml",
+  "checks": [
+    {
+      "metric": "dc_gain_dB",
+      "value": -27.85,
+      "op": ">=",
+      "limit": 72.71,
+      "source": 75.71,
+      "pass": false
+    },
+    {
+      "metric": "ugf_Hz",
+      "value": null,
+      "op": ">=",
+      "limit": 66590000.0,
+      "source": 83230000.0,
+      "pass": false
+    },
+    {
+      "metric": "pm_deg",
+      "value": null,
+      "op": ">=",
+      "limit": 55.0,
+      "source": 58.6,
+      "pass": false
+    },
+    {
+      "metric": "gm_dB",
+      "value": null,
+      "op": ">=",
+      "limit": 10.0,
+      "source": 19.8,
+      "pass": false
+    },
+    {
+      "metric": "power_uW",
+      "value": 288.86,
+      "op": "<=",
+      "limit": 296.4,
+      "source": 247.0,
+      "pass": true
+    },
+    {
+      "metric": "rise_settle_ns",
+      "value": 48.94,
+      "op": "<=",
+      "limit": 12.24,
+      "source": 8.16,
+      "pass": false
+    },
+    {
+      "metric": "fall_settle_ns",
+      "value": 48.3,
+      "op": "<=",
+      "limit": 26.73,
+      "source": 17.82,
+      "pass": false
+    },
+    {
+      "metric": "n_triode",
+      "value": 5,
+      "op": "<=",
+      "limit": 2,
+      "source": 2,
+      "pass": false
+    }
+  ],
+  "pass": false
+}
