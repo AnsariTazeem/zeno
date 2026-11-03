@@ -1,0 +1,51 @@
+* Follower step-response testbench (from tb_Opamp_2stg_tran): VCM +/- Vstep/2 pulse, period T.
+* DUT: .subckt dut iref inp inn out.
+.lib ../../../../../../../analog_public_v1/deps/pdk/sky130A/libs.tech/combined/sky130.lib.spice tt
+.param VDD=1.2 Iref=20u
+.global vdd
+.options reltol=1e-3 gmin=1e-12 vntol=1e-6 abstol=1e-12
+.temp 27
+
+* Compiled component-only pilot DUT; no supplied simulator commands.
+.subckt dut iref inp inn out
+r0 iref vnc 1
+rn vnc vnb 13000
+xnr3 vnb vnc nr1 0 sky130_fd_pr__nfet_01v8_lvt W=20 L=0.5 nf=1 m=1
+xnr1 nr1 vnb 0 0 sky130_fd_pr__nfet_01v8_lvt W=40 L=2 nf=1 m=1
+xns1 vpc vnb 0 0 sky130_fd_pr__nfet_01v8_lvt W=10 L=2 nf=1 m=1
+rp vpb vpc 34000
+xpr3 vpb vpc pr1 vdd sky130_fd_pr__pfet_01v8_lvt W=20 L=0.5 nf=1 m=1
+xpr1 pr1 vpb vdd vdd sky130_fd_pr__pfet_01v8_lvt W=10 L=1 nf=1 m=1
+xnt tail vnb 0 0 sky130_fd_pr__nfet_01v8_lvt W=50 L=2 nf=1 m=1
+xni1 fa inp tail 0 sky130_fd_pr__nfet_01v8_lvt W=40 L=0.5 nf=1 m=1
+xni2 fb inn tail 0 sky130_fd_pr__nfet_01v8_lvt W=40 L=0.5 nf=1 m=1
+xps1 fa vpb vdd vdd sky130_fd_pr__pfet_01v8_lvt W=10 L=1 nf=1 m=6
+xps2 fb vpb vdd vdd sky130_fd_pr__pfet_01v8_lvt W=10 L=1 nf=1 m=6
+xpc1 o1 vpc fa vdd sky130_fd_pr__pfet_01v8_lvt W=70 L=0.5 nf=1 m=1
+xpc2 d1 vpc fb vdd sky130_fd_pr__pfet_01v8_lvt W=70 L=0.5 nf=1 m=1
+xnl3 d1 vnc nl1 0 sky130_fd_pr__nfet_01v8_lvt W=20 L=0.5 nf=1 m=1
+xnl1 nl1 d1 0 0 sky130_fd_pr__nfet_01v8_lvt W=10 L=0.5 nf=1 m=1
+xnl4 o1 vnc nl2 0 sky130_fd_pr__nfet_01v8_lvt W=20 L=0.5 nf=1 m=1
+xnl2 nl2 d1 0 0 sky130_fd_pr__nfet_01v8_lvt W=10 L=0.5 nf=1 m=1
+xn6 out o1 0 0 sky130_fd_pr__nfet_01v8_lvt W=40 L=0.5 nf=1 m=1
+xp7 out vpb vdd vdd sky130_fd_pr__pfet_01v8_lvt W=10 L=1 nf=1 m=19
+rz o1 cz 2000
+cc cz out 5.2000000000000001e-13
+.ends dut
+
+
+VSUP vdd 0 dc {VDD}
+.param VCM=0.9 CL=1p Vstep=0.2 T=100n td=5n tr=10p
+IREF vdd niref dc {Iref}
+VIN nin 0 dc {VCM-Vstep/2} PULSE({VCM-Vstep/2} {VCM+Vstep/2} {td} {tr} {tr} {T/2-tr} {T})
+XDUT niref nin nout nout dut
+CL nout 0 {CL}
+
+.control
+set wr_singlescale
+set wr_vecnames
+option numdgt=7
+tran 10p 200n 0 10p
+wrdata tran.txt v(nin) v(nout) i(VSUP)
+.endc
+.end

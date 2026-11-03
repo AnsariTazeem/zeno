@@ -1,0 +1,19 @@
+{
+  "started_at_utc": "2026-11-03T08:32:40.535088+00:00",
+  "command": [
+    "C:\\Users\\dell\\AppData\\Local\\Temp\\me_b46arz1e\\analog_public_v1\\deps\\ngspice_win41\\runtime\\Library\\bin\\ngspice_con.exe",
+    "-n",
+    "-b",
+    "-D",
+    "ngbehavior=hsa",
+    "-D",
+    "ng_nomodcheck",
+    "opamp_loop.cir"
+  ],
+  "deck_sha256": "dedd7fb3b6338e4b4f3c1e5c26c7e9e0048f10f8166182d7494bc8705504f280",
+  "simulator_sha256": "41a6bda700d9160089f2a39a14f94408172f7748215b68b81d39ea1bc26e300c",
+  "simulator_version": "ngspice 41 (conda-forge Windows h295a5eb_0)",
+  "requested_spiceinit": "set ngbehavior=hsa\nset ng_nomodcheck\n",
+  "numerical_profile": "upstream",
+  "startup_translation": "Reviewed hsa and ng_nomodcheck variables passed on CLI; local spinit sets one thread"
+}

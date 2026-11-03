@@ -1,0 +1,42 @@
+
+Note: Compatibility modes selected: hs a
+
+
+Circuit: * follower step-response testbench (from tb_opamp_2stg_tran): vcm +/- vstep/2 pulse, period t.
+
+option SCALE: Scale is set to 1e-06 for instance and model parameters
+option SCALE: Scale is set to 1e-06 for instance and model parameters
+option SCALE: Scale is set to 1e-06 for instance and model parameters
+option SCALE: Scale is set to 1e-06 for instance and model parameters
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+vdd                                        1.2
+niref                                 0.779852
+nin                                        0.8
+xdut.vnc                              0.779832
+xdut.vnb                              0.519832
+xdut.nr1                               0.20754
+xdut.vpc                              0.431876
+xdut.vpb                              0.607268
+xdut.pr1                              0.927357
+xdut.tail                             0.275544
+xdut.fa                               0.926649
+xdut.fb                               0.926194
+nout                                  0.800033
+xdut.o1                               0.581893
+xdut.d1                               0.572599
+xdut.nl1                               0.21217
+xdut.nl2                              0.212304
+xdut.cz                               0.581893
+vin#branch                                   0
+vsup#branch                        -0.00018911
+
+ Reference value :  0.00000e+00 Reference value :  1.66620e-08 Reference value :  3.53820e-08 Reference value :  5.35720e-08 Reference value :  7.32720e-08 Reference value :  9.16920e-08 Reference value :  1.09662e-07 Reference value :  1.27872e-07 Reference value :  1.43242e-07 Reference value :  1.59442e-07 Reference value :  1.77772e-07 Reference value :  1.96012e-07
+No. of Data Rows : 20032
+Note: Simulation executed from .control section 
