@@ -1,0 +1,42 @@
+
+Note: Compatibility modes selected: hs a
+
+
+Circuit: * follower step-response testbench (from tb_opamp_2stg_tran): vcm +/- vstep/2 pulse, period t.
+
+option SCALE: Scale is set to 1e-06 for instance and model parameters
+option SCALE: Scale is set to 1e-06 for instance and model parameters
+option SCALE: Scale is set to 1e-06 for instance and model parameters
+option SCALE: Scale is set to 1e-06 for instance and model parameters
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+vdd                                       1.15
+niref                                 0.779852
+nin                                        0.8
+xdut.vnc                              0.779832
+xdut.vnb                              0.519832
+xdut.nr1                               0.20754
+xdut.vpc                              0.383803
+xdut.vpb                               0.55788
+xdut.pr1                              0.878528
+xdut.tail                             0.274973
+xdut.fa                               0.879913
+xdut.fb                               0.879443
+nout                                  0.800034
+xdut.o1                               0.580692
+xdut.d1                               0.571764
+xdut.nl1                              0.212755
+xdut.nl2                              0.212884
+xdut.cz                               0.580692
+vin#branch                                   0
+vsup#branch                       -0.000186551
+
+ Reference value :  0.00000e+00 Reference value :  1.76520e-08 Reference value :  3.50020e-08 Reference value :  5.01720e-08 Reference value :  6.39620e-08 Reference value :  8.16920e-08 Reference value :  9.45820e-08 Reference value :  1.07552e-07 Reference value :  1.21202e-07 Reference value :  1.34102e-07 Reference value :  1.48072e-07 Reference value :  1.62912e-07 Reference value :  1.77992e-07 Reference value :  1.92682e-07
+No. of Data Rows : 20032
+Note: Simulation executed from .control section 
