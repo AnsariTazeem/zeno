@@ -50,6 +50,7 @@ unscored. No LLM judge is used. [Setup, grading, runtime and cost](docs/run.md)
 The tested source lives under `reproduction/payload/`. Its paths and hashes
 stay unchanged; the folders above make it easier to inspect. The full local
 entry archive is identified in [evidence/entry_archive.json](evidence/entry_archive.json).
+The [latest local delivery](docs/delivery.md) has its own source commit and verification receipt.
 
 **Status: draft.** More trials, an independent-machine run, rights review and
 the walkthrough remain open. The guide checklist records the gaps.
