@@ -1,0 +1,20 @@
+{
+  "started_at_utc": "2026-11-03T15:06:01.658623+00:00",
+  "source_name": "candidate.sp",
+  "original_sha256": "c85c1bb7e5cf684db3eb6939005b6b29ebbc60ae5ca3c141d3ed8d9dd7462e75",
+  "compiled_sha256": "0371bd065e6b1ad2ddbaa313fa2f3801d259899b56f4462555fe3d7de3ffdd1c",
+  "components": {
+    "x": 14,
+    "r": 2,
+    "c": 3
+  },
+  "numerics": "upstream",
+  "simulator_sha256": "41a6bda700d9160089f2a39a14f94408172f7748215b68b81d39ea1bc26e300c",
+  "code_sha256": {
+    "run_candidate.py": "a65ce0270505e52d757ab146a10d05d2d838bc2f4da4f2482a783d715e05f92c",
+    "circuit_input.py": "69c95d9e0cb9c4c00fa118f784fd046b366c8642f644471f033f6dbb69f09c8d",
+    "run_reference.py": "e3761c07b35c65f38b34031f25378eb0a1cbffe72e2fd35698798248ce1cc230",
+    "strict_measure.py": "4e973f88ba9ff1e0af12c40c8e8783fbe2f66dce46ffdb5dda3b5057a3aa2a0e"
+  },
+  "scope": "Development electrical verification; not automatically an AI trial"
+}
