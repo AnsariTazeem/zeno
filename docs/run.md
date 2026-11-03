@@ -26,6 +26,8 @@ Stay in the repository root and use the printed environment's Python:
 This verifies frozen files, runs the existing 50 setup/grading tests and checks
 the public task copies and exports. It makes no model calls, downloads or
 full-circuit simulation runs. Logs go to the ignored `.local-checks/` folder.
+Test subprocesses use a temporary directory inside that log folder, so they
+do not need write access to the system temporary directory.
 
 ## Reproduce native controls
 

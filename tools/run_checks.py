@@ -3,6 +3,7 @@ from pathlib import Path
 from datetime import datetime, timezone
 import hashlib
 import json
+import os
 import re
 import subprocess
 import sys
@@ -36,6 +37,10 @@ def main():
     log_parent = ROOT / '.local-checks'
     log_parent.mkdir(exist_ok=True)
     output = Path(tempfile.mkdtemp(prefix='offline_', dir=log_parent))
+    test_temp = output / 'tmp'
+    test_temp.mkdir()
+    environment = os.environ.copy()
+    environment.update(TMP=str(test_temp), TEMP=str(test_temp))
     suites = [('bootstrap_boundaries',PAYLOAD/'checks/test_bootstrap.py',8),
               ('grading_regressions',PAYLOAD/'eval_core_v4/test_core.py',30),
               ('supply_evidence',PAYLOAD/'eval_core_v4/test_supply_evidence.py',12),
@@ -45,7 +50,7 @@ def main():
         command = [sys.executable,'-I','-B','-c',
             "import runpy,sys; sys.path.insert(0,sys.argv[1]); p=sys.argv[2]; sys.argv=[p]; runpy.run_path(p,run_name='__main__')",
             str(path.parent),str(path)]
-        result = subprocess.run(command,cwd=ROOT,capture_output=True,timeout=120)
+        result = subprocess.run(command,cwd=ROOT,env=environment,capture_output=True,timeout=120)
         (output/(label+'_stdout.txt')).write_bytes(result.stdout)
         (output/(label+'_stderr.txt')).write_bytes(result.stderr)
         stderr=result.stderr.decode('utf-8',errors='replace')
