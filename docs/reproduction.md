@@ -22,5 +22,5 @@ suite on Windows. The manual native job also passed on a GitHub-hosted runner.
 [Hosted receipt](../evidence/hosted_verification.json). Run IDs,
 source commits and artifacts identify the tested snapshot.
 
-Local cached setup took 77.7 seconds and native qualification 344.1 seconds.
+Local cached setup took 77.703 seconds and native qualification 344.141 seconds.
 These are observed timings on one computer. [Commands](run.md)

@@ -39,10 +39,9 @@ This runs the original 50 tests and five circuit controls: three passing
 references, an ordinary SUPPLY failure and a no-gain SUPPLY failure. Use a
 fresh prepared root: qualification refuses to overwrite earlier outputs.
 
-The completed run on this computer took about 67 seconds for cached setup and
-472 seconds for qualification. Qualification covered 21 conditions in 20
-successful full-circuit native processes. These are observed timings, not
-guarantees. [Reproduction report](reproduction.md)
+The recorded fresh-clone run took 77.703 seconds for cached setup and 344.141
+seconds for native qualification. It covered 21 conditions in 20 native
+processes. [Run receipt](../evidence/clone_verification.json) · [Reproduction](reproduction.md)
 
 The source was checked in a fresh clone and venv. See [reproduction](reproduction.md)
 and [CI](ci.md) for run details.
@@ -69,8 +68,7 @@ python -I -B tools/export_task.py --task supply --out 'C:/new/task-folder'
 Only that task's verified public files are copied. The destination must not
 exist. Give the model that folder only, in a fresh context. This repository
 contains references; LOAD/TIA's fixed plant can expose SUPPLY's repair.
-Export checks reduce accidental leakage but do not establish OS isolation
-or absence of training exposure.
+The collection boundaries are documented in [methodology](methodology.md).
 
 ## Cost and evidence
 
@@ -85,9 +83,8 @@ host. The qualification timings measure the five-control batch, not a fixed
 per-candidate runtime.
 
 Model settings, dates, capture timing and candidate feedback are retained in
-[transcripts](../transcripts/README.md). Exact backend revisions, temperatures
-and seeds are unknown. The full raw entry archive remains local; its identity
-is in [the archive record](../evidence/entry_archive.json).
+[transcripts](../transcripts/README.md). The full raw entry archive remains
+local; its identity is in [the archive record](../evidence/entry_archive.json).
 
 ## Recreate the waveform plot
 
