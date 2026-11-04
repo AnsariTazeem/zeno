@@ -8,9 +8,24 @@
 | LOAD, UI-labelled GPT-6/High | 3 | Pass |
 | LOAD, Sol/High CLI, v4 | 1 | Pass |
 | TIA, UI-labelled GPT-6/High | 2 | Pass |
+| TIA, Sol/High CLI, v4 | 2 | Pass |
 
 Finer simulation confirmed each final result. The sessions use different
 interfaces and grader versions; they are not a matched model comparison.
+
+## Fresh TIA CLI session
+
+Proposal 1 passes two of six conditions. Proposal 2 keeps the compensation
+network and increases the feedback resistance from 10,000 to 10,042 ohms.
+It passes all six conditions, confirmed with finer numerics. Refined worst
+settling is 425.875 ns, maximum overshoot/undershoot is
+8.41418 mV, minimum phase margin is 78.3548 degrees,
+and minimum bandwidth is 2.00789 MHz.
+
+The trial stops at this confirmed pass. TIA remains a passing control;
+these two responses do not demonstrate an unsolved TIA limitation.
+
+[Measurements](../evidence/tia_cli_summary.json) · [First answer](../transcripts/tia_cli/proposal01/model_reply.md) · [Final answer](../transcripts/tia_cli/proposal02/model_reply.md)
 
 ## Fresh LOAD CLI session
 
@@ -51,6 +66,6 @@ settling: 13.278–14.053 ns against a 12.24 ns limit.
 [Repeat measurements](../evidence/supply_v4_repeat_summary.json) · [Earlier measurements](../evidence/supply_v4_summary.json) · [Catalog](../results/catalog.json) · [Responses](../transcripts/README.md)
 
 A separate v3 follow-up stopped after two replies on a wrapper defect.
-It is excluded from the six complete-session count. Proposals, operating
+It is excluded from the seven complete-session count. Proposals, operating
 conditions and refined reruns are correlated measurements. This small
 selected sample does not establish a general failure rate.

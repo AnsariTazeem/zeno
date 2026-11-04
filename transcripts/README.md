@@ -7,6 +7,7 @@
 | SUPPLY repeat, Sol/High CLI, v4 | [Response](supply_v4_repeat/proposal01/model_reply.md) | [Response 3](supply_v4_repeat/proposal03/model_reply.md) | No full pass; collection recovered |
 | LOAD, UI-labelled GPT-6/High | [Response](load/proposal01/rendered_answer_whitespace_normalized.txt) | [Response 3](load/proposal03/rendered_answer_whitespace_normalized.txt) | Pass, refined |
 | LOAD, Sol/High CLI, v4 | [Response](load_cli/proposal01/model_reply.md) | Same proposal | Pass, refined |
+| TIA, Sol/High CLI, v4 | [Response](tia_cli/proposal01/model_reply.md) | [Response 2](tia_cli/proposal02/model_reply.md) | Pass, refined |
 | TIA, UI-labelled GPT-6/High | [Response](tia/proposal01/rendered_answer_whitespace_normalized.txt) | [Response 2](tia/proposal02/rendered_answer_whitespace_normalized.txt) | Pass, refined |
 
 Each folder retains the selected candidate and capture evidence. CLI replies
