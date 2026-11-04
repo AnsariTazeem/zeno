@@ -14,7 +14,7 @@ The v4 SUPPLY adapter handles a completed sweep whose gain stays below unity:
 UGF and phase margin can be undefined. With native identity and trace checks
 satisfied, this is an electrical failure. Missing or corrupt data stay unscored.
 
-The three complete SUPPLY sessions, two LOAD sessions and TIA session are included.
+The three complete SUPPLY sessions, two LOAD sessions and two TIA sessions are included.
 The SUPPLY repeat recovered from a UTC/local-date trace lookup interruption
 using the retained first answer and the same session. It was not regenerated.
 A separate v3 follow-up stopped after two replies on a wrapper defect and is
