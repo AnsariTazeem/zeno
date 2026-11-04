@@ -1,0 +1,34 @@
+{
+  "files": [
+    {
+      "path": "transcripts/load_cli/proposal01/input_message.txt",
+      "source_sha256": "118f94d8030e17f2c48759a6b4588c5cf60f859d373fe27418b7d6b47defc0fa",
+      "published_sha256": "118f94d8030e17f2c48759a6b4588c5cf60f859d373fe27418b7d6b47defc0fa",
+      "transformation": "none"
+    },
+    {
+      "path": "transcripts/load_cli/proposal01/model_reply.md",
+      "source_sha256": "2319f369f7dfad31633fa4262fc5f333d64c460b25c70968d8b8c07035bddf53",
+      "published_sha256": "2319f369f7dfad31633fa4262fc5f333d64c460b25c70968d8b8c07035bddf53",
+      "transformation": "none"
+    },
+    {
+      "path": "transcripts/load_cli/proposal01/candidate.sp",
+      "source_sha256": "3b5b5c13adbf8d314a0533bb28b1822d60272c18c177f4e61bc90c1fb5bf45dd",
+      "published_sha256": "3b5b5c13adbf8d314a0533bb28b1822d60272c18c177f4e61bc90c1fb5bf45dd",
+      "transformation": "none"
+    },
+    {
+      "path": "transcripts/load_cli/proposal01/capture.json",
+      "source_sha256": "dac43790502592c6b2679a692d9a48dc98ba62e13e2599a375c24d467d15a194",
+      "published_sha256": "dac43790502592c6b2679a692d9a48dc98ba62e13e2599a375c24d467d15a194",
+      "transformation": "none"
+    },
+    {
+      "path": "transcripts/load_cli/proposal01/launch.json",
+      "source_sha256": "c51d2d4e77841858a03a8d028cd8e9002145be9d3db980d7e1f2696d1257ab54",
+      "published_sha256": "7b199c7e45a469fe453a8f558cbaff0579ea0e75ea05be991829c45d806dbd8a",
+      "transformation": "Private session ID, launch command and absolute paths omitted"
+    }
+  ]
+}
