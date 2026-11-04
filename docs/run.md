@@ -44,9 +44,9 @@ This runs the original 50 tests and five circuit controls: three passing
 references, an ordinary SUPPLY failure and a no-gain SUPPLY failure. Use a
 fresh prepared root: qualification refuses to overwrite earlier outputs.
 
-The recorded fresh-clone run took 77.703 seconds for cached setup and 344.141
+The latest fresh-venv run took 32.732 seconds for cached setup and 192.526
 seconds for native qualification. It covered 21 conditions in 20 native
-processes. [Run receipt](../evidence/clone_verification.json) · [Reproduction](reproduction.md)
+processes. [Run receipt](../evidence/final_validation.json) · [Reproduction](reproduction.md)
 
 The source was checked in a fresh clone and venv. See [reproduction](reproduction.md)
 and [CI](ci.md) for run details.

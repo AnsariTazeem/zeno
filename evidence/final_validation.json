@@ -1,0 +1,62 @@
+{
+  "verified_at_utc": "2026-11-04T12:56:54.665485+00:00",
+  "scope": "Fresh local venv and cached dependencies on this Windows host; no new model trials",
+  "outcome": "passed",
+  "bootstrap_sha256": "7d4bed57fbc2726bc08270f49ff0b7e71233eedcc1d4d5ef4440f24c2c9a4a41",
+  "setup_lock_sha256": "81e6645ec1053d5d91312d3093b37aa3cade532b97a8d7aa352e5df85c41804a",
+  "kit_manifest_sha256": "47eb721d5b14964e23804d01c0f05bd9d636ded0f3019fb6289e76fca6f5577b",
+  "verified_runtime_files": 1202,
+  "offline_tests_passed": 63,
+  "controls": [
+    {
+      "label": "load_ref01",
+      "category": "pass",
+      "conditions": 6,
+      "passing_conditions": 6,
+      "native_processes": 1,
+      "all_check_classifications_reproduced": true
+    },
+    {
+      "label": "supply_neg01",
+      "category": "specification_failure",
+      "conditions": 3,
+      "passing_conditions": 0,
+      "native_processes": 6,
+      "all_check_classifications_reproduced": true
+    },
+    {
+      "label": "supply_no_gain01",
+      "category": "specification_failure",
+      "conditions": 3,
+      "passing_conditions": 0,
+      "native_processes": 6,
+      "all_check_classifications_reproduced": true
+    },
+    {
+      "label": "supply_ref01",
+      "category": "pass",
+      "conditions": 3,
+      "passing_conditions": 3,
+      "native_processes": 6,
+      "all_check_classifications_reproduced": true
+    },
+    {
+      "label": "tia_ref01",
+      "category": "pass",
+      "conditions": 6,
+      "passing_conditions": 6,
+      "native_processes": 1,
+      "all_check_classifications_reproduced": true
+    }
+  ],
+  "native_processes": 20,
+  "operating_conditions": 21,
+  "qualification_result_sha256": "974d677bb289244953e6bc08f34988e106200471c51deea6bdb56a17176da54d",
+  "qualification_manifest_sha256": "01fe812e33cb1a6e94ab493d0a73c40edcf47d755255a05b88612d0efa92ba09",
+  "qualification_artifacts_retained_locally": true,
+  "cached_setup_seconds": 32.732,
+  "qualification_wall_seconds": 192.526,
+  "model_calls": 0,
+  "independent_machine_or_OS": false,
+  "historical_hosted_qualification": "evidence/hosted_verification.json"
+}

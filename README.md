@@ -59,7 +59,7 @@ and setup boundaries. No LLM judge is used.
 
 Simulation and regrading need no model account or API keys. Collection used an
 existing ChatGPT subscription; per-run inference cost was unavailable. A
-recorded five-control qualification took 344.141 seconds after 77.703 seconds
+recorded five-control qualification took 192.526 seconds after 32.732 seconds
 of cached setup. [Reproduction record](docs/reproduction.md)
 
 ## Code and data
