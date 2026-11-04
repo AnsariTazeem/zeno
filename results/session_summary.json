@@ -1,0 +1,259 @@
+{
+  "scope": "Selected historical complete sessions; catalog consistency audit, not native regrading",
+  "packet_revision": "recorded",
+  "complete_sessions": 7,
+  "baseline_proposals": 17,
+  "saved_evaluations": 24,
+  "disclosed_interrupted_attempts": 1,
+  "complete_attempt_ledger_available": false,
+  "groups": [
+    {
+      "task": "load",
+      "task_id": "LOAD-P01",
+      "model": "UI-labelled GPT-6 / High",
+      "recorded_grader": "eval_core_v3",
+      "backend_revision": null,
+      "temperature": null,
+      "seed": null,
+      "packet_revision": "recorded",
+      "proposal_budget": 3,
+      "complete_sessions": 1,
+      "confirmed_passes": 1,
+      "proposals_per_session": [
+        3
+      ],
+      "trial_ids": [
+        "LOAD-P01-T01"
+      ]
+    },
+    {
+      "task": "load",
+      "task_id": "LOAD-P01",
+      "model": "requested gpt-6.1-sol / High (CLI)",
+      "recorded_grader": "eval_core_v4",
+      "backend_revision": null,
+      "temperature": null,
+      "seed": null,
+      "packet_revision": "recorded",
+      "proposal_budget": 3,
+      "complete_sessions": 1,
+      "confirmed_passes": 1,
+      "proposals_per_session": [
+        1
+      ],
+      "trial_ids": [
+        "load_cli_trial01"
+      ]
+    },
+    {
+      "task": "supply",
+      "task_id": "SUPPLY-P01-v2",
+      "model": "requested gpt-6.1-sol / High (CLI)",
+      "recorded_grader": "eval_core_v3",
+      "backend_revision": null,
+      "temperature": null,
+      "seed": null,
+      "packet_revision": "recorded",
+      "proposal_budget": 3,
+      "complete_sessions": 1,
+      "confirmed_passes": 0,
+      "proposals_per_session": [
+        3
+      ],
+      "trial_ids": [
+        "fresh_sol_supply_trial01"
+      ]
+    },
+    {
+      "task": "supply",
+      "task_id": "SUPPLY-P01-v2",
+      "model": "requested gpt-6.1-sol / High (CLI)",
+      "recorded_grader": "eval_core_v4",
+      "backend_revision": null,
+      "temperature": null,
+      "seed": null,
+      "packet_revision": "recorded",
+      "proposal_budget": 3,
+      "complete_sessions": 2,
+      "confirmed_passes": 0,
+      "proposals_per_session": [
+        3,
+        3
+      ],
+      "trial_ids": [
+        "fresh_sol_supply_v4_trial01",
+        "supply_v4_repeat_recovered"
+      ]
+    },
+    {
+      "task": "tia",
+      "task_id": "TIA-P01",
+      "model": "UI-labelled GPT-6 / High",
+      "recorded_grader": "eval_core_v3",
+      "backend_revision": null,
+      "temperature": null,
+      "seed": null,
+      "packet_revision": "recorded",
+      "proposal_budget": 3,
+      "complete_sessions": 1,
+      "confirmed_passes": 1,
+      "proposals_per_session": [
+        2
+      ],
+      "trial_ids": [
+        "TIA-P01-T02"
+      ]
+    },
+    {
+      "task": "tia",
+      "task_id": "TIA-P01",
+      "model": "requested gpt-6.1-sol / High (CLI)",
+      "recorded_grader": "eval_core_v4",
+      "backend_revision": null,
+      "temperature": null,
+      "seed": null,
+      "packet_revision": "recorded",
+      "proposal_budget": 3,
+      "complete_sessions": 1,
+      "confirmed_passes": 1,
+      "proposals_per_session": [
+        2
+      ],
+      "trial_ids": [
+        "tia_cli_trial01"
+      ]
+    }
+  ],
+  "sessions": [
+    {
+      "trial_id": "LOAD-P01-T01",
+      "task": "load",
+      "task_id": "LOAD-P01",
+      "model": "UI-labelled GPT-6 / High",
+      "recorded_grader": "eval_core_v3",
+      "backend_revision": null,
+      "temperature": null,
+      "seed": null,
+      "packet_revision": "recorded",
+      "proposal_budget": 3,
+      "proposals": 3,
+      "confirmed_pass": true,
+      "final_candidate": "transcripts/load/proposal03/candidate_rendered.sp",
+      "final_candidate_sha256": "838960ad14473af1eca8e7152d160f6183f5700f345ef2936a0187c157b42347",
+      "final_baseline": "load_p3_baseline",
+      "final_refined": "load_p3_refined"
+    },
+    {
+      "trial_id": "TIA-P01-T02",
+      "task": "tia",
+      "task_id": "TIA-P01",
+      "model": "UI-labelled GPT-6 / High",
+      "recorded_grader": "eval_core_v3",
+      "backend_revision": null,
+      "temperature": null,
+      "seed": null,
+      "packet_revision": "recorded",
+      "proposal_budget": 3,
+      "proposals": 2,
+      "confirmed_pass": true,
+      "final_candidate": "transcripts/tia/proposal02/candidate_rendered.sp",
+      "final_candidate_sha256": "6da3159f7ea705371e387d64a5024cbc32daf49e3434a008e0d51061fecc7b7e",
+      "final_baseline": "tia_p2_baseline",
+      "final_refined": "tia_p2_refined"
+    },
+    {
+      "trial_id": "fresh_sol_supply_trial01",
+      "task": "supply",
+      "task_id": "SUPPLY-P01-v2",
+      "model": "requested gpt-6.1-sol / High (CLI)",
+      "recorded_grader": "eval_core_v3",
+      "backend_revision": null,
+      "temperature": null,
+      "seed": null,
+      "packet_revision": "recorded",
+      "proposal_budget": 3,
+      "proposals": 3,
+      "confirmed_pass": false,
+      "final_candidate": "transcripts/supply/proposal03/candidate.sp",
+      "final_candidate_sha256": "8bb15e3ee8312d72d2db543838cad93ff9702da83fc399b5b2f1adb7f26e27fe",
+      "final_baseline": "supply_p3_baseline",
+      "final_refined": "supply_p3_refined"
+    },
+    {
+      "trial_id": "fresh_sol_supply_v4_trial01",
+      "task": "supply",
+      "task_id": "SUPPLY-P01-v2",
+      "model": "requested gpt-6.1-sol / High (CLI)",
+      "recorded_grader": "eval_core_v4",
+      "backend_revision": null,
+      "temperature": null,
+      "seed": null,
+      "packet_revision": "recorded",
+      "proposal_budget": 3,
+      "proposals": 3,
+      "confirmed_pass": false,
+      "final_candidate": "transcripts/supply_v4/proposal03/candidate.sp",
+      "final_candidate_sha256": "6ca767a466494bb1087b5fa0e9e30a35b9c95653d333f48e4f3ad4b58b15f908",
+      "final_baseline": "supply_v4_p3_baseline",
+      "final_refined": "supply_v4_p3_refined"
+    },
+    {
+      "trial_id": "load_cli_trial01",
+      "task": "load",
+      "task_id": "LOAD-P01",
+      "model": "requested gpt-6.1-sol / High (CLI)",
+      "recorded_grader": "eval_core_v4",
+      "backend_revision": null,
+      "temperature": null,
+      "seed": null,
+      "packet_revision": "recorded",
+      "proposal_budget": 3,
+      "proposals": 1,
+      "confirmed_pass": true,
+      "final_candidate": "transcripts/load_cli/proposal01/candidate.sp",
+      "final_candidate_sha256": "3b5b5c13adbf8d314a0533bb28b1822d60272c18c177f4e61bc90c1fb5bf45dd",
+      "final_baseline": "load_cli_p1_baseline",
+      "final_refined": "load_cli_p1_refined"
+    },
+    {
+      "trial_id": "supply_v4_repeat_recovered",
+      "task": "supply",
+      "task_id": "SUPPLY-P01-v2",
+      "model": "requested gpt-6.1-sol / High (CLI)",
+      "recorded_grader": "eval_core_v4",
+      "backend_revision": null,
+      "temperature": null,
+      "seed": null,
+      "packet_revision": "recorded",
+      "proposal_budget": 3,
+      "proposals": 3,
+      "confirmed_pass": false,
+      "final_candidate": "transcripts/supply_v4_repeat/proposal03/candidate.sp",
+      "final_candidate_sha256": "46a61df6b5ac94f3db92aa7bf49a4dbc15d16eb22625616d532e2f19142143f7",
+      "final_baseline": "supply_v4_repeat_p3_baseline",
+      "final_refined": "supply_v4_repeat_p3_refined"
+    },
+    {
+      "trial_id": "tia_cli_trial01",
+      "task": "tia",
+      "task_id": "TIA-P01",
+      "model": "requested gpt-6.1-sol / High (CLI)",
+      "recorded_grader": "eval_core_v4",
+      "backend_revision": null,
+      "temperature": null,
+      "seed": null,
+      "packet_revision": "recorded",
+      "proposal_budget": 3,
+      "proposals": 2,
+      "confirmed_pass": true,
+      "final_candidate": "transcripts/tia_cli/proposal02/candidate.sp",
+      "final_candidate_sha256": "6f4c0f5db143db8ed97179c821d0b38a7fa6b21d80a76afa8d10cb51a0e604c9",
+      "final_baseline": "tia_cli_p2_baseline",
+      "final_refined": "tia_cli_p2_refined"
+    }
+  ],
+  "population_pass_rate": null,
+  "pass_at_k": null,
+  "pass_power_k": null,
+  "statistical_limit": "Selected development sessions, sparse groups and unknown backend settings; no population estimate or model ranking"
+}

@@ -46,7 +46,8 @@ def main():
               ('supply_evidence',PAYLOAD/'eval_core_v4/test_supply_evidence.py',12),
               ('repository_layout',ROOT/'tests/test_repository_layout.py',7),
               ('download_recovery',ROOT/'tests/test_download_recovery.py',6),
-              ('task_contracts',ROOT/'tests/test_task_contracts.py',10)]
+              ('task_contracts',ROOT/'tests/test_task_contracts.py',10),
+              ('trial_summary',ROOT/'tests/test_trial_summary.py',15)]
     checks=[]
     for label, path, count in suites:
         command = [sys.executable,'-I','-B','-c',
