@@ -34,6 +34,9 @@ finer-confirmed passes.
 
 The record contains seven complete adaptive sessions and 24 saved evaluations.
 [Exact model responses](transcripts/README.md) accompany the measurements.
+Those sessions used the recorded packets. The [current packets](tasks/README.md)
+clarify input limits and reporting precision; their electrical requirements
+are unchanged. [Task validation](docs/task-validation.md)
 
 ## Run
 
@@ -54,7 +57,7 @@ Setup prints the new environment path. From the repository root:
 Each circuit must pass every stated requirement at every operating point.
 The deterministic grader accepts electrically valid alternatives and keeps
 invalid inputs and execution errors separate from electrical failures.
-Passing references, negative controls and 63 offline tests check the grader
+Passing references, negative controls and 73 offline tests check the grader
 and setup boundaries. No LLM judge is used.
 
 Simulation and regrading need no model account or API keys. Collection used an

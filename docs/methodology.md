@@ -5,6 +5,11 @@ Every check must pass at every point. Valid results score 100 or 0; invalid
 input and invalid execution/evidence are separate unscored outcomes.
 Equivalent valid circuits are accepted. No LLM judge is used.
 
+The existing seven-session record uses the original packets. `clarified-1`
+discloses previously unstated compiler bounds and measurement precision for
+future collection. Electrical limits and grading code are unchanged. No new
+model trials are included. [Packet audit](task-validation.md)
+
 Sessions allow at most three proposals, with feedback only about the submitted
 candidate. References are withheld. The final valid proposal is checked with
 finer numerics. CLI/UI sessions and grader versions are recorded separately.
