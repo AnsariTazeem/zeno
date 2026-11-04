@@ -49,7 +49,7 @@ def main():
               ('task_contracts',ROOT/'tests/test_task_contracts.py',10),
               ('trial_summary',ROOT/'tests/test_trial_summary.py',15),
               ('publication',ROOT/'tests/test_publication.py',6),
-              ('collection',ROOT/'tests/test_collection.py',17),
+              ('collection',ROOT/'tests/test_collection.py',18),
               ('transport',ROOT/'tests/test_transport.py',6)]
     checks=[]
     for label, path, count in suites:

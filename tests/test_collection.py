@@ -6,6 +6,7 @@ import json
 import shutil
 import tempfile
 import unittest
+from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parent.parent
 spec = importlib.util.spec_from_file_location('collection', ROOT/'tools/collect_trials.py')
@@ -238,6 +239,14 @@ class CollectionTests(unittest.TestCase):
         (self.folder/'attempts/trial01/outcome.json').unlink()
         with self.assertRaisesRegex(ValueError, 'Terminal proposal retained'):
             self.record()
+
+    def test_status_command_routes_to_summary(self):
+        with patch('sys.argv', ['collect_trials.py', 'status', '--name', 'example']), \
+                patch.object(collection, 'campaign_path', return_value=self.folder), \
+                patch.object(collection, 'status', return_value={'checked': True}) as summarize, \
+                patch('builtins.print'):
+            collection.main()
+        summarize.assert_called_once_with(self.folder)
 
 
 if __name__ == '__main__':

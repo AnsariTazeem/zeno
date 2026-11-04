@@ -373,8 +373,8 @@ def main():
     stop.add_argument('--name', required=True)
     stop.add_argument('--trial', required=True)
     stop.add_argument('--kind', choices=('transport_error', 'protocol_error'), required=True)
-    status = sub.add_parser('status')
-    status.add_argument('--name', required=True)
+    status_parser = sub.add_parser('status')
+    status_parser.add_argument('--name', required=True)
     args = parser.parse_args()
     if args.command == 'prepare':
         print(prepare(args.name, args.model, args.effort, args.interface, codex=args.codex))
