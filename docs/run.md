@@ -10,7 +10,7 @@ python -I -B bootstrap.py
 ```
 
 Setup verifies cached files or downloads pinned archives and wheels:
-41,668,459 bytes with an empty cache. It creates a short temporary root and
+about 42 MB with an empty cache. It creates a short temporary root and
 venv, then prints their paths. NumPy 2.3.5 and zstandard 0.25.0 are pinned.
 No model account or API key is needed for simulation or grading. Windows may
 later remove the temporary root; rerun setup to create a new one.
@@ -28,9 +28,10 @@ Stay in the repository root and use the printed environment's Python:
 & 'C:/printed/root/.venv/Scripts/python.exe' -I -B tools/run_checks.py
 ```
 
-This verifies frozen files and runs 88 tests covering setup, download recovery,
-grading, raw evidence, task exports and session accounting. It makes no model calls, downloads or
-full-circuit simulation runs. Logs go to the ignored `.local-checks/` folder.
+This verifies pinned files and runs the regression suite covering setup, download
+recovery, grading, raw evidence, task exports, session accounting and publication
+boundaries. It makes no model calls, downloads or full-circuit simulation runs.
+Logs go to the ignored `.local-checks/` folder.
 Test subprocesses use a temporary directory inside that log folder, so they
 do not need write access to the system temporary directory.
 
@@ -44,8 +45,8 @@ This runs the original 50 tests and five circuit controls: three passing
 references, an ordinary SUPPLY failure and a no-gain SUPPLY failure. Use a
 fresh prepared root: qualification refuses to overwrite earlier outputs.
 
-The latest fresh-venv run took 32.732 seconds for cached setup and 192.526
-seconds for native qualification. It covered 21 conditions in 20 native
+Cached setup took about 30 seconds and native qualification about three minutes
+on the tested machine. Qualification covered 21 conditions in 20 native
 processes. [Run receipt](../evidence/final_validation.json) · [Reproduction](reproduction.md)
 
 The source was checked in a fresh clone and venv. See [reproduction](reproduction.md)
@@ -75,7 +76,7 @@ exist. Give the model that folder only, in a fresh context. This repository
 contains references; LOAD/TIA's fixed plant can expose SUPPLY's repair.
 The collection boundaries are documented in [methodology](methodology.md).
 
-Export defaults to the `clarified-1` packet. Add `--revision recorded` for the
+Export defaults to the current packet. Add `--revision recorded` for the
 exact historical task inputs. Electrical grading requirements are unchanged.
 Run `tools/audit_tasks.py` with the prepared Python to check declarations,
 input boundaries and verdicts. [Audit details](task-validation.md)
@@ -85,7 +86,8 @@ input boundaries and verdicts. [Audit details](task-validation.md)
 Setup, tests and circuit grading make zero model calls. Historical collection
 used the existing ChatGPT subscription, with no separately billed API fallback.
 Subscription usage consumed quota; no per-run dollar inference cost is known.
-Model access and collection are separate from this offline runner.
+Use the [collection commands](collection.md) to prepare fixed inputs and record
+new externally captured responses. Model access remains separate from simulation.
 
 A SUPPLY evaluation launches six native testbenches; LOAD/TIA each launch one
 process spanning six conditions. Time depends on circuit behavior, profile and

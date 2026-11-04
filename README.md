@@ -58,13 +58,13 @@ Setup prints the new environment path. From the repository root:
 Each circuit must pass every stated requirement at every operating point.
 The deterministic grader accepts electrically valid alternatives and keeps
 invalid inputs and execution errors separate from electrical failures.
-Passing references, negative controls and 88 offline tests check the grader
+Passing references, negative controls and offline tests check the grader
 and setup boundaries. No LLM judge is used.
 
 Simulation and regrading need no model account or API keys. Collection used an
 existing ChatGPT subscription; per-run inference cost was unavailable. A
-recorded five-control qualification took 192.526 seconds after 32.732 seconds
-of cached setup. [Reproduction record](docs/reproduction.md)
+recorded five-control qualification took about three minutes after roughly
+30 seconds of cached setup. [Reproduction record](docs/reproduction.md)
 
 ## Code and data
 

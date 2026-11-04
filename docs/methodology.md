@@ -5,18 +5,18 @@ Every check must pass at every point. Valid results score 100 or 0; invalid
 input and invalid execution/evidence are separate unscored outcomes.
 Equivalent valid circuits are accepted. No LLM judge is used.
 
-The existing seven-session record uses the original packets. `clarified-1`
-discloses previously unstated compiler bounds and measurement precision for
-future collection. Electrical limits and grading code are unchanged. No new
-model trials are included. [Packet audit](task-validation.md)
+The existing seven-session record uses the historical packets. Current exports
+state compiler bounds and measurement precision explicitly, with unchanged
+electrical limits. Results retain their original packet and grader identity.
+[Task validation](task-validation.md)
 
 Sessions allow at most three proposals, with feedback only about the submitted
 candidate. References are withheld. The final valid proposal is checked with
 finer numerics. CLI/UI sessions and grader versions are recorded separately.
 
-The v4 SUPPLY adapter handles a completed sweep whose gain stays below unity:
-UGF and phase margin can be undefined. With native identity and trace checks
-satisfied, this is an electrical failure. Missing or corrupt data stay unscored.
+A complete, valid SUPPLY sweep whose gain stays below unity fails electrically;
+its unity-gain frequency and phase margin can be undefined. Missing or corrupt
+data stay unscored.
 
 ## Collection conditions
 
@@ -27,9 +27,9 @@ version for each evaluation. Exact backend revisions, temperatures and seeds
 were unavailable. Comparisons between these selected sessions are descriptive;
 they do not establish a matched model ranking or a population failure rate.
 
-The SUPPLY repeat recovered from a UTC/local-date trace lookup interruption
-using the retained first answer and the same session. It was not regenerated.
-A separate v3 follow-up stopped after two replies on a wrapper defect and is
+One SUPPLY session resumed after a capture interruption using the retained
+answer and the same context, without regeneration. A separate follow-up
+stopped after two replies on a wrapper defect and is
 excluded from complete-trial counts. Conditions, proposals and refined runs
 are correlated measurements, not independent trials.
 
@@ -42,3 +42,7 @@ LOAD/TIA CLI collections took place after the repository was public; their
 collection receipts record that exposure. References were withheld from the
 supplied packets, while prior exposure and absolute confidentiality remain
 unverified.
+
+New collection uses a [fixed campaign](collection.md) with three trials per task,
+explicit starts, retained interruptions and no automatic model retries. Its
+results remain separate from the historical record.

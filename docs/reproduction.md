@@ -1,8 +1,7 @@
 # Reproduction
 
-The offline suite has 88 tests: eight setup-boundary checks, six download-recovery
-checks, 30 grading tests, 12 raw-evidence tests, seven historical packet/export
-tests, ten current-packet/contract tests and 15 session-accounting tests.
+The [offline suite](../tests/README.md) checks setup, grading, raw evidence, task
+exports, session accounting and publication boundaries.
 
 Downloads use a separate temporary file for each attempt. Interrupted or invalid
 downloads are removed; verified cache files and pre-existing partials are preserved.
@@ -26,8 +25,7 @@ suite on Windows. The manual native job also passed on a GitHub-hosted runner.
 [Hosted receipt](../evidence/hosted_verification.json). Run IDs,
 source commits and artifacts identify the tested snapshot.
 
-The recorded native qualification verified all 1,202 runtime files and reproduced
-all five controls; its accompanying offline suite had 63 tests. The current suite
-adds ten task-contract and 15 session-accounting tests. Cached setup took 32.732 seconds and
-native qualification took 192.526 seconds. These are observed timings on one
-computer. [Latest receipt](../evidence/final_validation.json) · [Commands](run.md)
+Native qualification verifies runtime identities and reproduces all five
+controls. Recorded cached setup took about 30 seconds and qualification about
+three minutes on the tested machine. The receipts retain exact timings and file
+identities. [Native receipt](../evidence/final_validation.json) · [Commands](run.md)

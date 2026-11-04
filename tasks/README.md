@@ -6,7 +6,7 @@
 | LOAD | [Compensate the load](revisions/clarified-1/load/TASK.md) | Six load/parasitic pairs |
 | TIA | [Design sensor feedback](revisions/clarified-1/tia/TASK.md) | Six sensor/wiring pairs |
 
-The current `clarified-1` packets state the existing compiler limits and
+The current packets state the compiler limits and
 measurement conventions explicitly. They preserve the electrical requirements.
 The original folders retain the exact packets used for the [recorded results](../docs/results.md).
 `contract.json` contains the scoring limits; `PROMPT.txt` is the model-facing
@@ -16,5 +16,5 @@ Export one task with `python -I -B tools/export_task.py --task supply --out NEW_
 from the repo root. Do not give a model the entire repository or mix task
 contexts: it contains references, and LOAD/TIA's plant exposes SUPPLY's repair.
 
-Default export uses `clarified-1`. Add `--revision recorded` to reproduce the
+Default export uses the current packet. Add `--revision recorded` to reproduce the
 historical input files. [Task audit](../docs/task-validation.md)
