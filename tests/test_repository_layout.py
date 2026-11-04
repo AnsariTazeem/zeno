@@ -32,7 +32,7 @@ class RepositoryTests(unittest.TestCase):
     def test_exports_have_only_task_files(self):
         for task,meta in CATALOG.items():
             out=self.tmp/task
-            result=exporter.export(task,out)
+            result=exporter.export(task,out,revision='recorded')
             self.assertEqual(result['reference_files_exported'],0)
             self.assertEqual({p.name for p in out.iterdir()},{r['name'] for r in meta['files']})
             for row in meta['files']:
@@ -40,7 +40,7 @@ class RepositoryTests(unittest.TestCase):
 
     def test_existing_destination_is_preserved(self):
         out=self.tmp/'existing';out.mkdir();(out/'keep.txt').write_text('keep')
-        with self.assertRaises(FileExistsError):exporter.export('supply',out)
+        with self.assertRaises(FileExistsError):exporter.export('supply',out,revision='recorded')
         self.assertEqual((out/'keep.txt').read_text(),'keep')
         self.assertEqual(len(list(out.iterdir())),1)
 
@@ -48,7 +48,7 @@ class RepositoryTests(unittest.TestCase):
         root=self.fixture()
         (root/'tasks/supply/starter.sp').write_text('changed')
         out=self.tmp/'out'
-        with self.assertRaises(ValueError):exporter.export('supply',out,root)
+        with self.assertRaises(ValueError):exporter.export('supply',out,root,revision='recorded')
         self.assertFalse(out.exists())
 
     def test_catalog_path_escape_is_rejected(self):
@@ -56,7 +56,7 @@ class RepositoryTests(unittest.TestCase):
         data=json.loads(path.read_text());data['tasks']['supply']['files'][0]['name']='../outside'
         path.write_text(json.dumps(data))
         out=self.tmp/'out'
-        with self.assertRaises(ValueError):exporter.export('supply',out,root)
+        with self.assertRaises(ValueError):exporter.export('supply',out,root,revision='recorded')
         self.assertFalse(out.exists())
 
     def test_reference_circuits_are_pinned_to_tested_controls(self):
