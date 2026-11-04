@@ -44,7 +44,8 @@ def main():
     suites = [('bootstrap_boundaries',PAYLOAD/'checks/test_bootstrap.py',8),
               ('grading_regressions',PAYLOAD/'eval_core_v4/test_core.py',30),
               ('supply_evidence',PAYLOAD/'eval_core_v4/test_supply_evidence.py',12),
-              ('repository_layout',ROOT/'tests/test_repository_layout.py',7)]
+              ('repository_layout',ROOT/'tests/test_repository_layout.py',7),
+              ('download_recovery',ROOT/'tests/test_download_recovery.py',6)]
     checks=[]
     for label, path, count in suites:
         command = [sys.executable,'-I','-B','-c',
