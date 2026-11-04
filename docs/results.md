@@ -78,3 +78,34 @@ The recovered SUPPLY session and excluded interrupted follow-up are described
 in [collection conditions](methodology.md#collection-conditions).
 
 [Catalog](../results/catalog.json) · [Exact responses](../transcripts/README.md)
+
+## Repetition by configuration
+
+| Task | Model/interface | Grader | Confirmed passes / complete sessions |
+|---|---|---|---:|
+| SUPPLY | Requested Sol/High CLI | v3 | 0/1 |
+| SUPPLY | Requested Sol/High CLI | v4 | 0/2 |
+| LOAD | UI-labelled GPT-6/High | v3 | 1/1 |
+| LOAD | Requested Sol/High CLI | v4 | 1/1 |
+| TIA | UI-labelled GPT-6/High | v3 | 1/1 |
+| TIA | Requested Sol/High CLI | v4 | 1/1 |
+
+These are observed counts from the recorded packets. Unknown backend versions,
+temperatures and seeds remain unknown. Different interfaces and graders stay
+separate; the table does not rank models. Most cells have one session, so the
+record does not establish repeatability or a population pass rate. No confidence
+interval, pass@k or pass^k estimate is assigned to this selected sample.
+
+Rebuild the [session summary](../results/session_summary.json) from the catalog
+and retained candidate files:
+
+```powershell
+python -I -B tools/summarize_trials.py
+```
+
+The audit rejects duplicate or missing proposals, settings changes within a
+session, premature failure stops, continuation after a pass, changed candidates
+between baseline and confirmation, and disagreement between numerical profiles.
+It checks catalog consistency; native regrading remains a separate command.
+One disclosed interrupted attempt remains outside the complete-session table;
+this catalog is not a complete ledger of every collection attempt.

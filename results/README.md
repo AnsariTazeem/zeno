@@ -11,3 +11,8 @@ Candidate paths resolve under [transcripts/](../transcripts/README.md).
 `native_result_in_entry_archive` names a file inside the separately retained
 full archive; it is not a missing Git file. [Archive name and digest](../evidence/entry_archive.json).
 No population rate or matched model ranking is estimated.
+
+[Session summary](session_summary.json) groups the record by task, requested
+model/interface and grader. Rebuild it with `python -I -B tools/summarize_trials.py`.
+The [configuration table](../docs/results.md#repetition-by-configuration) shows
+the available repetition without treating proposals or reruns as new trials.
