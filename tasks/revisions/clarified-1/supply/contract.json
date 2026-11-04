@@ -1,0 +1,108 @@
+{
+  "task_id": "SUPPLY-P01",
+  "version": "development-2-model-domain-corrected",
+  "supplies_V": [
+    1.15,
+    1.2,
+    1.25
+  ],
+  "process": "tt",
+  "temperature_C": 27,
+  "VCM_V": 0.9,
+  "CL_F": 1e-12,
+  "Iref_A": 2e-05,
+  "Vstep_V": 0.2,
+  "limits": {
+    "dc_gain_dB": {
+      ">=": 72.71
+    },
+    "ugf_Hz": {
+      ">=": 66590000
+    },
+    "pm_deg": {
+      ">=": 55
+    },
+    "gm_dB": {
+      ">=": 10
+    },
+    "power_uW": {
+      "<=": 296.4
+    },
+    "command_rise_settle_ns": {
+      "<=": 12.24
+    },
+    "command_fall_settle_ns": {
+      "<=": 26.73
+    },
+    "n_triode": {
+      "<=": 2
+    },
+    "input_current_uA": {
+      "<=": 0.01
+    }
+  },
+  "all_points_required": true,
+  "command_error_band_V": 0.002,
+  "observation_s": 2e-07,
+  "max_proposals": 3,
+  "feedback": "Same pointwise simulation metrics/errors after each proposal; no reference-solution disclosure",
+  "scope": "Explicitly adapted public-circuit development screen, not an independent novelty claim",
+  "geometry": {
+    "sky130_fd_pr__nfet_01v8_lvt": {
+      "W_um": [
+        1,
+        1000
+      ],
+      "L_um": [
+        0.15,
+        10
+      ],
+      "nf": 1,
+      "m_integer": [
+        1,
+        100
+      ]
+    },
+    "sky130_fd_pr__pfet_01v8_lvt": {
+      "W_um": [
+        1,
+        1000
+      ],
+      "L_um": [
+        0.35,
+        10
+      ],
+      "nf": 1,
+      "m_integer": [
+        1,
+        100
+      ]
+    }
+  },
+  "geometry_preflight": "run_candidate_v2.py; source-bound model_domain_v2.json",
+  "packet_revision": "clarified-1",
+  "input_format": {
+    "maximum_characters": 30000,
+    "name_max_characters": 32,
+    "passive_nodes_must_differ": true,
+    "minimum_mos_instances": 1,
+    "instance_prefixes": [
+      "X",
+      "R",
+      "C"
+    ],
+    "case_insensitive": true
+  },
+  "measurement_reporting": {
+    "crossing_interpolation": "linear_frequency",
+    "rounded_before_comparison": {
+      "dc_gain_dB": 2,
+      "pm_deg": 1,
+      "gm_dB": 1,
+      "power_uW": 2,
+      "input_current_uA": 4
+    },
+    "saturation_margin_decimals_before_count": 3,
+    "settling": "first retained sample after final excursion; not rounded before comparison"
+  }
+}
