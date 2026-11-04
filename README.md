@@ -15,6 +15,7 @@ candidate, simulation traces and score.
 The tasks draw on amplifier compensation, feedback stability and transient
 settling. Their operating grids are synthetic; reference circuits establish
 feasibility under the same numerical checks.
+[Engineering context and threshold sources](docs/problem.md)
 
 ## Finding
 
@@ -57,7 +58,7 @@ Setup prints the new environment path. From the repository root:
 Each circuit must pass every stated requirement at every operating point.
 The deterministic grader accepts electrically valid alternatives and keeps
 invalid inputs and execution errors separate from electrical failures.
-Passing references, negative controls and 73 offline tests check the grader
+Passing references, negative controls and 88 offline tests check the grader
 and setup boundaries. No LLM judge is used.
 
 Simulation and regrading need no model account or API keys. Collection used an
