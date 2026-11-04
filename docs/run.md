@@ -28,8 +28,8 @@ Stay in the repository root and use the printed environment's Python:
 & 'C:/printed/root/.venv/Scripts/python.exe' -I -B tools/run_checks.py
 ```
 
-This verifies frozen files and runs 73 tests covering setup, download recovery,
-grading, raw evidence and task exports. It makes no model calls, downloads or
+This verifies frozen files and runs 88 tests covering setup, download recovery,
+grading, raw evidence, task exports and session accounting. It makes no model calls, downloads or
 full-circuit simulation runs. Logs go to the ignored `.local-checks/` folder.
 Test subprocesses use a temporary directory inside that log folder, so they
 do not need write access to the system temporary directory.
