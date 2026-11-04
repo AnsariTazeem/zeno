@@ -1,6 +1,7 @@
 """Exercise collection freezes, denominators, terminal outcomes and feedback boundaries."""
 from pathlib import Path
 import importlib.util
+import hashlib
 import json
 import shutil
 import tempfile
@@ -19,16 +20,21 @@ class CollectionTests(unittest.TestCase):
         parent.mkdir(exist_ok=True)
         cls.temp = tempfile.TemporaryDirectory(prefix='collection_', dir=parent)
         cls.root = Path(cls.temp.name)
-        for folder in ('tasks', 'reproduction'):
-            shutil.copytree(ROOT/folder, cls.root/folder,
-                            ignore=shutil.ignore_patterns('__pycache__', 'cache', '.venv'))
+        shutil.copytree(ROOT/'tasks', cls.root/'tasks')
+        # State-machine tests use a small identity fixture; native controls cover the full runtime.
+        lock = cls.root/'reproduction/payload/eval_core_v4/dependency_lock.json'
+        lock.parent.mkdir(parents=True)
+        lock.write_bytes(b'{"fixture":true}\n')
+        manifest = {'files': [{'path': 'payload/eval_core_v4/dependency_lock.json',
+                    'bytes': lock.stat().st_size, 'sha256': hashlib.sha256(lock.read_bytes()).hexdigest()}]}
+        (cls.root/'reproduction/kit_manifest.json').write_text(json.dumps(manifest), encoding='utf-8')
         (cls.root/'tools').mkdir()
         for name in ('collect_trials.py', 'export_task.py', 'audit_publication.py'):
             shutil.copyfile(ROOT/'tools'/name, cls.root/'tools'/name)
         shutil.copyfile(ROOT/'run_eval.py', cls.root/'run_eval.py')
         cls.prepared = cls.root/'prepared'
         (cls.prepared/'eval_core_v4').mkdir(parents=True)
-        shutil.copyfile(ROOT/'reproduction/payload/eval_core_v4/dependency_lock.json', cls.prepared/'eval_core_v4/dependency_lock.json')
+        shutil.copyfile(lock, cls.prepared/'eval_core_v4/dependency_lock.json')
 
     @classmethod
     def tearDownClass(cls):

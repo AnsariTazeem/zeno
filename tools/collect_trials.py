@@ -42,7 +42,7 @@ def campaign_path(name, root=ROOT):
     return root/'.local-trials'/name
 
 
-def prepare(name, model, effort, interface, root=ROOT):
+def prepare(name, model, effort, interface, root=ROOT, codex=False):
     """Freeze nine interleaved episodes before importing any model answer."""
     destination = campaign_path(name, root)
     if destination.exists():
@@ -51,6 +51,10 @@ def prepare(name, model, effort, interface, root=ROOT):
     revision = catalog['default_revision']
     sources = ['tools/collect_trials.py', 'tools/export_task.py', 'tools/audit_publication.py', 'tasks/catalog.json',
                'run_eval.py', 'reproduction/kit_manifest.json']
+    transport = None
+    if codex:
+        sources += ['tools/codex_transport.py', 'tools/collect_cli.py']
+        transport = module('prepared_codex_transport', root/'tools/codex_transport.py').describe()
     for row in read(root/'reproduction/kit_manifest.json')['files']:
         source = root/'reproduction'/row['path']
         if source.stat().st_size != row['bytes'] or sha(source) != row['sha256']:
@@ -91,9 +95,9 @@ def prepare(name, model, effort, interface, root=ROOT):
             'requested_model': model, 'requested_effort': effort, 'interface': interface,
             'backend_revision': None, 'temperature': None, 'seed': None,
             'packet_revision': revision, 'trials_per_task': 3, 'proposal_budget': 3,
-            'tools': 'none; evaluator feedback only', 'automatic_model_retries': 0,
+            'tools': 'none; evaluator feedback only', 'automatic_wrapper_retries': 0,
             'separately_billed_API_fallback': False, 'native_run_prefix': 'c'+uuid.uuid4().hex[:8],
-            'sources': identities, 'schedule': schedule}
+            'sources': identities, 'schedule': schedule, 'transport': transport}
     save(destination/'protocol.json', plan)
     (destination/'protocol.sha256').write_text(sha(destination/'protocol.json')+'\n', encoding='ascii')
     return destination
@@ -356,6 +360,7 @@ def main():
     create.add_argument('--model', required=True)
     create.add_argument('--effort', required=True)
     create.add_argument('--interface', required=True)
+    create.add_argument('--codex', action='store_true', help='Pin the installed subscription CLI and its access policy')
     ingest = sub.add_parser('record')
     ingest.add_argument('--name', required=True)
     ingest.add_argument('--response', type=Path, required=True)
@@ -372,7 +377,7 @@ def main():
     status.add_argument('--name', required=True)
     args = parser.parse_args()
     if args.command == 'prepare':
-        print(prepare(args.name, args.model, args.effort, args.interface))
+        print(prepare(args.name, args.model, args.effort, args.interface, codex=args.codex))
     elif args.command == 'record':
         print(json.dumps(record(campaign_path(args.name), args.response, args.prepared_root.resolve(), args.trial), indent=2))
     elif args.command == 'start':
