@@ -15,6 +15,11 @@ venv, then prints their paths. NumPy 2.3.5 and zstandard 0.25.0 are pinned.
 No model account or API key is needed for simulation or grading. Windows may
 later remove the temporary root; rerun setup to create a new one.
 
+Keep Windows `TEMP` and `TMP` at a short, writable location. Native evaluation
+creates its own scratch directory there; redirecting it into a long project
+path can break ngspice's model includes. The default setup chooses a short
+temporary output root. Preserve failed logs and use a new root when retrying.
+
 ## Run offline checks
 
 Stay in the repository root and use the printed environment's Python:
