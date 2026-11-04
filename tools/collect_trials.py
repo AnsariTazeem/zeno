@@ -175,11 +175,39 @@ def native_evaluate(prepared, task, candidate, run_id, proposal, refined):
     return read(run/'result.json'), {'result_sha256': sha(run/'result.json'), 'run_id': run_id}
 
 
+def checked_turn(turn):
+    receipt = read(turn/'receipt.json')
+    if turn.name != 'proposal'+str(receipt['proposal']):
+        raise ValueError('Recorded proposal identity changed')
+    for name, field in [('model_reply.txt', 'response_sha256'), ('feedback.txt', 'feedback_sha256')]:
+        if sha(turn/name) != receipt[field]:
+            raise ValueError('Recorded response or feedback changed')
+    candidate = turn/'candidate.sp'
+    if (sha(candidate) if candidate.exists() else None) != receipt['candidate_sha256']:
+        raise ValueError('Recorded candidate changed')
+    return receipt
+
+
+def checked_outcome(trial):
+    outcome = read(trial/'outcome.json')
+    if outcome['outcome'] in ('confirmed_pass', 'no_confirmed_pass'):
+        turns = sorted(trial.glob('proposal[123]'))
+        if not (trial/'started.json').exists() or not turns:
+            raise ValueError('Completed trial has no captured attempt')
+        receipts = [checked_turn(turn) for turn in turns]
+        if (outcome['proposals'] != len(turns) or
+                any(r['outcome'] != 'continue' for r in receipts[:-1]) or
+                receipts[-1]['outcome'] != outcome['outcome'] or
+                outcome['episode_success'] is not (outcome['outcome'] == 'confirmed_pass')):
+            raise ValueError('Trial outcome disagrees with recorded proposals')
+    return outcome
+
+
 def active_slot(folder, plan):
     for slot in plan['schedule']:
         trial = folder/'attempts'/slot['trial']
         if (trial/'outcome.json').exists():
-            outcome = read(trial/'outcome.json')['outcome']
+            outcome = checked_outcome(trial)['outcome']
             if outcome not in ('confirmed_pass', 'no_confirmed_pass'):
                 raise ValueError('Campaign stopped on an infrastructure or protocol outcome')
             continue
@@ -226,6 +254,8 @@ def record(folder, response, prepared, expected_trial, root=ROOT, evaluator=nati
     for previous in existing:
         if not (previous/'receipt.json').is_file():
             raise ValueError('Incomplete proposal retained; do not regenerate or skip it')
+        if checked_turn(previous)['outcome'] != 'continue':
+            raise ValueError('Terminal proposal retained; finish its existing trial record')
     number = len(existing)+1
     if number > 3:
         raise ValueError('Proposal budget exhausted')
@@ -267,6 +297,7 @@ def record(folder, response, prepared, expected_trial, root=ROOT, evaluator=nati
             text = ''
     (turn/'feedback.txt').write_text(text, encoding='utf-8', newline='\n')
     receipt = {'proposal': number, 'response_sha256': sha(turn/'model_reply.txt'),
+               'candidate_sha256': sha(turn/'candidate.sp') if (turn/'candidate.sp').exists() else None,
                'category': category, 'outcome': outcome, 'native_evaluations': native,
                'feedback_sha256': sha(turn/'feedback.txt')}
     save(turn/'receipt.json', receipt)
@@ -285,10 +316,13 @@ def status(folder, root=ROOT):
         trial = folder/'attempts'/slot['trial']
         path = trial/'outcome.json'
         if path.exists():
-            value = read(path)
+            value = checked_outcome(trial)
         else:
             turns = sorted(trial.glob('proposal[123]')) if trial.exists() else []
             incomplete = any(not (p/'receipt.json').is_file() for p in turns)
+            for turn in turns:
+                if (turn/'receipt.json').is_file():
+                    checked_turn(turn)
             value = {'outcome': 'incomplete' if incomplete else ('in_progress' if (trial/'started.json').exists() else 'pending'),
                      'proposals': len(turns), 'episode_success': None}
         rows.append({'trial': slot['trial'], 'task': slot['task'],

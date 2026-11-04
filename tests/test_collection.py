@@ -189,17 +189,49 @@ class CollectionTests(unittest.TestCase):
     def test_metrics_and_score_types(self):
         self.assertEqual(collection.decision({'category': 'specification_failure', 'score': False}, None, 1), 'infrastructure_error')
         for slot in collection.read(self.folder/'protocol.json')['schedule']:
-            trial = self.folder/'attempts'/slot['trial']
-            trial.mkdir(parents=True, exist_ok=True)
-            collection.save(trial/'outcome.json', {'trial': slot['trial'], 'task': slot['task'],
-                'outcome': 'confirmed_pass' if slot['repetition'] < 3 else 'no_confirmed_pass',
-                'proposals': 1 if slot['repetition'] < 3 else 3,
-                'episode_success': slot['repetition'] < 3})
+            if slot['trial'] != 'trial01':
+                collection.start(self.folder, slot['trial'], root=self.root)
+            name = 'dut' if slot['task'] == 'supply' else 'feedback'
+            self.response.write_text('```spice\n.subckt '+name+'\n.ends '+name+'\n```\n')
+            def evaluate(*args):
+                result, receipt = self.evaluator(*args)
+                if slot['repetition'] == 3:
+                    result.update(category='specification_failure', score=0)
+                return result, receipt
+            for _ in range(1 if slot['repetition'] < 3 else 3):
+                self.record(evaluate, trial=slot['trial'])
         group = collection.status(self.folder, self.root)['groups'][0]
         self.assertAlmostEqual(group['estimates']['observed_success_fraction'], 2/3)
         self.assertEqual(group['estimates']['pass_at_k']['2'], 1)
         self.assertAlmostEqual(group['estimates']['pass_power_k']['2'], 1/3)
         self.assertEqual(group['estimates']['pass_power_k']['3'], 0)
+
+    def test_altered_history_and_terminal_capture_gaps_are_rejected(self):
+        def fail(*args):
+            result, receipt = self.evaluator(*args)
+            result.update(category='specification_failure', score=0)
+            return result, receipt
+        self.record(fail)
+        turn = self.folder/'attempts/trial01/proposal1'
+        for name in ('model_reply.txt', 'feedback.txt', 'candidate.sp'):
+            with self.subTest(file=name):
+                path = turn/name
+                before = path.read_bytes()
+                path.write_bytes(before+b'changed')
+                with self.assertRaisesRegex(ValueError, 'changed'):
+                    self.record()
+                path.write_bytes(before)
+        renamed = turn.with_name('proposal3')
+        turn.rename(renamed)
+        try:
+            with self.assertRaisesRegex(ValueError, 'identity changed'):
+                self.record()
+        finally:
+            renamed.rename(turn)
+        self.record()
+        (self.folder/'attempts/trial01/outcome.json').unlink()
+        with self.assertRaisesRegex(ValueError, 'Terminal proposal retained'):
+            self.record()
 
 
 if __name__ == '__main__':

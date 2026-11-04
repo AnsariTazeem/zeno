@@ -13,8 +13,8 @@ prepared venv Python. It needs the pinned NumPy and zstandard packages.
 | [Task contracts](test_task_contracts.py) | 10 | Current exports, leakage/tamper rejection, numerical declarations, reporting precision and verdict boundaries |
 | [Trial summary](test_trial_summary.py) | 15 | Duplicate/missing trials, settings drift, confirmation mismatches, early stops and non-electrical outcomes |
 | [Publication boundaries](test_publication.py) | 6 | Local paths, credentials, private session fields, redaction integrity and source boundaries |
-| [Collection protocol](test_collection.py) | 16 | Input freezes, trial counts, invalid answers, stopping rules, numerical confirmation and private feedback |
+| [Collection protocol](test_collection.py) | 17 | Input/history freezes, trial counts, invalid answers, stopping rules, numerical confirmation and private feedback |
 
-These 110 offline tests do not run model inference or full-circuit simulation.
+These 111 offline tests do not run model inference or full-circuit simulation.
 The prepared root's separate `qualification.py` runs the original 50 tests
 and five native controls. Logs use a new directory under `.local-checks/`.
