@@ -13,19 +13,13 @@ command-relative tracking checks, collection protocol, tests and setup tools.
 The underlying amplifier, device models and compensation physics are prior work.
 Dependencies retain their original license notices.
 
-The ZIP includes the attributed circuit/testbench foundation and PyYAML with
-their MIT notices. It includes download recipes for the simulator, process
-models, NumPy and zstandard; their archives, installed runtimes and model
-libraries are not shipped. Native decks, logs and numerical traces are run
-outputs. TI vendor libraries and organizer teaching materials are excluded.
+The source includes the circuit/testbench foundation and PyYAML with their MIT
+notices. Setup downloads the simulator, process models, NumPy and zstandard
+separately. Native decks, logs and numerical traces are simulation outputs.
 
 Ngspice's `COPYING` includes LGPL, MPL and GPL component notices alongside BSD.
-The external runtime keeps those notices. It is not relabelled as wholly
-permissive or covered by Zeno's authorship. See the
+The external runtime retains those notices. See the
 [ngspice licensing notes](https://ngspice.sourceforge.io/devel.html) and
 [SKY130 license](https://github.com/google/skywater-pdk-libs-sky130_fd_pr/blob/main/LICENSE).
 
-The task mechanisms are supported by Analog Devices' articles on
-[capacitive-load stability](https://www.analog.com/en/resources/analog-dialogue/articles/techniques-to-avoid-instability-capacitive-loading.html)
-and [transimpedance compensation](https://www.analog.com/en/resources/technical-articles/stabilize-transimpedance-amplifier-circuit-design.html).
-The numerical envelopes are synthetic test cases.
+[Engineering background and threshold sources](problem.md)
