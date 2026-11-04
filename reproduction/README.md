@@ -9,7 +9,8 @@ Windows Python 3.12 environment and verifies downloaded models, simulator and
 wheels by hash. [Commands](../docs/run.md)
 
 The `payload/eval_core_v4` runner uses earlier adapters for compatible tasks.
-Historical task packets and numerical fixtures retain their original bytes.
+Historical task packets and numerical measurements are preserved. Local host
+paths in published metadata are redacted; integrity records identify those copies.
 The bundle contains references: export one public task before giving it to a
 model. [Tasks](../tasks/README.md) · [Grading](../graders/README.md)
 

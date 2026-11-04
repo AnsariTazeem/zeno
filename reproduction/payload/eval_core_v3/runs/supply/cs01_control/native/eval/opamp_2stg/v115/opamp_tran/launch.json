@@ -1,7 +1,7 @@
 {
   "started_at_utc": "2026-11-03T08:32:11.247135+00:00",
   "command": [
-    "C:\\Users\\dell\\AppData\\Local\\Temp\\me_b46arz1e\\analog_public_v1\\deps\\ngspice_win41\\runtime\\Library\\bin\\ngspice_con.exe",
+    "<simulator>/ngspice_con.exe",
     "-n",
     "-b",
     "-D",

@@ -1,6 +1,6 @@
 {
   "circuit": "opamp_2stg",
-  "netlist": "C:\\Users\\dell\\AppData\\Local\\Temp\\me_b46arz1e\\analog_supply_pilot_v1\\runs\\s\\candidate_compiled.sp",
+  "netlist": "<runtime>/candidate_compiled.sp",
   "tech": "sky130_lvt",
   "vdd": 1.2,
   "corner": "tt",
@@ -208,7 +208,7 @@
       }
     ]
   },
-  "spec": "C:\\Users\\dell\\AppData\\Local\\Temp\\me_b46arz1e\\analog_public_v1\\upstream\\benchmark\\circuits\\opamp_2stg\\spec.yaml",
+  "spec": "<runtime>/spec.yaml",
   "checks": [
     {
       "metric": "dc_gain_dB",
