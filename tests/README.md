@@ -9,7 +9,8 @@ prepared venv Python. It needs the pinned NumPy and zstandard packages.
 | [Grading regressions](../reproduction/payload/eval_core_v4/test_core.py) | 30 | Correct/incorrect circuits, equivalent results, limits and malformed data |
 | [Supply evidence](../reproduction/payload/eval_core_v4/test_supply_evidence.py) | 12 | No-gain evidence, missing/corrupt traces, timeouts and identity changes |
 | [Repository/export checks](test_repository_layout.py) | 7 | Actual exported packets, tamper rejection and pinned references |
+| [Download recovery](test_download_recovery.py) | 6 | Interrupted streams, invalid payloads, HTTPS redirects and verified caches |
 
-These 57 offline checks do not run model inference or full-circuit simulation.
+These 63 offline checks do not run model inference or full-circuit simulation.
 The prepared root's separate `qualification.py` runs the original 50 tests
 and five native controls. Logs use a new directory under `.local-checks/`.

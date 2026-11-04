@@ -1,11 +1,11 @@
 # Recorded results
 
-[Summary](../docs/results.md) · [15-evaluation catalog](catalog.json) · [Latest SUPPLY measurements](../evidence/supply_v4_summary.json)
+[Summary](../docs/results.md) · [24-evaluation catalog](catalog.json) · [Latest SUPPLY measurements](../evidence/supply_v4_repeat_summary.json)
 
-The catalog covers four complete adaptive sessions, 11 baseline proposals,
-48 baseline conditions and 18 refined conditions. Those condition counts are
-correlated measurements, not independent model trials. One interrupted v3
-follow-up is excluded from the completed-session count.
+The catalog covers seven complete adaptive sessions and 17 baseline proposals.
+Finer reruns bring the saved evaluation count to 24. Operating conditions and
+reruns are correlated measurements, not independent model trials. One
+interrupted v3 follow-up is excluded from the completed-session count.
 
 Candidate paths resolve under [transcripts/](../transcripts/README.md).
 `native_result_in_entry_archive` names a file inside the separately retained
