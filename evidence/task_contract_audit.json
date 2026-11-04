@@ -1,0 +1,43 @@
+{
+  "outcome": "passed",
+  "packet_revision": "clarified-1",
+  "packets": [
+    {
+      "task": "supply",
+      "packet_revision": "clarified-1",
+      "electrical_contract_unchanged": true,
+      "prompt_matches_task": true,
+      "fixed_assets_unchanged": true
+    },
+    {
+      "task": "load",
+      "packet_revision": "clarified-1",
+      "electrical_contract_unchanged": true,
+      "prompt_matches_task": true,
+      "fixed_assets_unchanged": true
+    },
+    {
+      "task": "tia",
+      "packet_revision": "clarified-1",
+      "electrical_contract_unchanged": true,
+      "prompt_matches_task": true,
+      "fixed_assets_unchanged": true
+    }
+  ],
+  "declared_requirements_checked": 25,
+  "syntax_checks_passed": 21,
+  "precision_checks_passed": 7,
+  "verdict_checks_passed": 402,
+  "model_calls": 0,
+  "simulator_calls": 0,
+  "scope": "Input/compiler and saved-measurement boundary checks; not expert agreement or new model trials",
+  "audit_tool_sha256": "d818938fadf575be1e81808e66ab0aa220ff5fd4428d94f9478e2bf6319fd502",
+  "catalog_sha256": "42df877ae9f49fba00178ebd4898b9a1ec93336d2cd0d31f4c080d12e8a13921",
+  "frozen_kit_manifest_sha256": "47eb721d5b14964e23804d01c0f05bd9d636ded0f3019fb6289e76fca6f5577b",
+  "full_audit_sha256": "f4fd9f9daf415b8446e302075ffbda9bf5ecbb52f1a0aceca178f0fb14970f1c",
+  "offline_tests_passed": 73,
+  "recorded_candidates_input_checked": 17,
+  "historical_scores_changed": false,
+  "reference": "evidence/final_validation.json",
+  "command": "python -I -B tools/audit_tasks.py --out NEW_REPORT.json"
+}
