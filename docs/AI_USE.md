@@ -1,5 +1,6 @@
 # AI use
 
-AI tools assisted with research, task design, implementation and analysis.
-Validation uses automated tests, reference circuits and ngspice runs.
-Original model responses and measured outputs are retained with the results.
+I used AI tools for research, task design, implementation and analysis.
+Validation includes passing references, negative controls, regression tests,
+ngspice runs and raw-trace checks. The submitted records retain the model
+responses and measured outputs.

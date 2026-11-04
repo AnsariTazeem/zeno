@@ -20,8 +20,8 @@ each metadata redaction. Unmodified records remain in the local entry archive.
 The v3 follow-up interrupted after two replies is not counted as a complete
 trial. Its record is `transcripts/interrupted_v3/INTERRUPTED.md` inside the
 full entry archive. The original trial's feedback notes are separate.
-Backend revisions, temperatures and seeds are unknown. These are different
-collection interfaces and grader versions, not a matched model ranking.
+Settings and collection conditions are described in
+[methodology](../docs/methodology.md).
 
 The SUPPLY repeat retains the original first answer after a date-directory
 lookup interruption. Its remaining proposals resume the same model session.
