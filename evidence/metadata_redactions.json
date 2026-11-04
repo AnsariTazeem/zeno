@@ -1,0 +1,54 @@
+{
+  "scope": "Launch metadata only; model replies, candidates and numerical results unchanged",
+  "original_records_retained_locally": true,
+  "records": [
+    {
+      "path": "transcripts/supply/proposal01/launch.json",
+      "removed_fields": [
+        "resume_session"
+      ],
+      "before_sha256": "13d74cd4184e37d6eac780deca0009fb15082edc209b05f6daacd7ad4f38c03b",
+      "after_sha256": "f69286963bd937548e6fef0243dd3ae7deb887061b400b02ab12627fd52c7566"
+    },
+    {
+      "path": "transcripts/supply/proposal02/launch.json",
+      "removed_fields": [
+        "resume_session"
+      ],
+      "before_sha256": "3ae9575d127c9a323a4eb281c6d4650e657f1a1ad50513d8bf4520e4f3c45017",
+      "after_sha256": "be5b951c40badfa96fa356a580c92ba675f89551d71b7363a156f74999f41308"
+    },
+    {
+      "path": "transcripts/supply/proposal03/launch.json",
+      "removed_fields": [
+        "resume_session"
+      ],
+      "before_sha256": "4528d219946daa3059b7e84a9e366f21c73c867e1b7dbfa0d6934b12bd81f76a",
+      "after_sha256": "2113947c76b31488899f20c85213cd56c83e9639a4c3ae3df867ba83b5d2027f"
+    },
+    {
+      "path": "transcripts/supply_v4/proposal01/launch.json",
+      "removed_fields": [
+        "resume_session"
+      ],
+      "before_sha256": "b9ada27229b24a31a5c209ee44dcdb908349a1fdd7182154421b1ae8a3a1ee63",
+      "after_sha256": "da1d0058486ff618423be6f3059dc31cd77d6fc71c7f7a2edfb7b493a16fbfe4"
+    },
+    {
+      "path": "transcripts/supply_v4/proposal02/launch.json",
+      "removed_fields": [
+        "resume_session"
+      ],
+      "before_sha256": "6fb08a83d67cec71921755fe8b974a0ee255b48a151715dca7e815517a55fb52",
+      "after_sha256": "dfa4e4902f3e2a24b22f59cfc7377a5c3306a023a3cb2b19ba965646d589fbad"
+    },
+    {
+      "path": "transcripts/supply_v4/proposal03/launch.json",
+      "removed_fields": [
+        "resume_session"
+      ],
+      "before_sha256": "ac70a5d8fb23bb3f7c3fa43c1a9e4f26a20b17c438a1b0e46414392bba76c150",
+      "after_sha256": "afc2da8f3686b91dcbabb3364719d4bcdb2729dba14cfddfaa5d21520229d108"
+    }
+  ]
+}

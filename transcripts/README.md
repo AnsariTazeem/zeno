@@ -13,9 +13,11 @@
 Each folder retains the selected candidate and capture evidence. CLI replies
 are captured Markdown; browser replies are whitespace-normalized rendered
 text with capture receipts. The complete archive retains broader raw evidence.
-Private chat identifiers and local launch paths are withheld from public
-metadata; response/candidate bytes stay unchanged. The source map records
-each metadata redaction. Unmodified records remain in the local entry archive.
+Private chat identifiers are withheld from published launch metadata;
+response/candidate bytes stay unchanged. Historical native execution logs
+retain machine paths used by the simulator. The archive source map and
+[metadata record](../evidence/metadata_redactions.json) identify redactions.
+Original capture records remain local.
 
 The v3 follow-up interrupted after two replies is not counted as a complete
 trial. Its record is `transcripts/interrupted_v3/INTERRUPTED.md` inside the
