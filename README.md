@@ -8,10 +8,10 @@ meet gain, stability, settling, accuracy and power limits at every test point.
 | Task | What changes | Recorded result |
 |---|---|---|
 | [SUPPLY](tasks/supply/TASK.md) | Supply voltage | Three Sol/High sessions; 0 full passes within three proposals |
-| [LOAD](tasks/load/TASK.md) | Load and parasitic capacitance | GPT-6/High passed on proposal 3 |
+| [LOAD](tasks/load/TASK.md) | Load and parasitic capacitance | Sol/High passed on proposal 1; UI-labelled GPT-6/High on proposal 3 |
 | [TIA](tasks/tia/TASK.md) | Sensor and wiring capacitance | GPT-6/High passed on proposal 2 |
 
-Finer simulation confirmed the final results. The five recorded sessions
+Finer simulation confirmed the final results. The six recorded sessions
 use different interfaces and grader versions. One SUPPLY session recovered
 from a collection interruption.
 [Results](docs/results.md) · [Model responses](transcripts/README.md)
