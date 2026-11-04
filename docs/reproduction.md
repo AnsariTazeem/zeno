@@ -1,7 +1,10 @@
 # Reproduction
 
-The offline suite has 57 tests: eight setup-boundary checks, 30 grading tests,
-12 raw-evidence tests and seven packet/export tests.
+The offline suite has 63 tests: eight setup-boundary checks, six download-recovery
+checks, 30 grading tests, 12 raw-evidence tests and seven packet/export tests.
+
+Downloads use a separate temporary file for each attempt. Interrupted or invalid
+downloads are removed; verified cache files and pre-existing partials are preserved.
 
 Native qualification runs three passing references and two SUPPLY failures:
 
