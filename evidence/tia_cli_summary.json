@@ -1,0 +1,890 @@
+{
+  "at_utc": "2026-11-04T07:09:04.001689+00:00",
+  "task_id": "TIA-P01",
+  "outcome": "confirmed_pass",
+  "reason": null,
+  "requested_model": "gpt-6.1-sol",
+  "requested_effort": "high",
+  "response_turns": 2,
+  "evaluated_proposals": 2,
+  "measurements": [
+    {
+      "proposal": 1,
+      "profile": "baseline",
+      "case": {
+        "id": "case00",
+        "sensor_pF": 10,
+        "wire_pF": 2
+      },
+      "pass": false,
+      "phase_margins_deg": [
+        112.91119008567485
+      ],
+      "bandwidth_Hz": 2016497.2305193087,
+      "dc_Zreal_ohm": -9997.109047373,
+      "dc_Zimag_ohm": 0.2155365007968,
+      "dc_delivered_power_uW": 226.945060452,
+      "initial_error_V": 2.421759009996194e-05,
+      "edges": [
+        {
+          "edge": 1,
+          "target_V": 0.7,
+          "settle_ns": 569.7500000000001,
+          "endpoint_error_V": 0.0008431748672000916,
+          "overshoot_V": 0.0
+        },
+        {
+          "edge": 2,
+          "target_V": 0.9,
+          "settle_ns": 422.7499999999999,
+          "endpoint_error_V": 1.2513658399937455e-05,
+          "overshoot_V": 1.2513658399937455e-05
+        },
+        {
+          "edge": 3,
+          "target_V": 0.7,
+          "settle_ns": 564.2499999999998,
+          "endpoint_error_V": 0.0008322702514000913,
+          "overshoot_V": 0.0
+        },
+        {
+          "edge": 4,
+          "target_V": 0.9,
+          "settle_ns": 423.74999999999994,
+          "endpoint_error_V": 1.7781950000239632e-06,
+          "overshoot_V": 1.7781950000239632e-06
+        }
+      ]
+    },
+    {
+      "proposal": 1,
+      "profile": "baseline",
+      "case": {
+        "id": "case01",
+        "sensor_pF": 10,
+        "wire_pF": 10
+      },
+      "pass": false,
+      "phase_margins_deg": [
+        110.614671857147
+      ],
+      "bandwidth_Hz": 2070943.4822193063,
+      "dc_Zreal_ohm": -9997.109047379,
+      "dc_Zimag_ohm": 0.2155510244556,
+      "dc_delivered_power_uW": 226.945060452,
+      "initial_error_V": 2.421759009996194e-05,
+      "edges": [
+        {
+          "edge": 1,
+          "target_V": 0.7,
+          "settle_ns": 556.25,
+          "endpoint_error_V": 0.0008429982374000833,
+          "overshoot_V": 0.0
+        },
+        {
+          "edge": 2,
+          "target_V": 0.9,
+          "settle_ns": 413.75000000000006,
+          "endpoint_error_V": 1.2700115699981751e-05,
+          "overshoot_V": 1.2700115699981751e-05
+        },
+        {
+          "edge": 3,
+          "target_V": 0.7,
+          "settle_ns": 551.25,
+          "endpoint_error_V": 0.0008320944023000321,
+          "overshoot_V": 0.0
+        },
+        {
+          "edge": 4,
+          "target_V": 0.9,
+          "settle_ns": 414.2500000000003,
+          "endpoint_error_V": 1.9654180000161503e-06,
+          "overshoot_V": 1.9654180000161503e-06
+        }
+      ]
+    },
+    {
+      "proposal": 1,
+      "profile": "baseline",
+      "case": {
+        "id": "case02",
+        "sensor_pF": 70,
+        "wire_pF": 2
+      },
+      "pass": true,
+      "phase_margins_deg": [
+        95.3623422625933
+      ],
+      "bandwidth_Hz": 2464187.787980725,
+      "dc_Zreal_ohm": -9997.109047418,
+      "dc_Zimag_ohm": 0.2156454282342,
+      "dc_delivered_power_uW": 226.945060452,
+      "initial_error_V": 2.421759009996194e-05,
+      "edges": [
+        {
+          "edge": 1,
+          "target_V": 0.7,
+          "settle_ns": 437.2500000000001,
+          "endpoint_error_V": 0.0008425696254000803,
+          "overshoot_V": 0.0
+        },
+        {
+          "edge": 2,
+          "target_V": 0.9,
+          "settle_ns": 332.25000000000006,
+          "endpoint_error_V": 1.3171265899947215e-05,
+          "overshoot_V": 1.3171265899947215e-05
+        },
+        {
+          "edge": 3,
+          "target_V": 0.7,
+          "settle_ns": 433.25000000000006,
+          "endpoint_error_V": 0.0008316789444000605,
+          "overshoot_V": 0.0
+        },
+        {
+          "edge": 4,
+          "target_V": 0.9,
+          "settle_ns": 332.75000000000034,
+          "endpoint_error_V": 2.4495186999873297e-06,
+          "overshoot_V": 2.4495186999873297e-06
+        }
+      ]
+    },
+    {
+      "proposal": 1,
+      "profile": "baseline",
+      "case": {
+        "id": "case03",
+        "sensor_pF": 70,
+        "wire_pF": 10
+      },
+      "pass": true,
+      "phase_margins_deg": [
+        93.30581051427176
+      ],
+      "bandwidth_Hz": 2522135.863235918,
+      "dc_Zreal_ohm": -9997.109047424,
+      "dc_Zimag_ohm": 0.2156599518928,
+      "dc_delivered_power_uW": 226.945060452,
+      "initial_error_V": 2.421759009996194e-05,
+      "edges": [
+        {
+          "edge": 1,
+          "target_V": 0.7,
+          "settle_ns": 405.7500000000001,
+          "endpoint_error_V": 0.0008425662515000321,
+          "overshoot_V": 0.0
+        },
+        {
+          "edge": 2,
+          "target_V": 0.9,
+          "settle_ns": 312.7500000000001,
+          "endpoint_error_V": 1.3178870200025727e-05,
+          "overshoot_V": 1.3178870200025727e-05
+        },
+        {
+          "edge": 3,
+          "target_V": 0.7,
+          "settle_ns": 402.24999999999983,
+          "endpoint_error_V": 0.0008316779904000704,
+          "overshoot_V": 0.0
+        },
+        {
+          "edge": 4,
+          "target_V": 0.9,
+          "settle_ns": 313.75000000000017,
+          "endpoint_error_V": 2.459505999974354e-06,
+          "overshoot_V": 2.459505999974354e-06
+        }
+      ]
+    },
+    {
+      "proposal": 1,
+      "profile": "baseline",
+      "case": {
+        "id": "case04",
+        "sensor_pF": 150,
+        "wire_pF": 2
+      },
+      "pass": false,
+      "phase_margins_deg": [
+        79.3853330831511
+      ],
+      "bandwidth_Hz": 2791472.6177153923,
+      "dc_Zreal_ohm": -9997.109047477,
+      "dc_Zimag_ohm": 0.2157906648147,
+      "dc_delivered_power_uW": 226.945060452,
+      "initial_error_V": 2.421759009996194e-05,
+      "edges": [
+        {
+          "edge": 1,
+          "target_V": 0.7,
+          "settle_ns": 576.25,
+          "endpoint_error_V": 0.0008428681391000614,
+          "overshoot_V": 0.006192257741199914
+        },
+        {
+          "edge": 2,
+          "target_V": 0.9,
+          "settle_ns": 399.7500000000003,
+          "endpoint_error_V": 1.287195540000674e-05,
+          "overshoot_V": 0.00712704715129997
+        },
+        {
+          "edge": 3,
+          "target_V": 0.7,
+          "settle_ns": 570.75,
+          "endpoint_error_V": 0.0008320031082000856,
+          "overshoot_V": 0.006203210531600001
+        },
+        {
+          "edge": 4,
+          "target_V": 0.9,
+          "settle_ns": 399.74999999999983,
+          "endpoint_error_V": 2.175442299967578e-06,
+          "overshoot_V": 0.0071162272810000315
+        }
+      ]
+    },
+    {
+      "proposal": 1,
+      "profile": "baseline",
+      "case": {
+        "id": "case05",
+        "sensor_pF": 150,
+        "wire_pF": 10
+      },
+      "pass": false,
+      "phase_margins_deg": [
+        78.22592821014862
+      ],
+      "bandwidth_Hz": 2793538.0382318506,
+      "dc_Zreal_ohm": -9997.109047483,
+      "dc_Zimag_ohm": 0.2158051884716,
+      "dc_delivered_power_uW": 226.945060452,
+      "initial_error_V": 2.421759009996194e-05,
+      "edges": [
+        {
+          "edge": 1,
+          "target_V": 0.7,
+          "settle_ns": 600.7500000000001,
+          "endpoint_error_V": 0.0008431770596000199,
+          "overshoot_V": 0.007566066029299989
+        },
+        {
+          "edge": 2,
+          "target_V": 0.9,
+          "settle_ns": 406.2500000000001,
+          "endpoint_error_V": 1.2531664600023973e-05,
+          "overshoot_V": 0.008500641418800026
+        },
+        {
+          "edge": 3,
+          "target_V": 0.7,
+          "settle_ns": 596.25,
+          "endpoint_error_V": 0.0008323147336000147,
+          "overshoot_V": 0.00757699604739992
+        },
+        {
+          "edge": 4,
+          "target_V": 0.9,
+          "settle_ns": 405.7500000000003,
+          "endpoint_error_V": 1.8378213999525883e-06,
+          "overshoot_V": 0.008489824363499987
+        }
+      ]
+    },
+    {
+      "proposal": 2,
+      "profile": "baseline",
+      "case": {
+        "id": "case00",
+        "sensor_pF": 10,
+        "wire_pF": 2
+      },
+      "pass": true,
+      "phase_margins_deg": [
+        112.95537678160943
+      ],
+      "bandwidth_Hz": 2007818.4314145534,
+      "dc_Zreal_ohm": -10039.10577456,
+      "dc_Zimag_ohm": 0.2167855699416,
+      "dc_delivered_power_uW": 226.9570833636,
+      "initial_error_V": 2.421759089998865e-05,
+      "edges": [
+        {
+          "edge": 1,
+          "target_V": 0.7,
+          "settle_ns": 426.24999999999994,
+          "endpoint_error_V": 7.156862800061781e-06,
+          "overshoot_V": 0.0
+        },
+        {
+          "edge": 2,
+          "target_V": 0.9,
+          "settle_ns": 425.2500000000003,
+          "endpoint_error_V": 1.2417873599956941e-05,
+          "overshoot_V": 1.2417873599956941e-05
+        },
+        {
+          "edge": 3,
+          "target_V": 0.7,
+          "settle_ns": 425.2499999999999,
+          "endpoint_error_V": -3.803675499902681e-06,
+          "overshoot_V": 3.803675499902681e-06
+        },
+        {
+          "edge": 4,
+          "target_V": 0.9,
+          "settle_ns": 425.7500000000001,
+          "endpoint_error_V": 1.6273815000023006e-06,
+          "overshoot_V": 1.6273815000023006e-06
+        }
+      ]
+    },
+    {
+      "proposal": 2,
+      "profile": "baseline",
+      "case": {
+        "id": "case01",
+        "sensor_pF": 10,
+        "wire_pF": 10
+      },
+      "pass": true,
+      "phase_margins_deg": [
+        110.67749172368949
+      ],
+      "bandwidth_Hz": 2061742.3333739722,
+      "dc_Zreal_ohm": -10039.10577457,
+      "dc_Zimag_ohm": 0.216800171107,
+      "dc_delivered_power_uW": 226.9570833636,
+      "initial_error_V": 2.421759089998865e-05,
+      "edges": [
+        {
+          "edge": 1,
+          "target_V": 0.7,
+          "settle_ns": 416.75000000000006,
+          "endpoint_error_V": 6.971030100055842e-06,
+          "overshoot_V": 0.0
+        },
+        {
+          "edge": 2,
+          "target_V": 0.9,
+          "settle_ns": 415.7500000000002,
+          "endpoint_error_V": 1.2613905999936392e-05,
+          "overshoot_V": 1.2613905999936392e-05
+        },
+        {
+          "edge": 3,
+          "target_V": 0.7,
+          "settle_ns": 415.7499999999998,
+          "endpoint_error_V": -3.988718399905444e-06,
+          "overshoot_V": 3.988718399905444e-06
+        },
+        {
+          "edge": 4,
+          "target_V": 0.9,
+          "settle_ns": 416.7499999999999,
+          "endpoint_error_V": 1.824187199961358e-06,
+          "overshoot_V": 1.824187199961358e-06
+        }
+      ]
+    },
+    {
+      "proposal": 2,
+      "profile": "baseline",
+      "case": {
+        "id": "case02",
+        "sensor_pF": 70,
+        "wire_pF": 2
+      },
+      "pass": true,
+      "phase_margins_deg": [
+        95.48469045413859
+      ],
+      "bandwidth_Hz": 2451624.3204247775,
+      "dc_Zreal_ohm": -10039.10577461,
+      "dc_Zimag_ohm": 0.2168950786951,
+      "dc_delivered_power_uW": 226.9570833636,
+      "initial_error_V": 2.421759089998865e-05,
+      "edges": [
+        {
+          "edge": 1,
+          "target_V": 0.7,
+          "settle_ns": 335.7500000000001,
+          "endpoint_error_V": 6.5148364000178205e-06,
+          "overshoot_V": 0.0
+        },
+        {
+          "edge": 2,
+          "target_V": 0.9,
+          "settle_ns": 334.75000000000006,
+          "endpoint_error_V": 1.311386109992263e-05,
+          "overshoot_V": 1.311386109992263e-05
+        },
+        {
+          "edge": 3,
+          "target_V": 0.7,
+          "settle_ns": 334.75000000000006,
+          "endpoint_error_V": -4.431669299975738e-06,
+          "overshoot_V": 4.431669299975738e-06
+        },
+        {
+          "edge": 4,
+          "target_V": 0.9,
+          "settle_ns": 335.2499999999999,
+          "endpoint_error_V": 2.337177300026916e-06,
+          "overshoot_V": 2.337177300026916e-06
+        }
+      ]
+    },
+    {
+      "proposal": 2,
+      "profile": "baseline",
+      "case": {
+        "id": "case03",
+        "sensor_pF": 70,
+        "wire_pF": 10
+      },
+      "pass": true,
+      "phase_margins_deg": [
+        93.43093766763201
+      ],
+      "bandwidth_Hz": 2509220.447617179,
+      "dc_Zreal_ohm": -10039.10577461,
+      "dc_Zimag_ohm": 0.2169096798631,
+      "dc_delivered_power_uW": 226.9570833636,
+      "initial_error_V": 2.421759089998865e-05,
+      "edges": [
+        {
+          "edge": 1,
+          "target_V": 0.7,
+          "settle_ns": 316.25000000000017,
+          "endpoint_error_V": 6.510826300099026e-06,
+          "overshoot_V": 0.0
+        },
+        {
+          "edge": 2,
+          "target_V": 0.9,
+          "settle_ns": 315.25000000000006,
+          "endpoint_error_V": 1.3122149900013369e-05,
+          "overshoot_V": 1.3122149900013369e-05
+        },
+        {
+          "edge": 3,
+          "target_V": 0.7,
+          "settle_ns": 315.7499999999999,
+          "endpoint_error_V": -4.433252699942436e-06,
+          "overshoot_V": 4.433252699942436e-06
+        },
+        {
+          "edge": 4,
+          "target_V": 0.9,
+          "settle_ns": 315.75000000000034,
+          "endpoint_error_V": 2.3478630999385075e-06,
+          "overshoot_V": 2.3478630999385075e-06
+        }
+      ]
+    },
+    {
+      "proposal": 2,
+      "profile": "baseline",
+      "case": {
+        "id": "case04",
+        "sensor_pF": 150,
+        "wire_pF": 2
+      },
+      "pass": true,
+      "phase_margins_deg": [
+        79.51518834366965
+      ],
+      "bandwidth_Hz": 2779358.9916397682,
+      "dc_Zreal_ohm": -10039.10577467,
+      "dc_Zimag_ohm": 0.2170410903678,
+      "dc_delivered_power_uW": 226.9570833636,
+      "initial_error_V": 2.421759089998865e-05,
+      "edges": [
+        {
+          "edge": 1,
+          "target_V": 0.7,
+          "settle_ns": 398.75,
+          "endpoint_error_V": 6.785757300065143e-06,
+          "overshoot_V": 0.006944456861399995
+        },
+        {
+          "edge": 2,
+          "target_V": 0.9,
+          "settle_ns": 401.25000000000017,
+          "endpoint_error_V": 1.284595009998224e-05,
+          "overshoot_V": 0.007042677248599971
+        },
+        {
+          "edge": 3,
+          "target_V": 0.7,
+          "settle_ns": 399.25000000000006,
+          "endpoint_error_V": -4.134940399969089e-06,
+          "overshoot_V": 0.00695546701639993
+        },
+        {
+          "edge": 4,
+          "target_V": 0.9,
+          "settle_ns": 400.75000000000034,
+          "endpoint_error_V": 2.0946590999493253e-06,
+          "overshoot_V": 0.007031802295800027
+        }
+      ]
+    },
+    {
+      "proposal": 2,
+      "profile": "baseline",
+      "case": {
+        "id": "case05",
+        "sensor_pF": 150,
+        "wire_pF": 10
+      },
+      "pass": true,
+      "phase_margins_deg": [
+        78.35525764669417
+      ],
+      "bandwidth_Hz": 2781734.205728568,
+      "dc_Zreal_ohm": -10039.10577467,
+      "dc_Zimag_ohm": 0.2170556915336,
+      "dc_delivered_power_uW": 226.9570833636,
+      "initial_error_V": 2.421759089998865e-05,
+      "edges": [
+        {
+          "edge": 1,
+          "target_V": 0.7,
+          "settle_ns": 405.25000000000006,
+          "endpoint_error_V": 7.0745662000826215e-06,
+          "overshoot_V": 0.008316243419999925
+        },
+        {
+          "edge": 2,
+          "target_V": 0.9,
+          "settle_ns": 407.2500000000002,
+          "endpoint_error_V": 1.25287243000205e-05,
+          "overshoot_V": 0.008414377355900005
+        },
+        {
+          "edge": 3,
+          "target_V": 0.7,
+          "settle_ns": 405.25000000000006,
+          "endpoint_error_V": -3.84340709991271e-06,
+          "overshoot_V": 0.008327232018899955
+        },
+        {
+          "edge": 4,
+          "target_V": 0.9,
+          "settle_ns": 407.2500000000002,
+          "endpoint_error_V": 1.7801202000233829e-06,
+          "overshoot_V": 0.00840350521059996
+        }
+      ]
+    },
+    {
+      "proposal": 2,
+      "profile": "refined",
+      "case": {
+        "id": "case00",
+        "sensor_pF": 10,
+        "wire_pF": 2
+      },
+      "pass": true,
+      "phase_margins_deg": [
+        112.95512540787794
+      ],
+      "bandwidth_Hz": 2007891.4241396226,
+      "dc_Zreal_ohm": -10039.10577456,
+      "dc_Zimag_ohm": 0.2167855699416,
+      "dc_delivered_power_uW": 226.9570833636,
+      "initial_error_V": 2.421759420001557e-05,
+      "edges": [
+        {
+          "edge": 1,
+          "target_V": 0.7,
+          "settle_ns": 425.87499999999994,
+          "endpoint_error_V": 7.15439679999097e-06,
+          "overshoot_V": 0.0
+        },
+        {
+          "edge": 2,
+          "target_V": 0.9,
+          "settle_ns": 424.8749999999999,
+          "endpoint_error_V": 1.2418921000012517e-05,
+          "overshoot_V": 1.2418921000012517e-05
+        },
+        {
+          "edge": 3,
+          "target_V": 0.7,
+          "settle_ns": 425.125,
+          "endpoint_error_V": -3.806119100002725e-06,
+          "overshoot_V": 3.806119100002725e-06
+        },
+        {
+          "edge": 4,
+          "target_V": 0.9,
+          "settle_ns": 425.87499999900007,
+          "endpoint_error_V": 1.6284495999441262e-06,
+          "overshoot_V": 1.6284495999441262e-06
+        }
+      ]
+    },
+    {
+      "proposal": 2,
+      "profile": "refined",
+      "case": {
+        "id": "case01",
+        "sensor_pF": 10,
+        "wire_pF": 10
+      },
+      "pass": true,
+      "phase_margins_deg": [
+        110.6774716784869
+      ],
+      "bandwidth_Hz": 2061859.9138349378,
+      "dc_Zreal_ohm": -10039.10577457,
+      "dc_Zimag_ohm": 0.216800171107,
+      "dc_delivered_power_uW": 226.9570833636,
+      "initial_error_V": 2.421759420001557e-05,
+      "edges": [
+        {
+          "edge": 1,
+          "target_V": 0.7,
+          "settle_ns": 416.625,
+          "endpoint_error_V": 6.968838400012167e-06,
+          "overshoot_V": 0.0
+        },
+        {
+          "edge": 2,
+          "target_V": 0.9,
+          "settle_ns": 415.62499999999994,
+          "endpoint_error_V": 1.2614676800026814e-05,
+          "overshoot_V": 1.2614676800026814e-05
+        },
+        {
+          "edge": 3,
+          "target_V": 0.7,
+          "settle_ns": 415.62499999999994,
+          "endpoint_error_V": -3.990882899929105e-06,
+          "overshoot_V": 3.990882899929105e-06
+        },
+        {
+          "edge": 4,
+          "target_V": 0.9,
+          "settle_ns": 416.3749999999999,
+          "endpoint_error_V": 1.8249854000229604e-06,
+          "overshoot_V": 1.8249854000229604e-06
+        }
+      ]
+    },
+    {
+      "proposal": 2,
+      "profile": "refined",
+      "case": {
+        "id": "case02",
+        "sensor_pF": 70,
+        "wire_pF": 2
+      },
+      "pass": true,
+      "phase_margins_deg": [
+        95.48488292922937
+      ],
+      "bandwidth_Hz": 2451647.168219763,
+      "dc_Zreal_ohm": -10039.10577461,
+      "dc_Zimag_ohm": 0.2168950786951,
+      "dc_delivered_power_uW": 226.9570833636,
+      "initial_error_V": 2.421759420001557e-05,
+      "edges": [
+        {
+          "edge": 1,
+          "target_V": 0.7,
+          "settle_ns": 335.37499999999994,
+          "endpoint_error_V": 6.513389900097977e-06,
+          "overshoot_V": 0.0
+        },
+        {
+          "edge": 2,
+          "target_V": 0.9,
+          "settle_ns": 334.37500000000006,
+          "endpoint_error_V": 1.3113865899971877e-05,
+          "overshoot_V": 1.3113865899971877e-05
+        },
+        {
+          "edge": 3,
+          "target_V": 0.7,
+          "settle_ns": 334.8749999999999,
+          "endpoint_error_V": -4.4330901000089185e-06,
+          "overshoot_V": 4.4330901000089185e-06
+        },
+        {
+          "edge": 4,
+          "target_V": 0.9,
+          "settle_ns": 335.12500000000045,
+          "endpoint_error_V": 2.3372016999534395e-06,
+          "overshoot_V": 2.3372016999534395e-06
+        }
+      ]
+    },
+    {
+      "proposal": 2,
+      "profile": "refined",
+      "case": {
+        "id": "case03",
+        "sensor_pF": 70,
+        "wire_pF": 10
+      },
+      "pass": true,
+      "phase_margins_deg": [
+        93.43107241875092
+      ],
+      "bandwidth_Hz": 2509241.5505312765,
+      "dc_Zreal_ohm": -10039.10577461,
+      "dc_Zimag_ohm": 0.2169096798631,
+      "dc_delivered_power_uW": 226.9570833636,
+      "initial_error_V": 2.421759420001557e-05,
+      "edges": [
+        {
+          "edge": 1,
+          "target_V": 0.7,
+          "settle_ns": 316.375,
+          "endpoint_error_V": 6.509392900033717e-06,
+          "overshoot_V": 0.0
+        },
+        {
+          "edge": 2,
+          "target_V": 0.9,
+          "settle_ns": 315.1250000000002,
+          "endpoint_error_V": 1.3122147299982068e-05,
+          "overshoot_V": 1.3122147299982068e-05
+        },
+        {
+          "edge": 3,
+          "target_V": 0.7,
+          "settle_ns": 315.62500000000006,
+          "endpoint_error_V": -4.434664300001501e-06,
+          "overshoot_V": 4.434664300001501e-06
+        },
+        {
+          "edge": 4,
+          "target_V": 0.9,
+          "settle_ns": 315.87500000000057,
+          "endpoint_error_V": 2.347871699948101e-06,
+          "overshoot_V": 2.347871699948101e-06
+        }
+      ]
+    },
+    {
+      "proposal": 2,
+      "profile": "refined",
+      "case": {
+        "id": "case04",
+        "sensor_pF": 150,
+        "wire_pF": 2
+      },
+      "pass": true,
+      "phase_margins_deg": [
+        79.51484945659473
+      ],
+      "bandwidth_Hz": 2779654.1939211288,
+      "dc_Zreal_ohm": -10039.10577467,
+      "dc_Zimag_ohm": 0.2170410903678,
+      "dc_delivered_power_uW": 226.9570833636,
+      "initial_error_V": 2.421759420001557e-05,
+      "edges": [
+        {
+          "edge": 1,
+          "target_V": 0.7,
+          "settle_ns": 398.62500000000017,
+          "endpoint_error_V": 6.784593600039912e-06,
+          "overshoot_V": 0.006944244766399987
+        },
+        {
+          "edge": 2,
+          "target_V": 0.9,
+          "settle_ns": 401.1249999999999,
+          "endpoint_error_V": 1.2845640399938851e-05,
+          "overshoot_V": 0.007042448902299991
+        },
+        {
+          "edge": 3,
+          "target_V": 0.7,
+          "settle_ns": 399.1249999999998,
+          "endpoint_error_V": -4.136070200000397e-06,
+          "overshoot_V": 0.0069552549268999675
+        },
+        {
+          "edge": 4,
+          "target_V": 0.9,
+          "settle_ns": 400.62500000000006,
+          "endpoint_error_V": 2.0943844000198553e-06,
+          "overshoot_V": 0.007031573935100011
+        }
+      ]
+    },
+    {
+      "proposal": 2,
+      "profile": "refined",
+      "case": {
+        "id": "case05",
+        "sensor_pF": 150,
+        "wire_pF": 10
+      },
+      "pass": true,
+      "phase_margins_deg": [
+        78.35478760434131
+      ],
+      "bandwidth_Hz": 2782059.3023964656,
+      "dc_Zreal_ohm": -10039.10577467,
+      "dc_Zimag_ohm": 0.2170556915336,
+      "dc_delivered_power_uW": 226.9570833636,
+      "initial_error_V": 2.421759420001557e-05,
+      "edges": [
+        {
+          "edge": 1,
+          "target_V": 0.7,
+          "settle_ns": 405.125,
+          "endpoint_error_V": 7.07359040008626e-06,
+          "overshoot_V": 0.008316010479400004
+        },
+        {
+          "edge": 2,
+          "target_V": 0.9,
+          "settle_ns": 407.37500000000006,
+          "endpoint_error_V": 1.252818660002486e-05,
+          "overshoot_V": 0.008414182055599961
+        },
+        {
+          "edge": 3,
+          "target_V": 0.7,
+          "settle_ns": 405.3749999999999,
+          "endpoint_error_V": -3.8443518000086385e-06,
+          "overshoot_V": 0.0083269990914
+        },
+        {
+          "edge": 4,
+          "target_V": 0.9,
+          "settle_ns": 406.8750000000002,
+          "endpoint_error_V": 1.7796143999548875e-06,
+          "overshoot_V": 0.008403309887800026
+        }
+      ]
+    }
+  ],
+  "native_process_completions": 3,
+  "usage": {
+    "input_tokens": 66211,
+    "cached_input_tokens": 21120,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 11074,
+    "reasoning_output_tokens": 10674
+  },
+  "one_adaptive_task_trial": true,
+  "repo_public_before_collection": true,
+  "matched_to_earlier_UI_session": false,
+  "exact_backend_revision_known": false,
+  "separately_billed_API_calls": 0,
+  "raw_metric_reextraction_matches": true
+}

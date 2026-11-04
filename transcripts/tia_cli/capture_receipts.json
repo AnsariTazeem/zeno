@@ -1,0 +1,100 @@
+{
+  "files": [
+    {
+      "path": "transcripts/tia_cli/proposal01/input_message.txt",
+      "source_sha256": "38630f5586b76f1fe06d495c5f6962c9951ae21f3e6466524014f9275711cdce",
+      "published_sha256": "38630f5586b76f1fe06d495c5f6962c9951ae21f3e6466524014f9275711cdce",
+      "transformation": "none"
+    },
+    {
+      "path": "transcripts/tia_cli/proposal01/model_reply.md",
+      "source_sha256": "40b587ca2f2c99cc9caf6bbed21c04c740d66dda39dd536e8d3ee2ab77d211b7",
+      "published_sha256": "40b587ca2f2c99cc9caf6bbed21c04c740d66dda39dd536e8d3ee2ab77d211b7",
+      "transformation": "none"
+    },
+    {
+      "path": "transcripts/tia_cli/proposal01/candidate.sp",
+      "source_sha256": "eb537d06506d6efe865acd775ffa278edbe1c3a78baf6b26f42e24e83b244fed",
+      "published_sha256": "eb537d06506d6efe865acd775ffa278edbe1c3a78baf6b26f42e24e83b244fed",
+      "transformation": "none"
+    },
+    {
+      "path": "transcripts/tia_cli/proposal01/capture.json",
+      "source_sha256": "9375cdd8e49e6d7ac34076ae46ffce691b27176b64f07b34fd92f165870f8bde",
+      "published_sha256": "9375cdd8e49e6d7ac34076ae46ffce691b27176b64f07b34fd92f165870f8bde",
+      "transformation": "none"
+    },
+    {
+      "path": "transcripts/tia_cli/proposal01/feedback.txt",
+      "source_sha256": "19d34c68c420061682c4d520c59285e71f6c18d48046ff41b7cb33c4f6d42790",
+      "published_sha256": "19d34c68c420061682c4d520c59285e71f6c18d48046ff41b7cb33c4f6d42790",
+      "transformation": "none"
+    },
+    {
+      "path": "transcripts/tia_cli/proposal01/feedback_receipt.json",
+      "source_sha256": "796bbda63006d84e22743d48ab2eea955f572abf87d9e419fa0461b77315eead",
+      "published_sha256": "796bbda63006d84e22743d48ab2eea955f572abf87d9e419fa0461b77315eead",
+      "transformation": "none"
+    },
+    {
+      "path": "transcripts/tia_cli/proposal01/tool_audit.json",
+      "source_sha256": "055cd6754fa3a832a0e1e69be42e2079cd253283216cf72b6739afafcf7864a9",
+      "published_sha256": "055cd6754fa3a832a0e1e69be42e2079cd253283216cf72b6739afafcf7864a9",
+      "transformation": "none"
+    },
+    {
+      "path": "transcripts/tia_cli/proposal01/visible_tools.json",
+      "source_sha256": "e2ac9e6e1d328dd169d7b56f8b8e7efbb8681c1ab639fe098c3bdfb3aa29bde7",
+      "published_sha256": "0ca57494569a14307a5768380ed75284f1774991168802c32c7d0db8abbe0a4e",
+      "transformation": "Private session ID omitted"
+    },
+    {
+      "path": "transcripts/tia_cli/proposal01/launch.json",
+      "source_sha256": "2430dff67c56a1504ecda84ca41f6536c656fe8d9fb1d41c6cface87d64dc2d3",
+      "published_sha256": "c5b4f6f4cbc3696a388eeb2919a5bb4ffc12540beb4819ab8f0aa4fe8727f081",
+      "transformation": "Private session ID, launch command and absolute paths omitted"
+    },
+    {
+      "path": "transcripts/tia_cli/proposal02/input_message.txt",
+      "source_sha256": "27bba52e2a19bb76945db59ebaa8e5648ed6ff656e510257272a6f3f365e1224",
+      "published_sha256": "27bba52e2a19bb76945db59ebaa8e5648ed6ff656e510257272a6f3f365e1224",
+      "transformation": "none"
+    },
+    {
+      "path": "transcripts/tia_cli/proposal02/model_reply.md",
+      "source_sha256": "a0094c7d8bef24682342d19f061e7c712523b7b46aff105ff9b0ebbbf8bf448f",
+      "published_sha256": "a0094c7d8bef24682342d19f061e7c712523b7b46aff105ff9b0ebbbf8bf448f",
+      "transformation": "none"
+    },
+    {
+      "path": "transcripts/tia_cli/proposal02/candidate.sp",
+      "source_sha256": "6f4c0f5db143db8ed97179c821d0b38a7fa6b21d80a76afa8d10cb51a0e604c9",
+      "published_sha256": "6f4c0f5db143db8ed97179c821d0b38a7fa6b21d80a76afa8d10cb51a0e604c9",
+      "transformation": "none"
+    },
+    {
+      "path": "transcripts/tia_cli/proposal02/capture.json",
+      "source_sha256": "9ad13db0d8c5a03f304956316d3fcd09f72495dee9a814993c52495199873cff",
+      "published_sha256": "9ad13db0d8c5a03f304956316d3fcd09f72495dee9a814993c52495199873cff",
+      "transformation": "none"
+    },
+    {
+      "path": "transcripts/tia_cli/proposal02/tool_audit.json",
+      "source_sha256": "055cd6754fa3a832a0e1e69be42e2079cd253283216cf72b6739afafcf7864a9",
+      "published_sha256": "055cd6754fa3a832a0e1e69be42e2079cd253283216cf72b6739afafcf7864a9",
+      "transformation": "none"
+    },
+    {
+      "path": "transcripts/tia_cli/proposal02/visible_tools.json",
+      "source_sha256": "5240921e4d7ec0d5666da1c38dd8e77f6f7e638f00f10bb0ae33d118a193f8c2",
+      "published_sha256": "450e825f7c794722b6ee8d7af081953af00be0129401dcdaa45393fb271b0689",
+      "transformation": "Private session ID omitted"
+    },
+    {
+      "path": "transcripts/tia_cli/proposal02/launch.json",
+      "source_sha256": "8896f0abaa125c81104c8b8c85393a31d239c0dbacf667201c6bcfb474f269ff",
+      "published_sha256": "ce784e146ef5bee2a26ac7a1132992e91586e9d793d7b074ce6fcd89fcf42a00",
+      "transformation": "Private session ID, launch command and absolute paths omitted"
+    }
+  ]
+}
