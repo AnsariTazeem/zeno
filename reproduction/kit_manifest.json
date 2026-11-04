@@ -7,8 +7,8 @@
     },
     {
       "path": "bootstrap.py",
-      "bytes": 11339,
-      "sha256": "8498805a20012695cf38f60db9955eaaff7bbb2bffc12b5cf25024837ad6c240"
+      "bytes": 11608,
+      "sha256": "7d4bed57fbc2726bc08270f49ff0b7e71233eedcc1d4d5ef4440f24c2c9a4a41"
     },
     {
       "path": "payload/analog_public_v1/deps/python/_yaml/__init__.py",

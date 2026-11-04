@@ -60,19 +60,24 @@ def fetch(row, cache, offline):
         raise FileNotFoundError('Offline cache missing: ' + row['filename'])
     if urllib.parse.urlsplit(row['url']).scheme != 'https':
         raise ValueError('HTTPS required')
-    part = target.with_name(target.name + '.part')
+    descriptor, name = tempfile.mkstemp(prefix=target.name + '.', suffix='.part', dir=target.parent)
+    part = Path(name)
     count = 0
     started = time.monotonic()
-    with urllib.request.urlopen(row['url'], timeout=60) as response, part.open('xb') as handle:
-        if urllib.parse.urlsplit(response.url).scheme != 'https':
-            raise ValueError('Non-HTTPS redirect')
-        while body := response.read(1024 * 1024):
-            count += len(body)
-            if count > row['bytes'] or time.monotonic() - started > 300:
-                raise ValueError('Download size/time bound exceeded')
-            handle.write(body)
-    identity(part, row)
-    part.rename(target)
+    try:
+        with os.fdopen(descriptor, 'wb') as handle, urllib.request.urlopen(row['url'], timeout=60) as response:
+            if urllib.parse.urlsplit(response.url).scheme != 'https':
+                raise ValueError('Non-HTTPS redirect')
+            while body := response.read(1024 * 1024):
+                count += len(body)
+                if count > row['bytes'] or time.monotonic() - started > 300:
+                    raise ValueError('Download size/time bound exceeded')
+                handle.write(body)
+        identity(part, row)
+        part.rename(target)
+    finally:
+        # Remove only this attempt's file; a prior partial may belong to another run.
+        part.unlink(missing_ok=True)
     return target, 'downloaded_https'
 
 
