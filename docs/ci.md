@@ -1,6 +1,6 @@
 # CI
 
-[Checks](../.github/workflows/checks.yml) runs the 63-test offline suite on
+[Checks](../.github/workflows/checks.yml) runs the 73-test offline suite on
 Windows for pushes and pull requests. Dependencies and actions are pinned.
 Logs are retained for seven days.
 

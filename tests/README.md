@@ -10,7 +10,8 @@ prepared venv Python. It needs the pinned NumPy and zstandard packages.
 | [Supply evidence](../reproduction/payload/eval_core_v4/test_supply_evidence.py) | 12 | No-gain evidence, missing/corrupt traces, timeouts and identity changes |
 | [Repository/export checks](test_repository_layout.py) | 7 | Actual exported packets, tamper rejection and pinned references |
 | [Download recovery](test_download_recovery.py) | 6 | Interrupted streams, invalid payloads, HTTPS redirects and verified caches |
+| [Task contracts](test_task_contracts.py) | 10 | Current exports, leakage/tamper rejection, numerical declarations, reporting precision and verdict boundaries |
 
-These 63 offline checks do not run model inference or full-circuit simulation.
+These 73 offline tests do not run model inference or full-circuit simulation.
 The prepared root's separate `qualification.py` runs the original 50 tests
 and five native controls. Logs use a new directory under `.local-checks/`.

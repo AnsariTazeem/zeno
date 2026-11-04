@@ -1,7 +1,8 @@
 # Reproduction
 
-The offline suite has 63 tests: eight setup-boundary checks, six download-recovery
-checks, 30 grading tests, 12 raw-evidence tests and seven packet/export tests.
+The offline suite has 73 tests: eight setup-boundary checks, six download-recovery
+checks, 30 grading tests, 12 raw-evidence tests, seven historical packet/export
+tests and ten current-packet/contract tests.
 
 Downloads use a separate temporary file for each attempt. Interrupted or invalid
 downloads are removed; verified cache files and pre-existing partials are preserved.
@@ -25,7 +26,8 @@ suite on Windows. The manual native job also passed on a GitHub-hosted runner.
 [Hosted receipt](../evidence/hosted_verification.json). Run IDs,
 source commits and artifacts identify the tested snapshot.
 
-The latest local check verified all 1,202 runtime files, passed 63 offline
-tests and reproduced all five controls. Cached setup took 32.732 seconds and
+The recorded native qualification verified all 1,202 runtime files and reproduced
+all five controls; its accompanying offline suite had 63 tests. The current suite
+adds ten task-contract tests. Cached setup took 32.732 seconds and
 native qualification took 192.526 seconds. These are observed timings on one
 computer. [Latest receipt](../evidence/final_validation.json) · [Commands](run.md)

@@ -28,7 +28,7 @@ Stay in the repository root and use the printed environment's Python:
 & 'C:/printed/root/.venv/Scripts/python.exe' -I -B tools/run_checks.py
 ```
 
-This verifies frozen files and runs 63 tests covering setup, download recovery,
+This verifies frozen files and runs 73 tests covering setup, download recovery,
 grading, raw evidence and task exports. It makes no model calls, downloads or
 full-circuit simulation runs. Logs go to the ignored `.local-checks/` folder.
 Test subprocesses use a temporary directory inside that log folder, so they
@@ -74,6 +74,11 @@ Only that task's verified public files are copied. The destination must not
 exist. Give the model that folder only, in a fresh context. This repository
 contains references; LOAD/TIA's fixed plant can expose SUPPLY's repair.
 The collection boundaries are documented in [methodology](methodology.md).
+
+Export defaults to the `clarified-1` packet. Add `--revision recorded` for the
+exact historical task inputs. Electrical grading requirements are unchanged.
+Run `tools/audit_tasks.py` with the prepared Python to check declarations,
+input boundaries and verdicts. [Audit details](task-validation.md)
 
 ## Cost and evidence
 
