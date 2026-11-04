@@ -1,11 +1,36 @@
 # Collect model responses
 
 Collection is separate from simulation. Use the same model, effort, interface,
-task inputs and feedback policy throughout a campaign. Model login and response
-capture happen in the chosen interface; this tool does not call an API or handle
-credentials.
+task inputs and feedback policy throughout a campaign. Responses can be captured
+externally or through the subscription CLI. Simulation needs no model account.
 
-## Prepare
+## Subscription CLI
+
+On Windows, sign in to Codex using your ChatGPT account. Prepare the campaign
+with the installed CLI and its access policy pinned:
+
+```powershell
+python -I -B tools/collect_trials.py prepare --name comparison --model gpt-6.1-sol --effort high --interface CLI --codex
+python -I -B tools/collect_cli.py --name comparison --trial trial01 --prepared-root 'C:/printed/root'
+```
+
+The second command collects one episode. It starts a fresh context, evaluates
+each candidate and returns feedback in that same context, stopping at a confirmed
+pass or the proposal limit. Run the next scheduled trial with a new trial ID.
+
+Collection uses MXC with restricted reads and no command-network access. Shell,
+browser, connector and memory features are disabled. Captures are rejected if a
+tool is requested or the effective model/access settings differ from the plan.
+The collector makes no resends; connection handling inside the native CLI follows
+the client's defaults. There is no separately billed API fallback.
+
+Local canary tests checked input access, denied reads outside the permitted
+workspace and denied writes. An arithmetic capture checked the effective profile
+and absence of tool requests. [Check record](../evidence/transport_checks.json)
+
+## External capture
+
+To record responses from another controlled interface, prepare without `--codex`:
 
 ```powershell
 python -I -B tools/collect_trials.py prepare --name comparison --model gpt-6.1-sol --effort high --interface CLI

@@ -1,0 +1,21 @@
+{
+  "scope": "Collection checks, not circuit benchmark trials",
+  "native_canary": {
+    "input_read": true,
+    "outside_read_denied": true,
+    "write_denied": true
+  },
+  "model_capture": {
+    "requested_model": "gpt-6.1-sol",
+    "requested_effort": "high",
+    "arithmetic_answer_correct": true,
+    "tool_requests": 0,
+    "restricted_read_profile_verified": true,
+    "restricted_network_profile_verified": true
+  },
+  "authentication": "ChatGPT subscription confirmed; API environment overrides removed",
+  "automatic_wrapper_resends": 0,
+  "provider_connection_handling": "Built-in CLI defaults",
+  "separately_billed_API_fallback": false,
+  "benchmark_trials": 0
+}
