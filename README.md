@@ -79,8 +79,10 @@ Grade any candidate circuit, e.g. the bundled reference (seconds per run):
 python run_eval.py --prepared-root 'C:/printed/root' evaluate --task supply --candidate reference/supply.sp --run-id readme_example
 ```
 
-Use `--task load` or `--task tia` with any candidate file; the JSON result
-carries the measured values and per-requirement verdicts. A five-control
+Each run keeps its evidence under its `--run-id`; reusing an id is refused,
+so pass a fresh one for every run. Use `--task load` or `--task tia` with any
+candidate file; the JSON result carries the measured values and
+per-requirement verdicts. A five-control
 grader qualification runs in five to nine minutes after about a minute of
 cached setup (longer with a cold download cache). Evaluation is local and
 free; the recorded model sessions ran through an existing ChatGPT
@@ -90,8 +92,8 @@ subscription, and per-run inference cost is not reported.
 ## Models tested and results
 
 All model sessions were collected in November 2026. Reasoning effort was High
-in both interfaces. Temperature and seed were not set (interface defaults;
-recorded per run in `results/catalog.json`). A session could submit at most
+in both interfaces. Temperature and seed were not captured; the catalog
+records them as `null` per run in `results/catalog.json`. A session could submit at most
 three candidate circuits, with evaluator feedback between proposals and no
 tools or web access. The two records are reported separately because they
 come from different packets and grader versions.
@@ -132,10 +134,13 @@ Representative transcripts for every session and episode are indexed in
   (above) failed. Another session missed gain and gain margin outright.
   Compensation that reads well on a schematic left too little reserve once
   gain, margins, settling and power were measured together.
-- LOAD/TIA: passes were earned, not automatic. In both records the first TIA
-  proposal missed the initial-accuracy requirement and the refined second
-  proposal passed; LOAD sessions refined a working candidate to a
-  confirmed pass.
+- LOAD/TIA: passes came after iteration, not on arrival. In the TIA receipts
+  the first proposal missed dynamic-response limits — settling time in the
+  historical CLI record, phase margin in one matched episode and both in the
+  other — and the revised proposal passed. The historical web-UI record
+  follows the same fail-then-refine pattern (0 then 100). LOAD: the web-UI
+  session passed on its third proposal after two misses; the CLI sessions
+  passed on the first.
 - Measurement exposes what inspection misses: candidates that look right in
   schematic form fail on loop dynamics — the margin/settling trade-off.
   [Full failure analysis](docs/results.md)
