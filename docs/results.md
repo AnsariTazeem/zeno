@@ -60,7 +60,7 @@ for the feedback and grading workflow.
 
 [Measurements](../evidence/tia_cli_summary.json) · [First answer](../transcripts/tia_cli/proposal01/model_reply.md) · [Final answer](../transcripts/tia_cli/proposal02/model_reply.md)
 
-## Session record
+## Session record (historical seven)
 
 | Session | Proposals | Final outcome |
 |---|---:|---|
@@ -79,6 +79,37 @@ in [collection conditions](methodology.md#collection-conditions).
 
 [Catalog](../results/catalog.json) · [Exact responses](../transcripts/README.md)
 
+## Frozen CLI cohort (partial)
+
+A separate cohort used a pinned collector and the `clarified-1` packets with the
+requested gpt-6.1-sol/High CLI configuration: three planned episodes per task,
+at most three proposals, no tools and no automatic retries. Five of nine planned
+episodes completed before collection stopped.
+
+| Episode | Task | Proposals | Outcome |
+|---|---|---:|---|
+| trial01 | SUPPLY | 3 | No confirmed pass |
+| trial02 | LOAD | 1 | Pass, refined |
+| trial03 | TIA | 2 | Pass, refined |
+| trial04 | LOAD | 1 | Pass, refined |
+| trial05 | TIA | 2 | Pass, refined |
+| trial06 | SUPPLY | 1 | Interrupted (transport error); unscored |
+| trial07-09 | TIA, SUPPLY, LOAD | 0 | Not run |
+
+The two LOAD episodes produced byte-identical networks, also identical to the
+earlier CLI LOAD answer. Refined SUPPLY measurements missed DC gain
+(59.70-63.64 dB against 72.71 dB) and gain margin (8.2-8.5 dB against 10 dB),
+and command-relative settling completed at none of the three supplies. Both
+LOAD episodes passed all six conditions at refined numerics. Both TIA episodes
+passed all six conditions after one refinement proposal each; per-proposal
+measurements remain in the linked transcripts and receipts.
+
+Each capture records the effective model and effort, zero tool requests and the
+restricted read/network policy. The cohort is incomplete, so no pass@k or pass^k
+estimate is reported. It is not merged with the historical seven: packets, dates
+and grader revisions differ.
+[Evidence](../evidence/matched_cli_summary.json) · [Transcripts](../transcripts/matched_cli/README.md)
+
 ## Repetition by configuration
 
 | Task | Model/interface | Grader | Confirmed passes / complete sessions |
@@ -90,11 +121,13 @@ in [collection conditions](methodology.md#collection-conditions).
 | TIA | UI-labelled GPT-6/High | v3 | 1/1 |
 | TIA | Requested Sol/High CLI | v4 | 1/1 |
 
-These are observed counts from the recorded packets. Unknown backend versions,
-temperatures and seeds remain unknown. Different interfaces and graders stay
-separate; the table does not rank models. Most cells have one session, so the
-record does not establish repeatability or a population pass rate. No confidence
-interval, pass@k or pass^k estimate is assigned to this selected sample.
+These are observed counts from the historical seven sessions. The partial
+frozen CLI cohort above is excluded from this table and is not counted as
+additional sessions. Unknown backend versions, temperatures and seeds remain
+unknown. Different interfaces and graders stay separate; the table does not
+rank models. Most cells have one session, so the record does not establish
+repeatability or a population pass rate. No confidence interval, pass@k or
+pass^k estimate is assigned to this selected sample.
 
 Rebuild the [session summary](../results/session_summary.json) from the catalog
 and retained candidate files:

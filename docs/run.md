@@ -41,13 +41,17 @@ do not need write access to the system temporary directory.
 & 'C:/printed/root/.venv/Scripts/python.exe' -I -B 'C:/printed/root/qualification.py'
 ```
 
-This runs the original 50 tests and five circuit controls: three passing
-references, an ordinary SUPPLY failure and a no-gain SUPPLY failure. Use a
-fresh prepared root: qualification refuses to overwrite earlier outputs.
+This runs 51 grading tests (8 bootstrap-boundary, 30 frozen grading
+regressions, 13 SUPPLY-evidence regressions) and five circuit controls: three
+passing references, an ordinary SUPPLY failure and a no-gain SUPPLY failure.
+Use a fresh prepared root: qualification refuses to overwrite earlier outputs.
 
-Cached setup took about 30 seconds and native qualification about three minutes
-on the tested machine. Qualification covered 21 conditions in 20 native
-processes. [Run receipt](../evidence/final_validation.json) · [Reproduction](reproduction.md)
+The recorded v4 runs used about 30 seconds of cached setup and about three
+minutes of native qualification on the tested machine; the v5 qualification took
+under nine minutes on the same host. Qualification covered 21 conditions in 20
+native processes. [Earlier v4 run receipt](../evidence/final_validation.json) ·
+[Current v5 run receipt](../evidence/qualified_v5_summary.json) ·
+[Reproduction](reproduction.md)
 
 The source was checked in a fresh clone and venv. See [reproduction](reproduction.md)
 and [CI](ci.md) for run details.

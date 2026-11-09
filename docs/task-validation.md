@@ -7,8 +7,9 @@ The audit checks these declarations against the compiler and grader.
 
 The compiler checks input size, permitted devices and values, names, terminals
 and the subcircuit interface before simulation. Boundary tests exercise accepted
-and rejected inputs, including exact size limits. All 17 retained model
-candidates and the reference circuits satisfy the declared input rules.
+and rejected inputs, including exact size limits. The 17 model candidates are
+the historical audited set; with the reference circuits, they satisfy the
+declared input rules.
 
 SUPPLY compares measurements at its stated reporting precision. The audit also
 checks the extractor's rounding and interpolation behavior, so a boundary verdict
@@ -29,9 +30,16 @@ outcomes. [Grading rules](../graders/README.md)
 
 The audit exercises 402 electrical verdict boundaries. Passing references,
 alternative circuits, deliberately wrong answers and damaged evidence are covered
-by the [test suite](../tests/README.md). Separate
-[native validation](../evidence/final_validation.json) reproduces the references
-and two SUPPLY failures with the actual simulator.
+by the [test suite](../tests/README.md). The
+[current task-contract audit](../evidence/task_contract_audit_clarified2_v5.json)
+records these checks for the current clarified-2 packets and v5 evaluator,
+with zero model and simulator calls.
+
+Native qualification is recorded separately. The
+[earlier v4 receipt](../evidence/final_validation.json) reproduces the passing
+references and two SUPPLY failures for its source snapshot, and the
+[current v5 receipt](../evidence/qualified_v5_summary.json) records the same
+five controls under the current evaluator in a clean bootstrapped environment.
 
 ## Run the audit
 
@@ -42,13 +50,17 @@ From the repository root, use the Python environment printed by setup:
 ```
 
 This checks packet integrity, numerical declarations, input boundaries, reporting
-precision and verdicts without inference or full-circuit simulation.
-[Audit record](../evidence/task_contract_audit.json)
+precision and verdicts without model inference or full-circuit simulation.
+[Current audit record](../evidence/task_contract_audit_clarified2_v5.json).
+The stored [historical audit record](../evidence/task_contract_audit.json) covers
+the earlier clarified-1 packets and remains unchanged.
 
 ## Recorded results
 
-The current packets make existing input rules and measurement conventions
-explicit. Their electrical requirements are unchanged. Historical packets remain
-available with `tools/export_task.py --revision recorded`; current export is the
-default. Existing model results retain their original packet and grader identity.
-No new model trial on the current packets is reported yet.
+The seven historical sessions used the recorded packets. The frozen CLI cohort
+used the clarified-1 revision. The current clarified-2 packets make existing
+input rules and measurement conventions explicit; their electrical requirements
+are unchanged. Existing model results retain their original packet and grader
+identity, and no model trial on clarified-2 is reported. Historical packets
+remain available with `tools/export_task.py --revision recorded`; current export
+is the default.

@@ -8,9 +8,10 @@
 | Make results auditable | Retain candidates, simulation traces and machine-readable measurements |
 | Separate a bad circuit from a failed run | Record electrical failure, invalid input and infrastructure errors separately |
 
-[Core tests](../reproduction/payload/eval_core_v4/test_core.py) cover positive,
-negative and equivalent solutions. [Evidence tests](../reproduction/payload/eval_core_v4/test_supply_evidence.py)
-cover timeouts, identity changes and damaged traces. [Export tests](../tests/test_repository_layout.py)
+[Core tests](../reproduction/payload/eval_core_v5/test_core.py) cover positive,
+negative and equivalent solutions. [Evidence tests](../reproduction/payload/eval_core_v5/test_supply_evidence.py)
+cover timeouts, identity changes, damaged traces and undefined-crossing
+classification. [Export tests](../tests/test_repository_layout.py)
 check the actual model-visible files.
 
 Simulation and grading run locally. A model account is needed only to collect

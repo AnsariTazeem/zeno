@@ -33,6 +33,13 @@ stopped after two replies on a wrapper defect and is
 excluded from complete-trial counts. Conditions, proposals and refined runs
 are correlated measurements, not independent trials.
 
+A second, frozen cohort used a pinned collector, the `clarified-1` packets and
+the same requested configuration with three planned episodes per task. Five
+episodes completed, one was interrupted by a transport error and three were
+not started; the interrupted episode is unscored. The cohort is reported as a
+partial record only, without a pass@k or pass^k estimate, and is not merged
+with the historical seven because packets, dates and grader revisions differ.
+
 ## Input boundaries
 
 Export one public packet per fresh model context. LOAD/TIA's fixed amplifier

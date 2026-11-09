@@ -47,8 +47,8 @@ that apparatus; the budgets are not measurements from a customer requirement.
 | At most two devices out of saturation | Source count |
 
 LOAD and TIA use authored simulation budgets, stated in their
-[LOAD](../tasks/revisions/clarified-1/load/TASK.md) and
-[TIA](../tasks/revisions/clarified-1/tia/TASK.md) packets. LOAD allows 0.5 mV
+[LOAD](../tasks/revisions/clarified-2/load/TASK.md) and
+[TIA](../tasks/revisions/clarified-2/tia/TASK.md) packets. LOAD allows 0.5 mV
 tracking error on a 200 mV step, or 0.25%; TIA allows 1 mV, or 0.5%.
 SUPPLY allows 2 mV, or 1%. These are task-specific accuracy bands, not ADC
 resolution specifications. The finite grids test simultaneous constraints;
