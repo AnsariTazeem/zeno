@@ -1,0 +1,3143 @@
+{
+  "outcome": "passed",
+  "packet_revision": "clarified-2",
+  "evaluator": "reproduction/payload/eval_core_v5/run_eval.py",
+  "packets": [
+    {
+      "task": "supply",
+      "packet_revision": "clarified-2",
+      "electrical_contract_unchanged": true,
+      "prompt_matches_task": true,
+      "fixed_assets_unchanged": true
+    },
+    {
+      "task": "load",
+      "packet_revision": "clarified-2",
+      "electrical_contract_unchanged": true,
+      "prompt_matches_task": true,
+      "fixed_assets_unchanged": true
+    },
+    {
+      "task": "tia",
+      "packet_revision": "clarified-2",
+      "electrical_contract_unchanged": true,
+      "prompt_matches_task": true,
+      "fixed_assets_unchanged": true
+    }
+  ],
+  "declarations": [
+    {
+      "task": "supply",
+      "contract_path": "limits.dc_gain_dB.>=",
+      "declaration": "| DC gain | >=72.71 dB |"
+    },
+    {
+      "task": "supply",
+      "contract_path": "limits.ugf_Hz.>=",
+      "declaration": "| Unity-gain frequency | >=66.59 MHz |"
+    },
+    {
+      "task": "supply",
+      "contract_path": "limits.pm_deg.>=",
+      "declaration": "| Phase margin | >=55 degrees |"
+    },
+    {
+      "task": "supply",
+      "contract_path": "limits.gm_dB.>=",
+      "declaration": "| Gain margin | >=10 dB |"
+    },
+    {
+      "task": "supply",
+      "contract_path": "limits.power_uW.<=",
+      "declaration": "| DC supply power, including bias | <=296.4 uW |"
+    },
+    {
+      "task": "supply",
+      "contract_path": "limits.command_rise_settle_ns.<=",
+      "declaration": "| Rising settling | <=12.24 ns |"
+    },
+    {
+      "task": "supply",
+      "contract_path": "limits.command_fall_settle_ns.<=",
+      "declaration": "| Falling settling | <=26.73 ns |"
+    },
+    {
+      "task": "supply",
+      "contract_path": "limits.n_triode.<=",
+      "declaration": "| MOS devices out of saturation at DC | <=2 |"
+    },
+    {
+      "task": "supply",
+      "contract_path": "limits.input_current_uA.<=",
+      "declaration": "| Monitored DC input-source current | <=0.01 uA |"
+    },
+    {
+      "task": "supply",
+      "contract_path": "command_error_band_V",
+      "declaration": "+/-2 mV band"
+    },
+    {
+      "task": "load",
+      "contract_path": "limits.all_downward_unity_crossing_phase_margins_deg_min",
+      "declaration": "**>=50 degrees"
+    },
+    {
+      "task": "load",
+      "contract_path": "limits.command_error_band_V",
+      "declaration": "**+/-0.0005 V**"
+    },
+    {
+      "task": "load",
+      "contract_path": "limits.settle_us_max_each_of_four_edges",
+      "declaration": "**2.5 us**"
+    },
+    {
+      "task": "load",
+      "contract_path": "limits.overshoot_V_max_each_edge",
+      "declaration": "**<=0.010 V**"
+    },
+    {
+      "task": "load",
+      "contract_path": "limits.dc_supply_power_uW_max",
+      "declaration": "**<=350 uW**"
+    },
+    {
+      "task": "tia",
+      "contract_path": "limits.transimpedance_real_at_10Hz_ohm",
+      "declaration": "-10100..-9900 ohm"
+    },
+    {
+      "task": "tia",
+      "contract_path": "limits.transimpedance_imag_at_10Hz_abs_max_ohm",
+      "declaration": "<=1 ohm"
+    },
+    {
+      "task": "tia",
+      "contract_path": "limits.first_minus_3dB_bandwidth_min_Hz",
+      "declaration": ">=1 MHz"
+    },
+    {
+      "task": "tia",
+      "contract_path": "limits.all_downward_unity_crossing_phase_margins_min_deg",
+      "declaration": ">=55 degrees"
+    },
+    {
+      "task": "tia",
+      "contract_path": "limits.loop_phase_at_10Hz_abs_less_than_deg",
+      "declaration": "absolute initial phase <90 degrees"
+    },
+    {
+      "task": "tia",
+      "contract_path": "limits.loop_gain_at_10Hz_greater_than_dB",
+      "declaration": "(>0 dB at 10 Hz)"
+    },
+    {
+      "task": "tia",
+      "contract_path": "limits.dc_positive_delivered_supply_and_reference_power_max_uW",
+      "declaration": "<=300 uW"
+    },
+    {
+      "task": "tia",
+      "contract_path": "limits.command_error_band_V",
+      "declaration": "+/-1 mV"
+    },
+    {
+      "task": "tia",
+      "contract_path": "limits.each_edge_settle_max_ns",
+      "declaration": "by 500 ns"
+    },
+    {
+      "task": "tia",
+      "contract_path": "limits.each_edge_overshoot_max_V",
+      "declaration": "<=10 mV"
+    }
+  ],
+  "precision_checks": [
+    {
+      "probe": "rounded_phase_inside",
+      "actual": 55.0,
+      "expected": 55.0
+    },
+    {
+      "probe": "rounded_phase_outside",
+      "actual": 54.9,
+      "expected": 54.9
+    },
+    {
+      "probe": "rounded_current_inside",
+      "actual": 0.01,
+      "expected": 0.01
+    },
+    {
+      "probe": "rounded_current_outside",
+      "actual": 0.0101,
+      "expected": 0.0101
+    },
+    {
+      "probe": "linear_frequency_crossing",
+      "actual": 55.0,
+      "expected": 55.0
+    },
+    {
+      "probe": "rounded_saturation_0.3996",
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "probe": "rounded_saturation_0.3994",
+      "actual": 1,
+      "expected": 1
+    }
+  ],
+  "syntax_checks": [
+    {
+      "task": "supply",
+      "probe": "reference",
+      "expected_accepted": true,
+      "accepted": true
+    },
+    {
+      "task": "supply",
+      "probe": "same_node",
+      "expected_accepted": false,
+      "accepted": false
+    },
+    {
+      "task": "supply",
+      "probe": "name_32",
+      "expected_accepted": true,
+      "accepted": true
+    },
+    {
+      "task": "supply",
+      "probe": "name_33",
+      "expected_accepted": false,
+      "accepted": false
+    },
+    {
+      "task": "supply",
+      "probe": "size_at_limit",
+      "expected_accepted": true,
+      "accepted": true
+    },
+    {
+      "task": "supply",
+      "probe": "size_over_limit",
+      "expected_accepted": false,
+      "accepted": false
+    },
+    {
+      "task": "supply",
+      "probe": "duplicate_name",
+      "expected_accepted": false,
+      "accepted": false
+    },
+    {
+      "task": "load",
+      "probe": "reference",
+      "expected_accepted": true,
+      "accepted": true
+    },
+    {
+      "task": "load",
+      "probe": "same_node",
+      "expected_accepted": true,
+      "accepted": true
+    },
+    {
+      "task": "load",
+      "probe": "name_32",
+      "expected_accepted": true,
+      "accepted": true
+    },
+    {
+      "task": "load",
+      "probe": "name_33",
+      "expected_accepted": true,
+      "accepted": true
+    },
+    {
+      "task": "load",
+      "probe": "size_at_limit",
+      "expected_accepted": true,
+      "accepted": true
+    },
+    {
+      "task": "load",
+      "probe": "size_over_limit",
+      "expected_accepted": false,
+      "accepted": false
+    },
+    {
+      "task": "load",
+      "probe": "duplicate_name",
+      "expected_accepted": false,
+      "accepted": false
+    },
+    {
+      "task": "tia",
+      "probe": "reference",
+      "expected_accepted": true,
+      "accepted": true
+    },
+    {
+      "task": "tia",
+      "probe": "same_node",
+      "expected_accepted": false,
+      "accepted": false
+    },
+    {
+      "task": "tia",
+      "probe": "name_32",
+      "expected_accepted": true,
+      "accepted": true
+    },
+    {
+      "task": "tia",
+      "probe": "name_33",
+      "expected_accepted": false,
+      "accepted": false
+    },
+    {
+      "task": "tia",
+      "probe": "size_at_limit",
+      "expected_accepted": true,
+      "accepted": true
+    },
+    {
+      "task": "tia",
+      "probe": "size_over_limit",
+      "expected_accepted": false,
+      "accepted": false
+    },
+    {
+      "task": "tia",
+      "probe": "duplicate_name",
+      "expected_accepted": false,
+      "accepted": false
+    }
+  ],
+  "verdict_checks": [
+    {
+      "task": "supply",
+      "point": 1,
+      "probe": "dc_gain_dB_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "supply",
+      "point": 2,
+      "probe": "dc_gain_dB_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "supply",
+      "point": 3,
+      "probe": "dc_gain_dB_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "supply",
+      "point": 1,
+      "probe": "dc_gain_dB_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "supply",
+      "point": 2,
+      "probe": "dc_gain_dB_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "supply",
+      "point": 3,
+      "probe": "dc_gain_dB_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "supply",
+      "point": 1,
+      "probe": "ugf_Hz_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "supply",
+      "point": 2,
+      "probe": "ugf_Hz_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "supply",
+      "point": 3,
+      "probe": "ugf_Hz_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "supply",
+      "point": 1,
+      "probe": "ugf_Hz_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "supply",
+      "point": 2,
+      "probe": "ugf_Hz_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "supply",
+      "point": 3,
+      "probe": "ugf_Hz_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "supply",
+      "point": 1,
+      "probe": "pm_deg_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "supply",
+      "point": 2,
+      "probe": "pm_deg_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "supply",
+      "point": 3,
+      "probe": "pm_deg_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "supply",
+      "point": 1,
+      "probe": "pm_deg_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "supply",
+      "point": 2,
+      "probe": "pm_deg_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "supply",
+      "point": 3,
+      "probe": "pm_deg_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "supply",
+      "point": 1,
+      "probe": "gm_dB_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "supply",
+      "point": 2,
+      "probe": "gm_dB_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "supply",
+      "point": 3,
+      "probe": "gm_dB_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "supply",
+      "point": 1,
+      "probe": "gm_dB_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "supply",
+      "point": 2,
+      "probe": "gm_dB_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "supply",
+      "point": 3,
+      "probe": "gm_dB_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "supply",
+      "point": 1,
+      "probe": "power_uW_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "supply",
+      "point": 2,
+      "probe": "power_uW_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "supply",
+      "point": 3,
+      "probe": "power_uW_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "supply",
+      "point": 1,
+      "probe": "power_uW_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "supply",
+      "point": 2,
+      "probe": "power_uW_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "supply",
+      "point": 3,
+      "probe": "power_uW_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "supply",
+      "point": 1,
+      "probe": "command_rise_settle_ns_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "supply",
+      "point": 2,
+      "probe": "command_rise_settle_ns_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "supply",
+      "point": 3,
+      "probe": "command_rise_settle_ns_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "supply",
+      "point": 1,
+      "probe": "command_rise_settle_ns_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "supply",
+      "point": 2,
+      "probe": "command_rise_settle_ns_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "supply",
+      "point": 3,
+      "probe": "command_rise_settle_ns_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "supply",
+      "point": 1,
+      "probe": "command_fall_settle_ns_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "supply",
+      "point": 2,
+      "probe": "command_fall_settle_ns_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "supply",
+      "point": 3,
+      "probe": "command_fall_settle_ns_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "supply",
+      "point": 1,
+      "probe": "command_fall_settle_ns_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "supply",
+      "point": 2,
+      "probe": "command_fall_settle_ns_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "supply",
+      "point": 3,
+      "probe": "command_fall_settle_ns_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "supply",
+      "point": 1,
+      "probe": "n_triode_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "supply",
+      "point": 2,
+      "probe": "n_triode_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "supply",
+      "point": 3,
+      "probe": "n_triode_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "supply",
+      "point": 1,
+      "probe": "n_triode_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "supply",
+      "point": 2,
+      "probe": "n_triode_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "supply",
+      "point": 3,
+      "probe": "n_triode_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "supply",
+      "point": 1,
+      "probe": "input_current_uA_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "supply",
+      "point": 2,
+      "probe": "input_current_uA_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "supply",
+      "point": 3,
+      "probe": "input_current_uA_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "supply",
+      "point": 1,
+      "probe": "input_current_uA_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "supply",
+      "point": 2,
+      "probe": "input_current_uA_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "supply",
+      "point": 3,
+      "probe": "input_current_uA_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 1,
+      "probe": "phase_margin_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 2,
+      "probe": "phase_margin_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 3,
+      "probe": "phase_margin_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 4,
+      "probe": "phase_margin_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 5,
+      "probe": "phase_margin_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 6,
+      "probe": "phase_margin_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 1,
+      "probe": "phase_margin_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 2,
+      "probe": "phase_margin_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 3,
+      "probe": "phase_margin_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 4,
+      "probe": "phase_margin_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 5,
+      "probe": "phase_margin_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 6,
+      "probe": "phase_margin_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 1,
+      "probe": "power_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 2,
+      "probe": "power_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 3,
+      "probe": "power_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 4,
+      "probe": "power_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 5,
+      "probe": "power_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 6,
+      "probe": "power_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 1,
+      "probe": "zero_power",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 2,
+      "probe": "zero_power",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 3,
+      "probe": "zero_power",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 4,
+      "probe": "zero_power",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 5,
+      "probe": "zero_power",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 6,
+      "probe": "zero_power",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 1,
+      "probe": "power_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 2,
+      "probe": "power_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 3,
+      "probe": "power_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 4,
+      "probe": "power_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 5,
+      "probe": "power_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 6,
+      "probe": "power_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 1,
+      "probe": "phase_90",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 2,
+      "probe": "phase_90",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 3,
+      "probe": "phase_90",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 4,
+      "probe": "phase_90",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 5,
+      "probe": "phase_90",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 6,
+      "probe": "phase_90",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 1,
+      "probe": "phase_below_90",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 2,
+      "probe": "phase_below_90",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 3,
+      "probe": "phase_below_90",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 4,
+      "probe": "phase_below_90",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 5,
+      "probe": "phase_below_90",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 6,
+      "probe": "phase_below_90",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 1,
+      "probe": "real_transfer_-10100",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 2,
+      "probe": "real_transfer_-10100",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 3,
+      "probe": "real_transfer_-10100",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 4,
+      "probe": "real_transfer_-10100",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 5,
+      "probe": "real_transfer_-10100",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 6,
+      "probe": "real_transfer_-10100",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 1,
+      "probe": "real_transfer_-9900",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 2,
+      "probe": "real_transfer_-9900",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 3,
+      "probe": "real_transfer_-9900",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 4,
+      "probe": "real_transfer_-9900",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 5,
+      "probe": "real_transfer_-9900",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 6,
+      "probe": "real_transfer_-9900",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 1,
+      "probe": "real_transfer_-10100.001",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 2,
+      "probe": "real_transfer_-10100.001",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 3,
+      "probe": "real_transfer_-10100.001",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 4,
+      "probe": "real_transfer_-10100.001",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 5,
+      "probe": "real_transfer_-10100.001",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 6,
+      "probe": "real_transfer_-10100.001",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 1,
+      "probe": "real_transfer_-9899.999",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 2,
+      "probe": "real_transfer_-9899.999",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 3,
+      "probe": "real_transfer_-9899.999",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 4,
+      "probe": "real_transfer_-9899.999",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 5,
+      "probe": "real_transfer_-9899.999",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 6,
+      "probe": "real_transfer_-9899.999",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 1,
+      "probe": "dc_transimpedance_imag_ohm_boundary",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 2,
+      "probe": "dc_transimpedance_imag_ohm_boundary",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 3,
+      "probe": "dc_transimpedance_imag_ohm_boundary",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 4,
+      "probe": "dc_transimpedance_imag_ohm_boundary",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 5,
+      "probe": "dc_transimpedance_imag_ohm_boundary",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 6,
+      "probe": "dc_transimpedance_imag_ohm_boundary",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 1,
+      "probe": "dc_transimpedance_imag_ohm_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 2,
+      "probe": "dc_transimpedance_imag_ohm_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 3,
+      "probe": "dc_transimpedance_imag_ohm_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 4,
+      "probe": "dc_transimpedance_imag_ohm_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 5,
+      "probe": "dc_transimpedance_imag_ohm_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 6,
+      "probe": "dc_transimpedance_imag_ohm_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 1,
+      "probe": "first_minus_3dB_Hz_boundary",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 2,
+      "probe": "first_minus_3dB_Hz_boundary",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 3,
+      "probe": "first_minus_3dB_Hz_boundary",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 4,
+      "probe": "first_minus_3dB_Hz_boundary",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 5,
+      "probe": "first_minus_3dB_Hz_boundary",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 6,
+      "probe": "first_minus_3dB_Hz_boundary",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 1,
+      "probe": "first_minus_3dB_Hz_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 2,
+      "probe": "first_minus_3dB_Hz_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 3,
+      "probe": "first_minus_3dB_Hz_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 4,
+      "probe": "first_minus_3dB_Hz_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 5,
+      "probe": "first_minus_3dB_Hz_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 6,
+      "probe": "first_minus_3dB_Hz_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 1,
+      "probe": "dc_delivered_power_uW_boundary",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 2,
+      "probe": "dc_delivered_power_uW_boundary",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 3,
+      "probe": "dc_delivered_power_uW_boundary",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 4,
+      "probe": "dc_delivered_power_uW_boundary",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 5,
+      "probe": "dc_delivered_power_uW_boundary",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 6,
+      "probe": "dc_delivered_power_uW_boundary",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 1,
+      "probe": "dc_delivered_power_uW_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 2,
+      "probe": "dc_delivered_power_uW_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 3,
+      "probe": "dc_delivered_power_uW_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 4,
+      "probe": "dc_delivered_power_uW_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 5,
+      "probe": "dc_delivered_power_uW_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 6,
+      "probe": "dc_delivered_power_uW_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 1,
+      "probe": "low_frequency_loop_gain_dB_boundary",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 2,
+      "probe": "low_frequency_loop_gain_dB_boundary",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 3,
+      "probe": "low_frequency_loop_gain_dB_boundary",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 4,
+      "probe": "low_frequency_loop_gain_dB_boundary",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 5,
+      "probe": "low_frequency_loop_gain_dB_boundary",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 6,
+      "probe": "low_frequency_loop_gain_dB_boundary",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 1,
+      "probe": "low_frequency_loop_gain_dB_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 2,
+      "probe": "low_frequency_loop_gain_dB_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 3,
+      "probe": "low_frequency_loop_gain_dB_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 4,
+      "probe": "low_frequency_loop_gain_dB_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 5,
+      "probe": "low_frequency_loop_gain_dB_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 6,
+      "probe": "low_frequency_loop_gain_dB_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 1,
+      "probe": "phase_at_low_frequency_deg_boundary",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 2,
+      "probe": "phase_at_low_frequency_deg_boundary",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 3,
+      "probe": "phase_at_low_frequency_deg_boundary",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 4,
+      "probe": "phase_at_low_frequency_deg_boundary",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 5,
+      "probe": "phase_at_low_frequency_deg_boundary",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 6,
+      "probe": "phase_at_low_frequency_deg_boundary",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 1,
+      "probe": "phase_at_low_frequency_deg_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 2,
+      "probe": "phase_at_low_frequency_deg_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 3,
+      "probe": "phase_at_low_frequency_deg_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 4,
+      "probe": "phase_at_low_frequency_deg_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 5,
+      "probe": "phase_at_low_frequency_deg_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 6,
+      "probe": "phase_at_low_frequency_deg_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 1,
+      "probe": "zero_power",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 2,
+      "probe": "zero_power",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 3,
+      "probe": "zero_power",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 4,
+      "probe": "zero_power",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 5,
+      "probe": "zero_power",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 6,
+      "probe": "zero_power",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 1,
+      "probe": "phase_margin_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 2,
+      "probe": "phase_margin_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 3,
+      "probe": "phase_margin_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 4,
+      "probe": "phase_margin_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 5,
+      "probe": "phase_margin_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 6,
+      "probe": "phase_margin_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 1,
+      "probe": "phase_margin_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 2,
+      "probe": "phase_margin_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 3,
+      "probe": "phase_margin_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 4,
+      "probe": "phase_margin_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 5,
+      "probe": "phase_margin_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 6,
+      "probe": "phase_margin_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 1,
+      "probe": "initial_error_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 2,
+      "probe": "initial_error_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 3,
+      "probe": "initial_error_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 4,
+      "probe": "initial_error_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 5,
+      "probe": "initial_error_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 6,
+      "probe": "initial_error_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 1,
+      "probe": "initial_error_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 2,
+      "probe": "initial_error_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 3,
+      "probe": "initial_error_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 4,
+      "probe": "initial_error_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 5,
+      "probe": "initial_error_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 6,
+      "probe": "initial_error_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 1,
+      "probe": "edge1_settling_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 2,
+      "probe": "edge1_settling_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 3,
+      "probe": "edge1_settling_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 4,
+      "probe": "edge1_settling_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 5,
+      "probe": "edge1_settling_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 6,
+      "probe": "edge1_settling_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 1,
+      "probe": "edge1_settling_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 2,
+      "probe": "edge1_settling_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 3,
+      "probe": "edge1_settling_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 4,
+      "probe": "edge1_settling_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 5,
+      "probe": "edge1_settling_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 6,
+      "probe": "edge1_settling_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 1,
+      "probe": "edge1_overshoot_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 2,
+      "probe": "edge1_overshoot_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 3,
+      "probe": "edge1_overshoot_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 4,
+      "probe": "edge1_overshoot_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 5,
+      "probe": "edge1_overshoot_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 6,
+      "probe": "edge1_overshoot_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 1,
+      "probe": "edge1_overshoot_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 2,
+      "probe": "edge1_overshoot_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 3,
+      "probe": "edge1_overshoot_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 4,
+      "probe": "edge1_overshoot_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 5,
+      "probe": "edge1_overshoot_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 6,
+      "probe": "edge1_overshoot_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 1,
+      "probe": "edge2_settling_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 2,
+      "probe": "edge2_settling_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 3,
+      "probe": "edge2_settling_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 4,
+      "probe": "edge2_settling_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 5,
+      "probe": "edge2_settling_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 6,
+      "probe": "edge2_settling_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 1,
+      "probe": "edge2_settling_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 2,
+      "probe": "edge2_settling_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 3,
+      "probe": "edge2_settling_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 4,
+      "probe": "edge2_settling_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 5,
+      "probe": "edge2_settling_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 6,
+      "probe": "edge2_settling_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 1,
+      "probe": "edge2_overshoot_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 2,
+      "probe": "edge2_overshoot_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 3,
+      "probe": "edge2_overshoot_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 4,
+      "probe": "edge2_overshoot_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 5,
+      "probe": "edge2_overshoot_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 6,
+      "probe": "edge2_overshoot_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 1,
+      "probe": "edge2_overshoot_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 2,
+      "probe": "edge2_overshoot_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 3,
+      "probe": "edge2_overshoot_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 4,
+      "probe": "edge2_overshoot_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 5,
+      "probe": "edge2_overshoot_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 6,
+      "probe": "edge2_overshoot_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 1,
+      "probe": "edge3_settling_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 2,
+      "probe": "edge3_settling_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 3,
+      "probe": "edge3_settling_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 4,
+      "probe": "edge3_settling_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 5,
+      "probe": "edge3_settling_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 6,
+      "probe": "edge3_settling_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 1,
+      "probe": "edge3_settling_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 2,
+      "probe": "edge3_settling_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 3,
+      "probe": "edge3_settling_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 4,
+      "probe": "edge3_settling_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 5,
+      "probe": "edge3_settling_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 6,
+      "probe": "edge3_settling_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 1,
+      "probe": "edge3_overshoot_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 2,
+      "probe": "edge3_overshoot_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 3,
+      "probe": "edge3_overshoot_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 4,
+      "probe": "edge3_overshoot_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 5,
+      "probe": "edge3_overshoot_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 6,
+      "probe": "edge3_overshoot_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 1,
+      "probe": "edge3_overshoot_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 2,
+      "probe": "edge3_overshoot_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 3,
+      "probe": "edge3_overshoot_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 4,
+      "probe": "edge3_overshoot_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 5,
+      "probe": "edge3_overshoot_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 6,
+      "probe": "edge3_overshoot_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 1,
+      "probe": "edge4_settling_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 2,
+      "probe": "edge4_settling_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 3,
+      "probe": "edge4_settling_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 4,
+      "probe": "edge4_settling_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 5,
+      "probe": "edge4_settling_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 6,
+      "probe": "edge4_settling_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 1,
+      "probe": "edge4_settling_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 2,
+      "probe": "edge4_settling_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 3,
+      "probe": "edge4_settling_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 4,
+      "probe": "edge4_settling_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 5,
+      "probe": "edge4_settling_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 6,
+      "probe": "edge4_settling_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 1,
+      "probe": "edge4_overshoot_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 2,
+      "probe": "edge4_overshoot_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 3,
+      "probe": "edge4_overshoot_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 4,
+      "probe": "edge4_overshoot_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 5,
+      "probe": "edge4_overshoot_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 6,
+      "probe": "edge4_overshoot_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "load",
+      "point": 1,
+      "probe": "edge4_overshoot_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 2,
+      "probe": "edge4_overshoot_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 3,
+      "probe": "edge4_overshoot_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 4,
+      "probe": "edge4_overshoot_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 5,
+      "probe": "edge4_overshoot_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "load",
+      "point": 6,
+      "probe": "edge4_overshoot_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 1,
+      "probe": "edge1_settling_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 2,
+      "probe": "edge1_settling_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 3,
+      "probe": "edge1_settling_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 4,
+      "probe": "edge1_settling_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 5,
+      "probe": "edge1_settling_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 6,
+      "probe": "edge1_settling_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 1,
+      "probe": "edge1_settling_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 2,
+      "probe": "edge1_settling_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 3,
+      "probe": "edge1_settling_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 4,
+      "probe": "edge1_settling_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 5,
+      "probe": "edge1_settling_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 6,
+      "probe": "edge1_settling_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 1,
+      "probe": "edge1_overshoot_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 2,
+      "probe": "edge1_overshoot_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 3,
+      "probe": "edge1_overshoot_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 4,
+      "probe": "edge1_overshoot_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 5,
+      "probe": "edge1_overshoot_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 6,
+      "probe": "edge1_overshoot_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 1,
+      "probe": "edge1_overshoot_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 2,
+      "probe": "edge1_overshoot_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 3,
+      "probe": "edge1_overshoot_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 4,
+      "probe": "edge1_overshoot_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 5,
+      "probe": "edge1_overshoot_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 6,
+      "probe": "edge1_overshoot_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 1,
+      "probe": "edge2_settling_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 2,
+      "probe": "edge2_settling_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 3,
+      "probe": "edge2_settling_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 4,
+      "probe": "edge2_settling_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 5,
+      "probe": "edge2_settling_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 6,
+      "probe": "edge2_settling_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 1,
+      "probe": "edge2_settling_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 2,
+      "probe": "edge2_settling_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 3,
+      "probe": "edge2_settling_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 4,
+      "probe": "edge2_settling_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 5,
+      "probe": "edge2_settling_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 6,
+      "probe": "edge2_settling_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 1,
+      "probe": "edge2_overshoot_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 2,
+      "probe": "edge2_overshoot_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 3,
+      "probe": "edge2_overshoot_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 4,
+      "probe": "edge2_overshoot_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 5,
+      "probe": "edge2_overshoot_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 6,
+      "probe": "edge2_overshoot_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 1,
+      "probe": "edge2_overshoot_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 2,
+      "probe": "edge2_overshoot_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 3,
+      "probe": "edge2_overshoot_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 4,
+      "probe": "edge2_overshoot_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 5,
+      "probe": "edge2_overshoot_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 6,
+      "probe": "edge2_overshoot_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 1,
+      "probe": "edge3_settling_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 2,
+      "probe": "edge3_settling_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 3,
+      "probe": "edge3_settling_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 4,
+      "probe": "edge3_settling_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 5,
+      "probe": "edge3_settling_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 6,
+      "probe": "edge3_settling_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 1,
+      "probe": "edge3_settling_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 2,
+      "probe": "edge3_settling_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 3,
+      "probe": "edge3_settling_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 4,
+      "probe": "edge3_settling_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 5,
+      "probe": "edge3_settling_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 6,
+      "probe": "edge3_settling_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 1,
+      "probe": "edge3_overshoot_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 2,
+      "probe": "edge3_overshoot_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 3,
+      "probe": "edge3_overshoot_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 4,
+      "probe": "edge3_overshoot_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 5,
+      "probe": "edge3_overshoot_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 6,
+      "probe": "edge3_overshoot_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 1,
+      "probe": "edge3_overshoot_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 2,
+      "probe": "edge3_overshoot_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 3,
+      "probe": "edge3_overshoot_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 4,
+      "probe": "edge3_overshoot_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 5,
+      "probe": "edge3_overshoot_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 6,
+      "probe": "edge3_overshoot_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 1,
+      "probe": "edge4_settling_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 2,
+      "probe": "edge4_settling_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 3,
+      "probe": "edge4_settling_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 4,
+      "probe": "edge4_settling_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 5,
+      "probe": "edge4_settling_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 6,
+      "probe": "edge4_settling_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 1,
+      "probe": "edge4_settling_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 2,
+      "probe": "edge4_settling_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 3,
+      "probe": "edge4_settling_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 4,
+      "probe": "edge4_settling_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 5,
+      "probe": "edge4_settling_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 6,
+      "probe": "edge4_settling_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 1,
+      "probe": "edge4_overshoot_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 2,
+      "probe": "edge4_overshoot_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 3,
+      "probe": "edge4_overshoot_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 4,
+      "probe": "edge4_overshoot_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 5,
+      "probe": "edge4_overshoot_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 6,
+      "probe": "edge4_overshoot_at_limit",
+      "expected_pass": true,
+      "category": "pass"
+    },
+    {
+      "task": "tia",
+      "point": 1,
+      "probe": "edge4_overshoot_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 2,
+      "probe": "edge4_overshoot_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 3,
+      "probe": "edge4_overshoot_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 4,
+      "probe": "edge4_overshoot_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 5,
+      "probe": "edge4_overshoot_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    },
+    {
+      "task": "tia",
+      "point": 6,
+      "probe": "edge4_overshoot_outside",
+      "expected_pass": false,
+      "category": "specification_failure"
+    }
+  ],
+  "declared_requirements_checked": 25,
+  "precision_checks_passed": 7,
+  "syntax_checks_passed": 21,
+  "verdict_checks_passed": 402,
+  "model_calls": 0,
+  "simulator_calls": 0,
+  "scope": "Input/compiler and saved-measurement boundary checks; not expert agreement or new model trials"
+}

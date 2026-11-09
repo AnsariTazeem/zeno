@@ -49,7 +49,7 @@ class TaskContractTests(unittest.TestCase):
         for task, entry in revision['tasks'].items():
             destination = self.folder/task
             receipt = exporter.export(task, destination)
-            self.assertEqual(receipt['packet_revision'], 'clarified-1')
+            self.assertEqual(receipt['packet_revision'], 'clarified-2')
             self.assertEqual(receipt['reference_files_exported'], 0)
             self.assertEqual({x.name for x in destination.iterdir()}, {x['name'] for x in entry['files']})
             for row in entry['files']:
@@ -64,7 +64,7 @@ class TaskContractTests(unittest.TestCase):
 
     def test_changed_current_packet_fails_before_writing(self):
         root = self.fixture()
-        (root/'tasks/revisions/clarified-1/tia/PROMPT.txt').write_text('changed')
+        (root/'tasks/revisions/clarified-2/tia/PROMPT.txt').write_text('changed')
         destination = self.folder/'output'
         with self.assertRaisesRegex(ValueError, 'identity mismatch'):
             exporter.export('tia', destination, root)
@@ -74,7 +74,7 @@ class TaskContractTests(unittest.TestCase):
         root = self.fixture()
         path = root/'tasks/catalog.json'
         catalog = auditor.read(path)
-        catalog['revisions']['clarified-1']['folder'] = '../outside'
+        catalog['revisions']['clarified-2']['folder'] = '../outside'
         path.write_text(json.dumps(catalog))
         with self.assertRaisesRegex(ValueError, 'escapes'):
             exporter.export('tia', self.folder/'output', root)
@@ -84,7 +84,7 @@ class TaskContractTests(unittest.TestCase):
         root = self.fixture()
         path = root/'tasks/catalog.json'
         catalog = auditor.read(path)
-        revision = catalog['revisions']['clarified-1']
+        revision = catalog['revisions']['clarified-2']
         reference = (ROOT/'reference/tia.sp').read_bytes()
         (root/'tasks'/revision['folder']/'tia/reference.sp').write_bytes(reference)
         revision['tasks']['tia']['files'].append({'name': 'reference.sp', 'bytes': len(reference),
@@ -96,7 +96,7 @@ class TaskContractTests(unittest.TestCase):
 
     def test_repinning_cannot_hide_changed_electrical_limit(self):
         root = self.fixture()
-        path = root/'tasks/revisions/clarified-1/tia/contract.json'
+        path = root/'tasks/revisions/clarified-2/tia/contract.json'
         contract = auditor.read(path)
         contract['limits']['each_edge_settle_max_ns'] = 999
         path.write_text(json.dumps(contract))
@@ -106,7 +106,7 @@ class TaskContractTests(unittest.TestCase):
 
     def test_declarations_detect_a_wrong_numeric_requirement(self):
         root = self.fixture()
-        path = root/'tasks/revisions/clarified-1/tia/TASK.md'
+        path = root/'tasks/revisions/clarified-2/tia/TASK.md'
         path.write_text(path.read_text().replace('by 500 ns', 'by 900 ns'))
         with self.assertRaisesRegex(ValueError, 'numerical requirement'):
             auditor.declaration_checks(root)

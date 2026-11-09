@@ -6,8 +6,8 @@ prepared venv Python. It needs the pinned NumPy and zstandard packages.
 | Suite | Tests | Purpose |
 |---|---:|---|
 | [Bootstrap boundaries](../reproduction/payload/checks/test_bootstrap.py) | 8 | Archive paths, links, duplicate members, hashes and decompression bounds |
-| [Grading regressions](../reproduction/payload/eval_core_v4/test_core.py) | 30 | Correct/incorrect circuits, equivalent results, limits and malformed data |
-| [Supply evidence](../reproduction/payload/eval_core_v4/test_supply_evidence.py) | 12 | No-gain evidence, missing/corrupt traces, timeouts and identity changes |
+| [Grading regressions](../reproduction/payload/eval_core_v5/test_core.py) | 30 | Correct/incorrect circuits, equivalent results, limits and malformed data |
+| [Supply evidence](../reproduction/payload/eval_core_v5/test_supply_evidence.py) | 13 | No-gain evidence, undefined gain-margin classification, missing/corrupt traces, timeouts and identity changes |
 | [Repository/export checks](test_repository_layout.py) | 7 | Actual exported packets, tamper rejection and pinned references |
 | [Download recovery](test_download_recovery.py) | 6 | Interrupted streams, invalid payloads, HTTPS redirects and verified caches |
 | [Task contracts](test_task_contracts.py) | 10 | Current exports, leakage/tamper rejection, numerical declarations, reporting precision and verdict boundaries |
@@ -16,6 +16,8 @@ prepared venv Python. It needs the pinned NumPy and zstandard packages.
 | [Collection protocol](test_collection.py) | 18 | Input/history freezes, trial counts, invalid answers, stopping rules, numerical confirmation, CLI dispatch and private feedback |
 | [CLI transport](test_transport.py) | 6 | Effective model/access policy, forbidden tools, native provider settings and capture ownership |
 
-These 118 offline tests do not run model inference or full-circuit simulation.
-The prepared root's separate `qualification.py` runs the original 50 tests
-and five native controls. Logs use a new directory under `.local-checks/`.
+These 119 offline tests do not run model inference or full-circuit simulation.
+The frozen `eval_core_v4` test files remain historical regression fixtures for
+the recorded cohort and are not executed by this suite. The prepared root's
+separate `qualification.py` runs the grading tests and five native controls
+through the current runner. Logs use a new directory under `.local-checks/`.

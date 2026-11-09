@@ -236,7 +236,131 @@
           ]
         }
       }
+    },
+    "clarified-2": {
+      "folder": "revisions/clarified-2",
+      "tasks": {
+        "supply": {
+          "task_id": "SUPPLY-P01-v2",
+          "recorded_task": "supply",
+          "electrical_contract_unchanged": true,
+          "files": [
+            {
+              "name": "PROMPT.txt",
+              "bytes": 7268,
+              "sha256": "797945dc84362650f6d16ebdcc7e2e0f9f074c9e38ec5324da7410256032816a"
+            },
+            {
+              "name": "TASK.md",
+              "bytes": 7268,
+              "sha256": "797945dc84362650f6d16ebdcc7e2e0f9f074c9e38ec5324da7410256032816a"
+            },
+            {
+              "name": "starter.sp",
+              "bytes": 1243,
+              "sha256": "8605f9e675fb6d047eb97910f80fa667a63f89ff841250b548984a1b04debfdd"
+            },
+            {
+              "name": "contract.json",
+              "bytes": 2190,
+              "sha256": "bbd85709f4719b726b968c13ac1cc96287d5d0122f9c31cc5cc7702edb491b18"
+            },
+            {
+              "name": "LICENSE_UPSTREAM.txt",
+              "bytes": 1069,
+              "sha256": "d6b95b322ce7e119bbf18c0c43452cd88fa3247e5efcb1ac1c48bdffc886af75"
+            }
+          ],
+          "packet_revision": "clarified-2"
+        },
+        "load": {
+          "task_id": "LOAD-P01",
+          "recorded_task": "load",
+          "electrical_contract_unchanged": true,
+          "files": [
+            {
+              "name": "PROMPT.txt",
+              "bytes": 8157,
+              "sha256": "9e55dc7f48948cf3d94cb1d62e74177aea2fe80b077fcad891f48ef330ebddb2"
+            },
+            {
+              "name": "TASK.md",
+              "bytes": 8157,
+              "sha256": "9e55dc7f48948cf3d94cb1d62e74177aea2fe80b077fcad891f48ef330ebddb2"
+            },
+            {
+              "name": "starter.sp",
+              "bytes": 83,
+              "sha256": "b1ed6ce7308f63d02ed3dfd08ecb0a8d73e42b1bec2752ab9ac472583d18afd5"
+            },
+            {
+              "name": "fixed_amplifier.sp",
+              "bytes": 1385,
+              "sha256": "e8494224e2caf771c03b23ad3c982f2924640fa28dfd9591480ad6a47b3c78bc"
+            },
+            {
+              "name": "contract.json",
+              "bytes": 1798,
+              "sha256": "e424bffa02c254d2614bb5aa1a1cb656059f10b066657afc09099887ac705132"
+            },
+            {
+              "name": "MODEL_IDENTITY.json",
+              "bytes": 883,
+              "sha256": "ab7665233ec2a05316fdfc827ae402d090eef989251f680165d03807ed1920d9"
+            },
+            {
+              "name": "LICENSE_UPSTREAM.txt",
+              "bytes": 1069,
+              "sha256": "d6b95b322ce7e119bbf18c0c43452cd88fa3247e5efcb1ac1c48bdffc886af75"
+            }
+          ],
+          "packet_revision": "clarified-2"
+        },
+        "tia": {
+          "task_id": "TIA-P01",
+          "recorded_task": "tia",
+          "electrical_contract_unchanged": true,
+          "files": [
+            {
+              "name": "PROMPT.txt",
+              "bytes": 6755,
+              "sha256": "76312d42f27ce7515fde18fa16d6e50fbbc30763ed3b718047b115fe62b52db6"
+            },
+            {
+              "name": "TASK.md",
+              "bytes": 6755,
+              "sha256": "76312d42f27ce7515fde18fa16d6e50fbbc30763ed3b718047b115fe62b52db6"
+            },
+            {
+              "name": "starter.sp",
+              "bytes": 85,
+              "sha256": "64870a2676739ba01ee9587b00f4919f11e64a6092b991b91dab6913728d838e"
+            },
+            {
+              "name": "fixed_amplifier.sp",
+              "bytes": 1385,
+              "sha256": "e8494224e2caf771c03b23ad3c982f2924640fa28dfd9591480ad6a47b3c78bc"
+            },
+            {
+              "name": "contract.json",
+              "bytes": 2515,
+              "sha256": "ef02f0dbffac4efdf24758fc45909521eb81d8a4b62bb63d9d2be274cc68a5e0"
+            },
+            {
+              "name": "MODEL_IDENTITY.json",
+              "bytes": 474,
+              "sha256": "17bcbea07f53e66b5c9bf9a8b24d617f7f08a808e721e16d1e69e49102e9feaf"
+            },
+            {
+              "name": "LICENSE_UPSTREAM.txt",
+              "bytes": 1069,
+              "sha256": "d6b95b322ce7e119bbf18c0c43452cd88fa3247e5efcb1ac1c48bdffc886af75"
+            }
+          ],
+          "packet_revision": "clarified-2"
+        }
+      }
     }
   },
-  "default_revision": "clarified-1"
+  "default_revision": "clarified-2"
 }
