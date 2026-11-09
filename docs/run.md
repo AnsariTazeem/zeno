@@ -49,9 +49,15 @@ This runs 51 grading tests (8 bootstrap-boundary, 30 frozen grading
 regressions, 13 SUPPLY-evidence regressions) and five circuit controls: three
 passing references, an ordinary SUPPLY failure and a no-gain SUPPLY failure.
 Use a fresh prepared root: qualification refuses to overwrite earlier outputs.
-The updated qualification uses v6 and compares every reported check value with
-relative tolerance 1e-6 and absolute tolerance 1e-9. Native validation of v6
-requires a new Windows run; the linked receipts cover earlier revisions.
+<!-- coderabbit-ai-generated:v1 -->
+
+<!-- coderabbit-ai-generated-section:v1:77dba6162ea141e3548748e94045b3f9a9d8905f304cee35b5ab06400a4a21e0 -->
+
+The v6 qualification compares every reported check value with relative tolerance
+1e-6 and absolute tolerance 1e-9. The [Windows qualification run](https://github.com/AnsariTazeem/zeno/actions/runs/42560927106)
+passed on commit `e921a6c`; its native job completed in 2 minutes 44 seconds.
+
+<!-- /coderabbit-ai-generated:v1 -->
 
 The recorded v4 runs used about 30 seconds of cached setup and about three
 minutes of native qualification on the tested machine; the v5 qualification took

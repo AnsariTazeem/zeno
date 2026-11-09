@@ -30,8 +30,15 @@ relative tolerance `1e-6` and absolute tolerance `1e-9` in each metric's units.
 Lists are compared element by element; nulls must match. These tolerances apply
 to reproduction checks and do not change the electrical pass thresholds.
 
+<!-- coderabbit-ai-generated:v1 -->
+
+<!-- coderabbit-ai-generated-section:v1:feaa5bf164421b534572d097ad038537731a7ca465e46d2f21f8bd9c5d82856b -->
+
 Versions v1–v5 remain frozen. The [v5 receipt](../evidence/qualified_v5_summary.json)
-describes its original source; v6 needs separate Windows native qualification.
+describes its original source. A separate [Windows run](https://github.com/AnsariTazeem/zeno/actions/runs/42560927106)
+qualified v6 on commit `e921a6c`.
+
+<!-- /coderabbit-ai-generated:v1 -->
 [Commands](../docs/run.md) · [Tests](../tests/README.md)
 
 

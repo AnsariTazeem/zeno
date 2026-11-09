@@ -93,9 +93,16 @@ identity, and no model trial on clarified-2 is reported. Historical packets
 remain available with `tools/export_task.py --revision recorded`; current export
 is the default.
 
+<!-- coderabbit-ai-generated:v1 -->
+
+<!-- coderabbit-ai-generated-section:v1:19a9e5a3e18323ac7999fcea6bb11ea3ca166c3af66f5eccdbb56397878cc4ae -->
+
 The maintained v6 evaluator preserves the same electrical rules. The current
 audit command runs against v6; the linked historical audit receipts retain their
-original identities. New native qualification is required for the updated source.
+original identities. A [Windows native qualification](https://github.com/AnsariTazeem/zeno/actions/runs/42560927106)
+passed the five controls on commit `e921a6c`.
+
+<!-- /coderabbit-ai-generated:v1 -->
 
 
 <!-- /coderabbit-ai-generated:v1 -->
