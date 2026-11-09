@@ -1,0 +1,214 @@
+Complete the task below using only the supplied files and evaluator feedback.
+Do not use tools, browse, retrieve other files or consult other task sessions.
+Use a fresh context for this trial. Return one complete circuit and a short explanation.
+At most three proposals are allowed. Measurements will be returned after each proposal.
+
+[BEGIN FILE contract.json]
+{
+  "problem": "Compensate a frozen voltage-feedback amplifier driving a lumped capacitive and resistive input load without losing load-node DC accuracy or command settling",
+  "original_work": "Authored system task, passive-network design space, load scenarios and grading; amplifier and device models are attributed prior work",
+  "VDD_V": 1.2,
+  "Iref_A": 2e-05,
+  "process": "tt",
+  "temperature_C": 27,
+  "load_capacitances_pF": [
+    50,
+    150,
+    300
+  ],
+  "feedback_node_stray_capacitances_pF": [
+    0.2,
+    2
+  ],
+  "load_resistance_ohm": 100000,
+  "input_low_V": 0.8,
+  "input_high_V": 1.0,
+  "source_transition_ns": 20,
+  "first_transition_us": 5,
+  "edge_interval_us": 5,
+  "observation_us": 25,
+  "candidate_changes": "Passive feedback/isolation network only; fixed amplifier, source, load, supply and reference current",
+  "simplifications": "Lumped loads only; no transmission-line model, ADC sampling kickback, noise, layout, PVT breadth or silicon guarantee",
+  "task_id": "LOAD-P01",
+  "version": "development-1",
+  "limits": {
+    "all_downward_unity_crossing_phase_margins_deg_min": 50,
+    "command_error_band_V": 0.0005,
+    "settle_us_max_each_of_four_edges": 2.5,
+    "overshoot_V_max_each_edge": 0.01,
+    "dc_supply_power_uW_max": 350
+  },
+  "max_proposals": 3,
+  "all_six_operating_points_required": true,
+  "tracking_edge_count_per_point": 4,
+  "max_R": 8,
+  "max_C": 8,
+  "R_ohm": [
+    1,
+    10000000.0
+  ],
+  "C_F": [
+    1e-15,
+    1e-07
+  ],
+  "max_internal_nodes": 16,
+  "packet_revision": "clarified-1",
+  "input_format": {
+    "maximum_utf8_bytes": 32768,
+    "name_max_characters": null,
+    "passive_nodes_must_differ": false,
+    "instance_prefixes": [
+      "R",
+      "C"
+    ],
+    "case_insensitive": true,
+    "component_names_unique": true
+  }
+}
+
+[END FILE contract.json]
+
+[BEGIN FILE fixed_amplifier.sp]
+* Compiled component-only pilot DUT; no supplied simulator commands.
+.subckt dut iref inp inn out
+r0 iref vnc 1
+rn vnc vnb 13000
+xnr3 vnb vnc nr1 0 sky130_fd_pr__nfet_01v8_lvt W=20 L=0.5 nf=1 m=1
+xnr1 nr1 vnb 0 0 sky130_fd_pr__nfet_01v8_lvt W=40 L=2 nf=1 m=1
+xns1 vpc vnb 0 0 sky130_fd_pr__nfet_01v8_lvt W=10 L=2 nf=1 m=1
+rp vpb vpc 34000
+xpr3 vpb vpc pr1 vdd sky130_fd_pr__pfet_01v8_lvt W=20 L=0.5 nf=1 m=1
+xpr1 pr1 vpb vdd vdd sky130_fd_pr__pfet_01v8_lvt W=10 L=1 nf=1 m=1
+xnt tail vnb 0 0 sky130_fd_pr__nfet_01v8_lvt W=50 L=2 nf=1 m=1
+xni1 fa inp tail 0 sky130_fd_pr__nfet_01v8_lvt W=40 L=0.5 nf=1 m=1
+xni2 fb inn tail 0 sky130_fd_pr__nfet_01v8_lvt W=40 L=0.5 nf=1 m=1
+xps1 fa vpb vdd vdd sky130_fd_pr__pfet_01v8_lvt W=10 L=1 nf=1 m=6
+xps2 fb vpb vdd vdd sky130_fd_pr__pfet_01v8_lvt W=10 L=1 nf=1 m=6
+xpc1 o1 vpc fa vdd sky130_fd_pr__pfet_01v8_lvt W=70 L=0.5 nf=1 m=1
+xpc2 d1 vpc fb vdd sky130_fd_pr__pfet_01v8_lvt W=70 L=0.5 nf=1 m=1
+xnl3 d1 vnc nl1 0 sky130_fd_pr__nfet_01v8_lvt W=20 L=0.5 nf=1 m=1
+xnl1 nl1 d1 0 0 sky130_fd_pr__nfet_01v8_lvt W=10 L=0.5 nf=1 m=1
+xnl4 o1 vnc nl2 0 sky130_fd_pr__nfet_01v8_lvt W=20 L=0.5 nf=1 m=1
+xnl2 nl2 d1 0 0 sky130_fd_pr__nfet_01v8_lvt W=10 L=0.5 nf=1 m=1
+xn6 out o1 0 0 sky130_fd_pr__nfet_01v8_lvt W=40 L=0.5 nf=1 m=1
+xp7 out vpb vdd vdd sky130_fd_pr__pfet_01v8_lvt W=10 L=1 nf=1 m=19
+rz o1 cz 2000
+cc cz out 5.2000000000000001e-13
+.ends dut
+
+[END FILE fixed_amplifier.sp]
+
+[BEGIN FILE LICENSE_UPSTREAM.txt]
+MIT License
+
+Copyright (c) 2026 Saeid Rajabi
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+[END FILE LICENSE_UPSTREAM.txt]
+
+[BEGIN FILE MODEL_IDENTITY.json]
+{
+  "amplifier_repository": "https://github.com/saeidrajabii/AnalogPortBench",
+  "amplifier_commit": "13c40b2dd9bae22b83e2fc4aba0adb05e99e4282",
+  "amplifier_source": "benchmark/golden/opamp_2stg_1v2.sp",
+  "PDK_open_pdks_build": "f6eeac7dad085ffcc829ccfd721f7b4ce39edcf7",
+  "PDK_release": "https://github.com/fossi-foundation/ciel-releases/releases/tag/sky130-f6eeac7dad085ffcc829ccfd721f7b4ce39edcf7",
+  "selected_model_files": 1065,
+  "model_manifest_sha256": "4b489804d74852817888031596285c0fa51a757e7e9224cbac3bcda1ff956b9a",
+  "simulator_version": "41",
+  "simulator_package_url": "https://conda.anaconda.org/conda-forge/win-64/ngspice-exe-41-h295a5eb_0.conda",
+  "simulator_executable_sha256": "41a6bda700d9160089f2a39a14f94408172f7748215b68b81d39ea1bc26e300c",
+  "scope": "Frozen public numerical model, not a named commercial IC or silicon characterization"
+}
+
+[END FILE MODEL_IDENTITY.json]
+
+[BEGIN FILE PROMPT.txt]
+# LOAD-P01: compensate a capacitive-load buffer without losing accuracy
+
+You are reviewing a precision voltage-buffer connection to a new acquisition input. The amplifier, supply, source and input load are fixed. You may replace only the passive network connected to the amplifier output, its inverting input and the load. Deliver one network meeting every requirement below.
+
+This is an authored simulation task grounded in a documented analog-design workflow. The fixed transistor amplifier is attributed public prior work. The load values and requirements below define this case; they are not field measurements or a claim about a particular commercial IC.
+
+## Interface and fixed conditions
+
+- Supply: 1.2 V; TT process; 27 C; reference current: 20 uA injected from vdd into the amplifier's `iref` terminal.
+- The supplied `.subckt dut iref inp inn out` is the fixed amplifier. Its non-inverting input `inp` receives the command. Its output is node `drive`. Your feedback port `fb` connects to its inverting input `inn`.
+- Supply exactly one `.subckt feedback drive load fb` ending in `.ends feedback`. Node `load` is the acquisition input where accuracy, overshoot and settling are measured. Node `0` is ground. Other permitted node names are private internal network nodes.
+- A fixed 100000-ohm resistance connects `load` to ground. Its declared value is known and unchanged across conditions. A fixed capacitance connects `load` to ground. A separate stray capacitance connects `fb` to ground.
+- Test all six Cartesian combinations: load capacitance **50, 150, 300 pF** and feedback-node stray capacitance **0.2, 2 pF**. One fixed candidate must pass all six. No hidden load-resistance variation or component tolerance is included.
+- The external command is 0.8 V initially, then rises to 1.0 V at 5 us, falls to 0.8 V at 10 us, rises at 15 us and falls at 20 us. Every transition takes 20 ns. Each edge has a 5 us observation window; the trace ends at 25 us. The exact SPICE source is `PULSE(0.8 1.0 5u 20n 20n 4.98u 10u)`.
+
+The electrical connections, excluding the zero-DC test probes used for loop measurement, are:
+
+```spice
+XDUT niref command fb drive dut
+XNET drive load fb feedback
+Rload load 0 100000
+Cload load 0 <the tested load capacitance in farads>
+Cstray fb 0 <the tested stray capacitance in farads>
+```
+
+## Allowed changes and input format
+
+Use only resistors and capacitors in your `feedback` subcircuit. At most eight resistors, eight capacitors and sixteen private internal nodes are permitted. Each component line has exactly four tokens: instance name, first node, second node and literal value.
+
+- Resistors: 1..10000000 ohms, inclusive. Capacitors: 1e-15..1e-7 farads, inclusive.
+- Use numeric SI values such as `1000` and `2.2e-11`; suffixes such as `1k` or `22p` and expressions are not accepted by the component compiler.
+- Instance names start with R or C. Node/instance names use letters, digits and underscores and start with a letter; `0` is the ground exception. Names are case-insensitive. The interface ports `drive`, `load` and `fb` must all appear.
+- Blank lines and full-line `*` comments are allowed. The compiler gives internal nodes a private prefix to prevent collision with supply, source or probe nodes.
+- No other device types, sources, models, directives, additional subcircuits, file operations, expressions or changes to the fixed amplifier are allowed. The network cannot connect directly to the command source, supply or reference-current node.
+- The minimum permitted resistor can represent an interconnect in this simulation task. No particular topology, resistor count or reference wording is required; alternative compliant networks are welcome.
+
+## Input size and syntax
+
+The complete subcircuit may contain at most **32,768 UTF-8 bytes**, including comments and whitespace. Instance names must be unique, ignoring case. The input compiler adds no separate name-length limit. A component whose two nodes are identical is accepted by this compiler; it still consumes one of the permitted components. Such a component does not establish electrical compliance.
+
+## Requirements at each operating point
+
+1. **Load-node command tracking:** after each of the four edge start times, reach the commanded target within **+/-0.0005 V** no later than **2.5 us**, and remain in that band for the remainder of that edge's 5 us window. A stable output at an incorrect final voltage fails. The settling time is the first retained sample after the last out-of-band sample, measured from the start of the source transition.
+2. **Load-node overshoot:** rising overshoot above 1.0 V and falling undershoot below 0.8 V must each be **<=0.010 V**, measured over every corresponding edge window. The target is the commanded voltage, not the candidate's own endpoint.
+3. **Loop criterion:** at the 0.9 V DC command, the loop must have a valid non-inverting low-frequency phase (between -90 and +90 degrees at 10 Hz), at least one downward 0 dB crossing, and a phase margin of **>=50 degrees at every downward crossing** in the 10 Hz..10 GHz sweep. Phase margin is `180 + phase_at_crossing - phase_at_10Hz`, using continuous phase. Missing/undefined loop criteria do not pass.
+4. **DC power:** total supply power, including the reference-current branch, must be positive and **<=350 uW** at the 0.9 V DC command. This is a DC power criterion, not a transient-energy or noise specification.
+
+The loop test uses voltage/current double injection in the common connection between the feedback network and amplifier inverting input, so both local and load-node feedback paths are included. Its return ratio is `T=(Tv*Ti-1)/(Tv+Ti+2)`, with `Tv=-V(driver)/V(receiver)` under voltage injection and `Ti=I(driver)/I(receiver)` under current injection. The baseline AC grid has 50 points/decade; the transient retained maximum step is 1 ns. Numerical confirmation uses 100 points/decade, a 0.5 ns maximum step and tighter solver tolerances. Physical inputs, limits and the candidate remain unchanged.
+
+All traces must be finite, cover the full declared time/frequency ranges and contain strictly increasing coordinates. The measured command must match the declared waveform. Incomplete/nonfinite data and simulator failures are recorded separately from electrical noncompliance. Passing these six points does not imply continuous capacitance coverage, process/temperature breadth, noise/distortion, layout, transmission-line behavior, ADC sampling kickback or silicon validation.
+
+## Response and feedback protocol
+
+Provide a short engineering explanation and **one complete feedback subcircuit in a `spice` code block**. Distinguish estimates and static checks from actual electrical simulations. Do not invent measured performance.
+
+You have at most **three complete circuit proposals**, including the first. The local evaluator returns your candidate's measured pointwise results and errors after each evaluated proposal. You may revise using that feedback; do not request the reference answer. Stop after a confirmed full pass or the third proposal. If requirements remain unresolved, state that honestly.
+
+The case score is **100 only when every requirement passes at all six points; otherwise a completed electrical evaluation scores 0**. Input-format errors and simulator/measurement-invalid outcomes are labelled separately with no numerical electrical score. Diagnostic checks remain available; they are not averaged into a passing result.
+
+Provenance: the frozen amplifier and device-model apparatus are adapted from [AnalogPortBench, commit 13c40b2dd9bae22b83e2fc4aba0adb05e99e4282](https://github.com/saeidrajabii/AnalogPortBench/tree/13c40b2dd9bae22b83e2fc4aba0adb05e99e4282). Its MIT notice accompanies this packet. The passive-network task, load grid, accuracy/settling protocol and evaluator are authored for this development case; established compensation physics is not claimed as a new invention. Do not retrieve project-local reference networks or published task solutions. Device/circuit-theory documentation is allowed.
+
+[END FILE PROMPT.txt]
+
+[BEGIN FILE starter.sp]
+.subckt feedback drive load fb
+Riso drive load 1
+Rfb drive fb 1
+.ends feedback
+
+[END FILE starter.sp]
+File TASK.md is identical to PROMPT.txt.

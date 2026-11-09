@@ -1,0 +1,20 @@
+{
+  "effective_model": "gpt-6.1-sol",
+  "effective_effort": "high",
+  "tool_requests": 0,
+  "restricted_read_policy": true,
+  "restricted_network_policy": true,
+  "trace_sha256": "8d804aab6e4dc46f9aa1e5a24a7fc45886f2f82f2a2a36044acb6a835d0ff8e0",
+  "contexts_checked": 1,
+  "elapsed_seconds": 42.438000000081956,
+  "reply_sha256": "5f19bbd6220e9218dfcff15f2ceace0e0b870924d9d4486c3e46a74f000b5711",
+  "usage": [
+    {
+      "input_tokens": 12690,
+      "cached_input_tokens": 6656,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1162,
+      "reasoning_output_tokens": 1070
+    }
+  ]
+}

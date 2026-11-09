@@ -10,6 +10,9 @@
 | TIA, Sol/High CLI, v4 | [Response](tia_cli/proposal01/model_reply.md) | [Response 2](tia_cli/proposal02/model_reply.md) | Pass, refined |
 | TIA, UI-labelled GPT-6/High | [Response](tia/proposal01/rendered_answer_whitespace_normalized.txt) | [Response 2](tia/proposal02/rendered_answer_whitespace_normalized.txt) | Pass, refined |
 
+This table indexes the seven historical sessions only. The separate, partial
+[frozen CLI cohort](matched_cli/README.md) keeps its own folder and index.
+
 Each folder retains the selected candidate and capture evidence. CLI replies
 are captured Markdown; browser replies are whitespace-normalized rendered
 text with capture receipts. The complete archive retains broader raw evidence.

@@ -1,0 +1,745 @@
+{
+  "proposal": 2,
+  "proposals_remaining": 1,
+  "outcome": "pass",
+  "conditions": [
+    {
+      "condition": "Csensor=10pF, Cwire=2pF",
+      "pass": true,
+      "checks": [
+        {
+          "metric": "real_transimpedance_ohm",
+          "value": -9997.109745086,
+          "operator": "within",
+          "limit": [
+            -10100,
+            -9900
+          ],
+          "pass": true
+        },
+        {
+          "metric": "imag_transimpedance_ohm",
+          "value": 0.0642592131827,
+          "operator": "absolute <=",
+          "limit": 1,
+          "pass": true
+        },
+        {
+          "metric": "first_minus_3dB_Hz",
+          "value": 1890238.9714944735,
+          "operator": ">=",
+          "limit": 1000000,
+          "pass": true
+        },
+        {
+          "metric": "loop_phase_deg",
+          "value": -0.08492982077299,
+          "operator": "absolute <",
+          "limit": 90,
+          "pass": true
+        },
+        {
+          "metric": "loop_gain_dB",
+          "value": 80.80322103891,
+          "operator": ">",
+          "limit": 0,
+          "pass": true
+        },
+        {
+          "metric": "all_phase_margins_deg",
+          "value": [
+            60.54240977603441
+          ],
+          "operator": "all >=",
+          "limit": 55,
+          "pass": true
+        },
+        {
+          "metric": "delivered_power_uW",
+          "value": 226.945060452,
+          "operator": "0 < value <=",
+          "limit": 300,
+          "pass": true
+        },
+        {
+          "metric": "initial_error_V",
+          "value": 2.4217589699948583e-05,
+          "operator": "absolute <=",
+          "limit": 0.001,
+          "pass": true
+        },
+        {
+          "metric": "edge1_settle_ns",
+          "value": 470.7500000000001,
+          "operator": "<=",
+          "limit": 500,
+          "pass": true
+        },
+        {
+          "metric": "edge1_overshoot_V",
+          "value": 0.0,
+          "operator": "<=",
+          "limit": 0.01,
+          "pass": true
+        },
+        {
+          "metric": "edge2_settle_ns",
+          "value": 461.25000000000006,
+          "operator": "<=",
+          "limit": 500,
+          "pass": true
+        },
+        {
+          "metric": "edge2_overshoot_V",
+          "value": 2.2636568900002985e-05,
+          "operator": "<=",
+          "limit": 0.01,
+          "pass": true
+        },
+        {
+          "metric": "edge3_settle_ns",
+          "value": 470.7500000000001,
+          "operator": "<=",
+          "limit": 500,
+          "pass": true
+        },
+        {
+          "metric": "edge3_overshoot_V",
+          "value": 0.0,
+          "operator": "<=",
+          "limit": 0.01,
+          "pass": true
+        },
+        {
+          "metric": "edge4_settle_ns",
+          "value": 461.25000000000006,
+          "operator": "<=",
+          "limit": 500,
+          "pass": true
+        },
+        {
+          "metric": "edge4_overshoot_V",
+          "value": 2.2636569399936413e-05,
+          "operator": "<=",
+          "limit": 0.01,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "condition": "Csensor=10pF, Cwire=10pF",
+      "pass": true,
+      "checks": [
+        {
+          "metric": "real_transimpedance_ohm",
+          "value": -9997.109745092,
+          "operator": "within",
+          "limit": [
+            -10100,
+            -9900
+          ],
+          "pass": true
+        },
+        {
+          "metric": "imag_transimpedance_ohm",
+          "value": 0.06427373684262,
+          "operator": "absolute <=",
+          "limit": 1,
+          "pass": true
+        },
+        {
+          "metric": "first_minus_3dB_Hz",
+          "value": 1928244.000646955,
+          "operator": ">=",
+          "limit": 1000000,
+          "pass": true
+        },
+        {
+          "metric": "loop_phase_deg",
+          "value": -0.08584293411923,
+          "operator": "absolute <",
+          "limit": 90,
+          "pass": true
+        },
+        {
+          "metric": "loop_gain_dB",
+          "value": 80.80322089474,
+          "operator": ">",
+          "limit": 0,
+          "pass": true
+        },
+        {
+          "metric": "all_phase_margins_deg",
+          "value": [
+            61.051347095068394
+          ],
+          "operator": "all >=",
+          "limit": 55,
+          "pass": true
+        },
+        {
+          "metric": "delivered_power_uW",
+          "value": 226.945060452,
+          "operator": "0 < value <=",
+          "limit": 300,
+          "pass": true
+        },
+        {
+          "metric": "initial_error_V",
+          "value": 2.4217589699948583e-05,
+          "operator": "absolute <=",
+          "limit": 0.001,
+          "pass": true
+        },
+        {
+          "metric": "edge1_settle_ns",
+          "value": 460.75,
+          "operator": "<=",
+          "limit": 500,
+          "pass": true
+        },
+        {
+          "metric": "edge1_overshoot_V",
+          "value": 0.0,
+          "operator": "<=",
+          "limit": 0.01,
+          "pass": true
+        },
+        {
+          "metric": "edge2_settle_ns",
+          "value": 451.74999999999994,
+          "operator": "<=",
+          "limit": 500,
+          "pass": true
+        },
+        {
+          "metric": "edge2_overshoot_V",
+          "value": 2.305719539996698e-05,
+          "operator": "<=",
+          "limit": 0.01,
+          "pass": true
+        },
+        {
+          "metric": "edge3_settle_ns",
+          "value": 460.7499999999998,
+          "operator": "<=",
+          "limit": 500,
+          "pass": true
+        },
+        {
+          "metric": "edge3_overshoot_V",
+          "value": 0.0,
+          "operator": "<=",
+          "limit": 0.01,
+          "pass": true
+        },
+        {
+          "metric": "edge4_settle_ns",
+          "value": 451.7500000000004,
+          "operator": "<=",
+          "limit": 500,
+          "pass": true
+        },
+        {
+          "metric": "edge4_overshoot_V",
+          "value": 2.3057194999953623e-05,
+          "operator": "<=",
+          "limit": 0.01,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "condition": "Csensor=70pF, Cwire=2pF",
+      "pass": true,
+      "checks": [
+        {
+          "metric": "real_transimpedance_ohm",
+          "value": -9997.109745134,
+          "operator": "within",
+          "limit": [
+            -10100,
+            -9900
+          ],
+          "pass": true
+        },
+        {
+          "metric": "imag_transimpedance_ohm",
+          "value": 0.06436814063207,
+          "operator": "absolute <=",
+          "limit": 1,
+          "pass": true
+        },
+        {
+          "metric": "first_minus_3dB_Hz",
+          "value": 2170395.139833522,
+          "operator": ">=",
+          "limit": 1000000,
+          "pass": true
+        },
+        {
+          "metric": "loop_phase_deg",
+          "value": -0.0917781701042,
+          "operator": "absolute <",
+          "limit": 90,
+          "pass": true
+        },
+        {
+          "metric": "loop_gain_dB",
+          "value": 80.80321990384,
+          "operator": ">",
+          "limit": 0,
+          "pass": true
+        },
+        {
+          "metric": "all_phase_margins_deg",
+          "value": [
+            61.58745476524803
+          ],
+          "operator": "all >=",
+          "limit": 55,
+          "pass": true
+        },
+        {
+          "metric": "delivered_power_uW",
+          "value": 226.945060452,
+          "operator": "0 < value <=",
+          "limit": 300,
+          "pass": true
+        },
+        {
+          "metric": "initial_error_V",
+          "value": 2.4217589699948583e-05,
+          "operator": "absolute <=",
+          "limit": 0.001,
+          "pass": true
+        },
+        {
+          "metric": "edge1_settle_ns",
+          "value": 372.2500000000001,
+          "operator": "<=",
+          "limit": 500,
+          "pass": true
+        },
+        {
+          "metric": "edge1_overshoot_V",
+          "value": 0.0,
+          "operator": "<=",
+          "limit": 0.01,
+          "pass": true
+        },
+        {
+          "metric": "edge2_settle_ns",
+          "value": 366.2500000000001,
+          "operator": "<=",
+          "limit": 500,
+          "pass": true
+        },
+        {
+          "metric": "edge2_overshoot_V",
+          "value": 2.4204874999989023e-05,
+          "operator": "<=",
+          "limit": 0.01,
+          "pass": true
+        },
+        {
+          "metric": "edge3_settle_ns",
+          "value": 372.2500000000001,
+          "operator": "<=",
+          "limit": 500,
+          "pass": true
+        },
+        {
+          "metric": "edge3_overshoot_V",
+          "value": 0.0,
+          "operator": "<=",
+          "limit": 0.01,
+          "pass": true
+        },
+        {
+          "metric": "edge4_settle_ns",
+          "value": 366.2500000000001,
+          "operator": "<=",
+          "limit": 500,
+          "pass": true
+        },
+        {
+          "metric": "edge4_overshoot_V",
+          "value": 2.420487489995793e-05,
+          "operator": "<=",
+          "limit": 0.01,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "condition": "Csensor=70pF, Cwire=10pF",
+      "pass": true,
+      "checks": [
+        {
+          "metric": "real_transimpedance_ohm",
+          "value": -9997.109745141,
+          "operator": "within",
+          "limit": [
+            -10100,
+            -9900
+          ],
+          "pass": true
+        },
+        {
+          "metric": "imag_transimpedance_ohm",
+          "value": 0.06438266429199,
+          "operator": "absolute <=",
+          "limit": 1,
+          "pass": true
+        },
+        {
+          "metric": "first_minus_3dB_Hz",
+          "value": 2202682.5335093634,
+          "operator": ">=",
+          "limit": 1000000,
+          "pass": true
+        },
+        {
+          "metric": "loop_phase_deg",
+          "value": -0.09269128320973,
+          "operator": "absolute <",
+          "limit": 90,
+          "pass": true
+        },
+        {
+          "metric": "loop_gain_dB",
+          "value": 80.80321974309,
+          "operator": ">",
+          "limit": 0,
+          "pass": true
+        },
+        {
+          "metric": "all_phase_margins_deg",
+          "value": [
+            61.41369283118834
+          ],
+          "operator": "all >=",
+          "limit": 55,
+          "pass": true
+        },
+        {
+          "metric": "delivered_power_uW",
+          "value": 226.945060452,
+          "operator": "0 < value <=",
+          "limit": 300,
+          "pass": true
+        },
+        {
+          "metric": "initial_error_V",
+          "value": 2.4217589699948583e-05,
+          "operator": "absolute <=",
+          "limit": 0.001,
+          "pass": true
+        },
+        {
+          "metric": "edge1_settle_ns",
+          "value": 351.75000000000006,
+          "operator": "<=",
+          "limit": 500,
+          "pass": true
+        },
+        {
+          "metric": "edge1_overshoot_V",
+          "value": 0.0,
+          "operator": "<=",
+          "limit": 0.01,
+          "pass": true
+        },
+        {
+          "metric": "edge2_settle_ns",
+          "value": 346.2500000000003,
+          "operator": "<=",
+          "limit": 500,
+          "pass": true
+        },
+        {
+          "metric": "edge2_overshoot_V",
+          "value": 2.422348269992547e-05,
+          "operator": "<=",
+          "limit": 0.01,
+          "pass": true
+        },
+        {
+          "metric": "edge3_settle_ns",
+          "value": 351.75000000000006,
+          "operator": "<=",
+          "limit": 500,
+          "pass": true
+        },
+        {
+          "metric": "edge3_overshoot_V",
+          "value": 0.0,
+          "operator": "<=",
+          "limit": 0.01,
+          "pass": true
+        },
+        {
+          "metric": "edge4_settle_ns",
+          "value": 346.2500000000003,
+          "operator": "<=",
+          "limit": 500,
+          "pass": true
+        },
+        {
+          "metric": "edge4_overshoot_V",
+          "value": 2.422348370001437e-05,
+          "operator": "<=",
+          "limit": 0.01,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "condition": "Csensor=150pF, Cwire=2pF",
+      "pass": true,
+      "checks": [
+        {
+          "metric": "real_transimpedance_ohm",
+          "value": -9997.109745198,
+          "operator": "within",
+          "limit": [
+            -10100,
+            -9900
+          ],
+          "pass": true
+        },
+        {
+          "metric": "imag_transimpedance_ohm",
+          "value": 0.06451337723123,
+          "operator": "absolute <=",
+          "limit": 1,
+          "pass": true
+        },
+        {
+          "metric": "first_minus_3dB_Hz",
+          "value": 2367406.8568380913,
+          "operator": ">=",
+          "limit": 1000000,
+          "pass": true
+        },
+        {
+          "metric": "loop_phase_deg",
+          "value": -0.1009092995745,
+          "operator": "absolute <",
+          "limit": 90,
+          "pass": true
+        },
+        {
+          "metric": "loop_gain_dB",
+          "value": 80.8032181973,
+          "operator": ">",
+          "limit": 0,
+          "pass": true
+        },
+        {
+          "metric": "all_phase_margins_deg",
+          "value": [
+            58.710288675826405
+          ],
+          "operator": "all >=",
+          "limit": 55,
+          "pass": true
+        },
+        {
+          "metric": "delivered_power_uW",
+          "value": 226.945060452,
+          "operator": "0 < value <=",
+          "limit": 300,
+          "pass": true
+        },
+        {
+          "metric": "initial_error_V",
+          "value": 2.4217589699948583e-05,
+          "operator": "absolute <=",
+          "limit": 0.001,
+          "pass": true
+        },
+        {
+          "metric": "edge1_settle_ns",
+          "value": 454.2500000000001,
+          "operator": "<=",
+          "limit": 500,
+          "pass": true
+        },
+        {
+          "metric": "edge1_overshoot_V",
+          "value": 0.004935163456499914,
+          "operator": "<=",
+          "limit": 0.01,
+          "pass": true
+        },
+        {
+          "metric": "edge2_settle_ns",
+          "value": 457.75,
+          "operator": "<=",
+          "limit": 500,
+          "pass": true
+        },
+        {
+          "metric": "edge2_overshoot_V",
+          "value": 0.005216494500699942,
+          "operator": "<=",
+          "limit": 0.01,
+          "pass": true
+        },
+        {
+          "metric": "edge3_settle_ns",
+          "value": 454.24999999999994,
+          "operator": "<=",
+          "limit": 500,
+          "pass": true
+        },
+        {
+          "metric": "edge3_overshoot_V",
+          "value": 0.004935200211699908,
+          "operator": "<=",
+          "limit": 0.01,
+          "pass": true
+        },
+        {
+          "metric": "edge4_settle_ns",
+          "value": 457.75,
+          "operator": "<=",
+          "limit": 500,
+          "pass": true
+        },
+        {
+          "metric": "edge4_overshoot_V",
+          "value": 0.0052164945002999286,
+          "operator": "<=",
+          "limit": 0.01,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "condition": "Csensor=150pF, Cwire=10pF",
+      "pass": true,
+      "checks": [
+        {
+          "metric": "real_transimpedance_ohm",
+          "value": -9997.109745205,
+          "operator": "within",
+          "limit": [
+            -10100,
+            -9900
+          ],
+          "pass": true
+        },
+        {
+          "metric": "imag_transimpedance_ohm",
+          "value": 0.06452790089115,
+          "operator": "absolute <=",
+          "limit": 1,
+          "pass": true
+        },
+        {
+          "metric": "first_minus_3dB_Hz",
+          "value": 2372194.4820563337,
+          "operator": ">=",
+          "limit": 1000000,
+          "pass": true
+        },
+        {
+          "metric": "loop_phase_deg",
+          "value": -0.1018224123189,
+          "operator": "absolute <",
+          "limit": 90,
+          "pass": true
+        },
+        {
+          "metric": "loop_gain_dB",
+          "value": 80.80321801449,
+          "operator": ">",
+          "limit": 0,
+          "pass": true
+        },
+        {
+          "metric": "all_phase_margins_deg",
+          "value": [
+            58.34891632812678
+          ],
+          "operator": "all >=",
+          "limit": 55,
+          "pass": true
+        },
+        {
+          "metric": "delivered_power_uW",
+          "value": 226.945060452,
+          "operator": "0 < value <=",
+          "limit": 300,
+          "pass": true
+        },
+        {
+          "metric": "initial_error_V",
+          "value": 2.4217589699948583e-05,
+          "operator": "absolute <=",
+          "limit": 0.001,
+          "pass": true
+        },
+        {
+          "metric": "edge1_settle_ns",
+          "value": 462.2500000000001,
+          "operator": "<=",
+          "limit": 500,
+          "pass": true
+        },
+        {
+          "metric": "edge1_overshoot_V",
+          "value": 0.005891159293400006,
+          "operator": "<=",
+          "limit": 0.01,
+          "pass": true
+        },
+        {
+          "metric": "edge2_settle_ns",
+          "value": 465.2499999999999,
+          "operator": "<=",
+          "limit": 500,
+          "pass": true
+        },
+        {
+          "metric": "edge2_overshoot_V",
+          "value": 0.00620226673049995,
+          "operator": "<=",
+          "limit": 0.01,
+          "pass": true
+        },
+        {
+          "metric": "edge3_settle_ns",
+          "value": 462.2500000000001,
+          "operator": "<=",
+          "limit": 500,
+          "pass": true
+        },
+        {
+          "metric": "edge3_overshoot_V",
+          "value": 0.005891229469299986,
+          "operator": "<=",
+          "limit": 0.01,
+          "pass": true
+        },
+        {
+          "metric": "edge4_settle_ns",
+          "value": 465.25000000000034,
+          "operator": "<=",
+          "limit": 500,
+          "pass": true
+        },
+        {
+          "metric": "edge4_overshoot_V",
+          "value": 0.00620226673049995,
+          "operator": "<=",
+          "limit": 0.01,
+          "pass": true
+        }
+      ]
+    }
+  ]
+}

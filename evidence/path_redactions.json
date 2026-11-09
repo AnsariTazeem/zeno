@@ -311,7 +311,7 @@
         "supply_portability_v2/dependency_lock.json"
       ],
       "before_sha256": "7f652b5795e33ee8e63b246e2b48b88e55d289b70aaef77b2e242bce715d8805",
-      "after_sha256": "ca4ff44fd143db36d378096d10f93e8565c380facd15e01583bac5bb657c1d0e"
+      "after_sha256": "ce018df269bf7d6a4c78828944d3c40047744c1b0f8d6c6102ce118a2594fad7"
     },
     {
       "path": "reproduction/kit_manifest.json",
@@ -351,7 +351,7 @@
         "source_manifest.json"
       ],
       "before_sha256": "47eb721d5b14964e23804d01c0f05bd9d636ded0f3019fb6289e76fca6f5577b",
-      "after_sha256": "f38f8378a4da2b7cfc50ce90c4de22589dd1d7143ce9eee21ea1a049a3f16eea"
+      "after_sha256": "559cadf32b73f8f8b5b4a88d878875956e5e93c09f624385c51cff09789f301e"
     },
     {
       "path": "reproduction/README.md",
@@ -359,7 +359,7 @@
         "Publication metadata description"
       ],
       "before_sha256": "5a06abcc263b15235d2817b9a2372ef2c076fd2a25650055a7b639bf58ce9b45",
-      "after_sha256": "30a4807035aa689cdc206b111af5e5b7bf4004606eebf44a6ffee781afdd38bc"
+      "after_sha256": "129b79c533b8a84a088343c57becd5dd487e03c3aecbdfd3dce897d44e59457e"
     }
   ]
 }

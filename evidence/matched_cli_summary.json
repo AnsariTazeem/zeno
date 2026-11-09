@@ -1,0 +1,240 @@
+{
+  "cohort": "Frozen CLI, clarified-1 packets",
+  "scope": "Partial matched cohort: five complete episodes; collection stopped before all nine planned episodes ran",
+  "protocol": {
+    "created_at_utc": "2026-11-04T17:50:38.168624+00:00",
+    "requested_model": "gpt-6.1-sol",
+    "requested_effort": "high",
+    "interface": "CLI",
+    "backend_revision": null,
+    "temperature": null,
+    "seed": null,
+    "packet_revision": "clarified-1",
+    "trials_per_task": 3,
+    "proposal_budget": 3,
+    "tools": "none; evaluator feedback only",
+    "automatic_wrapper_retries": 0,
+    "separately_billed_API_fallback": false
+  },
+  "collection_audit": "Each published capture records the effective model and effort, zero tool requests and restricted read/network policy",
+  "episodes": [
+    {
+      "trial": "trial01",
+      "task": "supply",
+      "started_at_utc": "2026-11-04T17:52:30.426052+00:00",
+      "proposals": [
+        {
+          "proposal": 1,
+          "category": "specification_failure",
+          "outcome": "continue",
+          "capture_seconds": 165.875,
+          "reply_sha256": "c6ce9be6de0e2aba2ed00f4f092701465070ae13c4c121fb5f9206c2437baef0",
+          "candidate_sha256": "4b9ff09e2a352286f128e6f397e54c4b2ce370e0f0b44f2cd1d6eace5d01f802"
+        },
+        {
+          "proposal": 2,
+          "category": "specification_failure",
+          "outcome": "continue",
+          "capture_seconds": 213.75,
+          "reply_sha256": "f322e40195b8218c39071515bbd41d9553450e40c92834abb1d4ca0f5dd04ff8",
+          "candidate_sha256": "86859370c7b5c7f7baaa266b604ebfd8e3456b7c7957f880c9be0d92c29e5d0d"
+        },
+        {
+          "proposal": 3,
+          "category": "specification_failure",
+          "outcome": "no_confirmed_pass",
+          "capture_seconds": 273.46899999980815,
+          "reply_sha256": "addc641b65b78974a19e9f83480d582c9979bb8aca775c8e608e9f003ab27579",
+          "candidate_sha256": "573a5a5294925304751a7824d7f4724d9b9e572a8b8470d5031ec1eee10dda8b"
+        }
+      ],
+      "capture_seconds": 653.094,
+      "outcome": "no_confirmed_pass",
+      "confirmed_pass": false,
+      "complete": true,
+      "final_candidate_sha256": "573a5a5294925304751a7824d7f4724d9b9e572a8b8470d5031ec1eee10dda8b",
+      "task_id": "SUPPLY-P01-v2",
+      "refined_numerics": "refined",
+      "refined_category": "specification_failure"
+    },
+    {
+      "trial": "trial02",
+      "task": "load",
+      "started_at_utc": "2026-11-04T18:27:04.711954+00:00",
+      "proposals": [
+        {
+          "proposal": 1,
+          "category": "pass",
+          "outcome": "confirmed_pass",
+          "capture_seconds": 48.04700000002049,
+          "reply_sha256": "2733f582a6e1220aea97ab7886853ef4830330d3b58b4836f602eaa8396d41c0",
+          "candidate_sha256": "3b5b5c13adbf8d314a0533bb28b1822d60272c18c177f4e61bc90c1fb5bf45dd"
+        }
+      ],
+      "capture_seconds": 48.047,
+      "outcome": "confirmed_pass",
+      "confirmed_pass": true,
+      "complete": true,
+      "final_candidate_sha256": "3b5b5c13adbf8d314a0533bb28b1822d60272c18c177f4e61bc90c1fb5bf45dd",
+      "task_id": "LOAD-P01",
+      "refined_numerics": "refined",
+      "refined_category": "pass"
+    },
+    {
+      "trial": "trial03",
+      "task": "tia",
+      "started_at_utc": "2026-11-04T18:33:13.026761+00:00",
+      "proposals": [
+        {
+          "proposal": 1,
+          "category": "specification_failure",
+          "outcome": "continue",
+          "capture_seconds": 42.438000000081956,
+          "reply_sha256": "5f19bbd6220e9218dfcff15f2ceace0e0b870924d9d4486c3e46a74f000b5711",
+          "candidate_sha256": "42495a95f97653bb06dd2ccf6620c68e5344f548a9899d638842468fa8a78a1d"
+        },
+        {
+          "proposal": 2,
+          "category": "pass",
+          "outcome": "confirmed_pass",
+          "capture_seconds": 37.610000000102445,
+          "reply_sha256": "e18236bb61e42e98c4cf1be99fbce857cf76af6aac22ffdc073bde2b1bbe97c1",
+          "candidate_sha256": "e6b6e16b5ee981885ab1671c269ee21844edc975d9119ddc77b99a795b8d3e3b"
+        }
+      ],
+      "capture_seconds": 80.048,
+      "outcome": "confirmed_pass",
+      "confirmed_pass": true,
+      "complete": true,
+      "final_candidate_sha256": "e6b6e16b5ee981885ab1671c269ee21844edc975d9119ddc77b99a795b8d3e3b",
+      "task_id": "TIA-P01",
+      "refined_numerics": "refined",
+      "refined_category": "pass"
+    },
+    {
+      "trial": "trial04",
+      "task": "load",
+      "started_at_utc": "2026-11-04T18:35:58.162423+00:00",
+      "proposals": [
+        {
+          "proposal": 1,
+          "category": "pass",
+          "outcome": "confirmed_pass",
+          "capture_seconds": 38.92200000002049,
+          "reply_sha256": "e8980e1409394037a02fa4e3940ce5020d8ce41bc20f01a8366a7a7d40a811d7",
+          "candidate_sha256": "3b5b5c13adbf8d314a0533bb28b1822d60272c18c177f4e61bc90c1fb5bf45dd"
+        }
+      ],
+      "capture_seconds": 38.922,
+      "outcome": "confirmed_pass",
+      "confirmed_pass": true,
+      "complete": true,
+      "final_candidate_sha256": "3b5b5c13adbf8d314a0533bb28b1822d60272c18c177f4e61bc90c1fb5bf45dd",
+      "task_id": "LOAD-P01",
+      "refined_numerics": "refined",
+      "refined_category": "pass"
+    },
+    {
+      "trial": "trial05",
+      "task": "tia",
+      "started_at_utc": "2026-11-04T18:37:49.615855+00:00",
+      "proposals": [
+        {
+          "proposal": 1,
+          "category": "specification_failure",
+          "outcome": "continue",
+          "capture_seconds": 42.390000000130385,
+          "reply_sha256": "1836832164bf87f23ec2792e6144c620980222e9895a76c73d4a20ec25fa53f3",
+          "candidate_sha256": "272336394c755906b36398a68da051497543fbd6919b8306137543c1b10ab1c4"
+        },
+        {
+          "proposal": 2,
+          "category": "pass",
+          "outcome": "confirmed_pass",
+          "capture_seconds": 25.57799999997951,
+          "reply_sha256": "a40024a8f74e7c9e400acb033dd16c32f17c51c7b2b9aed1391af8341b5784e0",
+          "candidate_sha256": "ae6854bfb1bc6bc2c27fa152cb6ac6c144529ae2ff5a52f9ed3e1ddcd204a2c5"
+        }
+      ],
+      "capture_seconds": 67.968,
+      "outcome": "confirmed_pass",
+      "confirmed_pass": true,
+      "complete": true,
+      "final_candidate_sha256": "ae6854bfb1bc6bc2c27fa152cb6ac6c144529ae2ff5a52f9ed3e1ddcd204a2c5",
+      "task_id": "TIA-P01",
+      "refined_numerics": "refined",
+      "refined_category": "pass"
+    },
+    {
+      "trial": "trial06",
+      "task": "supply",
+      "started_at_utc": "2026-11-04T18:40:19.410563+00:00",
+      "proposals": [
+        {
+          "proposal": 1,
+          "category": "specification_failure",
+          "outcome": "continue",
+          "capture_seconds": 247.3279999999795,
+          "reply_sha256": "78768600b0bc0955f2ee12c8e70f2f1b75c31cce2efba7e75861f1824c58d1c9",
+          "candidate_sha256": "f03a9ffcdc30b4be8203fd7523987126fa12cf20a1649420655d0c599906a608"
+        }
+      ],
+      "capture_seconds": 247.328,
+      "outcome": "transport_error",
+      "confirmed_pass": null,
+      "complete": false,
+      "final_candidate_sha256": "f03a9ffcdc30b4be8203fd7523987126fa12cf20a1649420655d0c599906a608"
+    }
+  ],
+  "groups": [
+    {
+      "task": "supply",
+      "planned_episodes": 3,
+      "complete_episodes": 1,
+      "confirmed_passes": 0,
+      "started_episodes": 2,
+      "other_episodes": 2
+    },
+    {
+      "task": "load",
+      "planned_episodes": 3,
+      "complete_episodes": 2,
+      "confirmed_passes": 2,
+      "started_episodes": 2,
+      "other_episodes": 1
+    },
+    {
+      "task": "tia",
+      "planned_episodes": 3,
+      "complete_episodes": 2,
+      "confirmed_passes": 2,
+      "started_episodes": 2,
+      "other_episodes": 1
+    }
+  ],
+  "estimates_withheld": true,
+  "historical_record_separate": true,
+  "root": "transcripts/matched_cli",
+  "not_run": [
+    {
+      "trial": "trial07",
+      "task": "tia"
+    },
+    {
+      "trial": "trial08",
+      "task": "supply"
+    },
+    {
+      "trial": "trial09",
+      "task": "load"
+    }
+  ],
+  "interruption": {
+    "trial": "trial06",
+    "task": "supply",
+    "captured_proposals": 1,
+    "detail": "The second capture retained request and event records but no reply or audit record",
+    "episode_scored": false
+  },
+  "total_capture_seconds_complete_episodes": 888.079
+}

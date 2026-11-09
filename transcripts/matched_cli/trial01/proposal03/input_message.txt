@@ -1,0 +1,216 @@
+{
+  "proposal": 2,
+  "proposals_remaining": 1,
+  "outcome": "specification_failure",
+  "conditions": [
+    {
+      "condition": "VDD=1.15V",
+      "pass": false,
+      "checks": [
+        {
+          "metric": "dc_gain_dB",
+          "value": 61.75,
+          "operator": ">=",
+          "limit": 72.71,
+          "pass": false
+        },
+        {
+          "metric": "ugf_Hz",
+          "value": 44860555.18945263,
+          "operator": ">=",
+          "limit": 66590000,
+          "pass": false
+        },
+        {
+          "metric": "pm_deg",
+          "value": 81.9,
+          "operator": ">=",
+          "limit": 55,
+          "pass": true
+        },
+        {
+          "metric": "gm_dB",
+          "value": 11.2,
+          "operator": ">=",
+          "limit": 10,
+          "pass": true
+        },
+        {
+          "metric": "power_uW",
+          "value": 241.95,
+          "operator": "<=",
+          "limit": 296.4,
+          "pass": true
+        },
+        {
+          "metric": "command_rise_settle_ns",
+          "value": null,
+          "operator": "<=",
+          "limit": 12.24,
+          "pass": false
+        },
+        {
+          "metric": "command_fall_settle_ns",
+          "value": 14.621999999999996,
+          "operator": "<=",
+          "limit": 26.73,
+          "pass": true
+        },
+        {
+          "metric": "n_triode",
+          "value": 2,
+          "operator": "<=",
+          "limit": 2,
+          "pass": true
+        },
+        {
+          "metric": "input_current_uA",
+          "value": 0.0,
+          "operator": "<=",
+          "limit": 0.01,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "condition": "VDD=1.2V",
+      "pass": false,
+      "checks": [
+        {
+          "metric": "dc_gain_dB",
+          "value": 64.76,
+          "operator": ">=",
+          "limit": 72.71,
+          "pass": false
+        },
+        {
+          "metric": "ugf_Hz",
+          "value": 47077948.195680134,
+          "operator": ">=",
+          "limit": 66590000,
+          "pass": false
+        },
+        {
+          "metric": "pm_deg",
+          "value": 81.9,
+          "operator": ">=",
+          "limit": 55,
+          "pass": true
+        },
+        {
+          "metric": "gm_dB",
+          "value": 10.7,
+          "operator": ">=",
+          "limit": 10,
+          "pass": true
+        },
+        {
+          "metric": "power_uW",
+          "value": 257.59,
+          "operator": "<=",
+          "limit": 296.4,
+          "pass": true
+        },
+        {
+          "metric": "command_rise_settle_ns",
+          "value": null,
+          "operator": "<=",
+          "limit": 12.24,
+          "pass": false
+        },
+        {
+          "metric": "command_fall_settle_ns",
+          "value": 14.261999999999999,
+          "operator": "<=",
+          "limit": 26.73,
+          "pass": true
+        },
+        {
+          "metric": "n_triode",
+          "value": 2,
+          "operator": "<=",
+          "limit": 2,
+          "pass": true
+        },
+        {
+          "metric": "input_current_uA",
+          "value": 0.0,
+          "operator": "<=",
+          "limit": 0.01,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "condition": "VDD=1.25V",
+      "pass": false,
+      "checks": [
+        {
+          "metric": "dc_gain_dB",
+          "value": 66.61,
+          "operator": ">=",
+          "limit": 72.71,
+          "pass": false
+        },
+        {
+          "metric": "ugf_Hz",
+          "value": 48638446.51702216,
+          "operator": ">=",
+          "limit": 66590000,
+          "pass": false
+        },
+        {
+          "metric": "pm_deg",
+          "value": 82.0,
+          "operator": ">=",
+          "limit": 55,
+          "pass": true
+        },
+        {
+          "metric": "gm_dB",
+          "value": 10.4,
+          "operator": ">=",
+          "limit": 10,
+          "pass": true
+        },
+        {
+          "metric": "power_uW",
+          "value": 272.73,
+          "operator": "<=",
+          "limit": 296.4,
+          "pass": true
+        },
+        {
+          "metric": "command_rise_settle_ns",
+          "value": null,
+          "operator": "<=",
+          "limit": 12.24,
+          "pass": false
+        },
+        {
+          "metric": "command_fall_settle_ns",
+          "value": 17.952,
+          "operator": "<=",
+          "limit": 26.73,
+          "pass": true
+        },
+        {
+          "metric": "n_triode",
+          "value": 2,
+          "operator": "<=",
+          "limit": 2,
+          "pass": true
+        },
+        {
+          "metric": "input_current_uA",
+          "value": 0.0,
+          "operator": "<=",
+          "limit": 0.01,
+          "pass": true
+        }
+      ]
+    }
+  ]
+}
+
+Return the next complete proposal with a short explanation. All original requirements remain unchanged.

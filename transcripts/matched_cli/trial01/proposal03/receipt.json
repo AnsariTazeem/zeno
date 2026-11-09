@@ -1,0 +1,18 @@
+{
+  "proposal": 3,
+  "response_sha256": "addc641b65b78974a19e9f83480d582c9979bb8aca775c8e608e9f003ab27579",
+  "candidate_sha256": "573a5a5294925304751a7824d7f4724d9b9e572a8b8470d5031ec1eee10dda8b",
+  "category": "specification_failure",
+  "outcome": "no_confirmed_pass",
+  "native_evaluations": [
+    {
+      "result_sha256": "9f78f7d7054877464cc224c147f744626bfea1dfb4bfc4e3e11ad9ea2ef3cbc6",
+      "run_id": "trial01_b3"
+    },
+    {
+      "result_sha256": "2099742abf83c215e59de71a4ff857ab12ec2c5d65e9f2d38b6cc8f1bc926a07",
+      "run_id": "trial01_f3"
+    }
+  ],
+  "feedback_sha256": "a979b6e63070c265a9a8e992018053b8c0eaabe5686e5ba7ea90e676695d81a1"
+}
