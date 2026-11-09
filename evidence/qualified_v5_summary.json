@@ -1,0 +1,28 @@
+{
+  "scope": "Current task packets (clarified-2) qualified with the current eval_core_v5 runner in a freshly bootstrapped prepared Windows 3.12 environment; one host, no fresh OS or independent machine claim; model_calls 0",
+  "task_packet_revision": "clarified-2",
+  "evaluator": "reproduction/payload/eval_core_v5/run_eval.py",
+  "bootstrapped_at_utc": "2026-11-08T16:13:26.258920+00:00",
+  "bootstrap_outcome": "setup_complete_native_qualification_pending",
+  "bootstrap": "Pinned simulator/model archives and wheels downloaded over HTTPS and verified by recorded sha256; 1202 runtime files verified; v5 graded sources copied into the prepared root by bootstrap.py",
+  "qualification_started_at_utc": "2026-11-08T16:13:49.603200+00:00",
+  "qualification_finished_at_utc": "2026-11-08T16:22:36.858298+00:00",
+  "outcome": "fresh_venv_controls_reproduced_on_existing_host",
+  "verified_runtime_files_after_runs": 1202,
+  "offline_grading_test_outcome": "passed",
+  "offline_grading_tests": 51,
+  "offline_grading_test_suites": [
+    {"suite": "bootstrap_adversarial", "tests": 8, "returncode": 0},
+    {"suite": "frozen_regressions", "tests": 30, "returncode": 0},
+    {"suite": "supply_evidence_regressions", "tests": 13, "returncode": 0}
+  ],
+  "native_controls": [
+    {"task": "supply", "label": "ref01", "category": "pass", "conditions": 3, "passing_conditions": 3, "processes": 6},
+    {"task": "load", "label": "ref01", "category": "pass", "conditions": 6, "passing_conditions": 6, "processes": 1},
+    {"task": "tia", "label": "ref01", "category": "pass", "conditions": 6, "passing_conditions": 6, "processes": 1},
+    {"task": "supply", "label": "neg01", "category": "specification_failure", "conditions": 3, "passing_conditions": 0, "processes": 6},
+    {"task": "supply", "label": "no_gain01", "category": "specification_failure", "conditions": 3, "passing_conditions": 0, "processes": 6}
+  ],
+  "control_comparison": "Every check classification, metric and pass value reproduced the expected saved-measurement evidence; the no-gain circuit remained a specification failure under the v5 undefined-crossing rule",
+  "notes": "This receipt documents the current grader and packet only. evidence/final_validation.json is the earlier v4 qualification receipt for a prior source snapshot and remains unchanged."
+}

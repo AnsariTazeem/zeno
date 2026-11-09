@@ -8,7 +8,8 @@ Use `python -I -B bootstrap.py` from the repository root. Setup creates a new
 Windows Python 3.12 environment and verifies downloaded models, simulator and
 wheels by hash. [Commands](../docs/run.md)
 
-The `payload/eval_core_v4` runner uses earlier adapters for compatible tasks.
+The current `payload/eval_core_v5` runner grades all three tasks; the frozen
+`payload/eval_core_v4` runner is retained unchanged for the recorded cohort.
 Historical task packets and numerical measurements are preserved. Local host
 paths in published metadata are redacted; integrity records identify those copies.
 The bundle contains references: export one public task before giving it to a

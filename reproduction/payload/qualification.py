@@ -1,4 +1,4 @@
-"""Run frozen grading tests and four native controls in a prepared source kit."""
+"""Run frozen grading tests and native controls in a prepared source kit."""
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 from pathlib import Path
@@ -57,13 +57,13 @@ def main():
                                  'isolated': bool(sys.flags.isolated), 'numpy_origin': numpy.__file__,
                                  'numpy_version': numpy.__version__, 'venv_configuration': (ROOT / '.venv/pyvenv.cfg').read_text()}
         assert sys.flags.isolated
-        spec = importlib.util.spec_from_file_location('qualified_core', ROOT / 'eval_core_v4/run_eval.py')
+        spec = importlib.util.spec_from_file_location('qualified_core', ROOT / 'eval_core_v5/run_eval.py')
         core = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(core)
         assert core.verify() == 1202
         for label, script in [('bootstrap_adversarial', ROOT / 'checks/test_bootstrap.py'),
-                              ('frozen_regressions', ROOT / 'eval_core_v4/test_core.py'),
-                              ('supply_evidence_regressions', ROOT / 'eval_core_v4/test_supply_evidence.py')]:
+                              ('frozen_regressions', ROOT / 'eval_core_v5/test_core.py'),
+                              ('supply_evidence_regressions', ROOT / 'eval_core_v5/test_supply_evidence.py')]:
             launcher = "import sys,runpy; sys.path.insert(0,sys.argv[1]); script=sys.argv[2]; sys.argv=[script]; runpy.run_path(script,run_name='__main__')"
             entry = run(label, [sys.executable, '-I', '-B', '-c', launcher, str(script.parent), str(script)], 120)
             result['runs'].append(entry)
@@ -75,11 +75,11 @@ def main():
             label = case['label']
             log_label = case['task'] + '_' + label
             print('Starting native control: ' + log_label, flush=True)
-            command = [sys.executable, '-I', '-B', str(ROOT / 'eval_core_v4/run_eval.py'),
+            command = [sys.executable, '-I', '-B', str(ROOT / 'eval_core_v5/run_eval.py'),
                        'evaluate', '--task', case['task'], '--candidate', str(ROOT / case['candidate']),
                        '--run-id', label]
             entry = run(log_label, command)
-            folder = ROOT / 'eval_core_v4/runs' / case['task'] / label
+            folder = ROOT / 'eval_core_v5/runs' / case['task'] / label
             common = read(folder / 'result.json')
             assert entry['returncode'] == 0 and common['category'] == case['category'], label
             assert common['model_calls'] == 0 and common['evidence_mode'] == 'fresh_native_simulation'
@@ -131,7 +131,7 @@ def main():
     result['finished_at_utc'] = datetime.now(timezone.utc).isoformat()
     write(OUT / 'result.json', result)
     files = []
-    for folder in [OUT, ROOT / 'eval_core_v4/runs']:
+    for folder in [OUT, ROOT / 'eval_core_v5/runs']:
         for path in sorted(folder.rglob('*')):
             if path.is_file():
                 files.append({'path': str(path.relative_to(ROOT)), 'bytes': path.stat().st_size, 'sha256': sha(path)})
