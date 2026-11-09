@@ -6,19 +6,14 @@
       "sha256": "aaefa2e5193d4cf3654e469bc77cb04d1c7f2df76e4fe14aa18bafcaa851551b"
     },
     {
+      "path": "README.md",
+      "bytes": 1748,
+      "sha256": "917c57979a9e02c1724f20c0c702d41f91598fea4f23c3b04c01090e54be928d"
+    },
+    {
       "path": "bootstrap.py",
-      "bytes": 11608,
-      "sha256": "7d4bed57fbc2726bc08270f49ff0b7e71233eedcc1d4d5ef4440f24c2c9a4a41"
-    },
-    {
-      "path": "payload/analog_public_v1/deps/python/_yaml/__init__.py",
-      "bytes": 1402,
-      "sha256": "d3801eff9a2cc5a8692476b75c165401fe308ba5d7df6811f03e97ea9eb81840"
-    },
-    {
-      "path": "payload/analog_public_v1/deps/python/PyYAML-6.0.2.dist-info/direct_url.json",
-      "bytes": 257,
-      "sha256": "120b9d9b013d63302570ccc00ba3279af11a6c73e3d958c2221cefd3f343ab4a"
+      "bytes": 11673,
+      "sha256": "e8142e0c3adda37e388f29d556242fa645a61308f9213e07d77861f558a15a97"
     },
     {
       "path": "payload/analog_public_v1/deps/python/PyYAML-6.0.2.dist-info/INSTALLER",
@@ -46,14 +41,24 @@
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
+      "path": "payload/analog_public_v1/deps/python/PyYAML-6.0.2.dist-info/WHEEL",
+      "bytes": 102,
+      "sha256": "73b4961b5fe146f73d1d71c49265a54eed49af85a9cd1b9c7f3a933feffcab4b"
+    },
+    {
+      "path": "payload/analog_public_v1/deps/python/PyYAML-6.0.2.dist-info/direct_url.json",
+      "bytes": 257,
+      "sha256": "120b9d9b013d63302570ccc00ba3279af11a6c73e3d958c2221cefd3f343ab4a"
+    },
+    {
       "path": "payload/analog_public_v1/deps/python/PyYAML-6.0.2.dist-info/top_level.txt",
       "bytes": 11,
       "sha256": "ae98f42153138ac02387fd6f1b709c7fdbf98e9090c00cfa703d48554e597614"
     },
     {
-      "path": "payload/analog_public_v1/deps/python/PyYAML-6.0.2.dist-info/WHEEL",
-      "bytes": 102,
-      "sha256": "73b4961b5fe146f73d1d71c49265a54eed49af85a9cd1b9c7f3a933feffcab4b"
+      "path": "payload/analog_public_v1/deps/python/_yaml/__init__.py",
+      "bytes": 1402,
+      "sha256": "d3801eff9a2cc5a8692476b75c165401fe308ba5d7df6811f03e97ea9eb81840"
     },
     {
       "path": "payload/analog_public_v1/deps/python/yaml/__init__.py",
@@ -171,14 +176,19 @@
       "sha256": "4e973f88ba9ff1e0af12c40c8e8783fbe2f66dce46ffdb5dda3b5057a3aa2a0e"
     },
     {
-      "path": "payload/analog_public_v1/upstream/benchmark/circuits/opamp_2stg/spec.yaml",
-      "bytes": 1337,
-      "sha256": "ae32658726535bf152720bd2f2e84d4df20ea613a08081fcace68e4199de330a"
+      "path": "payload/analog_public_v1/upstream/LICENSE",
+      "bytes": 1069,
+      "sha256": "d6b95b322ce7e119bbf18c0c43452cd88fa3247e5efcb1ac1c48bdffc886af75"
     },
     {
       "path": "payload/analog_public_v1/upstream/benchmark/circuits.py",
       "bytes": 3644,
       "sha256": "68d591d8f6b9d8998c645de61a9203da586319d93339d5d57466991125ac6967"
+    },
+    {
+      "path": "payload/analog_public_v1/upstream/benchmark/circuits/opamp_2stg/spec.yaml",
+      "bytes": 1337,
+      "sha256": "ae32658726535bf152720bd2f2e84d4df20ea613a08081fcace68e4199de330a"
     },
     {
       "path": "payload/analog_public_v1/upstream/benchmark/config.py",
@@ -231,11 +241,6 @@
       "sha256": "a99591fa40d1b7786ca9cf19660474d55b4d70dc54382e7ecf8c1c934d557ba6"
     },
     {
-      "path": "payload/analog_public_v1/upstream/LICENSE",
-      "bytes": 1069,
-      "sha256": "d6b95b322ce7e119bbf18c0c43452cd88fa3247e5efcb1ac1c48bdffc886af75"
-    },
-    {
       "path": "payload/analog_public_v1/upstream_manifest.json",
       "bytes": 4860,
       "sha256": "2959409bde191e290151d383cf5a803650fd877574e1f6d0d2d64e8ab0a6c8fb"
@@ -271,11 +276,6 @@
       "sha256": "e8494224e2caf771c03b23ad3c982f2924640fa28dfd9591480ad6a47b3c78bc"
     },
     {
-      "path": "payload/analog_supply_pilot_v1/public_v2/contract.json",
-      "bytes": 1521,
-      "sha256": "b1ab4a010bc5ce9bfd41ffeebacbe3973020f59a281a50eb0d2fe6b4699426a2"
-    },
-    {
       "path": "payload/analog_supply_pilot_v1/public_v2/LICENSE_UPSTREAM.txt",
       "bytes": 1069,
       "sha256": "d6b95b322ce7e119bbf18c0c43452cd88fa3247e5efcb1ac1c48bdffc886af75"
@@ -286,14 +286,19 @@
       "sha256": "7b0317c46fbac01010dddb77b4975466147db0429145e9df37af0159859a402e"
     },
     {
-      "path": "payload/analog_supply_pilot_v1/public_v2/starter.sp",
-      "bytes": 1243,
-      "sha256": "8605f9e675fb6d047eb97910f80fa667a63f89ff841250b548984a1b04debfdd"
-    },
-    {
       "path": "payload/analog_supply_pilot_v1/public_v2/TASK.md",
       "bytes": 5779,
       "sha256": "ab873ea2d5eabf8d2be27542b445391f0e8e429339300a4786f350d2cd9b319d"
+    },
+    {
+      "path": "payload/analog_supply_pilot_v1/public_v2/contract.json",
+      "bytes": 1521,
+      "sha256": "b1ab4a010bc5ce9bfd41ffeebacbe3973020f59a281a50eb0d2fe6b4699426a2"
+    },
+    {
+      "path": "payload/analog_supply_pilot_v1/public_v2/starter.sp",
+      "bytes": 1243,
+      "sha256": "8605f9e675fb6d047eb97910f80fa667a63f89ff841250b548984a1b04debfdd"
     },
     {
       "path": "payload/analog_supply_pilot_v1/run_candidate.py",
@@ -381,16 +386,6 @@
       "sha256": "6037f51e6df2c571991e5bdadfc6f426c78888258e2db361c46d9897e8e6bf20"
     },
     {
-      "path": "payload/capload_case_v1/public/contract.json",
-      "bytes": 1560,
-      "sha256": "2b615a5cc09ef62ece6b03f76040bbe64570fa3ae3c1d04d1547ec37d40e0b31"
-    },
-    {
-      "path": "payload/capload_case_v1/public/fixed_amplifier.sp",
-      "bytes": 1385,
-      "sha256": "e8494224e2caf771c03b23ad3c982f2924640fa28dfd9591480ad6a47b3c78bc"
-    },
-    {
       "path": "payload/capload_case_v1/public/LICENSE_UPSTREAM.txt",
       "bytes": 1069,
       "sha256": "d6b95b322ce7e119bbf18c0c43452cd88fa3247e5efcb1ac1c48bdffc886af75"
@@ -406,14 +401,24 @@
       "sha256": "d2f9707791bbe7070eca2e622872987cc5da18aa97d4e83479546897b4603a45"
     },
     {
-      "path": "payload/capload_case_v1/public/starter.sp",
-      "bytes": 83,
-      "sha256": "b1ed6ce7308f63d02ed3dfd08ecb0a8d73e42b1bec2752ab9ac472583d18afd5"
-    },
-    {
       "path": "payload/capload_case_v1/public/TASK.md",
       "bytes": 7656,
       "sha256": "04937efe1947db5bbedc3988f50d4c1bdc1badbe72ba206d1dad7dc043bd8cb2"
+    },
+    {
+      "path": "payload/capload_case_v1/public/contract.json",
+      "bytes": 1560,
+      "sha256": "2b615a5cc09ef62ece6b03f76040bbe64570fa3ae3c1d04d1547ec37d40e0b31"
+    },
+    {
+      "path": "payload/capload_case_v1/public/fixed_amplifier.sp",
+      "bytes": 1385,
+      "sha256": "e8494224e2caf771c03b23ad3c982f2924640fa28dfd9591480ad6a47b3c78bc"
+    },
+    {
+      "path": "payload/capload_case_v1/public/starter.sp",
+      "bytes": 83,
+      "sha256": "b1ed6ce7308f63d02ed3dfd08ecb0a8d73e42b1bec2752ab9ac472583d18afd5"
     },
     {
       "path": "payload/capload_case_v1/qualification_scope.json",
@@ -1456,9 +1461,334 @@
       "sha256": "5c492620445a16badd8a35e2504fef5348a42386277e4bab9bf47a1001fe0f86"
     },
     {
+      "path": "payload/eval_core_v6/dependency_lock.json",
+      "bytes": 288418,
+      "sha256": "7760fa3d671d72826048891309cb46b00fbb5d21382fdf153e202c93e8d53c54"
+    },
+    {
+      "path": "payload/eval_core_v6/run_eval.py",
+      "bytes": 22156,
+      "sha256": "6a9590ae16531129f71e1d16f6a17e8f235fabc5a4ef65cef447801b5eda2424"
+    },
+    {
+      "path": "payload/eval_core_v6/supply_adapter.py",
+      "bytes": 10199,
+      "sha256": "039857ff336ee94a3af0b828768f45664cfc674c44f309b7b597b65262632ef5"
+    },
+    {
+      "path": "payload/eval_core_v6/test_core.py",
+      "bytes": 4727,
+      "sha256": "f5788e5adb42e879fbc9bfdbc3e76bb971eedbcec20a80aba9da7a7b01ac76af"
+    },
+    {
+      "path": "payload/eval_core_v6/test_supply_evidence.py",
+      "bytes": 7849,
+      "sha256": "9291c5de2009946bada4150c9c10f441f24a40ea9f4314cdc5792ec577cee4e9"
+    },
+    {
+      "path": "payload/eval_core_v6/tia_adapter.py",
+      "bytes": 6966,
+      "sha256": "5179eeb951a32196b0a5b2f4edab3560e6afb312393e0f7dd2e4f5a58538c768"
+    },
+    {
+      "path": "payload/public_packets/tasks/catalog.json",
+      "bytes": 12630,
+      "sha256": "039aac6b0a40961e506ee31100f684a0aa441ca05d892c283886732fd61fe889"
+    },
+    {
+      "path": "payload/public_packets/tasks/load/LICENSE_UPSTREAM.txt",
+      "bytes": 1069,
+      "sha256": "d6b95b322ce7e119bbf18c0c43452cd88fa3247e5efcb1ac1c48bdffc886af75"
+    },
+    {
+      "path": "payload/public_packets/tasks/load/MODEL_IDENTITY.json",
+      "bytes": 883,
+      "sha256": "ab7665233ec2a05316fdfc827ae402d090eef989251f680165d03807ed1920d9"
+    },
+    {
+      "path": "payload/public_packets/tasks/load/PROMPT.txt",
+      "bytes": 9292,
+      "sha256": "d2f9707791bbe7070eca2e622872987cc5da18aa97d4e83479546897b4603a45"
+    },
+    {
+      "path": "payload/public_packets/tasks/load/TASK.md",
+      "bytes": 7656,
+      "sha256": "04937efe1947db5bbedc3988f50d4c1bdc1badbe72ba206d1dad7dc043bd8cb2"
+    },
+    {
+      "path": "payload/public_packets/tasks/load/contract.json",
+      "bytes": 1560,
+      "sha256": "2b615a5cc09ef62ece6b03f76040bbe64570fa3ae3c1d04d1547ec37d40e0b31"
+    },
+    {
+      "path": "payload/public_packets/tasks/load/fixed_amplifier.sp",
+      "bytes": 1385,
+      "sha256": "e8494224e2caf771c03b23ad3c982f2924640fa28dfd9591480ad6a47b3c78bc"
+    },
+    {
+      "path": "payload/public_packets/tasks/load/starter.sp",
+      "bytes": 83,
+      "sha256": "b1ed6ce7308f63d02ed3dfd08ecb0a8d73e42b1bec2752ab9ac472583d18afd5"
+    },
+    {
+      "path": "payload/public_packets/tasks/revisions/clarified-1/load/LICENSE_UPSTREAM.txt",
+      "bytes": 1069,
+      "sha256": "d6b95b322ce7e119bbf18c0c43452cd88fa3247e5efcb1ac1c48bdffc886af75"
+    },
+    {
+      "path": "payload/public_packets/tasks/revisions/clarified-1/load/MODEL_IDENTITY.json",
+      "bytes": 883,
+      "sha256": "ab7665233ec2a05316fdfc827ae402d090eef989251f680165d03807ed1920d9"
+    },
+    {
+      "path": "payload/public_packets/tasks/revisions/clarified-1/load/PROMPT.txt",
+      "bytes": 8069,
+      "sha256": "0a0bcd7193fe4ca9ab39160451bfbb9b9c64546e82655095615a9a2f4e728c96"
+    },
+    {
+      "path": "payload/public_packets/tasks/revisions/clarified-1/load/TASK.md",
+      "bytes": 8069,
+      "sha256": "0a0bcd7193fe4ca9ab39160451bfbb9b9c64546e82655095615a9a2f4e728c96"
+    },
+    {
+      "path": "payload/public_packets/tasks/revisions/clarified-1/load/contract.json",
+      "bytes": 1798,
+      "sha256": "27718129bea098b3408966385c38eb84b08f7760fb8cd79fc971a2e68b8c28a2"
+    },
+    {
+      "path": "payload/public_packets/tasks/revisions/clarified-1/load/fixed_amplifier.sp",
+      "bytes": 1385,
+      "sha256": "e8494224e2caf771c03b23ad3c982f2924640fa28dfd9591480ad6a47b3c78bc"
+    },
+    {
+      "path": "payload/public_packets/tasks/revisions/clarified-1/load/starter.sp",
+      "bytes": 83,
+      "sha256": "b1ed6ce7308f63d02ed3dfd08ecb0a8d73e42b1bec2752ab9ac472583d18afd5"
+    },
+    {
+      "path": "payload/public_packets/tasks/revisions/clarified-1/supply/LICENSE_UPSTREAM.txt",
+      "bytes": 1069,
+      "sha256": "d6b95b322ce7e119bbf18c0c43452cd88fa3247e5efcb1ac1c48bdffc886af75"
+    },
+    {
+      "path": "payload/public_packets/tasks/revisions/clarified-1/supply/PROMPT.txt",
+      "bytes": 7067,
+      "sha256": "3289360998b3f60840aae1e30628a7dcb1c6ad10e57b41918cf40146c31b08fe"
+    },
+    {
+      "path": "payload/public_packets/tasks/revisions/clarified-1/supply/TASK.md",
+      "bytes": 7067,
+      "sha256": "3289360998b3f60840aae1e30628a7dcb1c6ad10e57b41918cf40146c31b08fe"
+    },
+    {
+      "path": "payload/public_packets/tasks/revisions/clarified-1/supply/contract.json",
+      "bytes": 2190,
+      "sha256": "5f12bae83c33516bc9a515efda0c2c3872221b598a9d55508941451cd9e4b640"
+    },
+    {
+      "path": "payload/public_packets/tasks/revisions/clarified-1/supply/starter.sp",
+      "bytes": 1243,
+      "sha256": "8605f9e675fb6d047eb97910f80fa667a63f89ff841250b548984a1b04debfdd"
+    },
+    {
+      "path": "payload/public_packets/tasks/revisions/clarified-1/tia/LICENSE_UPSTREAM.txt",
+      "bytes": 1069,
+      "sha256": "d6b95b322ce7e119bbf18c0c43452cd88fa3247e5efcb1ac1c48bdffc886af75"
+    },
+    {
+      "path": "payload/public_packets/tasks/revisions/clarified-1/tia/MODEL_IDENTITY.json",
+      "bytes": 474,
+      "sha256": "17bcbea07f53e66b5c9bf9a8b24d617f7f08a808e721e16d1e69e49102e9feaf"
+    },
+    {
+      "path": "payload/public_packets/tasks/revisions/clarified-1/tia/PROMPT.txt",
+      "bytes": 6592,
+      "sha256": "486a6a7555dbf974a24003dc667d789dd6b152994e7a04b37aea213bc3d9e089"
+    },
+    {
+      "path": "payload/public_packets/tasks/revisions/clarified-1/tia/TASK.md",
+      "bytes": 6592,
+      "sha256": "486a6a7555dbf974a24003dc667d789dd6b152994e7a04b37aea213bc3d9e089"
+    },
+    {
+      "path": "payload/public_packets/tasks/revisions/clarified-1/tia/contract.json",
+      "bytes": 2515,
+      "sha256": "a3a604fe8023f050695a2a04fe64f925550a426425c50df453783b760b0f5e85"
+    },
+    {
+      "path": "payload/public_packets/tasks/revisions/clarified-1/tia/fixed_amplifier.sp",
+      "bytes": 1385,
+      "sha256": "e8494224e2caf771c03b23ad3c982f2924640fa28dfd9591480ad6a47b3c78bc"
+    },
+    {
+      "path": "payload/public_packets/tasks/revisions/clarified-1/tia/starter.sp",
+      "bytes": 85,
+      "sha256": "64870a2676739ba01ee9587b00f4919f11e64a6092b991b91dab6913728d838e"
+    },
+    {
+      "path": "payload/public_packets/tasks/revisions/clarified-2/load/LICENSE_UPSTREAM.txt",
+      "bytes": 1069,
+      "sha256": "d6b95b322ce7e119bbf18c0c43452cd88fa3247e5efcb1ac1c48bdffc886af75"
+    },
+    {
+      "path": "payload/public_packets/tasks/revisions/clarified-2/load/MODEL_IDENTITY.json",
+      "bytes": 883,
+      "sha256": "ab7665233ec2a05316fdfc827ae402d090eef989251f680165d03807ed1920d9"
+    },
+    {
+      "path": "payload/public_packets/tasks/revisions/clarified-2/load/PROMPT.txt",
+      "bytes": 8157,
+      "sha256": "9e55dc7f48948cf3d94cb1d62e74177aea2fe80b077fcad891f48ef330ebddb2"
+    },
+    {
+      "path": "payload/public_packets/tasks/revisions/clarified-2/load/TASK.md",
+      "bytes": 8157,
+      "sha256": "9e55dc7f48948cf3d94cb1d62e74177aea2fe80b077fcad891f48ef330ebddb2"
+    },
+    {
+      "path": "payload/public_packets/tasks/revisions/clarified-2/load/contract.json",
+      "bytes": 1798,
+      "sha256": "e424bffa02c254d2614bb5aa1a1cb656059f10b066657afc09099887ac705132"
+    },
+    {
+      "path": "payload/public_packets/tasks/revisions/clarified-2/load/fixed_amplifier.sp",
+      "bytes": 1385,
+      "sha256": "e8494224e2caf771c03b23ad3c982f2924640fa28dfd9591480ad6a47b3c78bc"
+    },
+    {
+      "path": "payload/public_packets/tasks/revisions/clarified-2/load/starter.sp",
+      "bytes": 83,
+      "sha256": "b1ed6ce7308f63d02ed3dfd08ecb0a8d73e42b1bec2752ab9ac472583d18afd5"
+    },
+    {
+      "path": "payload/public_packets/tasks/revisions/clarified-2/supply/LICENSE_UPSTREAM.txt",
+      "bytes": 1069,
+      "sha256": "d6b95b322ce7e119bbf18c0c43452cd88fa3247e5efcb1ac1c48bdffc886af75"
+    },
+    {
+      "path": "payload/public_packets/tasks/revisions/clarified-2/supply/PROMPT.txt",
+      "bytes": 7268,
+      "sha256": "797945dc84362650f6d16ebdcc7e2e0f9f074c9e38ec5324da7410256032816a"
+    },
+    {
+      "path": "payload/public_packets/tasks/revisions/clarified-2/supply/TASK.md",
+      "bytes": 7268,
+      "sha256": "797945dc84362650f6d16ebdcc7e2e0f9f074c9e38ec5324da7410256032816a"
+    },
+    {
+      "path": "payload/public_packets/tasks/revisions/clarified-2/supply/contract.json",
+      "bytes": 2190,
+      "sha256": "bbd85709f4719b726b968c13ac1cc96287d5d0122f9c31cc5cc7702edb491b18"
+    },
+    {
+      "path": "payload/public_packets/tasks/revisions/clarified-2/supply/starter.sp",
+      "bytes": 1243,
+      "sha256": "8605f9e675fb6d047eb97910f80fa667a63f89ff841250b548984a1b04debfdd"
+    },
+    {
+      "path": "payload/public_packets/tasks/revisions/clarified-2/tia/LICENSE_UPSTREAM.txt",
+      "bytes": 1069,
+      "sha256": "d6b95b322ce7e119bbf18c0c43452cd88fa3247e5efcb1ac1c48bdffc886af75"
+    },
+    {
+      "path": "payload/public_packets/tasks/revisions/clarified-2/tia/MODEL_IDENTITY.json",
+      "bytes": 474,
+      "sha256": "17bcbea07f53e66b5c9bf9a8b24d617f7f08a808e721e16d1e69e49102e9feaf"
+    },
+    {
+      "path": "payload/public_packets/tasks/revisions/clarified-2/tia/PROMPT.txt",
+      "bytes": 6755,
+      "sha256": "76312d42f27ce7515fde18fa16d6e50fbbc30763ed3b718047b115fe62b52db6"
+    },
+    {
+      "path": "payload/public_packets/tasks/revisions/clarified-2/tia/TASK.md",
+      "bytes": 6755,
+      "sha256": "76312d42f27ce7515fde18fa16d6e50fbbc30763ed3b718047b115fe62b52db6"
+    },
+    {
+      "path": "payload/public_packets/tasks/revisions/clarified-2/tia/contract.json",
+      "bytes": 2515,
+      "sha256": "ef02f0dbffac4efdf24758fc45909521eb81d8a4b62bb63d9d2be274cc68a5e0"
+    },
+    {
+      "path": "payload/public_packets/tasks/revisions/clarified-2/tia/fixed_amplifier.sp",
+      "bytes": 1385,
+      "sha256": "e8494224e2caf771c03b23ad3c982f2924640fa28dfd9591480ad6a47b3c78bc"
+    },
+    {
+      "path": "payload/public_packets/tasks/revisions/clarified-2/tia/starter.sp",
+      "bytes": 85,
+      "sha256": "64870a2676739ba01ee9587b00f4919f11e64a6092b991b91dab6913728d838e"
+    },
+    {
+      "path": "payload/public_packets/tasks/supply/LICENSE_UPSTREAM.txt",
+      "bytes": 1069,
+      "sha256": "d6b95b322ce7e119bbf18c0c43452cd88fa3247e5efcb1ac1c48bdffc886af75"
+    },
+    {
+      "path": "payload/public_packets/tasks/supply/PROMPT.txt",
+      "bytes": 7209,
+      "sha256": "7b0317c46fbac01010dddb77b4975466147db0429145e9df37af0159859a402e"
+    },
+    {
+      "path": "payload/public_packets/tasks/supply/TASK.md",
+      "bytes": 5779,
+      "sha256": "ab873ea2d5eabf8d2be27542b445391f0e8e429339300a4786f350d2cd9b319d"
+    },
+    {
+      "path": "payload/public_packets/tasks/supply/contract.json",
+      "bytes": 1521,
+      "sha256": "b1ab4a010bc5ce9bfd41ffeebacbe3973020f59a281a50eb0d2fe6b4699426a2"
+    },
+    {
+      "path": "payload/public_packets/tasks/supply/starter.sp",
+      "bytes": 1243,
+      "sha256": "8605f9e675fb6d047eb97910f80fa667a63f89ff841250b548984a1b04debfdd"
+    },
+    {
+      "path": "payload/public_packets/tasks/tia/LICENSE_UPSTREAM.txt",
+      "bytes": 1069,
+      "sha256": "d6b95b322ce7e119bbf18c0c43452cd88fa3247e5efcb1ac1c48bdffc886af75"
+    },
+    {
+      "path": "payload/public_packets/tasks/tia/MODEL_IDENTITY.json",
+      "bytes": 474,
+      "sha256": "17bcbea07f53e66b5c9bf9a8b24d617f7f08a808e721e16d1e69e49102e9feaf"
+    },
+    {
+      "path": "payload/public_packets/tasks/tia/PROMPT.txt",
+      "bytes": 10098,
+      "sha256": "7def6e90969b00723fff6d97617798c62b5ed18ac39107854b622a78fc5e0c79"
+    },
+    {
+      "path": "payload/public_packets/tasks/tia/TASK.md",
+      "bytes": 6154,
+      "sha256": "42263dbef3559ca8a6aab0b7caf1ddb7a09f7e784c656cd1963dc5abb5cf557b"
+    },
+    {
+      "path": "payload/public_packets/tasks/tia/contract.json",
+      "bytes": 2094,
+      "sha256": "e12b0d29c4965ecb68f54bfdfcd119a718c978cfb3e00d60120c7a732397d81c"
+    },
+    {
+      "path": "payload/public_packets/tasks/tia/fixed_amplifier.sp",
+      "bytes": 1385,
+      "sha256": "e8494224e2caf771c03b23ad3c982f2924640fa28dfd9591480ad6a47b3c78bc"
+    },
+    {
+      "path": "payload/public_packets/tasks/tia/starter.sp",
+      "bytes": 85,
+      "sha256": "64870a2676739ba01ee9587b00f4919f11e64a6092b991b91dab6913728d838e"
+    },
+    {
+      "path": "payload/public_packets/tools/export_task.py",
+      "bytes": 2661,
+      "sha256": "076d854ac590dad700c08026ad2b420c05e240e6933aff7317bb534afb2dbc09"
+    },
+    {
       "path": "payload/qualification.py",
-      "bytes": 8340,
-      "sha256": "a621670f7d85af7e4d13ab88ae507219511ffe4716b5e1d92843fee04c49d929"
+      "bytes": 12179,
+      "sha256": "e82acaa05b31f14a82132b931840b7eb8fc6af753249af3452effbc9a5f2789f"
     },
     {
       "path": "payload/supply_portability_v2/dependency_lock.json",
@@ -1481,16 +1811,6 @@
       "sha256": "73151932e38c8ea091d3a0e3f998e6ae48c88a9cf389d5c07fc1563c31f03973"
     },
     {
-      "path": "payload/tia_case_v1/apparatus.py",
-      "bytes": 8496,
-      "sha256": "294a41ce8dcfce0e7886cc77a994b8c34f0bbdd04f77e67a538c69ba2d41f682"
-    },
-    {
-      "path": "payload/tia_case_v1/boundary_validation.py",
-      "bytes": 1805,
-      "sha256": "ec565a0827208f0c3e39365f8bedae4f1bb6af8d873ec2994e9100e70319c877"
-    },
-    {
       "path": "payload/tia_case_v1/COMPOUND_SELECTION.md",
       "bytes": 1348,
       "sha256": "64f29e18a140653be64d546401d76b583ed3e3ac21fc40cd0b2748cdecc328d7"
@@ -1501,14 +1821,34 @@
       "sha256": "cbd5b7df8596a03da44558ce2f68e81a70cbed788a13f09ec0fc10fd79164118"
     },
     {
+      "path": "payload/tia_case_v1/EXTENSION_01.md",
+      "bytes": 1970,
+      "sha256": "37b228d6368803a89d2e18d7556b43649625a3be2ad1baedea29cabb0543365b"
+    },
+    {
+      "path": "payload/tia_case_v1/PLAN.md",
+      "bytes": 4663,
+      "sha256": "042a87a2daea7b94c705c14e70dd138541777627e17d78ab02821d712317dfa1"
+    },
+    {
+      "path": "payload/tia_case_v1/STOPPING_RULE_REVISION.md",
+      "bytes": 1325,
+      "sha256": "38031eb7e7f5f6a519009f269d5e51e16d5b8c64df2450aba9ad5b07dd9d8f8e"
+    },
+    {
+      "path": "payload/tia_case_v1/apparatus.py",
+      "bytes": 8496,
+      "sha256": "294a41ce8dcfce0e7886cc77a994b8c34f0bbdd04f77e67a538c69ba2d41f682"
+    },
+    {
+      "path": "payload/tia_case_v1/boundary_validation.py",
+      "bytes": 1805,
+      "sha256": "ec565a0827208f0c3e39365f8bedae4f1bb6af8d873ec2994e9100e70319c877"
+    },
+    {
       "path": "payload/tia_case_v1/evaluate_frozen.py",
       "bytes": 879,
       "sha256": "d87a36cb832861e14e17035d8c9c390790c2242080f8b6a1658e59943f1cedd4"
-    },
-    {
-      "path": "payload/tia_case_v1/evaluations/reference_rg5000_refined01/result.json",
-      "bytes": 13585,
-      "sha256": "869a411078035984b3231f9fd2a4f2d6490b2eb898489f58f2f48c9d3d695bbc"
     },
     {
       "path": "payload/tia_case_v1/evaluations/TIA_T02_P02_refined/result.json",
@@ -1516,14 +1856,14 @@
       "sha256": "3c18967cb15e962e0b05fd3d90d979efbab81a662977a6e7938ca49600a2c52c"
     },
     {
+      "path": "payload/tia_case_v1/evaluations/reference_rg5000_refined01/result.json",
+      "bytes": 13585,
+      "sha256": "869a411078035984b3231f9fd2a4f2d6490b2eb898489f58f2f48c9d3d695bbc"
+    },
+    {
       "path": "payload/tia_case_v1/evaluations/undercompensated_1p_01/result.json",
       "bytes": 13615,
       "sha256": "35ab2c9be6e358bf925d5ca2e27ed7ca6f9e68e9cbe0870f3b8cf06d1a721c1f"
-    },
-    {
-      "path": "payload/tia_case_v1/EXTENSION_01.md",
-      "bytes": 1970,
-      "sha256": "37b228d6368803a89d2e18d7556b43649625a3be2ad1baedea29cabb0543365b"
     },
     {
       "path": "payload/tia_case_v1/independent_witness.py",
@@ -1534,11 +1874,6 @@
       "path": "payload/tia_case_v1/network_input.py",
       "bytes": 2469,
       "sha256": "f7f7d27668a01b14b6fb6f76c577f2a8e863e09a8c333f99eef7021efc3eee87"
-    },
-    {
-      "path": "payload/tia_case_v1/PLAN.md",
-      "bytes": 4663,
-      "sha256": "042a87a2daea7b94c705c14e70dd138541777627e17d78ab02821d712317dfa1"
     },
     {
       "path": "payload/tia_case_v1/preparation.json",
@@ -1606,16 +1941,6 @@
       "sha256": "6572321e005a1f86fa1dd188b766a809f7bf600cf178874e50032bdba9118303"
     },
     {
-      "path": "payload/tia_case_v1/public/contract.json",
-      "bytes": 2094,
-      "sha256": "e12b0d29c4965ecb68f54bfdfcd119a718c978cfb3e00d60120c7a732397d81c"
-    },
-    {
-      "path": "payload/tia_case_v1/public/fixed_amplifier.sp",
-      "bytes": 1385,
-      "sha256": "e8494224e2caf771c03b23ad3c982f2924640fa28dfd9591480ad6a47b3c78bc"
-    },
-    {
       "path": "payload/tia_case_v1/public/LICENSE_UPSTREAM.txt",
       "bytes": 1069,
       "sha256": "d6b95b322ce7e119bbf18c0c43452cd88fa3247e5efcb1ac1c48bdffc886af75"
@@ -1631,14 +1956,24 @@
       "sha256": "7def6e90969b00723fff6d97617798c62b5ed18ac39107854b622a78fc5e0c79"
     },
     {
-      "path": "payload/tia_case_v1/public/starter.sp",
-      "bytes": 85,
-      "sha256": "64870a2676739ba01ee9587b00f4919f11e64a6092b991b91dab6913728d838e"
-    },
-    {
       "path": "payload/tia_case_v1/public/TASK.md",
       "bytes": 6154,
       "sha256": "42263dbef3559ca8a6aab0b7caf1ddb7a09f7e784c656cd1963dc5abb5cf557b"
+    },
+    {
+      "path": "payload/tia_case_v1/public/contract.json",
+      "bytes": 2094,
+      "sha256": "e12b0d29c4965ecb68f54bfdfcd119a718c978cfb3e00d60120c7a732397d81c"
+    },
+    {
+      "path": "payload/tia_case_v1/public/fixed_amplifier.sp",
+      "bytes": 1385,
+      "sha256": "e8494224e2caf771c03b23ad3c982f2924640fa28dfd9591480ad6a47b3c78bc"
+    },
+    {
+      "path": "payload/tia_case_v1/public/starter.sp",
+      "bytes": 85,
+      "sha256": "64870a2676739ba01ee9587b00f4919f11e64a6092b991b91dab6913728d838e"
     },
     {
       "path": "payload/tia_case_v1/qualification_freeze.json",
@@ -1656,14 +1991,14 @@
       "sha256": "7bd6b8946940b79948c548c8048e545684b91c8edc9444d8dfc0c8f76a97c0a7"
     },
     {
-      "path": "payload/tia_case_v1/STOPPING_RULE_REVISION.md",
-      "bytes": 1325,
-      "sha256": "38031eb7e7f5f6a519009f269d5e51e16d5b8c64df2450aba9ad5b07dd9d8f8e"
-    },
-    {
       "path": "payload/tia_case_v1/test_validation.py",
       "bytes": 6787,
       "sha256": "23cd548cf7c396e4701f33bcbeaa12e161b5350e8c71f6e7531b8e2ba0d1bade"
+    },
+    {
+      "path": "payload/tia_case_v1/trials/trial02/PROTOCOL.md",
+      "bytes": 2881,
+      "sha256": "0ded853fd456ee7f3c5fadebba6871cd3e2b7927db667e1ced28dff9f53e448a"
     },
     {
       "path": "payload/tia_case_v1/trials/trial02/launch_prompt.txt",
@@ -1681,11 +2016,6 @@
       "sha256": "6da3159f7ea705371e387d64a5024cbc32daf49e3434a008e0d51061fecc7b7e"
     },
     {
-      "path": "payload/tia_case_v1/trials/trial02/PROTOCOL.md",
-      "bytes": 2881,
-      "sha256": "0ded853fd456ee7f3c5fadebba6871cd3e2b7927db667e1ced28dff9f53e448a"
-    },
-    {
       "path": "payload/tia_case_v1/trials/trial02/retain_capture.py",
       "bytes": 1974,
       "sha256": "bd305f2db0c4cbed26bc6f5733fd5b458ee661e74d1d11c299efb9c7e1848e60"
@@ -1701,11 +2031,6 @@
       "sha256": "15237546d80de915489daf00e78a4ada9ec912a9d1e5741ee97f34a92b999f2e"
     },
     {
-      "path": "README.md",
-      "bytes": 1025,
-      "sha256": "129b79c533b8a84a088343c57becd5dd487e03c3aecbdfd3dce897d44e59457e"
-    },
-    {
       "path": "requirements.lock",
       "bytes": 191,
       "sha256": "d49ba437689ca65a255f71cbf98db3125dc7ae50ba2f77b87d6d04a1d4979344"
@@ -1717,8 +2042,8 @@
     },
     {
       "path": "source_manifest.json",
-      "bytes": 67843,
-      "sha256": "ce018df269bf7d6a4c78828944d3c40047744c1b0f8d6c6102ce118a2594fad7"
+      "bytes": 78245,
+      "sha256": "6717cc5961ca061112159ca88c16bad9beb4bbdee234cd6592e3a5a67d3f8c63"
     }
   ]
 }

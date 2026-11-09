@@ -189,7 +189,7 @@ def precision_checks(root=ROOT):
 
 def verdict_checks(root=ROOT):
     payload = root/'reproduction/payload'
-    core = load('contract_audit_core', payload/'eval_core_v5/run_eval.py')
+    core = load('contract_audit_core', payload/'eval_core_v6/run_eval.py')
     fixtures = {
         'supply': payload/'eval_core_v3/runs/supply/cs01_control/native/result.json',
         'load': payload/'capload_case_v1/evaluations/reference_compiled_01/result.json',
@@ -268,7 +268,7 @@ def audit(root=ROOT):
     syntax = syntax_checks(root)
     verdicts = verdict_checks(root)
     return {'outcome': 'passed', 'packet_revision': read(root/'tasks/catalog.json')['default_revision'],
-            'evaluator': 'reproduction/payload/eval_core_v5/run_eval.py',
+            'evaluator': 'reproduction/payload/eval_core_v6/run_eval.py',
             'packets': packets, 'declarations': declarations, 'precision_checks': precision,
             'syntax_checks': syntax, 'verdict_checks': verdicts,
             'declared_requirements_checked': len(declarations),

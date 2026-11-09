@@ -23,10 +23,10 @@ class CollectionTests(unittest.TestCase):
         cls.root = Path(cls.temp.name)
         shutil.copytree(ROOT/'tasks', cls.root/'tasks')
         # State-machine tests use a small identity fixture; native controls cover the full runtime.
-        lock = cls.root/'reproduction/payload/eval_core_v4/dependency_lock.json'
+        lock = cls.root/'reproduction/payload/eval_core_v6/dependency_lock.json'
         lock.parent.mkdir(parents=True)
         lock.write_bytes(b'{"fixture":true}\n')
-        manifest = {'files': [{'path': 'payload/eval_core_v4/dependency_lock.json',
+        manifest = {'files': [{'path': 'payload/eval_core_v6/dependency_lock.json',
                     'bytes': lock.stat().st_size, 'sha256': hashlib.sha256(lock.read_bytes()).hexdigest()}]}
         (cls.root/'reproduction/kit_manifest.json').write_text(json.dumps(manifest), encoding='utf-8')
         (cls.root/'tools').mkdir()
@@ -34,8 +34,8 @@ class CollectionTests(unittest.TestCase):
             shutil.copyfile(ROOT/'tools'/name, cls.root/'tools'/name)
         shutil.copyfile(ROOT/'run_eval.py', cls.root/'run_eval.py')
         cls.prepared = cls.root/'prepared'
-        (cls.prepared/'eval_core_v4').mkdir(parents=True)
-        shutil.copyfile(lock, cls.prepared/'eval_core_v4/dependency_lock.json')
+        (cls.prepared/'eval_core_v6').mkdir(parents=True)
+        shutil.copyfile(lock, cls.prepared/'eval_core_v6/dependency_lock.json')
 
     @classmethod
     def tearDownClass(cls):
@@ -63,6 +63,7 @@ class CollectionTests(unittest.TestCase):
                          ['supply', 'load', 'tia', 'load', 'tia', 'supply', 'tia', 'supply', 'load'])
         self.assertEqual(self.folder.parent.name, '.local-trials')
         self.assertEqual(plan['proposal_budget'], 3)
+        self.assertEqual(plan['evaluator'], 'eval_core_v6')
         self.assertFalse(plan['separately_billed_API_fallback'])
 
     def test_only_public_packet_and_request_are_model_visible(self):

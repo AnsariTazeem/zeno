@@ -70,7 +70,7 @@ jobs:
           name: native-qualification
           path: |
             ${{ runner.temp }}/zeno_native/qualification/
-            ${{ runner.temp }}/zeno_native/eval_core_v4/runs/
+            ${{ runner.temp }}/zeno_native/eval_core_v6/runs/
             ${{ runner.temp }}/zeno_native/bootstrap*.json
             ${{ runner.temp }}/zeno_native/pip_install_*.txt
             ${{ runner.temp }}/zeno_native/materialize_*.txt

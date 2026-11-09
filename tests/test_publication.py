@@ -21,13 +21,24 @@ class PublicationTests(unittest.TestCase):
         receipt = json.loads((ROOT/'evidence/path_redactions.json').read_text())
         self.assertFalse(receipt['electrical_measurements_changed'])
         self.assertFalse(receipt['model_responses_changed'])
+        maintenance = json.loads((ROOT/'reproduction/maintenance_manifest.json').read_text())
+        changes = {row['path']: row for row in maintenance['changes']}
+        self.assertEqual(set(changes), {'reproduction/README.md',
+                                      'reproduction/source_manifest.json',
+                                      'reproduction/kit_manifest.json'})
         for row in receipt['records']:
             with self.subTest(path=row['path']):
-                self.assertEqual(hashlib.sha256((ROOT/row['path']).read_bytes()).hexdigest(), row['after_sha256'])
+                expected = row['after_sha256']
+                if row['path'] in changes:
+                    change = changes[row['path']]
+                    self.assertEqual(change['previous_sha256'], expected)
+                    expected = change['sha256']
+                self.assertEqual(hashlib.sha256((ROOT/row['path']).read_bytes()).hexdigest(), expected)
 
     def test_private_paths_and_chat_links_are_detected(self):
         samples = [('local_user_path', 'C:'+ '/Users/'+'example/private.txt'),
                    ('local_user_path', '/home/'+'example/private.txt'),
+                   ('local_user_path', '/Users/'+'example/private.txt'),
                    ('private_chat_url', 'https://chatgpt.com/'+'c/'+'12345678-1234-1234-1234-123456789abc')]
         for kind, value in samples:
             self.assertIn({'path': 'example.txt', 'kind': kind}, publication.inspect('example.txt', value.encode()))
@@ -35,6 +46,8 @@ class PublicationTests(unittest.TestCase):
     def test_nested_private_fields_and_empty_placeholders(self):
         private = json.dumps({'nested': [{'thread_id': 'private'}]}).encode()
         self.assertEqual(publication.inspect('x.json', private), [{'path': 'x.json', 'kind': 'private_session_field'}])
+        self.assertEqual(publication.inspect('x.jsonl', private+b'\n'+b'{}\n'),
+                         [{'path': 'x.jsonl', 'kind': 'private_session_field'}])
         public = json.dumps({'thread_id': None, 'session_id': '[removed]'}).encode()
         self.assertEqual(publication.inspect('x.json', public), [])
 
