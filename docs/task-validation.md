@@ -39,9 +39,15 @@ by the [test suite](../tests/README.md). The
 
 <!-- coderabbit-ai-generated-section:v1:3cd4c5576c65ee2bc5205562ecc77fb951053dda7a8b219c3130c82b8e3ac1d4 -->
 
-[recorded v5 task-contract audit]
+<!-- coderabbit-ai-generated:v1 -->
 
-<!-- /coderabbit-ai-generated:v1 -->(../evidence/task_contract_audit_clarified2_v5.json)
+<!-- coderabbit-ai-generated-section:v1:9a861f9a46b2afa4e125dd0fd9371e09fd3a993c8ba25e3485d6757c4213c01c -->
+
+[recorded v5 task-contract audit](../evidence/task_contract_audit_clarified2_v5.json)
+
+<!-- /coderabbit-ai-generated:v1 -->
+
+<!-- /coderabbit-ai-generated:v1 -->
 records these checks for the current clarified-2 packets and v5 evaluator,
 with zero model and simulator calls.
 
@@ -65,9 +71,15 @@ precision and verdicts without model inference or full-circuit simulation.
 
 <!-- coderabbit-ai-generated-section:v1:3c1299a298d472fb8baddf10ab02b2c15c739a059549842c9c29f18774e75688 -->
 
-[Recorded v5 audit record]
+<!-- coderabbit-ai-generated:v1 -->
 
-<!-- /coderabbit-ai-generated:v1 -->(../evidence/task_contract_audit_clarified2_v5.json).
+<!-- coderabbit-ai-generated-section:v1:24a80bb4926f62320e7b0a03560fc9be94ab433e804625ec5628acdd7c4d78f7 -->
+
+[Recorded v5 audit record](../evidence/task_contract_audit_clarified2_v5.json)
+
+<!-- /coderabbit-ai-generated:v1 -->
+
+<!-- /coderabbit-ai-generated:v1 -->.
 The stored [historical audit record](../evidence/task_contract_audit.json) covers
 the earlier clarified-1 packets and remains unchanged.
 
