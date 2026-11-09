@@ -1,3 +1,7 @@
+<!-- coderabbit-ai-generated:v1 -->
+
+<!-- coderabbit-ai-generated-section:v1:993168b1f9f41dabed5dfa0b6cc7b40df8a9c2782fdfe59fa2d47863cb9ff8ba -->
+
 # Reproduction
 
 The [offline suite](../tests/README.md) checks setup, grading, raw evidence, task
@@ -27,13 +31,29 @@ source commits and artifacts identify the tested snapshot.
 
 Native qualification verifies runtime identities and reproduces all five
 controls. The recorded v4 qualification took about 30 seconds of cached setup
-and about three minutes on the tested machine; the current v5 qualification took
+and about three minutes on the tested machine; <!-- coderabbit-ai-generated:v1 -->
+
+<!-- coderabbit-ai-generated-section:v1:8777569ba1e60ec9056fca880a1f39a162a470b112e5621f5b3409fb45629138 -->
+
+the recorded v5 qualification took
+
+<!-- /coderabbit-ai-generated:v1 -->
 under nine minutes on the same host. The receipts retain exact timings and file
 identities. The [earlier v4 receipt](../evidence/final_validation.json) records
 that qualification for its source snapshot.
 
-The current v5 evaluator qualified separately after the v4 and clarified-1
+The recorded v5 evaluator qualified separately after the v4 and clarified-1
 material was frozen: in a clean bootstrapped Python 3.12 environment, all
 [check classifications](../evidence/qualified_v5_summary.json) reproduced the
 expected saved-measurement evidence, and the no-gain circuit remained a
 specification failure under the v5 undefined-crossing rule. [Commands](run.md)
+
+## Current maintenance revision
+
+New grading and qualification use v6. Qualification now enforces numerical
+agreement (relative tolerance 1e-6, absolute tolerance 1e-9), including list-valued
+measurements and nulls. Earlier receipts remain unchanged and do not qualify this
+updated source. Run the five native controls on Windows for a new receipt.
+
+
+<!-- /coderabbit-ai-generated:v1 -->

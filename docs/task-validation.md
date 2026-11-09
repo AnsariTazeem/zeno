@@ -1,3 +1,7 @@
+<!-- coderabbit-ai-generated:v1 -->
+
+<!-- coderabbit-ai-generated-section:v1:68f87103b3f9f943a92bdc49d1267ba10f016f93c98e5b347fe870deffdd02d1 -->
+
 # Task validation
 
 Each task states its input format, operating conditions, measurements and limits.
@@ -31,15 +35,21 @@ outcomes. [Grading rules](../graders/README.md)
 The audit exercises 402 electrical verdict boundaries. Passing references,
 alternative circuits, deliberately wrong answers and damaged evidence are covered
 by the [test suite](../tests/README.md). The
-[current task-contract audit](../evidence/task_contract_audit_clarified2_v5.json)
+<!-- coderabbit-ai-generated:v1 -->
+
+<!-- coderabbit-ai-generated-section:v1:3cd4c5576c65ee2bc5205562ecc77fb951053dda7a8b219c3130c82b8e3ac1d4 -->
+
+[recorded v5 task-contract audit]
+
+<!-- /coderabbit-ai-generated:v1 -->(../evidence/task_contract_audit_clarified2_v5.json)
 records these checks for the current clarified-2 packets and v5 evaluator,
 with zero model and simulator calls.
 
 Native qualification is recorded separately. The
 [earlier v4 receipt](../evidence/final_validation.json) reproduces the passing
 references and two SUPPLY failures for its source snapshot, and the
-[current v5 receipt](../evidence/qualified_v5_summary.json) records the same
-five controls under the current evaluator in a clean bootstrapped environment.
+[recorded v5 receipt](../evidence/qualified_v5_summary.json) records the same
+five controls under the recorded v5 evaluator in a clean bootstrapped environment.
 
 ## Run the audit
 
@@ -51,7 +61,13 @@ From the repository root, use the Python environment printed by setup:
 
 This checks packet integrity, numerical declarations, input boundaries, reporting
 precision and verdicts without model inference or full-circuit simulation.
-[Current audit record](../evidence/task_contract_audit_clarified2_v5.json).
+<!-- coderabbit-ai-generated:v1 -->
+
+<!-- coderabbit-ai-generated-section:v1:3c1299a298d472fb8baddf10ab02b2c15c739a059549842c9c29f18774e75688 -->
+
+[Recorded v5 audit record]
+
+<!-- /coderabbit-ai-generated:v1 -->(../evidence/task_contract_audit_clarified2_v5.json).
 The stored [historical audit record](../evidence/task_contract_audit.json) covers
 the earlier clarified-1 packets and remains unchanged.
 
@@ -64,3 +80,10 @@ are unchanged. Existing model results retain their original packet and grader
 identity, and no model trial on clarified-2 is reported. Historical packets
 remain available with `tools/export_task.py --revision recorded`; current export
 is the default.
+
+The maintained v6 evaluator preserves the same electrical rules. The current
+audit command runs against v6; the linked historical audit receipts retain their
+original identities. New native qualification is required for the updated source.
+
+
+<!-- /coderabbit-ai-generated:v1 -->

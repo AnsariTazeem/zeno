@@ -1,3 +1,7 @@
+<!-- coderabbit-ai-generated:v1 -->
+
+<!-- coderabbit-ai-generated-section:v1:90e5ea311fcb64a7c2365f5afe5adaf311e9506c400f8ff410d6ae07a4095a96 -->
+
 # Setup and commands
 
 Use Windows x64 Python 3.12 and compatible Windows C/UCRT support. Run commands
@@ -45,15 +49,18 @@ This runs 51 grading tests (8 bootstrap-boundary, 30 frozen grading
 regressions, 13 SUPPLY-evidence regressions) and five circuit controls: three
 passing references, an ordinary SUPPLY failure and a no-gain SUPPLY failure.
 Use a fresh prepared root: qualification refuses to overwrite earlier outputs.
+The updated qualification uses v6 and compares every reported check value with
+relative tolerance 1e-6 and absolute tolerance 1e-9. Native validation of v6
+requires a new Windows run; the linked receipts cover earlier revisions.
 
 The recorded v4 runs used about 30 seconds of cached setup and about three
 minutes of native qualification on the tested machine; the v5 qualification took
 under nine minutes on the same host. Qualification covered 21 conditions in 20
 native processes. [Earlier v4 run receipt](../evidence/final_validation.json) ·
-[Current v5 run receipt](../evidence/qualified_v5_summary.json) ·
+[Recorded v5 run receipt](../evidence/qualified_v5_summary.json) ·
 [Reproduction](reproduction.md)
 
-The source was checked in a fresh clone and venv. See [reproduction](reproduction.md)
+The earlier source was checked in a fresh clone and venv. See [reproduction](reproduction.md)
 and [CI](ci.md) for run details.
 
 ## Grade a circuit
@@ -81,15 +88,29 @@ contains references; LOAD/TIA's fixed plant can expose SUPPLY's repair.
 The collection boundaries are documented in [methodology](methodology.md).
 
 Export defaults to the current packet. Add `--revision recorded` for the
+<!-- coderabbit-ai-generated:v1 -->
+
+<!-- coderabbit-ai-generated-section:v1:d03fc7cbbc9eb780d6586ab83a2fd9257ed94629b6344fde93ccdf6b8e3296ff -->
+
 exact historical task inputs. Electrical grading requirements are unchanged.
+The prepared v6 evaluator also
+
+<!-- /coderabbit-ai-generated:v1 -->
+supports `export-task --task supply --out NEW_FOLDER --revision clarified-2`
+with the same catalog and defaults.
 Run `tools/audit_tasks.py` with the prepared Python to check declarations,
 input boundaries and verdicts. [Audit details](task-validation.md)
 
-## Cost and evidence
+## Runtime and evidence
 
-Setup, tests and circuit grading make zero model calls. Historical collection
-used the existing ChatGPT subscription, with no separately billed API fallback.
-Subscription usage consumed quota; no per-run dollar inference cost is known.
+<!-- coderabbit-ai-generated:v1 -->
+
+<!-- coderabbit-ai-generated-section:v1:d32194228324269665cda0025ebcb1527d89db721be998dfe446ef669b0545f7 -->
+
+Setup, tests and circuit grading make zero model calls. The collection interface
+and model configuration are recorded per campaign.
+
+<!-- /coderabbit-ai-generated:v1 -->
 Use the [collection commands](collection.md) to prepare fixed inputs and record
 new externally captured responses. Model access remains separate from simulation.
 
@@ -105,7 +126,9 @@ local; its identity is in [the archive record](../evidence/entry_archive.json).
 ## Recreate the waveform plot
 
 With NumPy and matplotlib in a separate plotting environment, point the tool
-at an extracted entry archive and choose a new output folder:
+at the original extracted entry archive and choose a new output folder.
+This archive is not published; the public checkout alone cannot recreate that
+specific plot. See [historical prerequisites](history.md).
 
 ```powershell
 python -B tools/plot_supply_repeat.py --entry-root 'C:/extracted-entry' --out 'C:/new/plot'
@@ -113,3 +136,6 @@ python -B tools/plot_supply_repeat.py --entry-root 'C:/extracted-entry' --out 'C
 
 It verifies the recorded result hash and re-extracts settling from all three
 rising traces. It makes no model or simulator calls.
+
+
+<!-- /coderabbit-ai-generated:v1 -->

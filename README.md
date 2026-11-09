@@ -1,117 +1,82 @@
+<!-- coderabbit-ai-generated:v1 -->
+
+<!-- coderabbit-ai-generated-section:v1:8176564dbec1f876da99f3b4713a51b34c16b1e7af0264d2d7bd7cdf6ca40a64 -->
+
 # Zeno
 
-Zeno tests analog circuit repair across supply, load and sensor changes using
-three ngspice tasks with deterministic electrical grading. Seven selected
-historical sessions used requested gpt-6.1-sol/High and UI-labelled GPT-6/High;
-all three SUPPLY sessions exhausted three proposals without a full pass, while
-LOAD and TIA achieved finer-confirmed passes. A separate frozen gpt-6.1-sol/High
-CLI cohort completed five of nine planned episodes: one SUPPLY failure, two LOAD
-passes and two TIA passes, with one episode interrupted and three not run.
-Historical SUPPLY runs retain native simulation traces; the LOAD and TIA
-sessions and the frozen cohort retain measured summaries, transcripts and
-receipts. Candidate circuits, feedback and reproducible checks accompany both
-records. All runs were collected in November 2026; each transcript folder
-retains the per-run launch timestamps.
-
-The target workflow is amplifier redesign: an engineer changes the supply,
-load or sensor interface and needs to verify that the circuit still meets its
-requirements. Zeno grades the resulting electrical behavior and retains the
-candidate, measured result and supporting evidence for each recorded evaluation.
-
-The tasks draw on amplifier compensation, feedback stability and transient
-settling. Their operating grids are synthetic; reference circuits establish
-feasibility under the same numerical checks.
-[Engineering context and threshold sources](docs/problem.md)
-
-## Video walkthrough
-
-[Zeno Walkthrough | micro1 Eval Hackathon](https://youtu.be/2sTe0UKWpOI) —
-public link, no sign-in required (3:21, AI-generated narration).
-It covers the engineering problem, why plausible-looking answers fail, the
-deterministic grading path, a real reproduction run, the measured near miss,
-and the reference and deliberate-control validation.
-
-Short description: Zeno is a deterministic evaluation for analog circuit
-repair (electronics). It measures whether a model can repair a
-transistor-level amplifier so it still meets every stated electrical
-requirement when supply voltage, load capacitance or the sensor interface
-changes. Three ngspice tasks — SUPPLY, LOAD and TIA — grade candidate
-circuits with pass/fail electrical limits; no LLM judge is used. Every
-SUPPLY attempt in the retained records missed at least one measured
-requirement — one final circuit passed all other checks yet settled in
-13.278–14.053 ns against a 12.24 ns limit — while LOAD and TIA reconfirmed
-passes after refinement.
-
-## Finding
-
-One final SUPPLY circuit passed the other checks but settled
-in 13.278-14.053 ns against a 12.24 ns rising limit. In the frozen cohort, the
-SUPPLY episode missed gain and gain margin and never completed command-relative
-settling. LOAD and TIA have finer-confirmed passes in both records.
-
-[Results and failure analysis](docs/results.md) · [Collection method](docs/methodology.md)
+I built Zeno to evaluate analog circuit repair when supply voltage, load capacitance,
+or sensor capacitance changes. Three ngspice tasks grade candidate circuits against
+electrical limits for accuracy, speed, stability and power. Every requirement must
+pass at every operating point; grading does not use an LLM judge.
 
 ## Tasks
 
-| Task | What changes | Historical sessions | Frozen cohort (partial) |
-|---|---|---|---|
-| [SUPPLY](tasks/revisions/clarified-2/supply/TASK.md) | Supply voltage | 0 passes in 3 sessions | 0 passes in 1 complete episode; 1 interrupted |
-| [LOAD](tasks/revisions/clarified-2/load/TASK.md) | Load and parasitic capacitance | 2 passes in 2 sessions | 2 passes in 2 episodes |
-| [TIA](tasks/revisions/clarified-2/tia/TASK.md) | Sensor and wiring capacitance | 2 passes in 2 sessions | 2 passes in 2 episodes |
+| Task | Design change | Conditions |
+|---|---|---|
+| [SUPPLY](tasks/revisions/clarified-2/supply/TASK.md) | Repair a transistor-level amplifier for lower supply voltages | Three supplies |
+| [LOAD](tasks/revisions/clarified-2/load/TASK.md) | Compensate a fixed amplifier for capacitive loading | Six load/parasitic pairs |
+| [TIA](tasks/revisions/clarified-2/tia/TASK.md) | Design passive feedback for a current sensor | Six sensor/wiring pairs |
 
-The historical record contains seven complete adaptive sessions and 24 saved
-evaluations. The frozen cohort adds five complete episodes and one interrupted
-episode; the two records are reported separately.
-[Exact model responses](transcripts/README.md) accompany the measurements.
-Those sessions used the recorded packets. The [current packets](tasks/README.md)
-clarify input limits and reporting precision; their electrical requirements
-are unchanged. [Task validation](docs/task-validation.md)
+The operating grids are synthetic. Passing references establish feasibility under
+the same checks used for candidate circuits. [Engineering context](docs/problem.md)
 
-Three tasks, each with several operating conditions. The guide recommends 5-10
-tasks; this submission deliberately keeps three validated circuit-repair
-scenarios instead of adding unvalidated variants. Operating points are
-conditions within a task, not separate tasks.
+## Results
+
+The historical record contains seven complete sessions and 24 evaluations.
+SUPPLY exhausted its three-proposal budget in all three sessions. LOAD and TIA
+passed in both of their sessions, with finer numerical confirmation.
+One final SUPPLY candidate passed the other checks but settled in 13.278–14.053 ns
+against a 12.24 ns rising limit.
+
+A separate frozen CLI cohort completed five of nine planned episodes: one SUPPLY
+failure, two LOAD passes and two TIA passes. One episode was interrupted and three
+were not run. These records use different packet and grader revisions and are
+reported separately. They do not establish a population failure rate or model ranking.
+
+[Results and measurements](docs/results.md) · [Collection method](docs/methodology.md) ·
+[Original responses](transcripts/README.md)
 
 ## Run
 
-Requires Windows x64 Python 3.12 and Windows C/UCRT support.
+Requires Windows x64 Python 3.12 and compatible Windows C/UCRT support.
 
 ```powershell
 python -I -B bootstrap.py
 ```
 
-Setup prints the new environment path. From the repository root:
+Setup prints the prepared environment path. From the repository root:
 
 ```powershell
 & 'C:/printed/root/.venv/Scripts/python.exe' -I -B tools/run_checks.py
+python -I -B run_eval.py --prepared-root 'C:/printed/root' evaluate --task supply --candidate 'C:/your/circuit.sp' --run-id new01
 ```
 
-[Setup and commands](docs/run.md) · [CI](docs/ci.md)
+Simulation and regrading need no model account or API keys. The current evaluator
+is v6. Earlier evaluators and their receipts remain available for reproducing
+recorded results. The v6 maintenance changes have offline regression coverage;
+Windows native qualification must be run for the updated source before claiming
+native reproduction of this revision.
 
-Each circuit must pass every stated requirement at every operating point.
-The deterministic grader accepts electrically valid alternatives and keeps
-invalid inputs and execution errors separate from electrical failures.
-Passing references, negative controls and offline tests check the grader
-and setup boundaries. No LLM judge is used.
+[Setup and commands](docs/run.md) · [Grading](graders/README.md) · [CI](docs/ci.md)
 
-Simulation and regrading need no model account or API keys. Collection used an
-existing ChatGPT subscription; per-run inference cost was unavailable. A
-recorded five-control qualification of the earlier v4 evaluator took about
-three minutes after roughly 30 seconds of cached setup. The current v5
-evaluation reproduced the same control classifications in a clean bootstrapped
-environment. [Reproduction record](docs/reproduction.md)
+## Walkthrough
 
-## Code and data
+[Video walkthrough](https://youtu.be/2sTe0UKWpOI) covers the problem, grading,
+reproduction, a measured near miss, references and negative controls.
 
-- [Tasks](tasks/README.md), [reference circuits](reference/README.md), [graders](graders/README.md), [tests](tests/README.md).
-- [Design](docs/design.md), [methodology](docs/methodology.md), [reproduction](docs/reproduction.md).
-- [Prior work](docs/PRIOR_WORK.md) and [AI use](docs/AI_USE.md).
+## Code and evidence
 
-The amplifier and original measurement foundation come from AnalogPortBench
-(MIT). Zeno adds the task grids, restrictions, grading adapters and collection
-workflow. AI tools assisted research, implementation and analysis; validation
-includes native simulation, negative controls and raw-trace checks.
+- [Public task packets](tasks/README.md), [reference circuits](reference/README.md), [tests](tests/README.md).
+- [Design](docs/design.md), [task validation](docs/task-validation.md), [reproduction](docs/reproduction.md).
+- [Prior work and licenses](docs/PRIOR_WORK.md), [historical files and prerequisites](docs/history.md).
 
+The amplifier and original testbench foundation come from AnalogPortBench (MIT).
+Zeno adds the task grids, input restrictions, grading adapters and collection tools.
 The runtime and regression fixtures live in `reproduction/payload/`.
-The tasks use synthetic simulation conditions. Trial-time prompts, responses
-and measurement records retain their original content.
+Original prompts, responses and measurements retain their recorded contents.
+
+Export one task packet per fresh model context. This repository contains reference
+solutions, and LOAD/TIA's fixed amplifier exposes SUPPLY's repair.
+
+
+<!-- /coderabbit-ai-generated:v1 -->

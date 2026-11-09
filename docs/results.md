@@ -1,3 +1,7 @@
+<!-- coderabbit-ai-generated:v1 -->
+
+<!-- coderabbit-ai-generated-section:v1:7fe8ca512119c97d173188d825a904fb9b7f7e2b668035139a50bdab1c43ffb9 -->
+
 # Results
 
 ## SUPPLY
@@ -25,8 +29,10 @@ The v4 repeat's final circuit also misses gain and stability requirements:
 ![Final rising-step response at the three supplies](../evidence/supply_repeat_rising.png)
 
 The output rings and remains below the 1 V target. Briefly crossing the
-accuracy band does not satisfy settling. The plot uses the retained finer
-traces; its error zoom clips values beyond +/-10 mV.
+accuracy band does not satisfy settling. The plot uses the original finer
+traces; its error zoom clips values beyond +/-10 mV. Those repeat traces are
+held in an unpublished archive, so this specific plot cannot be regenerated
+from the public checkout alone. [Archive prerequisites](history.md#waveform-archive)
 
 
 These failures measure closure of simultaneous electrical requirements.
@@ -142,3 +148,6 @@ between baseline and confirmation, and disagreement between numerical profiles.
 It checks catalog consistency; native regrading remains a separate command.
 One disclosed interrupted attempt remains outside the complete-session table;
 this catalog is not a complete ledger of every collection attempt.
+
+
+<!-- /coderabbit-ai-generated:v1 -->

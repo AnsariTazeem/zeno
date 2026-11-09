@@ -1,3 +1,7 @@
+<!-- coderabbit-ai-generated:v1 -->
+
+<!-- coderabbit-ai-generated-section:v1:71f0a48e3d8d21f72768a1fbd2bd8feffeef509ce79c2ec028e9bc03838d5d33 -->
+
 # Collect model responses
 
 Collection is separate from simulation. Use the same model, effort, interface,
@@ -41,6 +45,10 @@ with at most three proposals per trial. Inputs and evaluator sources are pinned
 before any answer is recorded. The campaign stays in the ignored `.local-trials/`
 folder. Each trial has a task-only `inputs/trialNN/request.txt`; give the model
 that request, not the campaign directory or repository.
+
+New campaigns pin evaluator v6 in addition to their packet revision. Native
+recovery verifies the candidate, task, proposal, numerical profile, runner, lock
+and saved artifact identities. Older campaigns require their frozen collector.
 
 ## Run one trial
 
@@ -93,3 +101,6 @@ identically distributed episodes.
 Raw responses and host diagnostics remain private until reviewed for publication.
 The task-only input folder does not itself enforce an OS sandbox; qualify tool
 and file-access restrictions in the model interface used for collection.
+
+
+<!-- /coderabbit-ai-generated:v1 -->

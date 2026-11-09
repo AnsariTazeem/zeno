@@ -1,3 +1,7 @@
+<!-- coderabbit-ai-generated:v1 -->
+
+<!-- coderabbit-ai-generated-section:v1:aa0892346a767d8f41dc5085882f82315fbd07d6d5e209bc6a98cc21290aa405 -->
+
 # Public tasks
 
 | Task | Instructions | Conditions |
@@ -9,8 +13,9 @@
 The current packets (clarified-2) state the compiler limits and measurement
 conventions explicitly. They preserve the electrical requirements of the
 original packets. Original packets in `supply/`, `load/`, and `tia/` are
-retained as exact historical inputs. The frozen CLI cohort used clarified-1.
-clarified-2 has no reported model trial.
+retained as exact historical inputs. Their status and review wording describe
+collection time; use the linked current packets for new work. The frozen CLI cohort used clarified-1.
+No model trial on clarified-2 is included in the published results.
 `contract.json` contains the scoring limits; `PROMPT.txt` is the model-facing
 request. [catalog.json](catalog.json) records source paths and hashes.
 
@@ -20,3 +25,6 @@ contexts: it contains references, and LOAD/TIA's plant exposes SUPPLY's repair.
 Default export uses the current packet. Add `--revision recorded` to reproduce the
 historical input files, or `--revision clarified-1` for the frozen cohort's packet.
 [Task audit](../docs/task-validation.md)
+
+
+<!-- /coderabbit-ai-generated:v1 -->
