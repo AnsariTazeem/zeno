@@ -1,0 +1,107 @@
+{
+  "task_id": "TIA-P01",
+  "plant": "fixed_amplifier.sp, attributed AnalogPortBench pinned public plant",
+  "supply_V": 1.2,
+  "reference_V": 0.9,
+  "reference_current_A": 2e-05,
+  "process": "tt",
+  "temperature_C": 27,
+  "sensor_capacitances_pF": [
+    10,
+    70,
+    150
+  ],
+  "wire_capacitances_pF": [
+    2,
+    10
+  ],
+  "sensor_shunt_ohm": 1000000000,
+  "output_load_F": 2e-12,
+  "photocurrent_A": [
+    0,
+    2e-05
+  ],
+  "target_output_V": [
+    0.9,
+    0.7
+  ],
+  "transition_times_s": [
+    1e-06,
+    2e-06,
+    3e-06,
+    4e-06
+  ],
+  "ramp_s": 5e-09,
+  "stop_s": 5e-06,
+  "limits": {
+    "transimpedance_real_at_10Hz_ohm": [
+      -10100,
+      -9900
+    ],
+    "transimpedance_imag_at_10Hz_abs_max_ohm": 1,
+    "first_minus_3dB_bandwidth_min_Hz": 1000000,
+    "all_downward_unity_crossing_phase_margins_min_deg": 55,
+    "loop_phase_at_10Hz_abs_less_than_deg": 90,
+    "loop_gain_at_10Hz_greater_than_dB": 0,
+    "dc_positive_delivered_supply_and_reference_power_max_uW": 300,
+    "command_error_band_V": 0.001,
+    "each_edge_settle_max_ns": 500,
+    "each_edge_overshoot_max_V": 0.01
+  },
+  "power_operating_current_A": 1e-05,
+  "score": "100 only when every check passes at all six points; completed electrical miss 0; input/simulation-invalid unscored",
+  "numerics": {
+    "baseline": {
+      "maximum_transient_step_s": 5e-10,
+      "AC_points_per_decade": 100,
+      "reltol": 0.0001,
+      "vntol": 1e-07,
+      "abstol": 1e-13
+    },
+    "refined": {
+      "maximum_transient_step_s": 2.5e-10,
+      "AC_points_per_decade": 200,
+      "reltol": 1e-05,
+      "vntol": 1e-08,
+      "abstol": 1e-14
+    }
+  },
+  "network": {
+    "header": ".subckt feedback sense out vref",
+    "resistors_max": 8,
+    "capacitors_max": 8,
+    "resistance_ohm": [
+      1,
+      10000000
+    ],
+    "capacitance_F": [
+      1e-15,
+      1e-07
+    ],
+    "internal_nodes_max": 16,
+    "literal_SI_values_only": true,
+    "allowed_external_nodes": [
+      "sense",
+      "out",
+      "vref",
+      "0"
+    ],
+    "required_used_ports": [
+      "sense",
+      "out"
+    ]
+  },
+  "scope": "Authored synthetic TIA system task on attributed public transistor plant; no AI-gap, hardware, noise or industrial-reliability claim",
+  "packet_revision": "clarified-1",
+  "input_format": {
+    "maximum_utf8_bytes": 32768,
+    "name_max_characters": 32,
+    "passive_nodes_must_differ": true,
+    "instance_prefixes": [
+      "R",
+      "C"
+    ],
+    "case_insensitive": true,
+    "component_names_unique": true
+  }
+}

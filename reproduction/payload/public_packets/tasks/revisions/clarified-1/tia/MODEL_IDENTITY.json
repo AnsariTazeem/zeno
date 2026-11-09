@@ -1,0 +1,12 @@
+{
+  "source": "analog_public_v1/upstream/benchmark/golden/opamp_2stg_1v2.sp",
+  "source_sha256": "4778a3e11bf09bf5aa363376071ca523981ca17f8147d5dade255ab1d6a215f8",
+  "compiled_sha256": "e8494224e2caf771c03b23ad3c982f2924640fa28dfd9591480ad6a47b3c78bc",
+  "counts": {
+    "x": 18,
+    "r": 4,
+    "c": 1
+  },
+  "upstream_commit": "13c40b2dd9bae22b83e2fc4aba0adb05e99e4282",
+  "scope": "Attributed public plant; authored current-to-voltage fixture and grading"
+}
