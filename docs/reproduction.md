@@ -50,10 +50,18 @@ specification failure under the v5 undefined-crossing rule. [Commands](run.md)
 
 ## Current maintenance revision
 
-New grading and qualification use v6. Qualification now enforces numerical
-agreement (relative tolerance 1e-6, absolute tolerance 1e-9), including list-valued
-measurements and nulls. Earlier receipts remain unchanged and do not qualify this
-updated source. Run the five native controls on Windows for a new receipt.
+<!-- coderabbit-ai-generated:v1 -->
+
+<!-- coderabbit-ai-generated-section:v1:e8ad24719b391221e713a8cc337dbd48f9ffa119e4b525e899767b03f3c538ae -->
+
+New grading and qualification use v6. Qualification enforces numerical agreement
+(relative tolerance 1e-6, absolute tolerance 1e-9), including list-valued measurements
+and nulls. On 9 November 2026, the [Windows-hosted qualification](https://github.com/AnsariTazeem/zeno/actions/runs/42560927106)
+passed the offline suite and all five native controls on commit `e921a6c`. The
+`native-qualification` artifact contains the run evidence and is retained by
+GitHub until 16 November 2026. Earlier receipts describe their original revisions.
+
+<!-- /coderabbit-ai-generated:v1 -->
 
 
 <!-- /coderabbit-ai-generated:v1 -->

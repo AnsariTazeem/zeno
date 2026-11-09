@@ -51,11 +51,16 @@ Setup prints the prepared environment path. From the repository root:
 python -I -B run_eval.py --prepared-root 'C:/printed/root' evaluate --task supply --candidate 'C:/your/circuit.sp' --run-id new01
 ```
 
+<!-- coderabbit-ai-generated:v1 -->
+
+<!-- coderabbit-ai-generated-section:v1:9e7a404d871b7ea926c1721b99cbf4628cfc0a5165dea3f3befd954857c134df -->
+
 Simulation and regrading need no model account or API keys. The current evaluator
 is v6. Earlier evaluators and their receipts remain available for reproducing
-recorded results. The v6 maintenance changes have offline regression coverage;
-Windows native qualification must be run for the updated source before claiming
-native reproduction of this revision.
+recorded results. A [Windows qualification run](https://github.com/AnsariTazeem/zeno/actions/runs/42560927106) passed
+the offline suite and all five native controls on commit `e921a6c`.
+
+<!-- /coderabbit-ai-generated:v1 -->
 
 [Setup and commands](docs/run.md) · [Grading](graders/README.md) · [CI](docs/ci.md)
 
