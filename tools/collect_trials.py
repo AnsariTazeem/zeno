@@ -13,6 +13,8 @@ import uuid
 
 ROOT = Path(__file__).resolve().parent.parent
 TASKS = ('supply', 'load', 'tia')
+EVALUATOR = 'eval_core_v6'
+TASK_IDS = {'supply': 'SUPPLY-P01-v2', 'load': 'LOAD-P01', 'tia': 'TIA-P01'}
 
 
 def read(path):
@@ -94,7 +96,7 @@ def prepare(name, model, effort, interface, root=ROOT, codex=False):
     plan = {'created_at_utc': datetime.now(timezone.utc).isoformat(),
             'requested_model': model, 'requested_effort': effort, 'interface': interface,
             'backend_revision': None, 'temperature': None, 'seed': None,
-            'packet_revision': revision, 'trials_per_task': 3, 'proposal_budget': 3,
+            'evaluator': EVALUATOR, 'packet_revision': revision, 'trials_per_task': 3, 'proposal_budget': 3,
             'tools': 'none; evaluator feedback only', 'automatic_wrapper_retries': 0,
             'separately_billed_API_fallback': False, 'native_run_prefix': 'c'+uuid.uuid4().hex[:8],
             'sources': identities, 'schedule': schedule, 'transport': transport}
@@ -134,7 +136,7 @@ def feedback(result, proposal):
             'outcome': result['category'], 'conditions': []}
     for point in result.get('points', []):
         data['conditions'].append({'condition': point['condition'], 'pass': point['pass'],
-            'checks': [{key: check[key] for key in ('metric', 'value', 'operator', 'limit', 'pass')}
+            'checks': [{key: check[key] for key in ('metric', 'value', 'operator', 'limit', 'pass', 'reason') if key in check}
                        for check in point['checks']]})
     if result['category'] == 'invalid_candidate':
         data['format_requirement'] = 'Use the component grammar and bounds in the task.'
@@ -165,10 +167,10 @@ def decision(result, refined, proposal):
 
 def native_evaluate(prepared, task, candidate, run_id, proposal, refined):
     """Reuse a completed evaluation after interruption; never overwrite native output."""
-    run = prepared/'eval_core_v4/runs'/task/run_id
+    run = prepared/EVALUATOR/'runs'/task/run_id
     if not run.exists():
         command = [str(prepared/'.venv/Scripts/python.exe'), '-I', '-B',
-                   str(prepared/'eval_core_v4/run_eval.py'), 'evaluate', '--task', task,
+                   str(prepared/EVALUATOR/'run_eval.py'), 'evaluate', '--task', task,
                    '--candidate', str(candidate), '--run-id', run_id, '--proposal', str(proposal),
                    '--numerics', 'refined' if refined else 'upstream']
         subprocess.run(command, cwd=prepared, check=False)
@@ -176,7 +178,30 @@ def native_evaluate(prepared, task, candidate, run_id, proposal, refined):
         raise RuntimeError('Native evaluation incomplete; preserve logs and stop collection')
     if (run/'candidate_original.sp').read_bytes() != candidate.read_bytes():
         raise ValueError('Existing native run belongs to a different candidate')
-    return read(run/'result.json'), {'result_sha256': sha(run/'result.json'), 'run_id': run_id}
+    result = read(run/'result.json')
+    expected = {
+        'task_id': TASK_IDS[task], 'run_id': run_id, 'proposal': proposal,
+        'numerics': 'refined' if refined else 'upstream',
+        'evidence_mode': 'fresh_native_simulation',
+        'candidate_sha256': sha(candidate),
+        'runner_sha256': sha(prepared/EVALUATOR/'run_eval.py'),
+        'dependency_lock_sha256': sha(prepared/EVALUATOR/'dependency_lock.json'),
+    }
+    if any(result.get(key) != value for key, value in expected.items()):
+        raise ValueError('Existing native evaluation identity does not match the request')
+    manifest = read(run/'manifest.json')
+    recorded = set()
+    for row in manifest['files']:
+        path = (run/row['path']).resolve()
+        if not path.is_relative_to(run.resolve()) or row['path'] in recorded:
+            raise ValueError('Invalid native manifest path')
+        recorded.add(row['path'])
+        if path.stat().st_size != row['bytes'] or sha(path) != row['sha256']:
+            raise ValueError('Native evaluation artifact changed')
+    if not {'result.json', 'candidate_original.sp'} <= recorded:
+        raise ValueError('Native manifest is incomplete')
+    return result, {'result_sha256': sha(run/'result.json'), 'run_id': run_id,
+                    'evaluator': EVALUATOR}
 
 
 def checked_turn(turn):
@@ -245,7 +270,9 @@ def interrupt(folder, expected_trial, kind, root=ROOT):
 def record(folder, response, prepared, expected_trial, root=ROOT, evaluator=native_evaluate):
     plan = verify(folder, root)
     # All trials use the same prepared verifier; host paths remain private.
-    lock = 'eval_core_v4/dependency_lock.json'
+    if plan.get('evaluator') != EVALUATOR:
+        raise ValueError('Use the frozen collector for historical campaigns; prepare a new campaign for this evaluator')
+    lock = EVALUATOR+'/dependency_lock.json'
     if sha(prepared/lock) != sha(root/'reproduction/payload'/lock):
         raise ValueError('Prepare a runtime matching the collection protocol')
     slot = active_slot(folder, plan)

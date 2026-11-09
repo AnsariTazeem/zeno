@@ -161,13 +161,13 @@ def materialize(args):
         count = unpack(row, archive, args.output)
         receipt['archives'].append({'filename': row['filename'], 'sha256': sha(archive),
                                     'origin': origin, 'extracted_files': count})
-    for row in read(args.output / 'eval_core_v3/dependency_lock.json')['files']:
+    for row in read(args.output / 'eval_core_v6/dependency_lock.json')['files']:
         identity(safe(args.output, row['path']), row)
     import numpy
     import zstandard
     receipt.update({'finished_at_utc': datetime.now(timezone.utc).isoformat(),
                     'outcome': 'setup_complete_native_qualification_pending',
-                    'verified_runtime_files': 1202, 'python': sys.version,
+                    'verified_runtime_files': len(read(args.output / 'eval_core_v6/dependency_lock.json')['files']), 'python': sys.version,
                     'python_executable': sys.executable, 'numpy_version': numpy.__version__,
                     'numpy_origin': numpy.__file__, 'zstandard_origin': zstandard.__file__,
                     'system_site_packages': False, 'model_calls': 0,

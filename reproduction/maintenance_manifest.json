@@ -1,0 +1,21 @@
+{
+  "scope": "Current runtime documentation and manifest updates after the historical path redactions",
+  "historical_receipt": "evidence/path_redactions.json",
+  "changes": [
+    {
+      "path": "reproduction/source_manifest.json",
+      "previous_sha256": "ce018df269bf7d6a4c78828944d3c40047744c1b0f8d6c6102ce118a2594fad7",
+      "sha256": "58bd9451336ae66e6598a92115a5a08a7e0bf0840cca4bdb6b42ac3f3d7f2a1b"
+    },
+    {
+      "path": "reproduction/kit_manifest.json",
+      "previous_sha256": "559cadf32b73f8f8b5b4a88d878875956e5e93c09f624385c51cff09789f301e",
+      "sha256": "23cf4c839c0f1abcd3e55840171ea32f2f14f8c3845aaf2ea77fe503332d65e5"
+    },
+    {
+      "path": "reproduction/README.md",
+      "previous_sha256": "129b79c533b8a84a088343c57becd5dd487e03c3aecbdfd3dce897d44e59457e",
+      "sha256": "917c57979a9e02c1724f20c0c702d41f91598fea4f23c3b04c01090e54be928d"
+    }
+  ]
+}

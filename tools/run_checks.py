@@ -42,15 +42,16 @@ def main():
     environment = os.environ.copy()
     environment.update(TMP=str(test_temp), TEMP=str(test_temp))
     suites = [('bootstrap_boundaries',PAYLOAD/'checks/test_bootstrap.py',8),
-              ('grading_regressions',PAYLOAD/'eval_core_v5/test_core.py',30),
-              ('supply_evidence',PAYLOAD/'eval_core_v5/test_supply_evidence.py',13),
+              ('grading_regressions',PAYLOAD/'eval_core_v6/test_core.py',30),
+              ('supply_evidence',PAYLOAD/'eval_core_v6/test_supply_evidence.py',13),
               ('repository_layout',ROOT/'tests/test_repository_layout.py',7),
               ('download_recovery',ROOT/'tests/test_download_recovery.py',6),
               ('task_contracts',ROOT/'tests/test_task_contracts.py',10),
               ('trial_summary',ROOT/'tests/test_trial_summary.py',15),
               ('publication',ROOT/'tests/test_publication.py',6),
               ('collection',ROOT/'tests/test_collection.py',18),
-              ('transport',ROOT/'tests/test_transport.py',6)]
+              ('transport',ROOT/'tests/test_transport.py',6),
+              ('runtime_integrity',ROOT/'tests/test_runtime_integrity.py',8)]
     checks=[]
     for label, path, count in suites:
         command = [sys.executable,'-I','-B','-c',

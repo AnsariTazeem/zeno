@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parent.parent
 PATTERNS = {
     'credential': re.compile(rb'(?:sk-[A-Za-z0-9_-]{24,}|fc-[A-Za-z0-9]{24,}|gh[pousr]_[A-Za-z0-9]{30,}|-----BEGIN'
                              rb'[^\r\n]*PRIVATE KEY-----)'),
-    'local_user_path': re.compile(rb'(?i)(?:[A-Z]:[\\/]+Users[\\/]+[^\\/\s"\x27]+|/ho' rb'me/[^/\s"\x27]+)'),
+    'local_user_path': re.compile(rb'(?i)(?:[A-Z]:[\\/]+Users[\\/]+[^\\/\s"\x27]+|/(?:Users|ho' rb'me)/[^/\s"\x27]+)'),
     'private_chat_url': re.compile(rb'https://chatgpt\.com/c/[0-9a-f-]{36}'),
 }
 PRIVATE_FIELDS = {'session_id', 'thread_id', 'resume_session'}
@@ -17,8 +17,9 @@ PRIVATE_FIELDS = {'session_id', 'thread_id', 'resume_session'}
 
 def inspect(name, body):
     findings = [{'path': name, 'kind': kind} for kind, pattern in PATTERNS.items() if pattern.search(body)]
-    if name.endswith('.json'):
-        data = json.loads(body)
+    if name.endswith(('.json', '.jsonl')):
+        data = ([json.loads(line) for line in body.splitlines() if line.strip()]
+                if name.endswith('.jsonl') else json.loads(body))
 
         def walk(value):
             if isinstance(value, dict):
@@ -37,7 +38,8 @@ def publication_files(root):
     if (root/'.git').exists():
         result = subprocess.run(['git', 'ls-files', '-co', '--exclude-standard', '-z'],
                                 cwd=root, capture_output=True, check=True)
-        return sorted(set(filter(None, result.stdout.decode('utf-8').split('\0'))))
+        return sorted({name for name in result.stdout.decode('utf-8').split('\0')
+                       if name and (root/name).is_file()})
     folders = ('docs', 'tasks', 'reference', 'graders', 'tools', 'results',
                'transcripts', 'tests', 'evidence', 'reproduction', '.github')
     files = [p for name in folders for p in (root/name).rglob('*')

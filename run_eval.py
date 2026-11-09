@@ -9,7 +9,7 @@ if __name__ == '__main__':
     args, forwarded = parser.parse_known_args()
     root = args.prepared_root.resolve()
     python = root / '.venv/Scripts/python.exe'
-    runner = root / 'eval_core_v5/run_eval.py'
+    runner = root / 'eval_core_v6/run_eval.py'
     if not all(p.is_file() for p in [python, runner, root / 'bootstrap_result.json']):
         parser.error('Use the completed root printed by bootstrap.py')
     raise SystemExit(subprocess.call([str(python), '-I', '-B', str(runner), *forwarded]))
