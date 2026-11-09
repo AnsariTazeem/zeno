@@ -25,8 +25,9 @@ def sha(path):
 
 
 def write(path, data):
+    body = json.dumps(data, indent=2, allow_nan=False) + "\n"
     with path.open("x", encoding="utf-8") as handle:
-        handle.write(json.dumps(data, indent=2, allow_nan=False) + "\n")
+        handle.write(body)
 
 
 def run(label, command, timeout=1000):

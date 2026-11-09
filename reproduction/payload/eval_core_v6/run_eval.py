@@ -57,8 +57,9 @@ def sha(p):
 
 
 def save(p, v):
+    body = json.dumps(v, indent=2, allow_nan=False) + "\n"
     with p.open("x", encoding="utf-8", newline="\n") as f:
-        f.write(json.dumps(v, indent=2, allow_nan=False) + "\n")
+        f.write(body)
 
 
 def relative(root, name):
@@ -295,7 +296,20 @@ def write_outputs(out, r, proposal):
             "finished_at_utc": datetime.now(timezone.utc).isoformat(),
         }
     )
-    save(out / "result.json", r)
+    try:
+        save(out / "result.json", r)
+    except (TypeError, ValueError):
+        # Native measurements may contain non-finite values outside scored fields.
+        # Keep trusted run identity while recording an unscored infrastructure error.
+        identity = {key: r[key] for key in (
+            "task_id", "run_id", "proposal", "numerics", "evidence_mode",
+            "runner_sha256", "dependency_lock_sha256", "candidate_sha256",
+            "native_evaluator_launched", "schema_version", "model_calls", "finished_at_utc",
+        ) if key in r}
+        r.clear()
+        r.update(identity)
+        r.update(invalid("Non-finite or unserializable measurement data"))
+        save(out / "result.json", r)
     lines = [
         f"Measured feedback for proposal {proposal} of 3; task {r['task_id']}.",
         "Outcome: " + r["category"],
@@ -580,6 +594,12 @@ def main():
             data = read(out / "native/result.json")
             r["native_result_sha256"] = sha(out / "native/result.json")
             r.update(assess(a.task, data, contract, out / "native"))
+            # Validate before deleting the staged workspace so malformed
+            # measurements retain their original evidence for diagnosis.
+            try:
+                json.dumps(r, allow_nan=False)
+            except (TypeError, ValueError) as error:
+                raise ValueError("Non-finite or unserializable measurement data") from error
             if r["category"] in ("pass", "specification_failure"):
                 try:
                     shutil.rmtree(stage)

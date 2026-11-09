@@ -22,27 +22,35 @@ def write(path, value):
     path.write_text(json.dumps(value, indent=2)+'\n', encoding='utf-8')
 
 
+def is_cache(path):
+    return "__pycache__" in path.parts or path.suffix in (".pyc", ".pyo")
+
+
+def is_runtime_file(path):
+    return path.is_file() and not is_cache(path)
+
+
 def main():
     # Existing v5 seals remain authoritative for the frozen apparatus.
     rows = {row['path']: row for row in read(PAYLOAD/'eval_core_v5/dependency_lock.json')['files']}
     extra = [*sorted((PAYLOAD/'public_packets').rglob('*')),
              *[PAYLOAD/'eval_core_v6'/name for name in ('run_eval.py', 'supply_adapter.py', 'tia_adapter.py')]]
     for path in extra:
-        if path.is_file():
+        if is_runtime_file(path):
             row = identity(path, PAYLOAD)
             rows[row['path']] = row
     write(PAYLOAD/'eval_core_v6/dependency_lock.json', {
         'scope': 'v6 runtime dependencies; historical seals and electrical limits retained',
         'files': [rows[name] for name in sorted(rows)]})
     source = KIT/'source_manifest.json'
-    paths = {row['path'] for row in read(source)['files']}
+    paths = {row['path'] for row in read(source)['files'] if not is_cache(Path(row['path']))}
     paths.update(path.relative_to(PAYLOAD).as_posix()
                  for folder in ('eval_core_v6', 'public_packets')
                  for path in (PAYLOAD/folder).rglob('*')
-                 if path.is_file() and '__pycache__' not in path.parts)
+                 if is_runtime_file(path))
     write(source, {'files': [identity(PAYLOAD/name, PAYLOAD) for name in sorted(paths)]})
     kit = KIT/'kit_manifest.json'
-    paths = {row['path'] for row in read(kit)['files']}
+    paths = {row['path'] for row in read(kit)['files'] if not is_cache(Path(row['path']))}
     paths.update('payload/'+row['path'] for row in read(source)['files'])
     write(kit, {'files': [identity(KIT/name, KIT) for name in sorted(paths)]})
     # These three documents/manifests were redacted before the maintenance changes.

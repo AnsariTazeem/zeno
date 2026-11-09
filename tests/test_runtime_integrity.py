@@ -201,9 +201,71 @@ class RuntimeIntegrityTests(unittest.TestCase):
         self.assertNotEqual(result.returncode, 0)
         self.assertIn("without Python optimization", result.stderr)
 
+    def test_serialization_rejects_nonfinite_without_partial_result(self):
+        for writer in (core.save, qualification.write):
+            target = self.root / (writer.__module__ + '.json')
+            with self.assertRaises(ValueError):
+                writer(target, {'extra_metric': float('nan')})
+            self.assertFalse(target.exists())
+
+    def test_nonfinite_measurement_becomes_unscored_infrastructure_result(self):
+        source = self.root / 'replay.json'
+        source.write_text('{}')
+        output = self.root / 'outputs'
+        output.mkdir()
+        (output / 'dependency_lock.json').write_text('{}')
+        result = {'category': 'pass', 'score': 100, 'success': True,
+                  'points': [{'condition': 'test', 'extra': float('nan')}]}
+        with patch.object(core, 'HERE', output), patch.object(core, 'verify', return_value=1), \
+             patch.object(core, 'assess', return_value=result), \
+             patch('sys.argv', ['run_eval.py', 'replay', '--task', 'load',
+                                '--source', str(source), '--run-id', 'nonfinite']):
+            self.assertEqual(core.main(), 3)
+        run = output / 'runs/load/nonfinite'
+        data = json.loads((run / 'result.json').read_text())
+        self.assertEqual(data['category'], 'infrastructure_error')
+        self.assertIsNone(data['score'])
+        self.assertIn('Non-finite', data['error'])
+        self.assertTrue((run / 'manifest.json').is_file())
+        self.assertNotIn('points', data)
+
+    def test_manifest_refresh_excludes_cached_python_files(self):
+        refresh = load('refresh_test', ROOT / 'tools/refresh_manifests.py')
+        root = self.root / 'fixture'
+        kit = root / 'reproduction'
+        payload = kit / 'payload'
+        v5 = payload / 'eval_core_v5'
+        v6 = payload / 'eval_core_v6'
+        public = payload / 'public_packets/tools'
+        for folder in (v5, v6, public, root / 'evidence'):
+            folder.mkdir(parents=True)
+        for name in ('run_eval.py', 'supply_adapter.py', 'tia_adapter.py'):
+            (v6 / name).write_text('test')
+        (public / 'export_task.py').write_text('test')
+        (public / 'export_task.pyc').write_bytes(b'cache')
+        cache = public / '__pycache__'
+        cache.mkdir()
+        (cache / 'export_task.pyc').write_bytes(b'cache')
+        for path in (v5 / 'dependency_lock.json', kit / 'source_manifest.json', kit / 'kit_manifest.json'):
+            path.write_text('{"files": []}')
+        (root / 'evidence/path_redactions.json').write_text('{"records": []}')
+        with patch.object(refresh, 'ROOT', root), patch.object(refresh, 'KIT', kit), \
+             patch.object(refresh, 'PAYLOAD', payload):
+            refresh.main()
+        for path in (v6 / 'dependency_lock.json', kit / 'source_manifest.json', kit / 'kit_manifest.json'):
+            files = [row['path'] for row in json.loads(path.read_text())['files']]
+            self.assertTrue(files)
+            self.assertFalse(any('__pycache__' in name or name.endswith(('.pyc', '.pyo')) for name in files))
+
+    def test_replay_references_remain_valid_markdown_links(self):
+        body = (ROOT / 'docs/task-validation.md').read_text()
+        target = '(../evidence/task_contract_audit_clarified2_v5.json)'
+        for label in ('recorded v5 task-contract audit', 'Recorded v5 audit record'):
+            self.assertIn('[' + label + ']' + target, body)
+
     def test_successful_stage_cleanup_and_failed_stage_retention(self):
         # Test the actual CLI control flow with a synthetic native producer.
-        for category in ("pass", "infrastructure_error"):
+        for category in ("pass", "infrastructure_error", "nonfinite"):
             stage = self.root / category
             stage.mkdir()
             native = stage / "analog_supply_pilot_v1/runs/s"
@@ -225,8 +287,9 @@ class RuntimeIntegrityTests(unittest.TestCase):
                 core,
                 "assess",
                 return_value={
-                    "category": category,
-                    "score": 100 if category == "pass" else None,
+                    "category": "pass" if category == "nonfinite" else category,
+                    "score": 100 if category in ("pass", "nonfinite") else None,
+                    **({"points": [{"unused": float("nan")}]} if category == "nonfinite" else {}),
                 },
             ), patch.object(
                 core.subprocess, "Popen"

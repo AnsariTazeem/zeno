@@ -5,12 +5,12 @@
     {
       "path": "reproduction/source_manifest.json",
       "previous_sha256": "ce018df269bf7d6a4c78828944d3c40047744c1b0f8d6c6102ce118a2594fad7",
-      "sha256": "58bd9451336ae66e6598a92115a5a08a7e0bf0840cca4bdb6b42ac3f3d7f2a1b"
+      "sha256": "6717cc5961ca061112159ca88c16bad9beb4bbdee234cd6592e3a5a67d3f8c63"
     },
     {
       "path": "reproduction/kit_manifest.json",
       "previous_sha256": "559cadf32b73f8f8b5b4a88d878875956e5e93c09f624385c51cff09789f301e",
-      "sha256": "23cf4c839c0f1abcd3e55840171ea32f2f14f8c3845aaf2ea77fe503332d65e5"
+      "sha256": "950b0258f9855e4725819d639e95fb905eca4a8c04aa2660c6a552ea1e9a2724"
     },
     {
       "path": "reproduction/README.md",

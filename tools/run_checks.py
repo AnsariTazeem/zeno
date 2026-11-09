@@ -51,7 +51,7 @@ def main():
               ('publication',ROOT/'tests/test_publication.py',6),
               ('collection',ROOT/'tests/test_collection.py',18),
               ('transport',ROOT/'tests/test_transport.py',6),
-              ('runtime_integrity',ROOT/'tests/test_runtime_integrity.py',8)]
+              ('runtime_integrity',ROOT/'tests/test_runtime_integrity.py',12)]
     checks=[]
     for label, path, count in suites:
         command = [sys.executable,'-I','-B','-c',
